@@ -18,7 +18,16 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "@home/*": ["./modules/home/*"],
+      "@support-a-student/*": ["./modules/support-a-student/*"],
+      "@students/*": ["./src/modules/students/*"],
+      "@student/*": ["./src/modules/student/*"],
+      "@forms/*": ["./modules/forms/*"],
+      "@notfound/*": ["./modules/not-found/*"],
+      "@who-we-are/*": ["./modules/who-we-are/*"],
+      "@transparency/*": ["./modules/transparency/*"],
+      "@common/*": ["./common/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
