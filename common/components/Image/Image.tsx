@@ -25,6 +25,8 @@ const ImageComponent: FC<ImageProps> = ({
       alt={alt}
       width={width}
       height={height}
+      quality={100}
+      priority
     />
   );
 };

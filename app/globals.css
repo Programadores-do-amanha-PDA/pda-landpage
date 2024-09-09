@@ -31,3 +31,8 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.h-screen-minus-80 {
+  height: calc(100vh - 200px);
+}

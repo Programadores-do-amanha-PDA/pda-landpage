@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { dela_gothic, ibm_plex_sans, roboto, roboto_mono } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +13,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="pt-BR"
+      className={`w-full h-full flex ${ibm_plex_sans.variable} ${roboto.variable} ${roboto_mono.variable} ${dela_gothic.variable} `}
+    >
+      <body className="w-full h-max flex justify-center items-start">
+        {children}
+      </body>
     </html>
   );
 }

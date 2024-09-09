@@ -11,7 +11,7 @@ const buttonMenuDeviceStyle =
   "w-full text-start p-0 mx-0 font-normal text-gray-900 dark:text-gray-50 h-10 flex items-center justify-center font-semibold";
 
 const deviceMenuCss =
-  "h-screen flex-col !justify-start gap-4 flex overflow-y-none";
+  "h-full flex-col !justify-start gap-4 flex overflow-y-none";
 const desktopMenuCss =
   "h-20 !justify-start flex-col sm:flex-row overflow-y-none sm:gap-6";
 
@@ -27,14 +27,10 @@ const Header = () => {
   };
 
   return (
-    <Row
-      className={`w-full min-h-20 ${
-        deviceMenuOpen ? "h-screen" : "h-20"
-      }  sm:h-20 items-start justify-center`}
-    >
+    <Row className={`w-full min-h-20  sm:h-20 items-start justify-center`}>
       <Row
         className={`
-        h-20 w-full bg-gray-50 dark:bg-gray-900 transition-all max-w-7xl fixed sm:!justify-between items-center z-10 px-2 sm:px-4 md:px-6 lg:px-8 ${
+        h-20 w-full bg-gray-50 dark:bg-gray-900 transition-all max-w-7xl fixed sm:!justify-between items-center z-10 px-6 lg:px-8 ${
           deviceMenuOpen ? deviceMenuCss : desktopMenuCss
         }`}
       >
