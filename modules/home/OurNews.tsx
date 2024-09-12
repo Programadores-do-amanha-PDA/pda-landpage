@@ -139,7 +139,7 @@ const OurNews = () => {
             {newsGroups[newsGroupIndex].map((n, i) => (
               <Column
                 key={i}
-                className="max-w-80 h-max bg-gray-700 gap-8 p-3 rounded-lg justify-between"
+                className="max-w-80 h-max bg-secondary-630/15 dark:bg-secondary-800 gap-8 p-3 rounded-lg justify-between"
               >
                 {n.contentType === "text" && (
                   <>
@@ -178,7 +178,7 @@ const OurNews = () => {
                   />
 
                   <Button
-                    className="w-max h-10 p-1 px-2 relative flex items-center justify-center transition-all text-yellow-400 hover:text-yellow-400/55  rounded-xl gap-1 font-roboto sm:max-w-52"
+                    className="w-max h-10 p-1 px-2 relative flex items-center justify-center transition-all text-primary-600 hover:text-primary-700  dark:text-yellow-400 dark:hover:text-yellow-400/55  rounded-xl gap-1 font-roboto sm:max-w-52"
                     onClick={() => window.open(n.link)}
                   >
                     {n.linkTitle}

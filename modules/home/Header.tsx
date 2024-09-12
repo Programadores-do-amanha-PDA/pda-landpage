@@ -27,10 +27,10 @@ const Header = () => {
   };
 
   return (
-    <Row className="w-full min-h-20 sticky top-0 sm:h-20 items-start justify-center z-10 bg-gray-50 dark:bg-gray-900">
+    <Row className="w-full min-h-20 sticky top-0 sm:h-20 items-start justify-center z-10 bg-gray-50 dark:bg-secondary-900">
       <Row
         className={`
-        h-20 w-full bg-gray-50 dark:bg-gray-900 transition-all max-w-7xl fixed sm:!justify-between items-center z-10 px-6 lg:px-8 ${
+        h-20 w-full bg-gray-50 dark:bg-secondary-900 transition-all max-w-7xl fixed sm:!justify-between items-center z-10 px-6 lg:px-8 ${
           deviceMenuOpen ? deviceMenuCss : desktopMenuCss
         }`}
       >
@@ -100,14 +100,14 @@ const Header = () => {
 
           <Column className="sm:flex-row w-full sm:w-max gap-4 ">
             <Button
-              className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-yellow-400 rounded-xl gap-2 !text-gray-900`}
+              className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-primary-500 rounded-xl gap-2 !text-gray-900`}
               onClick={handleSubscribe}
             >
               Inscreva-se
             </Button>
             <InternalLink
               href="/contrate-um-talento"
-              className={`${buttonStyle} p-1 px-2 w-full relative items-center border-2 border-yellow-400 hover:bg-yellow-400/55 rounded-xl`}
+              className={`${buttonStyle} p-1 px-2 w-full relative items-center border-2 border-primary-500 hover:bg-primary-500/55 rounded-xl`}
             >
               Contrate um Talento
             </InternalLink>

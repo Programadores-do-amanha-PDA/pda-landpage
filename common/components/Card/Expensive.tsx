@@ -26,7 +26,7 @@ const Expensive = ({
   };
 
   return (
-    <Column className="w-full h-max sm:w-72 min-h-10 bg-yellow-400/55 backdrop-blur rounded-xl px-3 items-center justify-start gap-2">
+    <Column className="w-full h-max sm:w-72 min-h-10 bg-primary-500/55 backdrop-blur rounded-xl px-3 items-center justify-start gap-2">
       <Row
         className="w-full h-10 items-center justify-between gap-4"
         onClick={handleSetIsExpend}

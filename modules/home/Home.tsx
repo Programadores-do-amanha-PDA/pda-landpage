@@ -3,31 +3,29 @@
 import Header from "./Header";
 import MainHighlight from "./MainHighlight";
 import WhoWeAre from "./WhoWeAre";
-// import AboutFormation from "./AboutFormation";
-// import WhoAlreadyDone from "./WhoAlreadyDone";
-// import WantToSupport from "./WantToSupport";
+import AboutFormation from "./AboutFormation";
+
+import OurNews from "./OurNews";
 import OurPartners from "./OurPartners";
 // import Footer from "./Footer";
-// import OurNews from "./OurNews";
 import { Column } from "@/common/components";
 
 const Home = () => {
   return (
-    <Column className="flex w-full h-full items-center justify-start bg-gray-50 dark:bg-gray-900">
+    <Column className="flex w-full h-full items-center justify-start bg-gray-50 dark:bg-secondary-900">
       <Header />
       <MainHighlight />
       <WhoWeAre />
+      <AboutFormation />
 
+      <OurNews />
       <OurPartners />
-      {/* 
 
-      <AboutFormation ref={aboutFormationRef} />
-
+      {/*
       <WhoAlreadyDone ref={whoAlreadyDoneRef} />
 
       <WantToSupport ref={wantToSupportRef} />
 
-      <OurNews ref={ourNewsRef} />
 
 
       <Footer sectionsRefs={refs} />
