@@ -6,8 +6,16 @@ export interface RowComponentProps extends PropsWithChildren<{}> {
   onClick?: () => void;
 }
 
-const RowComponent: FC<RowComponentProps> = ({ children, className }) => {
-  return <div className={`flex flex-row ${className}`}>{children}</div>;
+const RowComponent: FC<RowComponentProps> = ({
+  children,
+  className,
+  ...rest
+}) => {
+  return (
+    <div className={`flex flex-row ${className}`} {...rest}>
+      {children}
+    </div>
+  );
 };
 
 export default RowComponent;
