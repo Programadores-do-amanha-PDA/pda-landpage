@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import { Image, Button, Row, Column } from "@common/components";
+import { Image, Button, Row, Column, InternalLink } from "@common/components";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <Row className={`w-full min-h-20  sm:h-20 items-start justify-center`}>
+    <Row className="w-full min-h-20 sticky top-0 sm:h-20 items-start justify-center z-10 bg-gray-50 dark:bg-gray-900">
       <Row
         className={`
         h-20 w-full bg-gray-50 dark:bg-gray-900 transition-all max-w-7xl fixed sm:!justify-between items-center z-10 px-6 lg:px-8 ${
@@ -94,22 +94,23 @@ const Header = () => {
               Quem somos
             </Link>
             <Link className={buttonStyle} href={"/apoie-um-aluno"}>
-              Nossos estudantes
+              Transparência
             </Link>
           </Column>
 
           <Column className="sm:flex-row w-full sm:w-max gap-4 ">
             <Button
-              className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-yellow-400 dark:bg-yellow-600 rounded-xl`}
-            >
-              Doe aqui!
-            </Button>
-            <Button
-              className={`${buttonStyle} p-1 px-2 w-full relative items-center border-2 border-yellow-400 dark:border-yellow-600 rounded-xl gap-2`}
+              className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-yellow-400 rounded-xl gap-2 !text-gray-900`}
               onClick={handleSubscribe}
             >
               Inscreva-se
             </Button>
+            <InternalLink
+              href="/contrate-um-talento"
+              className={`${buttonStyle} p-1 px-2 w-full relative items-center border-2 border-yellow-400 hover:bg-yellow-400/55 rounded-xl`}
+            >
+              Contrate um Talento
+            </InternalLink>
           </Column>
         </Column>
 
