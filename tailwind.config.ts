@@ -25,9 +25,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         "dela-gothic": ["var(--font-dela-gothic)"],
-        roboto: ["var(--font-roboto)"],
-        "roboto-mono": ["var(--font-roboto-mono)"],
-        "ibm-plex": ["var(--font-ibm-plex-sans)"],
+        "ibm-plex-sans": ["var(--font-ibm-plex-sans)"],
       },
       colors: {
         secondary: {
