@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { dela_gothic, ibm_plex_sans, roboto, roboto_mono } from "./fonts";
+import { dela_gothic, ibm_plex_sans } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`w-full h-full flex ${ibm_plex_sans.variable} ${roboto.variable} ${roboto_mono.variable} ${dela_gothic.variable} `}
+      className={`w-full h-full flex  ${ibm_plex_sans.variable} ${dela_gothic.variable} font-ibm-plex-sans`}
     >
       <body className="w-full h-max flex justify-center items-start">
         {children}
