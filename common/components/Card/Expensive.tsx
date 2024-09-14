@@ -3,23 +3,38 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import { Column } from "../Column";
 import { Row } from "../Row";
 import { Text } from "../Text";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import useIsScreenSmall from "@/hooks/useIsScreenSmall";
 
 const Expensive = ({
-  isExpendPrevious,
   label,
   expandedText,
   tagSection: { tagLabel, tags },
+  index,
 }: {
-  isExpendPrevious: boolean | false;
   label: string;
   expandedText: string;
   tagSection: {
     tagLabel: string;
     tags: string[];
   };
+  index: number;
 }) => {
-  const [isExpend, setIsExpend] = useState(isExpendPrevious);
+  const isScreenSmall = useIsScreenSmall();
+  const [isExpend, setIsExpend] = useState<boolean>();
+
+  useEffect(() => {
+    if (isScreenSmall && index !== 0) {
+      setIsExpend(false);
+    }
+    if (isScreenSmall && index === 0) {
+      setIsExpend(true);
+    }
+
+    if (!isScreenSmall) {
+      setIsExpend(true);
+    }
+  }, [isScreenSmall, index]);
 
   const handleSetIsExpend = () => {
     setIsExpend(!isExpend);

@@ -21,14 +21,14 @@ const partners = [
     height: 179,
   },
   {
-    logo: "/assets/partners/ifood.png",
+    logo: "/assets/partners/ifood.jpg",
     name: "Ifood",
     link: "",
     width: 644,
     height: 602,
   },
   {
-    logo: "/assets/partners/instituto_syn.webp",
+    logo: "/assets/partners/instituto_syn.png",
     name: "Instituto SYN",
     link: "",
     width: 640,
@@ -65,53 +65,73 @@ const partners = [
 ];
 
 const OurPartners = () => (
-  <Row className="justify-center p-6 lg:p-8 items-center w-full overflow-x-hidden bg-yellow-400/75 relative">
-    <Layout className="w-full max-w-7xl  flex-col gap-6 !justify-start flex-wrap">
-      <Column className="gap-4">
-        <Row className="items-center px-4">
-          <Text className="font-ibm-plex">Mantenedores</Text>
-        </Row>
-        <Row className="flex-wrap w-full gap-4">
-          {maintainers.map((maintainer, i) => (
-            <Link
-              key={i}
-              className="flex-shrink-0 w-20 mx-4"
-              href={maintainer.link}
-            >
-              <Image
-                src={maintainer.logo}
-                alt={maintainer.name}
-                width={300}
-                height={100}
-                className="object-contain w-full h-full"
-              />
-            </Link>
-          ))}
-        </Row>
+  <Row className="justify-center p-6 lg:p-8 items-center w-full overflow-x-hidden bg-gray-50 dark:bg-secondary-900 relative">
+    <Layout className="w-full max-w-7xl  flex-col gap-20 !justify-start flex-wrap">
+      <Column className="w-full text-start gap-4">
+        <Text className="text-xl sm:text-2xl font-dela-gothic">
+          <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
+            {"</"}
+          </Text>
+          Apoiadores e Patrocinadores
+          <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
+            {">"}
+          </Text>
+        </Text>
+        <Text className="font-ibm-plex-sans-sans font-semibold text-lg">
+          Conheçam as empresas e institutos que nos ajudam a causar impacto nas
+          vidas dos jovens negros e indígenas de todo o Brasil.
+        </Text>
       </Column>
+      <Column className="gap-10 w-full">
+        <Column className="gap-4">
+          <Row className="items-center px-4">
+            <Text className="font-dela-gothic text-xl prose text-gray-900 dark:text-gray-50">
+              Mantenedores
+            </Text>
+          </Row>
+          <Row className="flex-wrap w-full gap-4">
+            {maintainers.map((maintainer, i) => (
+              <Link
+                key={i}
+                className="flex-shrink-0 size-36 mx-4 bg-gray-50 rounded-xl p-1"
+                href={maintainer.link}
+              >
+                <Image
+                  src={maintainer.logo}
+                  alt={maintainer.name}
+                  width={300}
+                  height={100}
+                  className="object-contain w-full h-full"
+                />
+              </Link>
+            ))}
+          </Row>
+        </Column>
 
-      <hr className="w-full border-r border-gray-900/55 dark:border-gray-50/55 h-px" />
-      <Column className="gap-4">
-        <Row className="items-center px-4">
-          <Text className="font-ibm-plex">Apoiadores</Text>
-        </Row>
-        <Row className="flex-wrap w-full gap-4">
-          {partners.map((partner, k) => (
-            <Link
-              key={k}
-              className="flex-shrink-0 w-20 mx-4"
-              href={partner.link}
-            >
-              <Image
-                src={partner.logo}
-                alt={partner.name}
-                width={partner.width}
-                height={partner.height}
-                className="object-contain w-full h-full"
-              />
-            </Link>
-          ))}
-        </Row>
+        <Column className="gap-4">
+          <Row className="items-center px-4">
+            <Text className="font-dela-gothic text-xl prose text-gray-900 dark:text-gray-50">
+              Apoiadores
+            </Text>
+          </Row>
+          <Row className="flex-wrap w-full gap-4">
+            {partners.map((partner, k) => (
+              <Link
+                key={k}
+                className="flex-shrink-0 size-36 mx-4 bg-gray-50 rounded-xl p-1"
+                href={partner.link}
+              >
+                <Image
+                  src={partner.logo}
+                  alt={partner.name}
+                  width={partner.width}
+                  height={partner.height}
+                  className="object-contain w-full h-full "
+                />
+              </Link>
+            ))}
+          </Row>
+        </Column>
       </Column>
     </Layout>
   </Row>

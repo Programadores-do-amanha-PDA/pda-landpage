@@ -100,14 +100,14 @@ const Header = () => {
 
           <Column className="sm:flex-row w-full sm:w-max gap-4 ">
             <Button
-              className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-primary-500 rounded-xl gap-2 !text-gray-900`}
+              className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-primary-500 rounded-xl gap-2 !text-gray-900 shadow-sm`}
               onClick={handleSubscribe}
             >
               Inscreva-se
             </Button>
             <InternalLink
               href="/contrate-um-talento"
-              className={`${buttonStyle} p-1 px-2 w-full relative items-center border-2 border-primary-500 hover:bg-primary-500/55 rounded-xl`}
+              className={`${buttonStyle} p-1 px-2 w-full relative items-center border-2 border-secondary-500 hover:bg-secondary-500/55 rounded-xl shadow-sm`}
             >
               Contrate um Talento
             </InternalLink>

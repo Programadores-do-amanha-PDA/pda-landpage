@@ -45,7 +45,7 @@ const OurNews = () => {
       content:
         "“Tecnologia e impacto podem e devem andar juntos, afirma o CEO e fundador da ONG, Cleber Guedes, em sintonia com as metas do iFood. A Programadores do Amanhã foi criada para gerar renda e emprego para jovens negros por meio do ensino da programação.”",
       contentType: "text",
-      logo: "/assets/partners/ifood.png",
+      logo: "/assets/partners/ifood.jpg",
       logoAlt: "ifood",
       link: "https://institucional.ifood.com.br/noticias/programadores-do-amanha-multiplica-renda-de-jovens-negros/",
       linkTitle: "Ler noticia",
@@ -119,17 +119,17 @@ const OurNews = () => {
   return (
     <Row className="w-full items-center justify-center py-8">
       <Layout className="w-full max-w-7xl p-6 lg:p-8 relative flex-col gap-28">
-        <Column className="w-full text-start gap-4">
-          <Text className="text-xl sm:text-2xl font-dela-gothic">
-            <Text className="text-yellow-400  font-ibm-plex font-black text-center">
+        <Column className="w-full text-start gap-4 ">
+          <Text className="text-xl sm:text-2xl font-dela-gothic uppercase">
+            <Text className="text-yellow-400  font-ibm-plex-sans font-black text-center">
               {"</"}
             </Text>
             Nossas Noticias
-            <Text className="text-yellow-400  font-ibm-plex font-black text-center">
+            <Text className="text-yellow-400  font-ibm-plex-sans font-black text-center">
               {">"}
             </Text>
           </Text>
-          <Text className="font-roboto-mono font-semibold">
+          <Text className="font-semibold">
             Veja o que a comunidade tem falado da Programadores do Amanhã.
           </Text>
         </Column>
