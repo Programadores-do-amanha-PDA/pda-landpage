@@ -10,10 +10,11 @@ const useIsScreenSmall = (): boolean => {
     };
 
     window.addEventListener("resize", handleResize);
+    setIsSmallScreen(window.innerWidth < 640);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  });
 
   return isSmallScreen;
 };
