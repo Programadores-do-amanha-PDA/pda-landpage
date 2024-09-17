@@ -133,12 +133,12 @@ const OurNews = () => {
           </Text>
         </Column>
 
-        <Column className="gap-6">
+        <Column className="gap-8">
           <Row className="gap-6 flex-wrap">
             {newsGroups[newsGroupIndex].map((n, i) => (
               <Column
                 key={i}
-                className="max-w-80 h-max bg-secondary-630/15 dark:bg-secondary-800 gap-8 p-3 rounded-lg justify-between"
+                className="max-w-80 h-max bg-secondary-100/95 dark:bg-gray-600/35 gap-8 p-3 rounded-lg justify-between"
               >
                 {n.contentType === "text" && (
                   <>
@@ -177,7 +177,7 @@ const OurNews = () => {
                   />
 
                   <Button
-                    className="w-max h-10 p-1 px-2 relative flex items-center justify-center transition-all text-primary-600 hover:text-primary-700  dark:text-yellow-400 dark:hover:text-yellow-400/55  rounded-xl gap-1  sm:max-w-52"
+                    className="w-max h-10 p-1 px-2 relative flex items-center justify-center transition-all text-secondary-800 hover:text-secondary-700  dark:text-secondary-400 dark:hover:text-secondary-300  rounded-xl gap-1  sm:max-w-52"
                     onClick={() => window.open(n.link)}
                   >
                     {n.linkTitle}
@@ -189,45 +189,49 @@ const OurNews = () => {
           </Row>
 
           <Row className="w-full h-10 gap-4 items-center justify-center lg:justify-start">
-            {newsGroupIndex > 0 && (
-              <Button
-                className="size-10 bg-gray-200 dark:bg-gray-700 rounded-lg items-center justify-center"
-                onClick={() => setNewsGroupIndex(newsGroupIndex - 1)}
-              >
-                <ChevronLeftIcon
-                  className="text-gray-900 dark:text-gray-50 size-8 stroke-2"
-                  strokeWidth={1}
-                />
-              </Button>
-            )}
+            <Button
+              className="size-10 bg-secondary-100/95 dark:bg-gray-600/35 rounded-lg items-center justify-center"
+              onClick={() =>
+                newsGroupIndex > 0
+                  ? setNewsGroupIndex(newsGroupIndex - 1)
+                  : null
+              }
+            >
+              <ChevronLeftIcon
+                className="text-gray-900 dark:text-gray-50 size-8 stroke-2"
+                strokeWidth={1}
+              />
+            </Button>
             <Row className="w-28 items-center justify-between">
               {newsGroups.map((_, i) =>
                 i === newsGroupIndex ? (
                   <SunIcon
                     key={i}
-                    className="size-8 text-yellow-400"
+                    className="size-8 text-primary-500"
                     strokeWidth={2}
                   />
                 ) : (
                   <SunIcon
                     key={i}
-                    className="size-6 text-gray-600 "
+                    className="size-6 text-secondary-600/55 "
                     strokeWidth={2}
                   />
                 )
               )}
             </Row>
-            {newsGroupIndex !== newsGroups.length - 1 && (
-              <Button
-                className="size-10 bg-gray-200 dark:bg-gray-700 rounded-lg items-center justify-center"
-                onClick={() => setNewsGroupIndex(newsGroupIndex + 1)}
-              >
-                <ChevronRightIcon
-                  className="text-gray-900 dark:text-gray-50 size-8 stroke-2"
-                  strokeWidth={1}
-                />
-              </Button>
-            )}
+            <Button
+              className="size-10 bg-secondary-100/95 dark:bg-gray-600/35 rounded-lg items-center justify-center"
+              onClick={() =>
+                newsGroupIndex !== newsGroups.length - 1
+                  ? setNewsGroupIndex(newsGroupIndex + 1)
+                  : null
+              }
+            >
+              <ChevronRightIcon
+                className="text-gray-900 dark:text-gray-50 size-8 stroke-2"
+                strokeWidth={1}
+              />
+            </Button>
           </Row>
         </Column>
       </Layout>

@@ -118,17 +118,21 @@ const WhoAlreadyDone = () => {
                   )
                 )}
               </Row>
-              {feedbackGroupIndex !== newsGroups.length - 1 && (
-                <Button
-                  className="size-10 bg-gray-50/35 dark:bg-gray-900/35 rounded-lg items-center justify-center"
-                  onClick={() => setFeedbackGroupIndex(feedbackGroupIndex + 1)}
-                >
-                  <ChevronRightIcon
-                    className="text-gray-900 dark:text-gray-50 size-8 stroke-2"
-                    strokeWidth={1}
-                  />
-                </Button>
-              )}
+              <Button
+                className="size-10 bg-gray-50/35 dark:bg-gray-900/35 rounded-lg items-center justify-center"
+                onClick={() =>
+                  setFeedbackGroupIndex(
+                    feedbackGroupIndex !== newsGroups.length - 1
+                      ? feedbackGroupIndex + 1
+                      : feedbackGroupIndex
+                  )
+                }
+              >
+                <ChevronRightIcon
+                  className="text-gray-900 dark:text-gray-50 size-8 stroke-2"
+                  strokeWidth={1}
+                />
+              </Button>
             </Row>
           </Column>
         </Column>
