@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import { Column, Text, Row, Layout, Button, Image } from "@common/components";
 import {
-  ArrowLeftIcon,
   ArrowRightIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -143,7 +142,7 @@ const OurNews = () => {
               >
                 {n.contentType === "text" && (
                   <>
-                    <Text className="font-roboto text-gray-900 dark:text-gray-50">
+                    <Text className=" text-gray-900 dark:text-gray-50">
                       {n.content}
                     </Text>
                   </>
@@ -178,7 +177,7 @@ const OurNews = () => {
                   />
 
                   <Button
-                    className="w-max h-10 p-1 px-2 relative flex items-center justify-center transition-all text-primary-600 hover:text-primary-700  dark:text-yellow-400 dark:hover:text-yellow-400/55  rounded-xl gap-1 font-roboto sm:max-w-52"
+                    className="w-max h-10 p-1 px-2 relative flex items-center justify-center transition-all text-primary-600 hover:text-primary-700  dark:text-yellow-400 dark:hover:text-yellow-400/55  rounded-xl gap-1  sm:max-w-52"
                     onClick={() => window.open(n.link)}
                   >
                     {n.linkTitle}

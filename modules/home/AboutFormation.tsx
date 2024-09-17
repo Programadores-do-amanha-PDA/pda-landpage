@@ -79,11 +79,11 @@ const AboutFormation = () => {
           </Text>
         </Column>
 
-        <Column className="w-full gap-4 md:flex-row md:flex-wrap">
+        <Row className="w-full gap-4 justify-center items-center md:items-start md:justify-start flex-wrap">
           {formationCards.map((card, i) => (
             <Expensive key={i} index={i} {...card} />
           ))}
-        </Column>
+        </Row>
       </Layout>
     </Row>
   );
