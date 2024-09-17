@@ -6,7 +6,7 @@ interface TextProps {
 }
 
 const TextComponent: FC<TextProps> = ({ children, className }) => {
-  return <span className={`font-normal ${className}`}>{children}</span>;
+  return <span className={`${className}`}>{children}</span>;
 };
 
 export default TextComponent;

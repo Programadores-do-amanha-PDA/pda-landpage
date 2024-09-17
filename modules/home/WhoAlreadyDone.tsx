@@ -61,7 +61,7 @@ const WhoAlreadyDone = () => (
               </Text>
 
               <Column className="w-full">
-                <Text className="font-bold text-gray-900 dark:text-gray-50">
+                <Text className="font-bold font-ibm-plex-sans text-gray-900 dark:text-gray-50">
                   {feedback.name}
                 </Text>
                 <Text className="text-gray-900 dark:text-gray-50 font-semibold">

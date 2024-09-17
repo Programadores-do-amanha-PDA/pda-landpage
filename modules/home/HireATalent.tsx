@@ -1,3 +1,4 @@
+"use client";
 import { Button, Column, Layout, Row, Text } from "@/common/components";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";
 import {
@@ -5,8 +6,15 @@ import {
   BriefcaseIcon,
   HandRaisedIcon,
 } from "@heroicons/react/24/solid";
+import { useModal } from "@common/context/modal-context";
 
 const HireATalent = () => {
+  const { setIsOpen } = useModal();
+
+  const handleOpenForms = () => {
+    setIsOpen(true);
+  };
+
   const HireATalentCards = [
     {
       icon: BriefcaseIcon,
@@ -27,6 +35,7 @@ const HireATalent = () => {
         "Desenvolve os trabalhos de montagem, depuração e testes de programas e executando serviços de manutenção nos programas já desenvolvidos.",
     },
   ];
+
   return (
     <Row className="w-full items-center justify-center py-8">
       <Layout className="w-full max-w-7xl p-6 lg:p-8 relative flex-col gap-20">
@@ -68,7 +77,7 @@ const HireATalent = () => {
         <Column className="md:flex-row gap-4 w-full items-center justify-center">
           <Button
             className=" w-max h-10 p-1 px-3 gap-3 relative flex items-center justify-center transition-all font-semibold text-gray-900 dark:text-gray-50 bg-secondary-400/50 hover:bg-secondary-500 dark:bg-secondary-700/55 dark:hover:bg-secondary-500/50 rounded-xl sm:max-w-52 shadow-md"
-            // onClick={handleSubscribe}
+            onClick={handleOpenForms}
           >
             Quero saber mais
             <EnvelopeIcon className="size-5 text-gray-900 dark:text-gray-50 stroke-2 -rotate-12" />

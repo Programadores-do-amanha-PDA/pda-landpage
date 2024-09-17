@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { dela_gothic, ibm_plex_sans } from "./fonts";
+import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import AppProviders from "@/common/context";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -17,8 +20,25 @@ export default function RootLayout({
       lang="pt-BR"
       className={`w-full h-full flex  ${ibm_plex_sans.variable} ${dela_gothic.variable} font-ibm-plex-sans`}
     >
+      <head>
+        {/* eslint-disable-next-line */}
+        <script
+          type="text/javascript"
+          src="https://js.hsforms.net/forms/shell.js"
+        />
+        <Analytics />
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
+          <>
+            <GoogleTagManager
+              gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
+            />
+            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+          </>
+        )}
+      </head>
+
       <body className="w-full h-max flex justify-center items-start">
-        {children}
+        <AppProviders>{children}</AppProviders>
       </body>
     </html>
   );

@@ -1,4 +1,3 @@
-// import WannaSupportModal from "@forms/WannaSupportModal";
 import Header from "./Header";
 import MainHighlight from "./MainHighlight";
 import ImpactStatus from "./ImpactStatus";
@@ -7,9 +6,11 @@ import AboutFormation from "./AboutFormation";
 import HireATalent from "./HireATalent";
 import WhoAlreadyDone from "./WhoAlreadyDone";
 import Subscribe from "./Subscribe";
+import WantToSupport from "./WantToSupport";
 import OurNews from "./OurNews";
 import OurPartners from "./OurPartners";
-// import Footer from "./Footer";
+import Footer from "./Footer";
+import WannaSupportModal from "@forms/WannaSupportModal";
 
 import { Column } from "@/common/components";
 
@@ -24,18 +25,11 @@ const Home = () => {
       <AboutFormation />
       <WhoAlreadyDone />
       <Subscribe />
+      <WantToSupport />
       <OurNews />
       <OurPartners />
-
-      {/*
-
-      <WantToSupport ref={wantToSupportRef} />
-
-
-
-      <Footer sectionsRefs={refs} />
-
-      <WannaSupportModal /> */}
+      <Footer />
+      <WannaSupportModal />
     </Column>
   );
 };

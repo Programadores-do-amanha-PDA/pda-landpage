@@ -10,7 +10,7 @@ import {
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const WhoWeAre = () => (
-  <Row className="justify-center py-8   items-center w-full overflow-x-hidden bg-primary-500 relative">
+  <Row className="justify-center py-8 items-center w-full overflow-x-hidden bg-primary-500 relative">
     <Layout className="w-full max-w-7xl flex-col  gap-6 !justify-center items-center  flex-wrap">
       <Column className="p-4 md:lg:max-w-2xl lg:max-w-3xl xl:max-w-5xl  text-secondary-900 text-center items-center max-w-2xl prose gap-10">
         <Text className="text-lg sm:text-xl md:text-2xl md:lg:max-w-2xl lg:max-w-3xl xl:max-w-5xl font-dela-gothic uppercase">

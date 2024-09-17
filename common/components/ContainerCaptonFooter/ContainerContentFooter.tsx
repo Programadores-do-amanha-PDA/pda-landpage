@@ -4,6 +4,7 @@ import {
   ContentFooter,
 } from "./ContainerContentFooterStyled";
 import { Text } from "../Text";
+import { Column } from "../Column";
 
 interface DescriptionItem {
   content: string;
@@ -21,19 +22,23 @@ export function ContainerContentFooter({
   title,
 }: ContainerContentFooterData) {
   return (
-    <ContainerContent>
-      <Text className="text-gray-900 font-normal">{title}</Text>
-      {description.map((item, index) => (
-        <ContentFooter key={index}>
-          <a
-            className="font-normal no-underline"
-            onClick={item.onclick}
-            href={item.redirect}
-          >
-            {item.content}
-          </a>
-        </ContentFooter>
-      ))}
+    <ContainerContent className="items-center sm:items-start">
+      <Text className="text-gray-900 dark:text-gray-50 font-dela-gothic">
+        {title}
+      </Text>
+      <Column className="gap-2 items-center sm:items-start">
+        {description.map((item, index) => (
+          <ContentFooter key={index}>
+            <a
+              className="font-normal no-underline"
+              onClick={item.onclick}
+              href={item.redirect}
+            >
+              {item.content}
+            </a>
+          </ContentFooter>
+        ))}
+      </Column>
     </ContainerContent>
   );
 }

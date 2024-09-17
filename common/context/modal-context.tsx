@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState, Dispatch, SetStateAction } from "react";
 import {
   disableBodyScroll,
