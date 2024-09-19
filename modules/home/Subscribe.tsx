@@ -22,7 +22,7 @@ const Subscribe = () => {
         </Column>
 
         <Button
-          className="h-10 px-2 w-max relative flex items-center justify-center sm:justify-between bg-slate-50 hover:bg-slate-100 text-gray-900 rounded-xl gap-4 font-roboto font-semibold sm:max-w-sm shadow-md"
+          className="h-10 px-2 w-full md:w-max relative flex items-center justify-center sm:justify-between bg-slate-50 hover:bg-slate-100 text-gray-900 rounded-xl gap-4 font-roboto font-semibold sm:max-w-sm shadow-md"
           onClick={handleSubscribe}
         >
           Formulário de inscrição

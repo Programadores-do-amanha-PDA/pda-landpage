@@ -5,6 +5,7 @@ import {
 } from "./ContainerContentFooterStyled";
 import { Text } from "../Text";
 import { Column } from "../Column";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 interface DescriptionItem {
   content: string;
@@ -30,7 +31,7 @@ export function ContainerContentFooter({
         {description.map((item, index) => (
           <ContentFooter key={index}>
             <a
-              className="font-normal no-underline"
+              className="font-normal no-underline cursor-pointer text-gray-900 dark:text-gray-50 hover:text-primary-800 hover:dark:text-primary-500"
               onClick={item.onclick}
               href={item.redirect}
             >

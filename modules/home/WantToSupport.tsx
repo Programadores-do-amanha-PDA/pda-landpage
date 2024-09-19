@@ -1,6 +1,18 @@
 "use client";
-import { Layout, Text, Row, Button, Link, Column } from "@common/components";
-import { ArrowRightIcon, DocumentTextIcon, TrophyIcon } from "@heroicons/react/24/outline";
+import {
+  Layout,
+  Text,
+  Row,
+  Button,
+  Link,
+  Column,
+  InternalLink,
+} from "@common/components";
+import {
+  ArrowRightIcon,
+  DocumentTextIcon,
+  TrophyIcon,
+} from "@heroicons/react/24/outline";
 import { useModal } from "@common/context/modal-context";
 
 const WantToSupport = () => {
@@ -44,7 +56,7 @@ const WantToSupport = () => {
 
             <Column className="gap-6 sm:flex-row">
               <Link
-                className="w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-900 bg-gray-50/55 hover:bg-gray-50/80 dark:bg-primary-700/55 dark:hover:bg-primary-700/80 rounded-xl sm:max-w-52 shadow-md"
+                className="w-full md:w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-900 bg-gray-50/55 hover:bg-gray-50/80 dark:bg-primary-700/55 dark:hover:bg-primary-700/80 rounded-xl sm:max-w-52 shadow-md"
                 href="https://programadoresdoamanha.apoiar.co/"
               >
                 Doe Aqui
@@ -52,7 +64,7 @@ const WantToSupport = () => {
               </Link>
 
               <Link
-                className="w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-900 border-2 border-gray-50/55 hover:bg-gray-50/80 dark:border-primary-700/50 dark:hover:bg-primary-700/50 rounded-xl hover:shadow-md"
+                className="w-full md:w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-900 border-2 border-gray-50/55 hover:bg-gray-50/80 dark:border-primary-700/50 dark:hover:bg-primary-700/50 rounded-xl hover:shadow-md"
                 href="https://forms.gle/pFCB42A7FJ7L31Fd8"
               >
                 Quero Ser Mentor/a
@@ -74,20 +86,20 @@ const WantToSupport = () => {
 
             <Column className="gap-6 sm:flex-row">
               <Button
-                className="w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-50 bg-gray-50/55 hover:bg-gray-50/80 dark:bg-secondary-800/55 dark:hover:bg-secondary-800/80 rounded-xl sm:max-w-52 shadow-md"
+                className="w-full md:w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-50 bg-gray-50/55 hover:bg-gray-50/80 dark:bg-secondary-800/55 dark:hover:bg-secondary-800/80 rounded-xl sm:max-w-52 shadow-md"
                 onClick={handleOpenForms}
               >
                 Quero Apoiar
                 <ArrowRightIcon className="size-5 text-gray-50 stroke-2 -rotate-12" />
               </Button>
 
-              <Link
-                className="w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-50 border-2 border-gray-50/50 hover:bg-gray-50/50 dark:border-secondary-800/50 dark:hover:bg-secondary-800/50 rounded-xl hover:shadow-md"
-                href="https://forms.gle/pFCB42A7FJ7L31Fd8"
+              <InternalLink
+                className="w-full md:w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-50 border-2 border-gray-50/50 hover:bg-gray-50/50 dark:border-secondary-800/50 dark:hover:bg-secondary-800/50 rounded-xl hover:shadow-md"
+                href="/contrate-um-talento"
               >
                 Contrate um Talento
                 <TrophyIcon className="size-5 text-gray-50 -rotate-12" />
-              </Link>
+              </InternalLink>
             </Column>
           </Column>
         </Column>

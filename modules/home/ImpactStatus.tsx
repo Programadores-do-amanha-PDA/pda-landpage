@@ -12,7 +12,7 @@ const ImpactStatus = () => {
       data: "+R$ 3 milhões",
       label: "Gerados em renda",
       description:
-        "Geramos mais de 2 milhões de reais em renda agregada por nossos estudantes ao se empregarem na área de tecnologia.",
+        "Geramos mais de 3 milhões de reais em renda agregada por nossos estudantes ao se empregarem na área de tecnologia.",
     },
     {
       data: "250%",

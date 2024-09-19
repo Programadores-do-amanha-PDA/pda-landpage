@@ -1,6 +1,13 @@
 "use client";
-import { Button, Column, Layout, Row, Text } from "@/common/components";
-import { EnvelopeIcon } from "@heroicons/react/24/outline";
+import {
+  Button,
+  Column,
+  InternalLink,
+  Layout,
+  Row,
+  Text,
+} from "@/common/components";
+import { EnvelopeIcon, TrophyIcon } from "@heroicons/react/24/outline";
 import {
   AcademicCapIcon,
   BriefcaseIcon,
@@ -37,7 +44,7 @@ const HireATalent = () => {
   ];
 
   return (
-    <Row className="w-full items-center justify-center py-8">
+    <Row className="w-full items-center justify-center py-8 bg-secondary-400 dark:bg-secondary-700">
       <Layout className="w-full max-w-7xl p-6 lg:p-8 relative flex-col gap-20">
         <Column className="w-full text-start gap-4">
           <Text className="text-xl sm:text-2xl font-dela-gothic uppercase">
@@ -73,12 +80,19 @@ const HireATalent = () => {
 
         <Column className="md:flex-row gap-4 w-full items-center justify-start">
           <Button
-            className=" w-max h-10 p-1 px-3 gap-3 relative flex items-center justify-center transition-all font-semibold text-gray-900 dark:text-gray-50 bg-secondary-400/50 hover:bg-secondary-400/80 dark:bg-secondary-700/50 dark:hover:bg-secondary-700/80 rounded-xl sm:max-w-52 shadow-md"
+            className="w-full md:w-max h-10 p-1 px-3 gap-3 relative flex items-center justify-center transition-all font-semibold text-gray-900 dark:text-gray-50  bg-gray-50/55 dark:bg-secondary-800/55 hover:bg-gray-50/85 dark:hover:bg-secondary-800/85 rounded-xl sm:max-w-52 shadow-md"
             onClick={handleOpenForms}
           >
             Quero saber mais
             <EnvelopeIcon className="size-5 text-gray-900 dark:text-gray-50 stroke-2 -rotate-12" />
           </Button>
+          <InternalLink
+            className="w-full md:w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-50 border-2 border-gray-50/50 hover:bg-gray-50/50 dark:border-secondary-800/50 dark:hover:bg-secondary-800/50 rounded-xl hover:shadow-md"
+            href="/contrate-um-talento"
+          >
+            Contrate um Talento
+            <TrophyIcon className="size-5 text-gray-50 -rotate-12" />
+          </InternalLink>
         </Column>
       </Layout>
     </Row>

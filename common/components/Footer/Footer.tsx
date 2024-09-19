@@ -4,20 +4,20 @@ import { ContainerContentFooter } from "@common/components/ContainerCaptonFooter
 
 const Footer = () => {
   return (
-    <Row className="w-full items-center justify-center py-8 !pb-0 bg-slate-100 dark:bg-secondary-850">
+    <Row className="w-full items-center justify-center py-8 !pb-0 bg-slate-50 dark:bg-secondary-850">
       <Layout className="w-full max-w-7xl p-6 lg:p-8 relative flex-col gap-12">
         <Column className="w-full justify-between sm:flex-row gap-8">
           <Column className="gap-6 items-center sm:items-start">
             <Image
-              className="block dark:hidden size-16 w-auto"
-              width={200}
+              className="block dark:hidden size-14 w-auto"
+              width={300}
               height={100}
               src="/assets/Logo_PDA_Horizontal_FundoBranco.png"
               alt="Programadores do Amanhã"
             />
             <Image
               className="hidden dark:block size-16 w-auto"
-              width={200}
+              width={300}
               height={100}
               src="/assets/Logo_PDA_Horizontal_FundoRoxo.png"
               alt="Programadores do Amanhã"

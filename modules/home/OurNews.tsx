@@ -116,7 +116,7 @@ const OurNews = () => {
   const newsGroups = makeGroups();
 
   return (
-    <Row className="w-full items-center justify-center py-8">
+    <Row className="w-full items-center justify-center py-8 bg-secondary-400 dark:bg-secondary-700">
       <Layout className="w-full max-w-7xl p-6 lg:p-8 relative flex-col gap-28">
         <Column className="w-full text-start gap-4 ">
           <Text className="text-xl sm:text-2xl font-dela-gothic uppercase">
@@ -138,7 +138,7 @@ const OurNews = () => {
             {newsGroups[newsGroupIndex].map((n, i) => (
               <Column
                 key={i}
-                className="max-w-80 h-max bg-secondary-100/95 dark:bg-gray-600/35 gap-8 p-3 rounded-lg justify-between"
+                className="max-w-80 h-max bg-gray-50/90 dark:bg-secondary-900/35 gap-8 p-3 rounded-lg justify-between"
               >
                 {n.contentType === "text" && (
                   <>
@@ -190,7 +190,7 @@ const OurNews = () => {
 
           <Row className="w-full h-10 gap-4 items-center justify-center lg:justify-start">
             <Button
-              className="size-10 bg-secondary-100/95 dark:bg-gray-600/35 rounded-lg items-center justify-center"
+              className="size-10 bg-secondary-100/55 dark:bg-secondary-800/55 rounded-lg items-center justify-center"
               onClick={() =>
                 newsGroupIndex > 0
                   ? setNewsGroupIndex(newsGroupIndex - 1)
@@ -213,14 +213,14 @@ const OurNews = () => {
                 ) : (
                   <SunIcon
                     key={i}
-                    className="size-6 text-secondary-600/55 "
+                    className="size-6 text-secondary-600/55 dark:text-secondary-50/55 "
                     strokeWidth={2}
                   />
                 )
               )}
             </Row>
             <Button
-              className="size-10 bg-secondary-100/95 dark:bg-gray-600/35 rounded-lg items-center justify-center"
+              className="size-10 bg-secondary-100/55 dark:bg-secondary-800/55 rounded-lg items-center justify-center"
               onClick={() =>
                 newsGroupIndex !== newsGroups.length - 1
                   ? setNewsGroupIndex(newsGroupIndex + 1)

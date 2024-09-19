@@ -65,15 +65,15 @@ const partners = [
 ];
 
 const OurPartners = () => (
-  <Row className="justify-center p-6 lg:p-8 items-center w-full overflow-x-hidden bg-gray-50 dark:bg-secondary-900 relative">
-    <Layout className="w-full max-w-7xl  flex-col gap-20 !justify-start flex-wrap">
+  <Row className="justify-center p-6 lg:p-8 items-center w-full overflow-x-hidden bg-primary-500 dark:bg-primary-700 relative">
+    <Layout className="w-full max-w-7xl py-8 flex-col gap-20 !justify-start flex-wrap">
       <Column className="w-full text-start gap-4">
-        <Text className="text-xl sm:text-2xl font-dela-gothic">
-          <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
+        <Text className="text-xl sm:text-2xl font-dela-gothic uppercase">
+          <Text className="text-gray-50 dark:text-primary-900 font-ibm-plex-sans font-black text-center">
             {"</"}
           </Text>
-          Apoiadores e Patrocinadores
-          <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
+          Nossos Parceiros
+          <Text className="text-gray-50 dark:text-primary-900 font-ibm-plex-sans font-black text-center">
             {">"}
           </Text>
         </Text>

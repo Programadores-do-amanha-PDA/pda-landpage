@@ -27,13 +27,6 @@ const WhoWeAre = () => (
           </Text>
         </Text>
 
-        {/* <Text className="text-lg md:text-xl">
-          Em parceria com algumas das maiores empresas de tecnologia do Brasil e
-          Institutos filantrópicos, o Programadores do Amanhã apoiou no processo
-          de conquista da primeira vaga de emprego de jovens de todas as regiões
-          do Brasil, gerando mais de 2 milhões de reais em renda agregada.
-        </Text> */}
-
         <InternalLink
           href="/sobre-nos"
           className="w-max h-10 p-1 px-3 gap-3 relative flex items-center justify-center transition-all text-gray-900 font-semibold bg-gray-50/55 hover:bg-gray-50/85 rounded-xl sm:max-w-52 shadow-sm"

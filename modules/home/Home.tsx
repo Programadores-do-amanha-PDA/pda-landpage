@@ -1,4 +1,3 @@
-import Header from "./Header";
 import MainHighlight from "./MainHighlight";
 import ImpactStatus from "./ImpactStatus";
 import WhoWeAre from "./WhoWeAre";
@@ -9,10 +8,9 @@ import Subscribe from "./Subscribe";
 import WantToSupport from "./WantToSupport";
 import OurNews from "./OurNews";
 import OurPartners from "./OurPartners";
-import Footer from "./Footer";
 import WannaSupportModal from "@forms/WannaSupportModal";
 
-import { Column } from "@/common/components";
+import { Column, Header, Footer } from "@/common/components";
 
 const Home = () => {
   return (

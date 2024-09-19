@@ -4,6 +4,7 @@ export interface RowComponentProps extends PropsWithChildren<{}> {
   children?: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  ref?: React.RefObject<HTMLDivElement>;
 }
 
 const RowComponent: FC<RowComponentProps> = ({

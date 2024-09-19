@@ -1,9 +1,18 @@
 "use client";
-import { Column, Text, Row, Layout, Image, Button } from "@common/components";
+import {
+  Column,
+  Text,
+  Row,
+  Layout,
+  Image,
+  Button,
+  InternalLink,
+} from "@common/components";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   SunIcon,
+  TrophyIcon,
 } from "@heroicons/react/24/outline";
 import { useState } from "react";
 
@@ -85,55 +94,65 @@ const WhoAlreadyDone = () => {
               ))}
             </Column>
 
-            <Row className="w-full h-10 gap-4 items-center justify-center lg:justify-start">
-              <Button
-                className="size-10 bg-gray-50/35 dark:bg-gray-900/35 rounded-lg items-center justify-center"
-                onClick={() =>
-                  setFeedbackGroupIndex(
-                    feedbackGroupIndex > 0
-                      ? feedbackGroupIndex - 1
-                      : feedbackGroupIndex
-                  )
-                }
-              >
-                <ChevronLeftIcon
-                  className="text-gray-900 dark:text-gray-50 size-8 stroke-2"
-                  strokeWidth={1}
-                />
-              </Button>
-              <Row className="w-28 items-center gap-4 justify-center">
-                {newsGroups.map((_, i) =>
-                  i === feedbackGroupIndex ? (
-                    <SunIcon
-                      key={i}
-                      className="size-8 text-secondary-500"
-                      strokeWidth={2}
-                    />
-                  ) : (
-                    <SunIcon
-                      key={i}
-                      className="size-6 text-gray-50/35 dark:text-gray-900/35 "
-                      strokeWidth={2}
-                    />
-                  )
-                )}
+            <Column className="w-full md:flex-row justify-center md:justify-start items-center gap-14">
+              <Row className="w-full md:w-max gap-4 h-10 items-center justify-between md:justify-center lg:justify-start">
+                <Button
+                  className="size-10 bg-gray-50/35 dark:bg-gray-900/35 rounded-lg items-center justify-center"
+                  onClick={() =>
+                    setFeedbackGroupIndex(
+                      feedbackGroupIndex > 0
+                        ? feedbackGroupIndex - 1
+                        : feedbackGroupIndex
+                    )
+                  }
+                >
+                  <ChevronLeftIcon
+                    className="text-gray-900 dark:text-gray-50 size-8 stroke-2"
+                    strokeWidth={1}
+                  />
+                </Button>
+                <Row className="w-28 items-center gap-4 justify-center">
+                  {newsGroups.map((_, i) =>
+                    i === feedbackGroupIndex ? (
+                      <SunIcon
+                        key={i}
+                        className="size-8 text-primary-500"
+                        strokeWidth={2}
+                      />
+                    ) : (
+                      <SunIcon
+                        key={i}
+                        className="size-6 text-secondary-600/55 dark:text-secondary-50/55"
+                        strokeWidth={2}
+                      />
+                    )
+                  )}
+                </Row>
+                <Button
+                  className="size-10 bg-gray-50/35 dark:bg-gray-900/35 rounded-lg items-center justify-center"
+                  onClick={() =>
+                    setFeedbackGroupIndex(
+                      feedbackGroupIndex !== newsGroups.length - 1
+                        ? feedbackGroupIndex + 1
+                        : feedbackGroupIndex
+                    )
+                  }
+                >
+                  <ChevronRightIcon
+                    className="text-gray-900 dark:text-gray-50 size-8 stroke-2"
+                    strokeWidth={1}
+                  />
+                </Button>
               </Row>
-              <Button
-                className="size-10 bg-gray-50/35 dark:bg-gray-900/35 rounded-lg items-center justify-center"
-                onClick={() =>
-                  setFeedbackGroupIndex(
-                    feedbackGroupIndex !== newsGroups.length - 1
-                      ? feedbackGroupIndex + 1
-                      : feedbackGroupIndex
-                  )
-                }
+
+              <InternalLink
+                className="w-full md:w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-50 border-2 border-gray-50/50 hover:bg-gray-50/50 dark:border-secondary-800/50 dark:hover:bg-secondary-800/50 rounded-xl hover:shadow-md"
+                href="/contrate-um-talento"
               >
-                <ChevronRightIcon
-                  className="text-gray-900 dark:text-gray-50 size-8 stroke-2"
-                  strokeWidth={1}
-                />
-              </Button>
-            </Row>
+                Contrate um Talento
+                <TrophyIcon className="size-5 text-gray-50 -rotate-12" />
+              </InternalLink>
+            </Column>
           </Column>
         </Column>
       </Layout>
