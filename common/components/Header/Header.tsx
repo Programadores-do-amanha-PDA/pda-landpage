@@ -27,10 +27,10 @@ const Header = () => {
   };
 
   return (
-    <Row className="w-full min-h-20 sticky top-0 left-0 sm:h-20 items-start justify-center z-10 bg-gray-50 dark:bg-secondary-900">
+    <Row className="w-full min-h-20 sticky top-0 left-0 sm:h-20 items-start justify-center z-10 bg-gray-50 dark:bg-secondary-900 px-6 lg:px-8">
       <Row
         className={`
-        h-20 w-full bg-gray-50 dark:bg-secondary-900 transition-all top-0 max-w-7xl fixed sm:!justify-between items-center z-10 px-6 lg:px-8 ${
+        h-20 w-full bg-gray-50 dark:bg-secondary-900 transition-all top-0 max-w-7xl fixed sm:!justify-between items-center z-10  ${
           deviceMenuOpen ? deviceMenuCss : desktopMenuCss
         }`}
       >
@@ -89,7 +89,7 @@ const Header = () => {
             <Link className={buttonStyle} href={"/quem-somos"}>
               Quem somos
             </Link>
-            <Link className={buttonStyle} href={"/apoie-um-aluno"}>
+            <Link className={buttonStyle} href={"/transparencia"}>
               Transparência
             </Link>
           </Column>

@@ -5,7 +5,6 @@ import {
 } from "./ContainerContentFooterStyled";
 import { Text } from "../Text";
 import { Column } from "../Column";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 interface DescriptionItem {
   content: string;

@@ -42,3 +42,15 @@ body {
   font-family: "IBM Plex Sans", system-ui;
   font-style: normal;
 }
+
+.second-line {
+  flex-direction: row-reverse;
+
+  div {
+    align-items: flex-end;
+  }
+
+  div > span {
+    text-align: right;
+  }
+}
