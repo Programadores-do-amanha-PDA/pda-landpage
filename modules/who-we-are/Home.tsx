@@ -6,6 +6,9 @@ import OurValues from "./OurValues";
 import OurTeam from "./OurTeam";
 import Advice from "./Advice";
 import SupervisoryBoard from "./SupervisoryBoard";
+import TransparencyBanner from "./TransparencyBanner";
+import ActivityReport from "./ActivityReport";
+import FinancialStatements from "./FinancialStatements";
 
 const Home = () => {
   const metaProps = {
@@ -28,6 +31,9 @@ const Home = () => {
       <OurTeam />
       <Advice />
       <SupervisoryBoard />
+      <TransparencyBanner />
+      <ActivityReport />
+      <FinancialStatements />
       <Footer />
     </Column>
   );

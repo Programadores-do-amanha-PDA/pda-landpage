@@ -1,6 +1,8 @@
 import { FC, PropsWithChildren } from "react";
 
-export interface RowComponentProps extends PropsWithChildren<{}> {
+export interface RowComponentProps
+  extends PropsWithChildren<{}>,
+    React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
   onClick?: () => void;

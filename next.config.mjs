@@ -18,10 +18,6 @@ const nextConfig = {
         destination: "/who-we-are",
         source: "/quem-somos",
       },
-      {
-        destination: "/transparency",
-        source: "/transparencia",
-      },
     ];
   },
 };
