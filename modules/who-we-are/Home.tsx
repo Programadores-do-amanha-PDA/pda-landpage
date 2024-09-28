@@ -9,6 +9,7 @@ import SupervisoryBoard from "./SupervisoryBoard";
 import TransparencyBanner from "./TransparencyBanner";
 import ActivityReport from "./ActivityReport";
 import FinancialStatements from "./FinancialStatements";
+import ImpactStatus from "./ImpactStatus";
 
 const Home = () => {
   const metaProps = {
@@ -27,6 +28,7 @@ const Home = () => {
       <Header />
       <WhoWeAre />
       <WhereAreWe />
+      <ImpactStatus />
       <OurValues />
       <OurTeam />
       <Advice />

@@ -23,6 +23,7 @@ const OurValues = () => {
         "Todos nós da  Programadores do Amanhã sempre buscamos criar novas soluções e formas de aumentar nosso impacto. Testamos e aprendemos com os resultados, nos apoiando em dados e indicadores para entender como evoluir.",
     },
   ];
+
   return (
     <Row className="w-full items-center justify-center py-8 bg-secondary-630/55 dark:bg-secondary-630">
       <Layout className="w-full max-w-7xl p-6 lg:p-8 relative flex-col gap-28">
@@ -37,7 +38,8 @@ const OurValues = () => {
             </Text>
           </Text>
           <Text className="font-semibold">
-            Veja o que a comunidade tem falado da Programadores do Amanhã.
+            Conheça nossos valores que guiam nossa missão de empregar jovens
+            negros e indígenas no mercado de tecnologia
           </Text>
         </Column>
 
@@ -45,7 +47,7 @@ const OurValues = () => {
           {ourValues.map((value, index) => (
             <Column
               key={index}
-              className="gap-4 max-w-96 h-max bg-secondary-50/75 dark:bg-secondary-700/90  p-2 px-4 rounded-xl"
+              className="gap-2 max-w-96 bg-secondary-50/75 dark:bg-secondary-700/90  p-4 rounded-xl"
             >
               <Text className="font-dela-gothic">{value.label}</Text>
               <Text className="">{value.content}</Text>

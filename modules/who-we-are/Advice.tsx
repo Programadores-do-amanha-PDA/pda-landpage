@@ -15,7 +15,7 @@ const adviceMembers = [
     name: "Leticia Silveira",
     role: "Gerente de Programas",
     image: {
-      url: "/assets/team/Leticia_Silveira.jpg",
+      url: "/assets/team/Leticia_Silveira.png",
       alt: "",
     },
   },

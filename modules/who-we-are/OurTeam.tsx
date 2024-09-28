@@ -14,7 +14,7 @@ const OurTeam = () => {
       name: "Leticia Santana",
       role: "Gerente de Programas",
       image: {
-        url: "/assets/team/Leticia_Silveira.jpg",
+        url: "/assets/team/Leticia_Silveira.png",
         alt: "",
       },
     },

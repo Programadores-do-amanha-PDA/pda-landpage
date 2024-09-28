@@ -1,5 +1,5 @@
 "use client";
-import { Layout, Row, Text, Marker as Mark } from "@/common/components";
+import { Layout, Row, Text, Marker as Mark, Column } from "@/common/components";
 import { useEffect, useState } from "react";
 import {
   ComposableMap,
@@ -159,60 +159,82 @@ const WhereAreWe = () => {
       .then((data) => setGeoData(data));
   }, []);
 
-  if (!geoData) return <div>Carregando...</div>;
-
   return (
     <Row className="justify-center py-8 items-center w-full min-h-96 overflow-x-hidden">
-      <Layout className="w-full p-6 lg:p-8 max-w-7xl flex-col-reverse sm:flex-row gap-6 !justify-center items-center">
-        <Row className="w-full">
-          <ComposableMap
-            projection="geoAzimuthalEqualArea"
-            projectionConfig={{
-              rotate: [53, 15, 0],
-              scale: 600,
-            }}
-          >
-            <Geographies geography={geoData}>
-              {({ geographies }) =>
-                geographies.map((geo) => (
-                  <Geography key={geo.rsmKey} geography={geo} fill="#eddc11" />
-                ))
-              }
-            </Geographies>
-            {markers.map(({ name, coordinates, markerOffset }) => (
-              <Marker key={name} coordinates={coordinates}>
-                <g
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  transform="translate(-12, -24)"
-                  className="fill-none stroke-secondary-700 stroke-2"
-                >
-                  <path
-                    d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"
-                    fill="#fff"
-                  />
-                  <circle cx="12" cy="10" r="3" fill="#eddc11" />
-                </g>
+      <Layout className="w-full p-6 lg:p-8 flex-col gap-20 max-w-7xl">
+        <Column className="w-full text-start gap-4">
+          <Text className="text-xl sm:text-2xl font-dela-gothic uppercase">
+            <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
+              {"</"}
+            </Text>
+            Nosso Impacto
+            <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
+              {">"}
+            </Text>
+          </Text>
+        </Column>
 
-                <title style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}>
-                  {name}
-                </title>
-              </Marker>
-            ))}
-          </ComposableMap>
+        <Row className="flex-col-reverse sm:flex-row gap-6 !justify-center items-center">
+          <Row className="w-full items-center justify-center">
+            {!geoData ? (
+              <div>Carregando Mapa...</div>
+            ) : (
+              <ComposableMap
+                projection="geoAzimuthalEqualArea"
+                projectionConfig={{
+                  rotate: [53, 15, 0],
+                  scale: 600,
+                }}
+              >
+                <Geographies geography={geoData}>
+                  {({ geographies }) =>
+                    geographies.map((geo) => (
+                      <Geography
+                        key={geo.rsmKey}
+                        geography={geo}
+                        className="fill-primary-500"
+                      />
+                    ))
+                  }
+                </Geographies>
+                {markers.map(({ name, coordinates, markerOffset }) => (
+                  <Marker key={name} coordinates={coordinates}>
+                    <g
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      transform="translate(-12, -24)"
+                      className="fill-none stroke-secondary-700 stroke-2"
+                    >
+                      <path
+                        d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z"
+                        fill="#fff"
+                      />
+                      <circle cx="12" cy="10" r="3" fill="#eddc11" />
+                    </g>
+
+                    <title style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}>
+                      {name}
+                    </title>
+                  </Marker>
+                ))}
+              </ComposableMap>
+            )}
+          </Row>
+
+          <Text className="text-lg lg:text-xl text-gray-900 dark:text-gray-50 w-full text-center sm:text-start">
+            Em parceria com algumas das{" "}
+            <Mark className="bg-primary-500/55 px-2 rounded-lg text-gray-900 dark:text-gray-50">
+              maiores empresas de tecnologia do Brasil e Institutos
+              filantrópicos,
+            </Mark>{" "}
+            o Programadores do Amanhã apoiou no processo de{" "}
+            <Mark className="bg-primary-500/55 px-2 rounded-lg text-gray-900 dark:text-gray-50">
+              conquista da primeira vaga de emprego de jovens de todas as
+              regiões do Brasil, gerando mais de 3 milhões de reais em renda
+              agregada.
+            </Mark>{" "}
+          </Text>
         </Row>
-
-        <Text className="text-lg lg:text-xl text-gray-900 dark:text-gray-50 w-full text-center sm:text-start">
-          Em parceria com algumas das{" "}
-          <Mark className="bg-primary-500/55 px-2 rounded-lg text-gray-900 dark:text-gray-50">
-            maiores empresas de tecnologia do Brasil e Institutos filantrópicos,
-          </Mark>{" "}
-          o Programadores do Amanhã apoiou no processo de{" "}
-          <Mark className="bg-primary-500/55 px-2 rounded-lg text-gray-900 dark:text-gray-50">
-            conquista da primeira vaga de emprego de jovens de todas as regiões
-            do Brasil, gerando mais de 3 milhões de reais em renda agregada.
-          </Mark>{" "}
-        </Text>
       </Layout>
     </Row>
   );
