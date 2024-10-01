@@ -19,9 +19,9 @@ const Home = () => {
       <MainHighlight />
       <ImpactStatus />
       <WhoWeAre />
-      <HireATalent />
       <AboutFormation />
       <WhoAlreadyDone />
+      <HireATalent />
       <Subscribe />
       <WantToSupport />
       <OurNews />

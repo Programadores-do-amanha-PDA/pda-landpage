@@ -20,7 +20,7 @@
     "paths": {
       "@/*": ["./*"],
       "@home/*": ["./modules/home/*"],
-      "@support-a-student/*": ["./modules/support-a-student/*"],
+      "@hire-a-talent/*": ["./modules/hire-a-talent/*"],
       "@students/*": ["./src/modules/students/*"],
       "@student/*": ["./src/modules/student/*"],
       "@forms/*": ["./modules/forms/*"],

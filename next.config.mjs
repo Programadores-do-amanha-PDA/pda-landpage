@@ -18,6 +18,10 @@ const nextConfig = {
         destination: "/who-we-are",
         source: "/quem-somos",
       },
+      {
+        destination: "/hire-a-talent",
+        source: "/contrate-um-talento",
+      },
     ];
   },
 };

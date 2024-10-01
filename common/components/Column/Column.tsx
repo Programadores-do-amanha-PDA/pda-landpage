@@ -1,6 +1,8 @@
 import { FC, PropsWithChildren } from "react";
 
-interface ColumnComponentProps extends PropsWithChildren<{}> {
+interface ColumnComponentProps
+  extends PropsWithChildren<{}>,
+    React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
   id?: string;
