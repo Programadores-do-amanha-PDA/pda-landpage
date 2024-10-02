@@ -9,33 +9,33 @@ import {
 import { Input } from "@headlessui/react";
 import clsx from "clsx";
 import { useState } from "react";
-import { ComboBox } from "@/common/components/Selectors";
+import { ListBox } from "@/common/components/Selectors";
 
 const students = [
   {
-    name: "Karlla Doe",
-    image: "/images/alumini/alumini1.jpg",
+    name: "Karlla Souzza",
+    image: "/assets/team/Karlla_Souzza.jpg",
     technologies: ["Angular", "Vue"],
     linkedIn: "https://www.linkedin.com/in/johndoe/",
     github: "https://github.com/johndoe",
   },
   {
-    name: "John Doe",
-    image: "/images/alumini/alumini1.jpg",
+    name: "Karlla Souzza",
+    image: "/assets/team/Karlla_Souzza.jpg",
     technologies: ["React", "Angular", "Vue"],
     linkedIn: "https://www.linkedin.com/in/johndoe/",
     github: "https://github.com/johndoe",
   },
   {
-    name: "John Doe",
-    image: "/images/alumini/alumini1.jpg",
+    name: "Karlla Souzza",
+    image: "/assets/team/Karlla_Souzza.jpg",
     technologies: ["React", "Angular", "Vue"],
     linkedIn: "https://www.linkedin.com/in/johndoe/",
     github: "https://github.com/johndoe",
   },
   {
-    name: "John Doe",
-    image: "/images/alumini/alumini1.jpg",
+    name: "Karlla Souzza",
+    image: "/assets/team/Karlla_Souzza.jpg",
     technologies: ["React", "Angular", "Vue"],
     linkedIn: "https://www.linkedin.com/in/johndoe/",
     github: "https://github.com/johndoe",
@@ -44,32 +44,44 @@ const students = [
 
 const StudentsCardsContainer = () => {
   const [search, setSearch] = useState("");
-  const [queryFilter, setQueryFilter] = useState("");
   const uniqueTechnologies = Array.from(
     new Set(students.flatMap((s) => s.technologies))
   );
-  const technologies = ["Tecnologias", ...uniqueTechnologies];
-  const [filterSelected, setFilterSelected] = useState<string | null>(
-    technologies[0]
-  );
+  const technologies = ["Todas", ...uniqueTechnologies];
+  const [filterSelected, setFilterSelected] = useState([technologies[0]]);
+
+  const handleSetFilterSelected = (items: string[]) => {
+    if (items[items.length - 1] === technologies[0]) {
+      setFilterSelected([technologies[0]]);
+    } else if (
+      items[items.length - 1] !== technologies[0] &&
+      items.length > 0
+    ) {
+      setFilterSelected(items.filter((i) => i !== technologies[0]));
+    } else if (items.length === 0) {
+      setFilterSelected([technologies[0]]);
+    }
+  };
 
   const studentFilter = students.filter((student) => {
     if (search) {
-      if (filterSelected === "Tecnologias") {
+      if (filterSelected.length === 1 && filterSelected[0] === "Todas") {
         return student.name.toLowerCase().includes(search.toLowerCase());
-      } else if (filterSelected !== null) {
+      } else if (filterSelected.length > 0) {
         return (
           student.name.toLowerCase().includes(search.toLowerCase()) &&
-          student.technologies.includes(filterSelected)
+          filterSelected.some((tech) => student.technologies.includes(tech))
         );
       } else {
         return false;
       }
     } else {
-      if (filterSelected === "Tecnologias") {
+      if (filterSelected.length === 1 && filterSelected[0] === "Todas") {
         return true;
-      } else if (filterSelected !== null) {
-        return student.technologies.includes(filterSelected);
+      } else if (filterSelected.length > 0) {
+        return filterSelected.some((tech) =>
+          student.technologies.includes(tech)
+        );
       } else {
         return false;
       }
@@ -94,19 +106,17 @@ const StudentsCardsContainer = () => {
           </Row>
           <Row className="h-10 w-52 items-center justify-center gap-2 relative">
             <FunnelIcon className="size-5 stroke-2" />
-            <ComboBox
-              item={filterSelected}
+            <ListBox
               itens={technologies}
-              query={queryFilter}
-              setItem={setFilterSelected}
-              setQuery={setQueryFilter}
+              selectedItems={filterSelected}
+              setSelectedItems={handleSetFilterSelected}
             />
           </Row>
           <Link
             className="font-semibold text-gray-900 cursor-pointer dark:text-gray-50 flex flex-row gap-4 items-center justify-center w-full md:w-max h-10 p-1 px-2 rounded-xl border-2 border-gray-50/35 hover:border-gray-50/80"
             href=""
           >
-            <Text className="">Contrate diretamente conosco</Text>
+            <Text className="">Contrate Diretamente Conosco</Text>
             <DocumentTextIcon className="size-4 -rotate-12 stroke-2" />
           </Link>
         </Column>
