@@ -96,7 +96,7 @@ const Header = () => {
 
           <Column className="sm:flex-row w-full sm:w-max gap-4 ">
             <Button
-              className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-primary-500 rounded-xl gap-2 !text-gray-900 shadow-sm`}
+              className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-primary-500 rounded-xl gap-2 !text-gray-900 hover:shadow-sm`}
               onClick={handleSubscribe}
             >
               Inscreva-se
