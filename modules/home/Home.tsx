@@ -20,8 +20,10 @@ const Home = () => {
       <ImpactStatus />
       <WhoWeAre />
       <AboutFormation />
-      <WhoAlreadyDone />
-      <HireATalent />
+      <Column className="w-full items-center justify-center py-8 bg-gradient-to-b from-secondary-630/75 to-secondary-400 dark:from-secondary-630 dark:to-secondary-700 gap-8">
+        <WhoAlreadyDone />
+        <HireATalent />
+      </Column>
       <Subscribe />
       <WantToSupport />
       <OurNews />

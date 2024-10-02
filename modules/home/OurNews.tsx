@@ -118,7 +118,7 @@ const OurNews = () => {
   return (
     <Row className="w-full items-center justify-center py-8 bg-secondary-400 dark:bg-secondary-700">
       <Layout className="w-full max-w-7xl p-6 lg:p-8 relative flex-col gap-28">
-        <Column className="w-full text-start gap-4 ">
+        <Column className="w-full text-center md:text-start gap-4 ">
           <Text className="text-xl sm:text-2xl font-dela-gothic uppercase">
             <Text className="text-yellow-400  font-ibm-plex-sans font-black text-center">
               {"</"}
@@ -133,19 +133,17 @@ const OurNews = () => {
           </Text>
         </Column>
 
-        <Column className="gap-8">
-          <Row className="gap-6 flex-wrap">
+        <Column className="gap-8 ">
+          <Row className="gap-6 flex-wrap justify-center md:justify-start">
             {newsGroups[newsGroupIndex].map((n, i) => (
               <Column
                 key={i}
                 className="max-w-80 h-max bg-gray-50/90 dark:bg-secondary-900/35 gap-8 p-3 rounded-lg justify-between"
               >
                 {n.contentType === "text" && (
-                  <>
-                    <Text className=" text-gray-900 dark:text-gray-50">
-                      {n.content}
-                    </Text>
-                  </>
+                  <Text className=" text-gray-900 dark:text-gray-50">
+                    {n.content}
+                  </Text>
                 )}
                 {n.contentType === "youtube" && (
                   <Row className="">

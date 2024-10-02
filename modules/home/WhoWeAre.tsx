@@ -28,7 +28,7 @@ const WhoWeAre = () => (
         </Text>
 
         <InternalLink
-          href="/sobre-nos"
+          href="/quem-somos"
           className="w-max h-10 p-1 px-3 gap-3 relative flex items-center justify-center transition-all text-gray-900 font-semibold bg-gray-50/55 hover:bg-gray-50/85 rounded-xl sm:max-w-52 shadow-sm"
         >
           Ver mais

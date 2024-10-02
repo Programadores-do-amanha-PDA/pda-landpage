@@ -24,7 +24,7 @@ const AboutFormation = () => {
     {
       label: "Programação Back-End",
       expandedText:
-        "Oferecemos aulas,materiais e desafios para que os estudantes possam aprender a criar back-ends para aplicações reais.",
+        "Oferecemos aulas, materiais e desafios para que os estudantes possam aprender a criar back-ends para aplicações reais.",
       tagSection: {
         tagLabel: "Tecnologias:",
         tags: [
@@ -40,10 +40,36 @@ const AboutFormation = () => {
     {
       label: "Imersão em Inglês",
       expandedText:
-        "Oferecemos aulas de inglês para que você possa explorar o universo tecnológico sem limites.",
+        "Oferecemos aulas, materiais e desafios de inglês para que nossos estudantes possam explorar o universo tecnológico sem limites.",
       tagSection: {
-        tagLabel: "Tecnologias:",
-        tags: ["HTML5"],
+        tagLabel: "Conteúdos:",
+        tags: [
+          "Vocabulary",
+          "Personal presentation",
+          "Present simple",
+          "Adverbs of frequency",
+          "Past simple",
+          "Present Perfect",
+          "Past Continuous",
+          "Modal Verbs",
+        ],
+      },
+    },
+    {
+      label: "Soft Skills",
+      expandedText:
+        "Oferecemos aulas, materiais e desafios de habilidades comportamentais para que nossos estudantes possam se desenvolver de maneira profissional e aprender a lida com o outro e consigo mesmo em diferentes situações.",
+      tagSection: {
+        tagLabel: "Habilidades:",
+        tags: [
+          "Ágil",
+          "SCRUM & KANBAN",
+          "Comunicação Não-Violenta",
+          "Gestão de conflitos",
+          "Inovação",
+          "Visão de negócio",
+          "Storytelling",
+        ],
       },
     },
     {
@@ -51,8 +77,8 @@ const AboutFormation = () => {
       expandedText:
         "Oferecemos uma trilha de educação financeira para os estudantes aprenderem a gerenciar seu dinheiro eficientemente.",
       tagSection: {
-        tagLabel: "Tecnologias:",
-        tags: ["HTML5"],
+        tagLabel: "Conteúdos:",
+        tags: [""],
       },
     },
   ];
