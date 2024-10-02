@@ -1,7 +1,7 @@
 import Head from "next/head";
 
 import { Column, Footer, Header } from "@/common/components";
-import StudentsCards from "./StudentsCards";
+import StudentsCards from "./StudentsCardsContainer";
 
 const Home = () => {
   const metaProps = {
@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <Column className="flex w-full h-full items-center justify-start bg-gray-50 dark:bg-secondary-900 relative">
+    <Column className="flex w-full h-screen items-center justify-center md:justify-start bg-gray-50 dark:bg-secondary-900 relative">
       <Head>
         <title>Programadores do Amanhã</title>
         <link rel="icon" href="/static/favicon.ico" />
@@ -29,9 +29,10 @@ const Home = () => {
         <meta property="og:url" content={metaProps.ogUrl} />
       </Head>
       <Header />
-      
+
       <StudentsCards />
-      <Footer />
+
+      {/* <Footer /> */}
     </Column>
   );
 };
