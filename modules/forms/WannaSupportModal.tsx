@@ -10,7 +10,7 @@ const WannaSupport = () => {
   const { push } = useRouter();
   const searchParams = useSearchParams();
 
-  const { isOpen, setIsOpen } = useModal();
+  const { isOpen, setIsOpen, title } = useModal();
 
   const successfull = searchParams.get("successfull");
 
@@ -34,29 +34,31 @@ const WannaSupport = () => {
   }, [isOpen, successfull]);
 
   return (
-    <>
-      <Modal title="QUERO APOIAR" isOpen={isOpen} onClose={onClose}>
-        {!successfull ? (
-          isOpen && (
-            <Column
-              className="h-[474px] w-full md:w-[500px]"
-              id="wanna-support-form"
-            />
-          )
-        ) : (
-          <Row className="items-center justify-center gap-6">
-            <CheckIcon className="h-12 w-12 text-green-500 stroke-2" />
+    <Modal
+      title={title ? title : "QUERO APOIAR"}
+      isOpen={isOpen}
+      onClose={onClose}
+    >
+      {!successfull ? (
+        isOpen && (
+          <Column
+            className="h-[474px] w-full md:w-[500px]"
+            id="wanna-support-form"
+          />
+        )
+      ) : (
+        <Row className="items-center justify-center gap-6">
+          <CheckIcon className="h-12 w-12 text-green-500 stroke-2" />
 
-            <Column>
-              <Text className="text-lg font-ibm-plex-sans !font-bold mt-[50] mb-2">
-                Mensagem enviada com sucesso!
-              </Text>
-              <Text className="text-base">Você será respondido em breve.</Text>
-            </Column>
-          </Row>
-        )}
-      </Modal>
-    </>
+          <Column>
+            <Text className="text-lg font-ibm-plex-sans !font-bold mt-[50] mb-2">
+              Mensagem enviada com sucesso!
+            </Text>
+            <Text className="text-base">Você será respondido em breve.</Text>
+          </Column>
+        </Row>
+      )}
+    </Modal>
   );
 };
 

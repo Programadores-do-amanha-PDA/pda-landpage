@@ -146,7 +146,9 @@ const OurTeam = () => {
             </Text>
           </Text>
           <Text className="font-semibold">
-            Conheça as pessoas que tornam a nossa missão possível!
+            Conheça as pessoas que estão conosco nesta luta para tornar a nossa
+            missão de empregar a juventude negra e indígena na area da
+            tecnologia possível!
           </Text>
         </Column>
 

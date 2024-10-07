@@ -22,7 +22,7 @@ const ListBox = ({
         <div className="relative w-full">
           <ListboxButton
             className={clsx(
-              "w-full h-10 rounded-xl border-none bg-gray-50/35 px-2 text-sm/6 text-gray-50 dark:text-gray-900",
+              "w-full h-10 rounded-xl border-none bg-gray-700/35 dark:bg-gray-50/35 px-2 text-sm/6 text-gray-50 dark:text-gray-900",
               "items-center justify-between flex"
             )}
           >
@@ -37,7 +37,7 @@ const ListBox = ({
           anchor="bottom"
           transition
           className={clsx(
-            "w-[var(--button-width)] rounded-xl border border-gray-50/5 bg-primary-50 p-1 [--anchor-gap:var(--spacing-1)] empty:invisible",
+            "w-[var(--button-width)] rounded-xl border border-gray-50/5 bg-gray-700 dark:bg-primary-50 p-1 [--anchor-gap:var(--spacing-1)] empty:invisible",
             "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0"
           )}
         >

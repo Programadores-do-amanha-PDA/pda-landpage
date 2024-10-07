@@ -16,15 +16,16 @@ import {
 import { useModal } from "@common/context/modal-context";
 
 const WantToSupport = () => {
-  const { setIsOpen } = useModal();
+  const { setIsOpen, setTitle } = useModal();
 
   const handleOpenForms = () => {
     setIsOpen(true);
+    setTitle("QUERO APOIAR");
   };
 
   return (
     <Row className="justify-center py-8 items-center w-full overflow-x-hidden relative">
-      <Layout className="w-full max-w-7xl p-6 md:p-8 flex-col gap-14 !justify-center items-center flex-wrap">
+      <Layout className="w-full max-w-7xl p-6 md:p-8 flex-col gap-20 !justify-center items-center flex-wrap">
         <Column className="w-full text-start gap-4">
           <Text className="text-xl sm:text-2xl font-dela-gothic uppercase">
             <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
@@ -42,7 +43,7 @@ const WantToSupport = () => {
         </Column>
 
         <Column className="w-full lg:flex-row rounded-xl overflow-hidden">
-          <Column className="w-full lg:w-1/2 bg-primary-500 p-4 py-6 md:py-10 gap-10 justify-between">
+          <Column className="w-full lg:w-1/2 bg-primary-500 p-4 gap-10 justify-between">
             <Column className="gap-2">
               <Text className="font-dela-gothic uppercase text-gray-900">
                 APOIE COMO PESSOA FÍSICA
@@ -73,7 +74,7 @@ const WantToSupport = () => {
             </Column>
           </Column>
 
-          <Column className="w-full lg:w-1/2 bg-secondary-630 p-4 py-6 md:py-10 gap-10 justify-between">
+          <Column className="w-full lg:w-1/2 bg-secondary-630 p-4  gap-10 justify-between">
             <Column className="gap-2">
               <Text className="font-dela-gothic uppercase text-gray-50">
                 APOIE COMO EMPRESA OU INSTITUIÇÃO

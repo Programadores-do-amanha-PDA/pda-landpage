@@ -10,10 +10,11 @@ import { EnvelopeIcon, TrophyIcon } from "@heroicons/react/24/outline";
 import { useModal } from "@common/context/modal-context";
 
 const HireATalent = () => {
-  const { setIsOpen } = useModal();
+  const { setIsOpen, setTitle } = useModal();
 
   const handleOpenForms = () => {
     setIsOpen(true);
+    setTitle("QUERO SABER MAIS");
   };
 
   const HireATalentCards = [
@@ -21,19 +22,19 @@ const HireATalent = () => {
       image: "bg-[url('/assets/woman_working.jpg')]",
       title: "Analista JR ou Trainee",
       description:
-        "Desenvolve os trabalhos de montagem, depuração e testes de programas e executando serviços de manutenção nos programas já desenvolvidos.",
+        "Contrate um Analista JR ou Trainee e traga inovação para sua equipe! Esses jovens talentos estão prontos para aplicar seus conhecimentos e contribuir com novas ideias. Invista em seu desenvolvimento e prepare-os para se tornarem futuros líderes na sua empresa. Entre em contato conosco e descubra como podemos ajudar na contratação de novos talentos!",
     },
     {
       image: "bg-[url('/assets/man_working.jpg')]",
       title: "Estágios",
       description:
-        "Desenvolve os trabalhos de montagem, depuração e testes de programas e executando serviços de manutenção nos programas já desenvolvidos.",
+        "Aproveite a oportunidade de contratar estagiários! Eles trazem energia e novas perspectivas, além de estarem ansiosos para aprender e contribuir com sua empresa. Com um programa de estágio bem estruturado, você pode moldar futuros profissionais enquanto ganha colaboradores dedicados. Entre em contato agora e comece o processo de seleção!",
     },
     {
       image: "bg-[url('/assets/woman_working_together.jpg')]",
       title: "Jovem Aprendiz",
       description:
-        "Desenvolve os trabalhos de montagem, depuração e testes de programas e executando serviços de manutenção nos programas já desenvolvidos.",
+        "Invista no futuro ao contratar um Jovem Aprendiz! Essa é uma excelente forma de apoiar o desenvolvimento profissional de jovens entre 14 e 24 anos, enquanto eles contribuem com suas habilidades para sua empresa. Além de cumprir a legislação, você promove a inclusão social e forma cidadãos preparados para o mercado de trabalho.",
     },
   ];
 
@@ -59,7 +60,7 @@ const HireATalent = () => {
         {HireATalentCards.map((card, i) => (
           <Column
             key={i}
-            className={`w-full md:w-80 h-max items-start justify-center rounded-xl p-4 ${card.image} gap-8 shadow-sm  overflow-clip bg-bottom bg-cover relative before:rounded-xl before:bg-secondary-400/50 before:backdrop-blur-sm before:dark:bg-secondary-700/50 before:absolute before:w-full before:h-full before:inset-y-0 before:m-auto before:inset-x-0`}
+            className={`w-full md:w-80 h-max items-start justify-center rounded-xl p-4 ${card.image} gap-8 shadow-sm  overflow-clip bg-bottom bg-cover relative before:rounded-xl before:bg-secondary-300/90 before:dark:bg-secondary-700/85 before:absolute before:w-full before:h-full before:inset-y-0 before:m-auto before:inset-x-0`}
           >
             <Column className="gap-4 z-[2]">
               <Text className="text-lg font-dela-gothic">{card.title}</Text>

@@ -24,6 +24,10 @@ const nextConfig = {
       },
     ];
   },
+
+  images: {
+    domains: ["www.gravatar.com"],
+  },
 };
 
 export default nextConfig;

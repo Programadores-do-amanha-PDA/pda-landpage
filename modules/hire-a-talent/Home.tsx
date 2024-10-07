@@ -1,9 +1,10 @@
 import Head from "next/head";
 
-import { Column, Footer, Header } from "@/common/components";
+import { Column, Header } from "@/common/components";
 import StudentsCards from "./StudentsCardsContainer";
+import { Student } from "@/app/api/student/_studentModel";
 
-const Home = () => {
+const Home = ({ students }: { students: Student[] }) => {
   const metaProps = {
     author: "Programadores do Amanhã",
     description:
@@ -30,9 +31,7 @@ const Home = () => {
       </Head>
       <Header />
 
-      <StudentsCards />
-
-      {/* <Footer /> */}
+      <StudentsCards students={students} />
     </Column>
   );
 };

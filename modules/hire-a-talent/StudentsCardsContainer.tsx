@@ -10,39 +10,13 @@ import { Input } from "@headlessui/react";
 import clsx from "clsx";
 import { useState } from "react";
 import { ListBox } from "@/common/components/Selectors";
+import { Student } from "@/app/api/student/_studentModel";
 
-const students = [
-  {
-    name: "Karlla Souzza",
-    image: "/assets/team/Karlla_Souzza.jpg",
-    technologies: ["Angular", "Vue"],
-    linkedIn: "https://www.linkedin.com/in/johndoe/",
-    github: "https://github.com/johndoe",
-  },
-  {
-    name: "Karlla Souzza",
-    image: "/assets/team/Karlla_Souzza.jpg",
-    technologies: ["React", "Angular", "Vue"],
-    linkedIn: "https://www.linkedin.com/in/johndoe/",
-    github: "https://github.com/johndoe",
-  },
-  {
-    name: "Karlla Souzza",
-    image: "/assets/team/Karlla_Souzza.jpg",
-    technologies: ["React", "Angular", "Vue"],
-    linkedIn: "https://www.linkedin.com/in/johndoe/",
-    github: "https://github.com/johndoe",
-  },
-  {
-    name: "Karlla Souzza",
-    image: "/assets/team/Karlla_Souzza.jpg",
-    technologies: ["React", "Angular", "Vue"],
-    linkedIn: "https://www.linkedin.com/in/johndoe/",
-    github: "https://github.com/johndoe",
-  },
-];
+const StudentsCardsContainer = ({ students }: { students: Student[] }) => {
+  if (!students) {
+    throw new Error("Students prop is required");
+  }
 
-const StudentsCardsContainer = () => {
   const [search, setSearch] = useState("");
   const uniqueTechnologies = Array.from(
     new Set(students.flatMap((s) => s.technologies))
@@ -90,13 +64,16 @@ const StudentsCardsContainer = () => {
 
   return (
     <Row className="justify-center p-6 md:p-10 h-full !items-start w-full overflow-x-hidden relative overflow-hidden">
-      <Layout className="w-full h-full max-w-7xl flex-col !items-start !justify-start overflow-x-auto">
-        <Column className="bg-primary-700 w-full h-max md:h-max rounded-xl p-4 items-start md:items-center justify-between md:flex-row flex-wrap gap-4 sticky top-0 inset-x-0">
+      <Layout className="w-full h-full max-w-7xl flex-col !items-center !justify-start overflow-x-auto">
+        <Column className="dark:bg-primary-700 bg-primary-500 w-full h-max md:h-max rounded-xl p-4 items-start md:items-center justify-between md:flex-row flex-wrap gap-4 sticky top-0 inset-x-0 z-10">
+          <Text className="text-xl w-full mb-10 text-gray-900 dark:text-gray-50 sm:text-2xl text-center font-dela-gothic uppercase">
+            Contrate um Talento
+          </Text>
           <Row className="h-10 w-full md:w-1/3 items-center justify-center gap-2">
             <MagnifyingGlassIcon className="size-5 stroke-2" />
             <Input
               className={clsx(
-                " block w-full rounded-xl shadow-sm border-none bg-gray-50/35 py-1.5 px-3 text-sm/6 text-gray-50 dark:text-gray-900 placeholder-gray-50 dark:placeholder-gray-900",
+                " block w-full rounded-xl shadow-sm border-none bg-gray-700/35 dark:bg-gray-50/35 py-1.5 px-3 text-sm/6 text-gray-50 dark:text-gray-900 placeholder-gray-50 dark:placeholder-gray-900",
                 "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-gray-50/25 font-ibm-plex-sans"
               )}
               placeholder="Procurando por alguém?"
@@ -113,7 +90,7 @@ const StudentsCardsContainer = () => {
             />
           </Row>
           <Link
-            className="font-semibold text-gray-900 cursor-pointer dark:text-gray-50 flex flex-row gap-4 items-center justify-center w-full md:w-max h-10 p-1 px-2 rounded-xl border-2 border-gray-50/35 hover:border-gray-50/80"
+            className="font-semibold text-gray-900 cursor-pointer dark:text-gray-50 flex flex-row gap-4 items-center justify-center w-full md:w-max h-10 p-1 px-2 rounded-xl border-2 border-gray-900/35  dark:border-gray-50/35 dark:hover:border-gray-50/80 hover:border-gray-900/80"
             href=""
           >
             <Text className="">Contrate Diretamente Conosco</Text>
@@ -121,17 +98,17 @@ const StudentsCardsContainer = () => {
           </Link>
         </Column>
 
-        <Column className="w-full h-max gap-6 px-2 pt-10 md:flex-row md:flex-wrap">
+        <Column className="w-full h-max gap-6 px-2 pt-10 md:flex-row md:flex-wrap justify-evenly">
           {studentFilter.map((student, i) => (
             <Column
               key={i}
-              className="w-full lg:max-w-96 lg:h-max max-h-50 dark:bg-gray-50/30 p-2 rounded-2xl gap-6 shadow-md"
+              className="w-full lg:max-w-96 lg:h-max max-h-50 bg-gray-100 dark:bg-gray-50/30 p-2 rounded-2xl gap-6 shadow-md"
             >
               <Row className="w-full gap-4">
                 <Image
                   className="rounded-xl w-28 object-cover border-0"
-                  src={student.image}
-                  width={300}
+                  src={student.avatar ?? ""}
+                  width={150}
                   height={300}
                   alt=""
                 />
@@ -158,13 +135,13 @@ const StudentsCardsContainer = () => {
                 <Row className="gap-2 w-full justify-between">
                   <Link
                     className="font-semibold text-gray-900 cursor-pointer dark:text-gray-50 flex flex-row flex-nowrap gap-4 items-center justify-center bg-primary-500/55 w-full p-1 px-2 rounded-xl hover:bg-primary-500/75"
-                    href={student.linkedIn}
+                    href={student.linkedin}
                   >
                     <Text className="">LinkedIn</Text>
                     <ArrowRightIcon className="size-4 -rotate-12" />
                   </Link>
                   <Link
-                    className="font-semibold text-gray-900 cursor-pointer dark:text-gray-50 flex flex-row flex-nowrap gap-4 items-center justify-center w-full p-1 px-2 rounded-xl hover:bg-gray-50/35"
+                    className="font-semibold text-gray-900 cursor-pointer dark:text-gray-50 flex flex-row flex-nowrap gap-4 items-center justify-center w-full p-1 px-2 rounded-xl dark:hover:bg-gray-50/35 hover:bg-gray-50"
                     href={student.github}
                   >
                     <Text className="">Github</Text>

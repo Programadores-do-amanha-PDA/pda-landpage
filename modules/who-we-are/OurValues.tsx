@@ -38,8 +38,8 @@ const OurValues = () => {
             </Text>
           </Text>
           <Text className="font-semibold">
-            Conheça nossos valores que guiam nossa missão de empregar jovens
-            negros e indígenas no mercado de tecnologia
+            Conheça os nossos valores que nos guiam em nossa missão de empregar
+            jovens negros e indígenas no mercado de tecnologia.
           </Text>
         </Column>
 

@@ -1,4 +1,4 @@
-import { Student } from '../pages/api/student/_studentModel'
+import { Student } from '../app/api/student/_studentModel'
 
 export const getRandomStudent = async (url: string) => {
   return new Promise<Student>((resolve, reject) => {

@@ -82,9 +82,6 @@ const Advice = () => {
               {">"}
             </Text>
           </Text>
-          <Text className="font-semibold">
-            Conheça as pessoas que tornam a nossa missão possível!
-          </Text>
         </Column>
 
         <div
@@ -106,7 +103,9 @@ const Advice = () => {
 
               <Column className="gap-2 max-[737px]:even:items-end">
                 <Text className="font-bold text-lg max-[737px]:even:text-right text-gray-900 dark:text-gray-50">
-                  <Marker className="px-1 rounded-lg bg-gray-50 dark:bg-secondary-900 text-gray-900 dark:text-gray-50">{member.name}</Marker>
+                  <Marker className="px-1 rounded-lg bg-gray-50 dark:bg-secondary-900 text-gray-900 dark:text-gray-50">
+                    {member.name}
+                  </Marker>
                 </Text>
                 <Text className="font-normal max-[737px]:even:text-right text-gray-900 dark:text-gray-50">
                   {member.role}

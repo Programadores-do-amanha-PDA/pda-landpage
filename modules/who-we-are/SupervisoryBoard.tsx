@@ -82,9 +82,6 @@ const SupervisoryBoard = () => {
               {">"}
             </Text>
           </Text>
-          <Text className="font-semibold">
-            Conheça as pessoas que tornam a nossa missão possível!
-          </Text>
         </Column>
 
         <div

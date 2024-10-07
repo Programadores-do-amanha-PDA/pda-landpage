@@ -10,12 +10,15 @@ import { ScriptProps } from "next/script";
 interface IModalContext {
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
+  title: string;
+  setTitle: Dispatch<SetStateAction<string>>;
 }
 
 const ModalContext = React.createContext<IModalContext>({} as IModalContext);
 
 const ModalProvider: React.FC<ScriptProps> = (props) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [title, setTitle] = useState("QUERO APOIAR");
 
   useEffect(() => {
     if (isOpen) {
@@ -32,7 +35,10 @@ const ModalProvider: React.FC<ScriptProps> = (props) => {
   }, []);
 
   return (
-    <ModalContext.Provider value={{ isOpen, setIsOpen }} {...props}>
+    <ModalContext.Provider
+      value={{ isOpen, setIsOpen, title, setTitle }}
+      {...props}
+    >
       {props.children}
     </ModalContext.Provider>
   );
