@@ -11,6 +11,7 @@ import OurPartners from "./OurPartners";
 import WannaSupportModal from "@forms/WannaSupportModal";
 
 import { Column, Header, Footer } from "@/common/components";
+import { Suspense } from "react";
 
 const Home = () => {
   return (
@@ -29,7 +30,9 @@ const Home = () => {
       <OurNews />
       <OurPartners />
       <Footer />
-      <WannaSupportModal />
+      <Suspense fallback={<div>Loading...</div>}>
+        <WannaSupportModal />
+      </Suspense>
     </Column>
   );
 };

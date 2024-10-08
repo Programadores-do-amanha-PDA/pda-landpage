@@ -1,5 +1,3 @@
-import { Event } from "../event/_eventModel";
-
 export interface Student {
   _id?: string;
   id?: string;

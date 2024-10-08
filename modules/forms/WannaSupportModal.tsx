@@ -1,5 +1,5 @@
 "use client";
-import { Column, Modal, Text, Image, Row } from "@common/components";
+import { Column, Modal, Text, Row } from "@common/components";
 import { useModal } from "@common/context/modal-context";
 import { useEffect, useLayoutEffect } from "react";
 

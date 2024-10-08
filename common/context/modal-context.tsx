@@ -1,5 +1,10 @@
 "use client";
-import React, { useEffect, useState, Dispatch, SetStateAction } from "react";
+import React, {
+  useEffect,
+  useState,
+  Dispatch,
+  SetStateAction,
+} from "react";
 import {
   disableBodyScroll,
   enableBodyScroll,
@@ -40,6 +45,7 @@ const ModalProvider: React.FC<ScriptProps> = (props) => {
       {...props}
     >
       {props.children}
+
     </ModalContext.Provider>
   );
 };
