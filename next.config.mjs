@@ -20,7 +20,6 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        https: true,
         protocol: "https",
         hostname: "www.gravatar.com",
       },
