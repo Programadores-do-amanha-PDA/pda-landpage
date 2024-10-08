@@ -18,7 +18,7 @@ const nextConfig = {
   },
 
   images: {
-    domains: ["www.gravatar.com"],
+    remotePatterns: ["www.gravatar.com"],
   },
 };
 

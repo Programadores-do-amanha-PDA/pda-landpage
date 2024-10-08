@@ -22,6 +22,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-simple-maps": "^3.0.0",
+    "sharp": "^0.33.5",
     "slug": "^9.1.0",
     "swr": "^2.2.5",
     "tailwindcss-animatecss": "^3.0.5"
