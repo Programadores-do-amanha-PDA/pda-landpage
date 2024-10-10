@@ -1,237 +1,56 @@
-import { useEffect, useState } from "react";
 import { Student } from "@/app/api/student/_studentModel";
 import { Column, Image, Link, Row, Text } from "@/common/components";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
-export interface CardProps {
-  linkedin: string;
-  facebook: string;
-  twitter: string;
-  whatsapp: string;
-  student: Student;
-}
-
-const Card = (cardProps: CardProps) => {
-  const [avatar, setAvatar] = useState(cardProps.student.avatar);
-  const [slug, setSlug] = useState(cardProps.student.slug);
-  const [name, setName] = useState(cardProps.student.name);
-  const [city, setCity] = useState(cardProps.student.city);
-  const [state, setState] = useState(cardProps.student.state);
-  const [github, setGithub] = useState(cardProps.student.github);
-  const [linkedin, setLinkedin] = useState(cardProps.student.linkedin);
-  const [bio, setBio] = useState(cardProps.student.bio);
-  const [clicked, setClicked] = useState(false);
-  const [opacity, setOpacity] = useState(1);
-
-  const [facebookShare, setFacebookShare] = useState(
-    cardProps.facebook.replace("slug", slug)
-  );
-  const [twitterShare, setTwitterShare] = useState(
-    cardProps.twitter.replace("slug", slug)
-  );
-  const [whatsappShare, setWhatsappShare] = useState(
-    cardProps.whatsapp.replace("slug", slug)
-  );
-  const [linkedinShare, setLinkedinShare] = useState(
-    cardProps.linkedin.replace("slug", slug)
-  );
-
-  useEffect(() => {
-    if (clicked) {
-      fetch(`/api/student?currentSlug=${slug}`).then(async (res) => {
-        const data: Student = await res.json();
-        setAvatar(data.avatar);
-        setSlug(data.slug);
-        setName(data.name);
-        setCity(data.city);
-        setState(data.state);
-        setGithub(data.github);
-        setLinkedin(data.linkedin);
-        setBio(data.bio);
-        setFacebookShare(cardProps.facebook.replace("slug", data.slug));
-        setTwitterShare(cardProps.twitter.replace("slug", data.slug));
-        setWhatsappShare(cardProps.whatsapp.replace("slug", data.slug));
-        setLinkedinShare(cardProps.linkedin.replace("slug", data.slug));
-        setClicked(false);
-      });
-    }
-  }, [clicked]);
-
+const Card = ({ student }: { student: Student }) => {
   return (
-    <Row className="">
-      <Column>
-        <Row className="mt-5 justify-between items-center self-center bg-secondary-400 w-96 md:w-[600px] rounded-xl">
-          <Column>
-            <Column className="justify-center md:justify-between items-center md:flex-row">
-              <Column>
-                <Column className="md:flex-row">
-                  <Row className="ml-0 md:ml-3 mt-10 md:flex-col justify-center">
-                    {avatar && (
-                      <Image
-                        height={120}
-                        width={120}
-                        className="rounded-full"
-                        src={avatar}
-                        alt=""
-                      />
-                    )}
-                  </Row>
-
-                  <Column>
-                    <Row>
-                      <Text>{name}</Text>
-                    </Row>
-                    <Row>
-                      <Text>Estudante de programação</Text>
-                    </Row>
-                    <Row>
-                      <Text>
-                        {city}, {state}
-                      </Text>
-                    </Row>
-                    <Link href={github} target="_blank">
-                      <Row>
-                        <Text>Acesse meu perfil no github</Text>
-                        <Row>
-                          <Image
-                            height={16}
-                            width={16}
-                            src="/assets/ico_git.png"
-                            alt=""
-                          />
-                        </Row>
-                      </Row>
-                    </Link>
-                  </Column>
-                </Column>
-              </Column>
-
-              <Column>
-                <Link href={linkedin} target="_blank">
-                  <Column>
-                    <Row>
-                      <Image
-                        height={32}
-                        width={51}
-                        src="/assets/eye.png"
-                        alt=""
-                      />
-                    </Row>
-                    <Row>
-                      <Text>Ver perfil Linkedin</Text>
-                    </Row>
-                  </Column>
-                </Link>
-              </Column>
-            </Column>
-
-            <Row>
-              <Text>&quot; {bio} &quot;</Text>
-            </Row>
-
-            <Row></Row>
-
-            <Row>
-              <Column>
-                <Text>
-                  Compartilhe o perfil desse aluno e o ajude a ter mais
-                  visibilidade
+    <Column className="w-full lg:max-w-96 lg:h-max max-h-50 bg-gray-100 dark:bg-gray-50/30 p-2 rounded-2xl gap-6 shadow-md">
+      <Row className="w-full gap-4">
+        <Image
+          className="rounded-xl w-28 object-cover border-0"
+          src={student.avatar ?? ""}
+          width={150}
+          height={300}
+          alt=""
+        />
+        <Column className="gap-4">
+          <Text className="font-bold text-lg">{student.name}</Text>
+          <Column className="gap-3">
+            <Text className="text-sm font-semibold text-gray-900 dark:text-gray-50">
+              Tecnologias:
+            </Text>
+            <Row className="flex-wrap gap-2 h-14">
+              {student.technologies.map((technology, j) => (
+                <Text
+                  key={j}
+                  className="w-max h-max px-2 rounded-full border border-gray-900/55 dark:border-gray-50/55 text-sm text-gray-900 dark:text-gray-50"
+                >
+                  {technology}
                 </Text>
-              </Column>
-
-              <Column>
-                <Row>
-                  <Link target="_blank" href={linkedinShare}>
-                    <Column>
-                      <Image
-                        width={22}
-                        height={23}
-                        src="/assets/linkedin.png"
-                        alt=""
-                      ></Image>
-                    </Column>
-                  </Link>
-                  <Link target="_blank" href={facebookShare}>
-                    <Column>
-                      <Image
-                        width={11}
-                        height={22}
-                        src="/assets/facebook.png"
-                        alt=""
-                      ></Image>
-                    </Column>
-                  </Link>
-                  <Link target="_blank" href={twitterShare}>
-                    <Column>
-                      <Image
-                        width={20}
-                        height={17}
-                        src="/assets/twitter.png"
-                        alt=""
-                      ></Image>
-                    </Column>
-                  </Link>
-                  <Link target="_blank" href={whatsappShare}>
-                    <Column>
-                      <Image
-                        width={20}
-                        height={20}
-                        src="/assets/whatsapp.png"
-                        alt=""
-                      ></Image>
-                    </Column>
-                  </Link>
-                </Row>
-              </Column>
+              ))}
             </Row>
           </Column>
-        </Row>
-        <Row></Row>
-        <Row></Row>
-        <Row>
-          <Column
-            onClick={() => {
-              setClicked(true);
-            }}
-            onMouseOver={() => {
-              setOpacity(0.6);
-            }}
-            onMouseOut={() => {
-              setOpacity(1);
-            }}
-            onMouseUp={() => {
-              setOpacity(1);
-            }}
-            onTouchStart={() => {
-              setOpacity(0.6);
-            }}
-            onTouchEnd={() => {
-              setOpacity(1);
-            }}
-            onMouseDown={() => {
-              setOpacity(0.6);
-            }}
+        </Column>
+      </Row>
+      <Column className="gap-4 md:flex-row">
+        <Row className="gap-2 w-full justify-between">
+          <Link
+            className="font-semibold text-gray-900 cursor-pointer dark:text-gray-50 flex flex-row flex-nowrap gap-4 items-center justify-center bg-primary-500/55 w-full p-1 px-2 rounded-xl hover:bg-primary-500/75"
+            href={student.linkedin}
           >
-            <Text>Veja outro aluno</Text>
-          </Column>
-        </Row>
-        <Row>
-          <Column>
-            <Text>
-              Algumas das habilidades que os alunos dos Programadores do Amanhã
-              estão se desenvolvendo
-            </Text>
-          </Column>
-        </Row>
-        <Row>
-          <Column>
-            <Text>
-              HTML, CSS, Javascript, Git/Github, Node, React, lógica de
-              programação, soft skills e inglês
-            </Text>
-          </Column>
+            <Text className="">LinkedIn</Text>
+            <ArrowRightIcon className="size-4 -rotate-12" />
+          </Link>
+          <Link
+            className="font-semibold text-gray-900 cursor-pointer dark:text-gray-50 flex flex-row flex-nowrap gap-4 items-center justify-center w-full p-1 px-2 rounded-xl dark:hover:bg-gray-50/35 hover:bg-gray-50"
+            href={student.github}
+          >
+            <Text className="">Github</Text>
+            <ArrowRightIcon className="size-4 -rotate-12" />
+          </Link>
         </Row>
       </Column>
-    </Row>
+    </Column>
   );
 };
 
