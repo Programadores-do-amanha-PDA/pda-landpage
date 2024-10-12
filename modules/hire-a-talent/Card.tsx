@@ -7,20 +7,20 @@ const Card = ({ student }: { student: Student }) => {
     <Column className="w-full lg:max-w-96 lg:h-max max-h-50 bg-gray-100 dark:bg-gray-50/30 p-2 rounded-2xl gap-6 shadow-md">
       <Row className="w-full gap-4">
         <Image
-          className="rounded-xl w-28 object-cover border-0"
+          className="rounded-xl w-20 h-36 object-cover border-0"
           src={student.avatar ?? ""}
           width={150}
           height={300}
           alt=""
         />
         <Column className="gap-4">
-          <Text className="font-bold text-lg">{student.name}</Text>
+          <Text className="font-bold text-lg truncate">{student.name}</Text>
           <Column className="gap-3">
             <Text className="text-sm font-semibold text-gray-900 dark:text-gray-50">
               Tecnologias:
             </Text>
             <Row className="flex-wrap gap-2 h-14">
-              {student.technologies.map((technology, j) => (
+              {student?.technologies?.map((technology, j) => (
                 <Text
                   key={j}
                   className="w-max h-max px-2 rounded-full border border-gray-900/55 dark:border-gray-50/55 text-sm text-gray-900 dark:text-gray-50"
