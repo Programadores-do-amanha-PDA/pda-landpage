@@ -1,9 +1,13 @@
 "use client";
+import { Suspense, useEffect, useState } from "react";
 import { Column, Header, Image, InternalLink, Text } from "@/common/components";
 import StudentsCards from "./StudentsCardsContainer";
+import WannaSupportModal from "@forms/WannaSupportModal";
+
+
 import { Student } from "@/app/api/student/_studentModel";
-import { useEffect, useState } from "react";
 import { getStudents } from "@/hooks/getStudents";
+
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 
 const Home = () => {
@@ -50,6 +54,10 @@ const Home = () => {
       ) : (
         <StudentsCards students={students} loading={loading} />
       )}
+
+      <Suspense fallback={<div>Loading...</div>}>
+        <WannaSupportModal />
+      </Suspense>
     </Column>
   );
 };

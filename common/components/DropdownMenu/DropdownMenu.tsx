@@ -21,14 +21,20 @@ interface DropdownMenuProps {
   children: React.ReactNode;
   anchor: AnchorProps;
   menuItems: React.ReactNode[];
+  ResetDefaultComponent: React.ReactNode;
 }
-const DropdownMenu = ({ children, anchor, menuItems }: DropdownMenuProps) => {
+const DropdownMenu = ({
+  children,
+  anchor,
+  menuItems,
+  ResetDefaultComponent,
+}: DropdownMenuProps) => {
   return (
     <Menu>
       <MenuButton
         className={clsx(
-          "w-full h-10 rounded-xl border-none bg-gray-700/35 dark:bg-gray-50/35 px-2 text-sm/6 text-gray-50 dark:text-gray-900",
-          "items-center justify-between flex transition-all relative"
+          "w-max h-10 rounded-xl border-none bg-secondary-700 dark:bg-secondary-100 px-2 text-sm/6 text-gray-50 dark:text-gray-900",
+          "items-center justify-between flex transition-all relative data-[open]:rounded-b-none"
         )}
       >
         {children}
@@ -36,13 +42,16 @@ const DropdownMenu = ({ children, anchor, menuItems }: DropdownMenuProps) => {
       <MenuItems
         anchor={anchor}
         className={clsx(
-          "w-[var(--button-width)] rounded-xl bg-primary-700 dark:bg-primary-50 [--anchor-gap:var(--spacing-1)] empty:invisible",
-          "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0 z-10 data-[open]:rounded-t-none m-0 p-0"
+          "w-max rounded-xl bg-secondary-600 dark:bg-secondary-100 [--anchor-gap:var(--spacing-1)] empty:invisible",
+          "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0 z-10 m-0 p-0 data-[open]:rounded-tr-none shadow-md"
         )}
       >
         {menuItems.map((menuItem, i) => (
           <MenuItem key={i}>{menuItem}</MenuItem>
         ))}
+
+        <hr />
+        {ResetDefaultComponent}
       </MenuItems>
     </Menu>
   );

@@ -14,12 +14,12 @@ const Card = ({ student }: { student: Student }) => {
           alt=""
         />
         <Column className="gap-4">
-          <Text className="font-bold text-lg truncate">{student.name}</Text>
+          <Text className="font-bold text-lg">{student.name}</Text>
           <Column className="gap-3">
             <Text className="text-sm font-semibold text-gray-900 dark:text-gray-50">
               Tecnologias:
             </Text>
-            <Row className="flex-wrap gap-2 h-14">
+            <Row className="flex-wrap gap-2 md:h-14">
               {student?.technologies?.map((technology, j) => (
                 <Text
                   key={j}

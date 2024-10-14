@@ -1,7 +1,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 
-import { Row, Column, Text, Image } from "@common/components";
+import { Row, Column, Text } from "@common/components";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 interface ModalProps {
@@ -31,7 +31,7 @@ const Modal = ({ isOpen, onClose, title, children, ...props }: ModalProps) => {
         <Row className="h-12 w-full mb-5 justify-between items-center">
           <Row className="w-5 hidden md:block" />
           <Text className="text-lg font-dela-gothic text-gray-50">{title}</Text>
-          <Row onClick={onClose}>
+          <Row onClick={onClose} className="cursor-pointer">
             <XMarkIcon className="size-6 text-gray-50" strokeWidth={4} />
           </Row>
         </Row>

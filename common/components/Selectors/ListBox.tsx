@@ -1,3 +1,5 @@
+import { Row } from "../Row";
+import clsx from "clsx";
 import {
   Listbox,
   ListboxButton,
@@ -5,26 +7,15 @@ import {
   ListboxOptions,
 } from "@headlessui/react";
 
+import { CheckIcon, ChevronLeftIcon } from "@heroicons/react/20/solid";
+
 type Align = "start" | "end";
 type Placement = "top" | "right" | "bottom" | "left";
 type BaseAnchorProps = {
-  /**
-   * The `gap` is the space between the trigger and the panel.
-   */
   gap: number | string;
-  /**
-   * The `offset` is the amount the panel should be nudged from its original position.
-   */
   offset: number | string;
-  /**
-   * The `padding` is the minimum space between the panel and the viewport.
-   */
   padding: number | string;
 };
-import { CheckIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
-import clsx from "clsx";
-import { Row } from "../Row";
-import {} from "@heroicons/react/24/outline";
 
 const ListBox = ({
   itens,
@@ -49,16 +40,16 @@ const ListBox = ({
       <div className="w-full">
         <ListboxButton
           className={clsx(
-            "w-full h-10 rounded-xl border-none bg-gray-700/35 dark:bg-gray-50/35 px-2 text-sm/6 text-gray-50 dark:text-gray-900",
-            "items-center justify-between flex data-[open]:rounded-r-none data-[open]:bg-primary-700/35 transition-all relative"
+            "w-full h-10 border-none bg-gray-700/35 dark:bg-gray-50/35 px-2 text-sm/6 text-gray-50 dark:text-gray-900",
+            "items-center justify-between flex data-[open]:bg-secondary-50/35 data-[open]:dark:bg-secondary-200/35 transition-all relative gap-2"
           )}
         >
+          <ChevronLeftIcon className="size-5 fill-gray-50/60 group-data-[hover]:fill-gray-50 dark:fill-gray-900/60 dark:group-data-[hover]:fill-gray-900 data-[open]:rotate-180" />
           <span className="text-sm font-normal">
             {selectedItems.length === 1
               ? selectedItems[0]
               : selectedItems[0].concat(" +", String(selectedItems.length - 1))}
           </span>
-          <ChevronRightIcon className="size-5 fill-gray-50/60 group-data-[hover]:fill-gray-50 dark:fill-gray-900/60 dark:group-data-[hover]:fill-gray-900 data-[open]:rotate-180" />
         </ListboxButton>
       </div>
 
@@ -66,15 +57,15 @@ const ListBox = ({
         anchor={anchor}
         transition
         className={clsx(
-          "w-[var(--button-width)] rounded-xl border border-gray-50/5 bg-primary-700 dark:bg-primary-50 [--anchor-gap:var(--spacing-1)] empty:invisible",
-          "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0 z-10 data-[open]:rounded-tl-none"
+          "w-max rounded-xl border border-gray-50/5 bg-secondary-600 dark:bg-secondary-50 [--anchor-gap:var(--spacing-1)] empty:invisible",
+          "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0 z-10"
         )}
       >
         {itens.map((item, i) => (
           <ListboxOption
             key={i}
             value={item}
-            className="group flex cursor-pointer items-center gap-2 rounded-lg py-1.5 px-3 select-none data-[focus]:bg-primary-500/10"
+            className="group flex cursor-pointer items-center gap-2 rounded-lg py-1.5 px-3 select-none data-[focus]:bg-secondary-50/35 data-[focus]:dark:bg-secondary-200/35"
           >
             <Row
               className={clsx(
