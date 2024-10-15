@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Uma ponte que dá acesso a jovens negros e negras que desejam ingressar no mercado da tecnologia. Uma ponte construída de maneira muito especial. Por pessoas que já estiveram do lado de lá, no lugar em que conquistar a carreira dos sonhos parecia algo muito distante. Então estamos aqui principalmente para mudar essa lógica, para trazer o emprego dos sonhos para perto da periferia. Dando as ferramentas para que pretos e pretas sejam protagonistas nessa revolução tecnológica que todos nós estamos vivendo.",
   keywords:
-    "programadores do amanhã, tecnologia, jovens, negros,  periferia, emprego, carreira, revolução tecnológica, ong, NGO, computador, curso ti, IA, AI, curso inglês, curso, Inglês, Programação",
+    "programadores do amanhã, tecnologia, jovens, negros, periferia, emprego, carreira, revolução tecnológica, ong, NGO, computador, curso TI, TI, IA, AI, curso inglês, curso, Inglês, Programação",
   openGraph: {
     title: "Programadores do Amanhã",
     description:
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://programadoresdoamanha.org/images/programadores-do-amanha .png",
+        url: "https://programadoresdoamanha.org/assets/Logo_PDA_Horizontal_FundoRoxo.png",
         width: 800,
         height: 600,
         alt: "Programadores do Amanhã",
