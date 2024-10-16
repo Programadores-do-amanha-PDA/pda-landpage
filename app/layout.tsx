@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Programadores do Amanhã",
   authors: {
     name: "Programadores do Amanhã",
-    url: "https://programadoresdoamanha.org/",
+    url: "https://programadoresdoamanha.org.br/",
   },
   description:
     "Uma ponte que dá acesso a jovens negros e negras que desejam ingressar no mercado da tecnologia. Uma ponte construída de maneira muito especial. Por pessoas que já estiveram do lado de lá, no lugar em que conquistar a carreira dos sonhos parecia algo muito distante. Então estamos aqui principalmente para mudar essa lógica, para trazer o emprego dos sonhos para perto da periferia. Dando as ferramentas para que pretos e pretas sejam protagonistas nessa revolução tecnológica que todos nós estamos vivendo.",
@@ -19,11 +19,11 @@ export const metadata: Metadata = {
     title: "Programadores do Amanhã",
     description:
       "Uma ponte que dá acesso a jovens negros e negras que  desejam ingressar no mercado da tecnologia.",
-    url: "https://programadoresdoamanha.org/",
+    url: "https://programadoresdoamanha.org.br/",
     type: "website",
     images: [
       {
-        url: "https://programadoresdoamanha.org/assets/Logo_PDA_Horizontal_FundoRoxo.png",
+        url: "https://programadoresdoamanha.org.br/assets/Logo_PDA_Horizontal_FundoRoxo.png",
         width: 800,
         height: 600,
         alt: "Programadores do Amanhã",

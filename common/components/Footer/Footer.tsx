@@ -59,7 +59,7 @@ const Footer = () => {
                   content: "Contrate um Talento",
                   onclick: () => {
                     window.open(
-                      "https://programadoresdoamanha.org/contrate-um-talento"
+                      "https://programadoresdoamanha.org.br/contrate-um-talento"
                     );
                   },
                 },
