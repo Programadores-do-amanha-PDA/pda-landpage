@@ -38,51 +38,108 @@ const StudentsCardsContainer = ({
   const uniqueTechnologies = Array.from(
     new Set(students.flatMap((s) => s.technologies))
   );
+
+  const uniqueClasses = Array.from(new Set(students.map((s) => s.class)));
+
   const technologies = ["Tecnologias", ...uniqueTechnologies];
+  const classes = ["Turmas", ...uniqueClasses];
 
-  const [filterSelected, setFilterSelected] = useState([technologies[0]]);
+  const [technologySelected, setTechnologySelected] = useState([
+    technologies[0],
+  ]);
+  const [classSelected, setClassSelected] = useState([classes[0]]);
 
-  const handleSetFilterSelected = (items: string[]) => {
+  const handleSetTechnologySelected = (items: string[]) => {
     if (items[items.length - 1] === technologies[0]) {
-      setFilterSelected([technologies[0]]);
+      setTechnologySelected([technologies[0]]);
     } else if (
       items[items.length - 1] !== technologies[0] &&
       items.length > 0
     ) {
-      setFilterSelected(items.filter((i) => i !== technologies[0]));
+      setTechnologySelected(items.filter((i) => i !== technologies[0]));
     } else if (items.length === 0) {
-      setFilterSelected([technologies[0]]);
+      setTechnologySelected([technologies[0]]);
+    }
+  };
+
+  const handleSetClassSelected = (items: string[]) => {
+    if (items[items.length - 1] === classes[0]) {
+      setClassSelected([classes[0]]);
+    } else if (items[items.length - 1] !== classes[0] && items.length > 0) {
+      setClassSelected(items.filter((i) => i !== classes[0]));
+    } else if (items.length === 0) {
+      setClassSelected([classes[0]]);
     }
   };
 
   const studentFilter = students.filter((student) => {
     if (search) {
       if (
-        filterSelected.length === 1 &&
-        filterSelected[0] === technologies[0]
+        technologySelected.length === 1 &&
+        technologySelected[0] === technologies[0] &&
+        classSelected.length === 1 &&
+        classSelected[0] === classes[0]
       ) {
         return student.name.toLowerCase().includes(search.toLowerCase());
-      } else if (filterSelected.length > 0) {
+      } else if (
+        technologySelected.length > 0 &&
+        technologySelected[0] !== technologies[0] &&
+        classSelected.length > 0 &&
+        classSelected[0] !== classes[0]
+      ) {
         return (
           student.name.toLowerCase().includes(search.toLowerCase()) &&
-          filterSelected.some((tech) => student?.technologies?.includes(tech))
+          technologySelected.some((tech) =>
+            student?.technologies?.includes(tech)
+          ) &&
+          classSelected.some((cl) => student.class === cl)
+        );
+      } else if (
+        technologySelected.length > 0 &&
+        technologySelected[0] !== technologies[0]
+      ) {
+        return (
+          student.name.toLowerCase().includes(search.toLowerCase()) &&
+          technologySelected.some((tech) =>
+            student?.technologies?.includes(tech)
+          )
+        );
+      } else if (classSelected.length > 0 && classSelected[0] !== classes[0]) {
+        return (
+          student.name.toLowerCase().includes(search.toLowerCase()) &&
+          classSelected.some((cl) => student.class === cl)
         );
       } else {
         return false;
       }
     } else {
       if (
-        filterSelected.length === 1 &&
-        filterSelected[0] === technologies[0]
+        technologySelected.length === 1 &&
+        technologySelected[0] === technologies[0] &&
+        classSelected.length === 1 &&
+        classSelected[0] === classes[0]
       ) {
         return true;
       } else if (
-        filterSelected.length > 0 &&
-        filterSelected[0] !== technologies[0]
+        technologySelected.length > 0 &&
+        technologySelected[0] !== technologies[0] &&
+        classSelected.length > 0 &&
+        classSelected[0] !== classes[0]
       ) {
-        return filterSelected.some((tech) =>
+        return (
+          technologySelected.some((tech) =>
+            student?.technologies?.includes(tech)
+          ) && classSelected.some((cl) => student.class === cl)
+        );
+      } else if (
+        technologySelected.length > 0 &&
+        technologySelected[0] !== technologies[0]
+      ) {
+        return technologySelected.some((tech) =>
           student?.technologies?.includes(tech)
         );
+      } else if (classSelected.length > 0 && classSelected[0] !== classes[0]) {
+        return classSelected.some((cl) => student.class === cl);
       } else {
         return false;
       }
@@ -90,8 +147,17 @@ const StudentsCardsContainer = ({
   });
 
   const resetAllFilters = () => {
-    setFilterSelected([technologies[0]]);
+    setTechnologySelected([technologies[0]]);
+    setClassSelected([classes[0]]);
   };
+
+  const isTechnologyFilterActive =
+    JSON.stringify(technologySelected) !== JSON.stringify([technologies[0]]);
+  const isClassFilterActive =
+    JSON.stringify(classSelected) !== JSON.stringify([classes[0]]);
+  const filtersActives = [isTechnologyFilterActive, isClassFilterActive].filter(
+    (f) => f === true
+  ).length;
 
   return (
     <Row className="justify-center p-4 md:p-10 !py-0 h-max !items-start w-full relative overflow-x-auto">
@@ -117,20 +183,33 @@ const StudentsCardsContainer = ({
                   <ListBox
                     key={"listbox"}
                     itens={technologies}
-                    selectedItems={filterSelected}
-                    setSelectedItems={handleSetFilterSelected}
+                    selectedItems={technologySelected}
+                    setSelectedItems={handleSetTechnologySelected}
+                    anchor="left start"
+                  />,
+                  <ListBox
+                    key={"listbox"}
+                    itens={classes}
+                    selectedItems={classSelected}
+                    setSelectedItems={handleSetClassSelected}
                     anchor="left start"
                   />,
                 ]}
                 ResetDefaultComponent={
                   <Button
-                    className="text-sm w-full items-center justify-center text-gray-50 dark:text-gray-900 py-2"
+                    className="text-sm w-36 items-center justify-center text-gray-50 dark:text-gray-900 py-2"
                     onClick={resetAllFilters}
                   >
                     Limpar filtros
                   </Button>
                 }
               >
+                {filtersActives > 0 && (
+                  <Text className="absolute flex rounded-full -top-1 -right-2 size-5 bg-red-400 text-gray-50 items-center justify-center !text-sm">
+                    {filtersActives}
+                  </Text>
+                )}
+
                 <FunnelIcon className="size-5 stroke-2" />
               </Menu>
             </Row>

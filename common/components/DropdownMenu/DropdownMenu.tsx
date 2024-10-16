@@ -33,7 +33,7 @@ const DropdownMenu = ({
     <Menu>
       <MenuButton
         className={clsx(
-          "w-max h-10 rounded-xl border-none bg-secondary-700 dark:bg-secondary-100 px-2 text-sm/6 text-gray-50 dark:text-gray-900",
+          "w-max h-10 rounded-xl border-none bg-secondary-700 dark:bg-secondary-100 px-2 text-sm/6 text-gray-50 dark:text-gray-900 relative",
           "items-center justify-between flex transition-all relative data-[open]:rounded-b-none"
         )}
       >
