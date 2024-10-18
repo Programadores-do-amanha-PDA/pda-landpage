@@ -8,6 +8,7 @@ import {
   ChevronRightIcon,
   SunIcon,
 } from "@heroicons/react/24/outline";
+import { useTranslations } from "next-intl";
 
 type News = {
   content: string;
@@ -19,6 +20,8 @@ type News = {
 };
 
 const OurNews = () => {
+  const t = useTranslations("home.OurNews");
+
   const [newsGroupIndex, setNewsGroupIndex] = useState<number>(0);
 
   const news: News[] = [
@@ -29,25 +32,23 @@ const OurNews = () => {
       logo: "/assets/partners/onfly.png",
       logoAlt: "onfly",
       link: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7183831578299555840?compact=1",
-      linkTitle: "Ver post",
+      linkTitle: t("news.0.linkTitle"),
     },
     {
-      content:
-        "“A ONG já formou 140 jovens, que saíram do curso empregados com um salário médio de R$ 3.600. Isso gera um aumento médio na renda familiar desses jovens de 240%.”",
+      content: t("news.1.content"),
       contentType: "text",
       logo: "/assets/news/braziljournal.png",
       logoAlt: "Brazil Journal",
       link: "https://braziljournal.com/pretos-pobres-e-perifericos-e-programando-o-brasil-de-amanha/",
-      linkTitle: "Ler noticia",
+      linkTitle: t("news.1.linkTitle"),
     },
     {
-      content:
-        "“Tecnologia e impacto podem e devem andar juntos, afirma o CEO e fundador da ONG, Cleber Guedes, em sintonia com as metas do iFood. A Programadores do Amanhã foi criada para gerar renda e emprego para jovens negros por meio do ensino da programação.”",
+      content: t("news.2.content"),
       contentType: "text",
       logo: "/assets/partners/ifood.jpg",
       logoAlt: "ifood",
       link: "https://institucional.ifood.com.br/noticias/programadores-do-amanha-multiplica-renda-de-jovens-negros/",
-      linkTitle: "Ler noticia",
+      linkTitle: t("news.2.linkTitle"),
     },
     {
       content:
@@ -56,52 +57,47 @@ const OurNews = () => {
       logo: "/assets/maintainers/meliuz.png",
       logoAlt: "Méliuz",
       link: "https://youtu.be/I5FkKeaT-2c?feature=shared",
-      linkTitle: "Ver video",
+      linkTitle: t("news.3.linkTitle"),
     },
     {
-      content:
-        "“O curso atua como uma ponte entre sonhos e realidade, oferecendo um caminho para que pessoas que antes viam a carreira em TI como algo distante possam agora trilhar um percurso concreto em direção ao sucesso”",
+      content: t("news.4.content"),
       contentType: "text",
       logo: "/assets/news/pretajoia.jpg",
       logoAlt: "Preta Joia",
       link: "https://www.pretajoia.com/2023/08/programadores-do-amanha-ministra-curso.html",
-      linkTitle: "Ler noticia",
+      linkTitle: t("news.4.linkTitle"),
     },
     {
-      content:
-        "“Com uma infraestrutura de qualidade, incluindo os melhores softwares e equipamentos, o “Programadores do Amanhã” promove uma conexão entre esses jovens talentos e grandes empresas que valorizam a diversidade e buscam construir um mercado mais inclusivo.”",
+      content: t("news.5.content"),
       contentType: "text",
       logo: "/assets/news/guiadeti.png",
       logoAlt: "GUIA DE TI",
       link: "https://guiadeti.com.br/curso-gratuito-programacao-jovens-negros/",
-      linkTitle: "Ler noticia",
+      linkTitle: t("news.5.linkTitle"),
     },
     {
-      content:
-        "“Nosso objetivo é ampliar as oportunidades para jovens negros e indígenas, proporcionando uma rota para ingressar no mercado de tecnologia, uma área muitas vezes marcada por desigualdades.”",
+      content: t("news.6.content"),
       contentType: "text",
       logo: "/assets/news/odia.webp",
       logoAlt: "O DIA",
       link: "https://odia.ig.com.br/economia/empregos-e-negocios/2023/08/6691950-programadores-do-amanha-oferece-curso-exclusivo-de-programacao-para-negros-e-indigenas.html",
-      linkTitle: "Ler noticia",
+      linkTitle: t("news.6.linkTitle"),
     },
     {
-      content:
-        "“Mesmo sendo alta a demanda por profissionais da área de tecnologia e ciência da computação, o acesso à faculdade e aos cursos de capacitação é ainda restrito a poucas pessoas. Além do custo do investimento na qualificação profissional, tem também o investimento em um computador, ou notebook, de alta performance. Contudo não é barato e nem fácil ser programador. É por isso que o Projeto Programadores do Amanhã nasceu!”",
+      content: t("news.7.content"),
       contentType: "text",
       logo: "/assets/news/comitepelacidadania.png",
       logoAlt: "Comitê Pela Cidadania",
       link: "https://comitepelacidadania.org/programadores-do-amanha/",
-      linkTitle: "Ler noticia",
+      linkTitle: t("news.7.linkTitle"),
     },
     {
-      content:
-        "“Nossa meta é atingir 80% de empregabilidade em até seis meses após a formação e meu sonho grande é que, futuramente, não seja necessário realizar um processo seletivo para sermos realmente acessíveis e que todo jovem que tenha interesse possa fazer o curso”, aponta Cleber Guedes.",
+      content: t("news.8.content"),
       contentType: "text",
       logo: "/assets/news/aloalobahia.png",
       logoAlt: "alôalôbahia",
       link: "https://aloalobahia.com/notas/programadores-do-amanha-projeto-oferece-curso-gratuito-de-programacao-para-negros-e-indigenas",
-      linkTitle: "Ler noticia",
+      linkTitle: t("news.8.linkTitle"),
     },
   ];
 
@@ -123,14 +119,12 @@ const OurNews = () => {
             <Text className="text-yellow-400  font-ibm-plex-sans font-black text-center">
               {"</"}
             </Text>
-            Nossas Noticias
+            {t("title")}
             <Text className="text-yellow-400  font-ibm-plex-sans font-black text-center">
               {">"}
             </Text>
           </Text>
-          <Text className="font-semibold">
-            Veja o que a comunidade tem falado da Programadores do Amanhã.
-          </Text>
+          <Text className="font-semibold">{t("description")}</Text>
         </Column>
 
         <Column className="gap-8 ">

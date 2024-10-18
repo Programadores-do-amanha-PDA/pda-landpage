@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { dela_gothic, ibm_plex_sans } from "./fonts";
 import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+
+import "../globals.css";
+import { dela_gothic, ibm_plex_sans } from "../fonts";
 import AppProviders from "@/common/context";
 
 export const metadata: Metadata = {
@@ -34,11 +37,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  const messages = await getMessages();
+
   return (
     <html
       lang="pt-BR"
@@ -62,7 +68,9 @@ export default function RootLayout({
       </head>
 
       <body className="w-full h-max flex justify-center items-start">
-        <AppProviders>{children}</AppProviders>
+        <NextIntlClientProvider messages={messages}>
+          <AppProviders>{children}</AppProviders>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

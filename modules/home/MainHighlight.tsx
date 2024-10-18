@@ -10,11 +10,15 @@ import {
   InternalLink,
 } from "@common/components";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { useTranslations } from "next-intl";
 
 const MainHighlight = () => {
+  const t = useTranslations("home.MainHighlight");
+
   const handleSubscribe = () => {
     window.open("https://forms.gle/Sf93Zf5QmvASRFLp9");
   };
+
   return (
     <Row className="h-screen-minus-80  md:max-h-[530px] w-full justify-center">
       <Layout className="justify-center h-full items-center relative max-w-7xl p-6 lg:p-8 overflow-x-hidden">
@@ -23,11 +27,11 @@ const MainHighlight = () => {
             <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
               {"</"}
             </Text>
-            MULTIPLICAMOS OPORTUNIDADES PARA A JUVENTUDE{" "}
+            {t("bannerText.start")}{" "}
             <Marker className=" dark:text-gray-50 text-gray-900 bg-primary-300/55 px-2 rounded-lg">
-              NEGRA E INDÍGENA
+              {t("bannerText.highlight")}
             </Marker>{" "}
-            NO MERCADO DA TECNOLOGIA
+            {t("bannerText.final")}
             <Text className="text-primary-500 font-black font-ibm-plex-sans">
               {">"}
             </Text>
@@ -38,7 +42,7 @@ const MainHighlight = () => {
               className={`p-1 h-12 px-2 w-full relative flex items-center justify-center sm:justify-between bg-primary-500 text-gray-900 rounded-xl gap-2 font-semibold sm:max-w-xs hover:shadow-md`}
               onClick={handleSubscribe}
             >
-              Inscreva-se para a próxima turma
+              {t("buttonSubscribe")}
               <ArrowRightIcon
                 className="sm:block hidden size-7 bg-gray-50 dark:bg-secondary-900 rounded-2xl text-gray-900 dark:text-gray-50 p-1 -rotate-12"
                 strokeWidth={3}
@@ -48,7 +52,7 @@ const MainHighlight = () => {
               href="/contrate-um-talento"
               className={`p-1 h-12 px-2 w-full relative flex items-center justify-center border-2 transition-all border-secondary-500 hover:bg-secondary-500/55 text-gray-900 dark:text-gray-50 rounded-xl gap-2 font-semibold sm:max-w-52 shadow-sm`}
             >
-              Contrate um Talento
+              {t("buttonHireATalent")}
             </InternalLink>
           </Column>
         </Column>
@@ -58,14 +62,14 @@ const MainHighlight = () => {
             src={"/assets/man_home.png"}
             width={400}
             height={400}
-            alt=""
+            alt={t("manImageAlt")}
             className="w-full block dark:hidden"
           />
           <Image
             src={"/assets/man_home_dark.png"}
             width={400}
             height={400}
-            alt=""
+            alt={t("manImageAlt")}
             className="w-full hidden dark:block object-contain"
           />
         </Row>
@@ -75,14 +79,14 @@ const MainHighlight = () => {
             src={"/assets/woman_home.png"}
             width={400}
             height={400}
-            alt=""
+            alt={t("womanImageAlt")}
             className="w-full block dark:hidden"
           />
           <Image
             src={"/assets/woman_home_dark.png"}
             width={400}
             height={400}
-            alt=""
+            alt={t("womanImageAlt")}
             className="w-full hidden dark:block"
           />
         </Row>

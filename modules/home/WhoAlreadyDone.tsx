@@ -4,7 +4,6 @@ import {
   Text,
   Row,
   Layout,
-  Image,
   Button,
   InternalLink,
 } from "@common/components";
@@ -14,6 +13,7 @@ import {
   SunIcon,
   TrophyIcon,
 } from "@heroicons/react/24/outline";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 const studentsFeedback = [
@@ -38,6 +38,8 @@ const studentsFeedback = [
 ];
 
 const WhoAlreadyDone = () => {
+  const t = useTranslations("home.WhoAlreadyDone");
+
   const [feedbackGroupIndex, setFeedbackGroupIndex] = useState<number>(0);
 
   const makeGroups = () => {
@@ -57,15 +59,13 @@ const WhoAlreadyDone = () => {
           <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
             {"</"}
           </Text>
-          Quem já fez
+          {t("title")}
           <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
             {">"}
           </Text>
         </Text>
         <Text className="font-ibm-plex-sans-sans font-semibold text-lg">
-          Conheçam alguns dos ex-estudantes que já passaram pela Programadores
-          do Amanhã e o que eles tem a dizer sobre nós. Eles estão fazendo
-          incríveis coisas no mundo da tecnologia!
+          {t("description")}
         </Text>
       </Column>
 
@@ -148,7 +148,8 @@ const WhoAlreadyDone = () => {
               className="w-full md:w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-50 border-2 border-gray-50/50 hover:bg-gray-50/50 dark:border-secondary-800/50 dark:hover:bg-secondary-800/50 rounded-xl hover:shadow-md"
               href="/contrate-um-talento"
             >
-              Contrate um Talento
+              {t("buttonHireATalent")}
+
               <TrophyIcon className="size-5 text-gray-50 -rotate-12" />
             </InternalLink>
           </Column>

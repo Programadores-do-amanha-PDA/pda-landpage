@@ -3,7 +3,6 @@ import React, { useState } from "react";
 
 import { Image, Button, Row, Column, InternalLink } from "@common/components";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import Link from "next/link";
 
 const buttonMenuDesktopStyle =
   "text-gray-900 dark:text-gray-50 w-max mx-0 font-md font-roboto font-semibold";
@@ -83,15 +82,18 @@ const Header = () => {
           }`}
         >
           <Column className="sm:flex-row w-full sm:w-max gap-5">
-            <Link className={buttonStyle} href={"/"}>
+            <InternalLink className={buttonStyle} href={"/"}>
               Inicio
-            </Link>
-            <Link className={buttonStyle} href={"/quem-somos"}>
+            </InternalLink>
+            <InternalLink className={buttonStyle} href={"/quem-somos"}>
               Quem somos
-            </Link>
-            <Link className={buttonStyle} href={"/quem-somos#transparencia"}>
+            </InternalLink>
+            <InternalLink
+              className={buttonStyle}
+              href={"/quem-somos#transparencia"}
+            >
               Transparência
-            </Link>
+            </InternalLink>
           </Column>
 
           <Column className="sm:flex-row w-full sm:w-max gap-4 ">

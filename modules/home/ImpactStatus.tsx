@@ -1,24 +1,24 @@
 import { Column, Layout, Row, Text } from "@/common/components";
+import { useTranslations } from "next-intl";
 
 const ImpactStatus = () => {
+  const t = useTranslations("home.ImpactStatus");
+
   const statusItem = [
     {
-      data: "+400",
-      label: "Jovens selecionados",
-      description:
-        "Selecionamos mais de 300 jovens de todo o Brasil para fazer parte das nossas turmas.",
+      data: t("statusItem.0.data"),
+      label: t("statusItem.0.label"),
+      description: t("statusItem.0.description"),
     },
     {
-      data: "+R$ 3 milhões",
-      label: "Gerados em renda",
-      description:
-        "Geramos mais de 3 milhões de reais em renda agregada por nossos estudantes ao se empregarem na área de tecnologia.",
+      data: t("statusItem.1.data"),
+      label: t("statusItem.1.label"),
+      description: t("statusItem.1.description"),
     },
     {
-      data: "250%",
-      label: "Aumento em média na renda",
-      description:
-        "Em média geramos um aumento de 250% da renda familiar dos nossos estudantes ao se empregarem no mercado de tecnologia.",
+      data: t("statusItem.2.data"),
+      label: t("statusItem.2.label"),
+      description: t("statusItem.2.description"),
     },
   ];
 

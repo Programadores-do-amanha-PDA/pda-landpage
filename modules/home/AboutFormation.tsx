@@ -1,16 +1,17 @@
 "use client";
 import { Expensive } from "@/common/components/Card";
-import useIsScreenSmall from "@/hooks/useIsScreenSmall";
 import { Text, Column, Layout, Row } from "@common/components";
+import { useTranslations } from "next-intl";
 
 const AboutFormation = () => {
+  const t = useTranslations("home.AboutFormation");
+
   const formationCards = [
     {
-      label: "Programação Front-End",
-      expandedText:
-        "Oferecemos aulas, materiais e desafios para que os estudantes possam aprender a desenvolver front-ends modernos.",
+      label: t("formationCards.0.label"),
+      expandedText: t("formationCards.0.expandedText"),
       tagSection: {
-        tagLabel: "Tecnologias:",
+        tagLabel: t("formationCards.0.tagLabel"),
         tags: [
           "HTML5",
           "CSS3",
@@ -22,11 +23,10 @@ const AboutFormation = () => {
       },
     },
     {
-      label: "Programação Back-End",
-      expandedText:
-        "Oferecemos aulas, materiais e desafios para que os estudantes possam aprender a criar back-ends para aplicações reais.",
+      label: t("formationCards.1.label"),
+      expandedText: t("formationCards.1.expandedText"),
       tagSection: {
-        tagLabel: "Tecnologias:",
+        tagLabel: t("formationCards.1.tagLabel"),
         tags: [
           "JavaScript",
           "EcmaScript 6",
@@ -38,11 +38,10 @@ const AboutFormation = () => {
       },
     },
     {
-      label: "Imersão em Inglês",
-      expandedText:
-        "Oferecemos aulas, materiais e desafios de inglês para que nossos estudantes possam explorar o universo tecnológico sem limites.",
+      label: t("formationCards.2.label"),
+      expandedText: t("formationCards.2.expandedText"),
       tagSection: {
-        tagLabel: "Conteúdos:",
+        tagLabel: t("formationCards.2.tagLabel"),
         tags: [
           "Vocabulary",
           "Personal presentation",
@@ -56,11 +55,10 @@ const AboutFormation = () => {
       },
     },
     {
-      label: "Soft Skills",
-      expandedText:
-        "Oferecemos aulas, materiais e desafios de habilidades comportamentais para que nossos estudantes possam se desenvolver de maneira profissional e aprender a lida com o outro e consigo mesmo em diferentes situações.",
+      label: t("formationCards.3.label"),
+      expandedText: t("formationCards.3.expandedText"),
       tagSection: {
-        tagLabel: "Habilidades:",
+        tagLabel: t("formationCards.3.tagLabel"),
         tags: [
           "Ágil",
           "SCRUM & KANBAN",
@@ -73,11 +71,10 @@ const AboutFormation = () => {
       },
     },
     {
-      label: "Educação financeira",
-      expandedText:
-        "Oferecemos uma trilha de educação financeira para os estudantes aprenderem a gerenciar seu dinheiro eficientemente.",
+      label: t("formationCards.4.label"),
+      expandedText: t("formationCards.4.expandedText"),
       tagSection: {
-        tagLabel: "Conteúdos:",
+        tagLabel: t("formationCards.4.tagLabel"),
         tags: [""],
       },
     },
@@ -91,17 +88,13 @@ const AboutFormation = () => {
             <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
               {"</"}
             </Text>
-            Nossa Formação
+            {t("title")}
             <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
               {">"}
             </Text>
           </Text>
           <Text className="font-ibm-plex-sans-sans font-semibold text-lg">
-            Nossa formação é totalmente baseada em projetos, com as turmas
-            colocando a mão na massa desde o primeiro dia! Com essa abordagem,
-            simulamos dinâmicas reais do mercado de trabalho, promovendo a
-            aprendizagem entre pares e em squads. Tudo isso garante uma
-            experiência prática, interativa e gamificada.
+            {t("description")}
           </Text>
         </Column>
 

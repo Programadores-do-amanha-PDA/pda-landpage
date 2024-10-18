@@ -1,18 +1,18 @@
+import createNextIntlPlugin from "next-intl/plugin";
+
+const withNextIntl = createNextIntlPlugin();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async rewrites() {
     return [
       {
-        destination: "/support-a-student",
-        source: "/apoie-um-aluno",
+        destination: "/pt/who-we-are",
+        source: "/pt/quem-somos",
       },
       {
-        destination: "/who-we-are",
-        source: "/quem-somos",
-      },
-      {
-        destination: "/hire-a-talent",
-        source: "/contrate-um-talento",
+        destination: "/pt/hire-a-talent",
+        source: "/pt/contrate-um-talento",
       },
     ];
   },
@@ -27,4 +27,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

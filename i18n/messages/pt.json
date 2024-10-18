@@ -1,0 +1,167 @@
+{
+    "home": {
+        "MainHighlight": {
+            "bannerText": {
+                "start": "MULTIPLICAMOS OPORTUNIDADES PARA A JUVENTUDE",
+                "highlight": "NEGRA E INDÍGENA",
+                "final": "NO MERCADO DA TECNOLOGIA"
+            },
+            "buttonSubscribe": "Inscreva-se para a próxima turma",
+            "buttonHireATalent": "Contrate um Talento",
+            "womanImageAlt": "",
+            "manImageAlt": ""
+        },
+        "ImpactStatus": {
+            "statusItem": {
+                "0": {
+                    "data": "+400",
+                    "label": "Jovens selecionados",
+                    "description": "Selecionamos mais de 300 jovens de todo o Brasil para fazer parte das nossas turmas."
+                },
+                "1": {
+                    "data": "+R$ 3 milhões",
+                    "label": "Gerados em renda",
+                    "description": "Geramos mais de 3 milhões de reais em renda agregada por nossos estudantes ao se empregarem na área de tecnologia."
+                },
+                "2": {
+                    "data": "250%",
+                    "label": "Aumento em média na renda",
+                    "description": "Em média geramos um aumento de 250% da renda familiar dos nossos estudantes ao se empregarem no mercado de tecnologia."
+                }
+            }
+        },
+        "WhoWeAre": {
+            "descriptionText": {
+                "start": "O Instituto Programadores do Amanhã nasceu em 2021 com o",
+                "highlight": "objetivo de formar e empregar jovens pretos, pardos e indígenas",
+                "final": "no mercado de tecnologia."
+            },
+            "buttonLearnMore": "Saiba mais"
+        },
+        "OurNews": {
+            "title": "Nossas Noticias",
+            "description": "Veja o que a comunidade tem falado da Programadores do Amanhã.",
+            "news": {
+                "0": {
+                    "linkTitle": "Ver post"
+                },
+                "1": {
+                    "content": "“A ONG já formou 140 jovens, que saíram do curso empregados com um salário médio de R$ 3.600. Isso gera um aumento médio na renda familiar desses jovens de 240%.”",
+                    "linkTitle": "Ler noticia"
+                },
+                "2": {
+                    "content": "“Tecnologia e impacto podem e devem andar juntos, afirma o CEO e fundador da ONG, Cleber Guedes, em sintonia com as metas do iFood. A Programadores do Amanhã foi criada para gerar renda e emprego para jovens negros por meio do ensino da programação.”",
+                    "linkTitle": "Ler noticia"
+                },
+                "3": {
+                    "linkTitle": "Ver video"
+                },
+                "4": {
+                    "content": "“O curso atua como uma ponte entre sonhos e realidade, oferecendo um caminho para que pessoas que antes viam a carreira em TI como algo distante possam agora trilhar um percurso concreto em direção ao sucesso”",
+                    "linkTitle": "Ler noticia"
+                },
+                "5": {
+                    "content": "“Com uma infraestrutura de qualidade, incluindo os melhores softwares e equipamentos, o “Programadores do Amanhã” promove uma conexão entre esses jovens talentos e grandes empresas que valorizam a diversidade e buscam construir um mercado mais inclusivo.”",
+                    "linkTitle": "Ler noticia"
+                },
+                "6": {
+                    "content": "“Nosso objetivo é ampliar as oportunidades para jovens negros e indígenas, proporcionando uma rota para ingressar no mercado de tecnologia, uma área muitas vezes marcada por desigualdades.”",
+                    "linkTitle": "Ler noticia"
+                },
+                "7": {
+                    "content": "“Mesmo sendo alta a demanda por profissionais da área de tecnologia e ciência da computação, o acesso à faculdade e aos cursos de capacitação é ainda restrito a poucas pessoas. Além do custo do investimento na qualificação profissional, tem também o investimento em um computador, ou notebook, de alta performance. Contudo não é barato e nem fácil ser programador. É por isso que o Projeto Programadores do Amanhã nasceu!”",
+                    "linkTitle": "Ler noticia"
+                },
+                "8": {
+                    "content": "“Nossa meta é atingir 80% de empregabilidade em até seis meses após a formação e meu sonho grande é que, futuramente, não seja necessário realizar um processo seletivo para sermos realmente acessíveis e que todo jovem que tenha interesse possa fazer o curso”, aponta Cleber Guedes.”",
+                    "linkTitle": "Ler noticia"
+                }
+            }
+        },
+        "OurPartners": {
+            "title": "Nossos Parceiros",
+            "description": "Conheçam as empresas e institutos que nos ajudam a causar impacto nas vidas dos jovens negros e indígenas de todo o Brasil.",
+            "maintainersLabel": "Mantenedores",
+            "partnersLabel": "Apoiadores"
+        },
+        "Subscribe": {
+            "title": "Inscreva-se para as nossas turmas",
+            "description": "Para se inscrever, basta clicar no botão abaixo e preencher o nosso formulário de inscrição com seus dados. Nós entraremos em contato com você assim que abrirmos uma nova turma!",
+            "button": "Inscreva-se para nossa proxima turma!"
+        },
+        "WantToSupport": {
+            "title": "Nos Apoie",
+            "description": "Nos apoie a multiplicar as oportunidades para jovens negros e indígenas de todo o Brasil!",
+            "individual": {
+                "title": "APOIE COMO PESSOA FÍSICA",
+                "description": "Nos ajude através de doações ou sendo mentor de um dos nossos estudantes para que possamos juntos continuar a impactar as vidas de jovens negros e indígenas!",
+                "buttonDonate": "Doe Aqui",
+                "buttonMentor": "Quero Ser Mentor/a"
+            },
+            "institutional": {
+                "title": "APOIE COMO EMPRESA OU INSTITUIÇÃO",
+                "description": "Nos apoie a continuar a impactar as vidas de jovens negros e indígenas ou contrate um dos nossos talentos e mude uma vida!",
+                "buttonSupport": "Quero Apoiar",
+                "buttonHire": "Contrate um Talento"
+            },
+            "formTitle": "QUERO APOIAR"
+        },
+        "WhoAlreadyDone": {
+            "title": "Quem já fez",
+            "description": "Conheçam alguns dos ex-estudantes que já passaram pela Programadores do Amanhã e o que eles tem a dizer sobre nós. Eles estão fazendo incríveis coisas no mundo da tecnologia!",
+            "buttonHireATalent": "Contrate um Talento"
+        },
+        "AboutFormation": {
+            "title": "Nossa Formação",
+            "description": "Nossa formação é totalmente baseada em projetos, com as turmas colocando a mão na massa desde o primeiro dia! Com essa abordagem, simulamos dinâmicas reais do mercado de trabalho, promovendo a aprendizagem entre pares e em squads. Tudo isso garante uma experiência prática, interativa e gamificada.",
+            "formationCards": {
+                "0": {
+                    "label": "Programação Front-End",
+                    "expandedText": "Oferecemos aulas, materiais e desafios para que os estudantes possam aprender a desenvolver front-ends modernos.",
+                    "tagLabel": "Tecnologias:"
+                },
+                "1": {
+                    "label": "Programação Back-End",
+                    "expandedText": "Oferecemos aulas, materiais e desafios para que os estudantes possam aprender a criar back-ends para aplicações reais.",
+                    "tagLabel": "Tecnologias:"
+                },
+                "2": {
+                    "label": "Imersão em Inglês",
+                    "expandedText": "Oferecemos aulas, materiais e desafios de inglês para que nossos estudantes possam explorar o universo tecnológico sem limites.",
+                    "tagLabel": "Conteúdos:"
+                },
+                "3": {
+                    "label": "Soft Skills",
+                    "expandedText": "Oferecemos aulas, materiais e desafios de habilidades comportamentais para que nossos estudantes possam se desenvolver de maneira profissional e aprender a lida com o outro e consigo mesmo em diferentes situações.",
+                    "tagLabel": "Habilidades:"
+                },
+                "4": {
+                    "label": "Educação financeira",
+                    "expandedText": "Oferecemos uma trilha de educação financeira para os estudantes aprenderem a gerenciar seu dinheiro eficientemente.",
+                    "tagLabel": "Conteúdos:"
+                }
+            }
+        },
+        "HireATalent": {
+            "title": "Contrate um Talento e Mude uma Vida",
+            "description": "Apoiamos empresas a contratarem para seus programadas de formação de talentos em três formas:",
+            "cards": {
+                "0": {
+                    "title": "Analista JR ou Trainee",
+                    "description": "Contrate um Analista JR ou Trainee e traga inovação para sua equipe! Esses jovens talentos estão prontos para aplicar seus conhecimentos e contribuir com novas ideias. Invista em seu desenvolvimento e prepare-os para se tornarem futuros líderes na sua empresa. Entre em contato conosco e descubra como podemos ajudar na contratação de novos talentos!"
+                },
+                "1": {
+                    "title": "Estágios",
+                    "description": "Aproveite a oportunidade de contratar estagiários! Eles trazem energia e novas perspectivas, além de estarem ansiosos para aprender e contribuir com sua empresa. Com um programa de estágio bem estruturado, você pode moldar futuros profissionais enquanto ganha colaboradores dedicados. Entre em contato agora e comece o processo de seleção!"
+                },
+                "2": {
+                    "title": "Jovem Aprendiz",
+                    "description": "Invista no futuro ao contratar um Jovem Aprendiz! Essa é uma excelente forma de apoiar o desenvolvimento profissional de jovens entre 14 e 24 anos, enquanto eles contribuem com suas habilidades para sua empresa. Além de cumprir a legislação, você promove a inclusão social e forma cidadãos preparados para o mercado de trabalho."
+                }
+            },
+            "buttonLearnMore": "Quero saber mais",
+            "buttonHireATalent": "Contrate um Talento",
+            "formTitle": "QUERO SABER MAIS"
+        }
+    }
+}

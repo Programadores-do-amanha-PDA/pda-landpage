@@ -8,33 +8,33 @@ import {
 } from "@/common/components";
 import { EnvelopeIcon, TrophyIcon } from "@heroicons/react/24/outline";
 import { useModal } from "@common/context/modal-context";
+import { useTranslations } from "next-intl";
 
 const HireATalent = () => {
+  const t = useTranslations("home.HireATalent");
+
   const { setIsOpen, setTitle } = useModal();
 
   const handleOpenForms = () => {
     setIsOpen(true);
-    setTitle("QUERO SABER MAIS");
+    setTitle(t("formTitle"));
   };
 
   const HireATalentCards = [
     {
       image: "bg-[url('/assets/woman_working.jpg')]",
-      title: "Analista JR ou Trainee",
-      description:
-        "Contrate um Analista JR ou Trainee e traga inovação para sua equipe! Esses jovens talentos estão prontos para aplicar seus conhecimentos e contribuir com novas ideias. Invista em seu desenvolvimento e prepare-os para se tornarem futuros líderes na sua empresa. Entre em contato conosco e descubra como podemos ajudar na contratação de novos talentos!",
+      title: t("cards.0.title"),
+      description: t("cards.0.description"),
     },
     {
       image: "bg-[url('/assets/man_working.jpg')]",
-      title: "Estágios",
-      description:
-        "Aproveite a oportunidade de contratar estagiários! Eles trazem energia e novas perspectivas, além de estarem ansiosos para aprender e contribuir com sua empresa. Com um programa de estágio bem estruturado, você pode moldar futuros profissionais enquanto ganha colaboradores dedicados. Entre em contato agora e comece o processo de seleção!",
+      title: t("cards.1.title"),
+      description: t("cards.1.description"),
     },
     {
       image: "bg-[url('/assets/woman_working_together.jpg')]",
-      title: "Jovem Aprendiz",
-      description:
-        "Invista no futuro ao contratar um Jovem Aprendiz! Essa é uma excelente forma de apoiar o desenvolvimento profissional de jovens entre 14 e 24 anos, enquanto eles contribuem com suas habilidades para sua empresa. Além de cumprir a legislação, você promove a inclusão social e forma cidadãos preparados para o mercado de trabalho.",
+      title: t("cards.2.title"),
+      description: t("cards.2.description"),
     },
   ];
 
@@ -45,14 +45,13 @@ const HireATalent = () => {
           <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
             {"</"}
           </Text>
-          Contrate um Talento e Mude uma Vida
+          {t("title")}
           <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
             {">"}
           </Text>
         </Text>
         <Text className="font-ibm-plex-sans-sans font-semibold text-lg">
-          Apoiamos empresas a contratarem para seus programadas de formação de
-          talentos em três formas:
+          {t("description")}
         </Text>
       </Column>
 
@@ -77,14 +76,14 @@ const HireATalent = () => {
           className="w-full md:w-max h-10 p-1 px-3 gap-3 relative flex items-center justify-center transition-all font-semibold text-gray-900 dark:text-gray-50  bg-gray-50/55 dark:bg-secondary-800/55 hover:bg-gray-50/85 dark:hover:bg-secondary-800/85 rounded-xl sm:max-w-52 shadow-md"
           onClick={handleOpenForms}
         >
-          Quero saber mais
+          {t("buttonLearnMore")}
           <EnvelopeIcon className="size-5 text-gray-900 dark:text-gray-50 stroke-2 -rotate-12" />
         </Button>
         <InternalLink
           className="w-full md:w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-50 border-2 border-gray-50/50 hover:bg-gray-50/50 dark:border-secondary-800/50 dark:hover:bg-secondary-800/50 rounded-xl hover:shadow-md"
           href="/contrate-um-talento"
         >
-          Contrate um Talento
+          {t("buttonHireATalent")}
           <TrophyIcon className="size-5 text-gray-50 -rotate-12" />
         </InternalLink>
       </Column>
