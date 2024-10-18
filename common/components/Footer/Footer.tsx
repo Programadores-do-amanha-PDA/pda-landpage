@@ -77,6 +77,14 @@ const Footer = () => {
                     );
                   },
                 },
+                {
+                  content: "Trabalhe conosco",
+                  onclick: () => {
+                    window.open(
+                      "https://docs.google.com/forms/d/e/1FAIpQLSf-MSrs-wAZJnjps0VdvA-fk7oVFwv3c2_ddaA5OZF7gtkT8Q/viewform"
+                    );
+                  },
+                },
               ]}
             />
 
