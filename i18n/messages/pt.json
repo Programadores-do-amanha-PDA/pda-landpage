@@ -1,4 +1,24 @@
 {
+    "header": {
+        "home": {
+            "title": "Inicio"
+        },
+        "whoWeAre": {
+            "title": "Quem somos",
+            "href": "/quem-somos"
+        },
+        "transparency": {
+            "title": "Transparência",
+            "href": "/quem-somos#transparency"
+        },
+        "subscribe": {
+            "title": "Inscreva-se"
+        },
+        "hireATalent": {
+            "title": "Contrate um Talento",
+            "href": "/contrate-um-talento"
+        }
+    },
     "home": {
         "MainHighlight": {
             "bannerText": {

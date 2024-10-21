@@ -34,7 +34,7 @@ const Home = () => {
       <Advice />
       <SupervisoryBoard />
       <TransparencyBanner />
-      <Column className="w-full items-center justify-center py-8 bg-gradient-to-b from-primary-500 to-secondary-630 dark:from-primary-600 dark:to-secondary-750 gap-10">
+      <Column className="w-full items-center justify-center py-8 px-6 lg:px-8 bg-gradient-to-b from-primary-500 to-secondary-630 dark:from-primary-600 dark:to-secondary-750 gap-10">
       <ActivityReport />
       <FinancialStatements />
       </Column>

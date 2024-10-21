@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 
 import { Image, Button, Row, Column, InternalLink } from "@common/components";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -15,6 +16,8 @@ const desktopMenuCss =
   "h-20 !justify-start flex-col sm:flex-row overflow-y-none sm:gap-6";
 
 const Header = () => {
+  const t = useTranslations("header");
+
   const [deviceMenuOpen, setDeviceMenuOpen] = useState(false);
 
   const buttonStyle = deviceMenuOpen
@@ -26,19 +29,16 @@ const Header = () => {
   };
 
   return (
-    <Row className="w-full min-h-20 sticky top-0 left-0 sm:h-20 items-start justify-center z-10 bg-gray-50 dark:bg-secondary-900">
+    <Row className="w-full min-h-20 sticky top-0 left-0 sm:h-20 items-start justify-center z-50 bg-gray-50 dark:bg-secondary-900">
       <Row
         className={`
-        h-20 w-full bg-gray-50 dark:bg-secondary-900 transition-all top-0 max-w-7xl fixed sm:!justify-between  px-6 lg:px-8 xl:px-0 items-center z-10  ${
+        h-20 w-full bg-gray-50 dark:bg-secondary-900 transition-all top-0 max-w-7xl fixed sm:!justify-between  px-6 lg:px-8 xl:px-0 items-center z-50  ${
           deviceMenuOpen ? deviceMenuCss : desktopMenuCss
         }`}
       >
         <Row className="flex w-full sm:w-max  justify-between z-10 self-center">
           <Row className="w-full sm:w-max flex justify-between items-center h-20 relative top-0 left-0">
-            <Row
-              className="cursor-pointer size-10"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
+            <InternalLink className="cursor-pointer size-10" href="/">
               <Image
                 className="block dark:hidden"
                 src="/assets/simbolo_pda_fundo_branco.png"
@@ -54,7 +54,7 @@ const Header = () => {
                 width={100}
                 height={100}
               />
-            </Row>
+            </InternalLink>
 
             <Column
               className={`flex ${
@@ -83,16 +83,13 @@ const Header = () => {
         >
           <Column className="sm:flex-row w-full sm:w-max gap-5">
             <InternalLink className={buttonStyle} href={"/"}>
-              Inicio
+              {t("home.title")}
             </InternalLink>
-            <InternalLink className={buttonStyle} href={"/quem-somos"}>
-              Quem somos
+            <InternalLink className={buttonStyle} href={t("whoWeAre.href")}>
+              {t("whoWeAre.title")}
             </InternalLink>
-            <InternalLink
-              className={buttonStyle}
-              href={"/quem-somos#transparencia"}
-            >
-              Transparência
+            <InternalLink className={buttonStyle} href={t("transparency.href")}>
+              {t("transparency.title")}
             </InternalLink>
           </Column>
 
@@ -101,13 +98,13 @@ const Header = () => {
               className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-primary-500 rounded-xl gap-2 !text-gray-900 hover:shadow-sm`}
               onClick={handleSubscribe}
             >
-              Inscreva-se
+              {t("subscribe.title")}
             </Button>
             <InternalLink
-              href="/contrate-um-talento"
+              href={t("hireATalent.href")}
               className={`${buttonStyle} p-1 px-2 w-full relative items-center border-2 border-secondary-500 hover:bg-secondary-500/55 rounded-xl shadow-sm`}
             >
-              Contrate um Talento
+              {t("hireATalent.title")}
             </InternalLink>
           </Column>
         </Column>
