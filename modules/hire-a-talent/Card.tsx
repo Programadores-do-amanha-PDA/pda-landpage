@@ -1,8 +1,11 @@
 import { Student } from "@/app/api/student/_studentModel";
 import { Column, Image, Link, Row, Text } from "@/common/components";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { useTranslations } from "next-intl";
 
 const Card = ({ student }: { student: Student }) => {
+  const t = useTranslations("hire-a-talent.Card");
+
   return (
     <Column className="w-full lg:max-w-96 lg:h-max max-h-50 bg-gray-100 dark:bg-gray-50/30 p-2 rounded-2xl gap-6 shadow-md">
       <Row className="w-full gap-4">
@@ -17,7 +20,7 @@ const Card = ({ student }: { student: Student }) => {
           <Text className="font-bold text-lg">{student.name}</Text>
           <Column className="gap-3">
             <Text className="text-sm font-semibold text-gray-900 dark:text-gray-50">
-              Tecnologias:
+              {t("technologies")}
             </Text>
             <Row className="flex-wrap gap-2 md:h-14">
               {student?.technologies?.map((technology, j) => (

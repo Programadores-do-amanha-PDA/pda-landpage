@@ -5,26 +5,15 @@ import clsx from "clsx";
 
 import { Student } from "@/app/api/student/_studentModel";
 
-import {
-  Button,
-  Column,
-  Image,
-  Layout,
-  Link,
-  Row,
-  Text,
-} from "@/common/components";
+import { Button, Column, Image, Layout, Row, Text } from "@/common/components";
 import { ListBox } from "@/common/components/Selectors";
 
-import {
-  EnvelopeIcon,
-  FunnelIcon,
-  MagnifyingGlassIcon,
-} from "@heroicons/react/24/outline";
+import { FunnelIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import Card from "./Card";
 import EmptyCard from "./EmptyCard";
 import { Menu } from "@/common/components/DropdownMenu";
 import HireUs from "./HireUs";
+import { useTranslations } from "next-intl";
 
 const StudentsCardsContainer = ({
   students,
@@ -33,6 +22,8 @@ const StudentsCardsContainer = ({
   students: Student[];
   loading: boolean | null;
 }) => {
+  const t = useTranslations("hire-a-talent.StudentsCardsContainer");
+
   const [search, setSearch] = useState("");
 
   const uniqueTechnologies = Array.from(
@@ -41,8 +32,8 @@ const StudentsCardsContainer = ({
 
   const uniqueClasses = Array.from(new Set(students.map((s) => s.class)));
 
-  const technologies = ["Tecnologias", ...uniqueTechnologies];
-  const classes = ["Turmas", ...uniqueClasses];
+  const technologies = [t("technologies"), ...uniqueTechnologies];
+  const classes = [t("interestAreas"), ...uniqueClasses];
 
   const [technologySelected, setTechnologySelected] = useState([
     technologies[0],
@@ -171,7 +162,7 @@ const StudentsCardsContainer = ({
                   " block w-full rounded-xl shadow-sm border-none bg-gray-700/35 dark:bg-gray-50/35 py-1.5 px-3 text-sm/6 text-gray-50 dark:text-gray-900 placeholder-gray-50 dark:placeholder-gray-900",
                   "focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-gray-50/25 font-ibm-plex-sans"
                 )}
-                placeholder="Procurando por alguém?"
+                placeholder={t("searchPlaceholder")}
                 onChange={(e) => setSearch(e.target.value)}
                 value={search}
               />
@@ -200,7 +191,7 @@ const StudentsCardsContainer = ({
                     className="text-sm w-36 items-center justify-center text-gray-50 dark:text-gray-900 py-2"
                     onClick={resetAllFilters}
                   >
-                    Limpar filtros
+                    {t("resetFilters")}
                   </Button>
                 }
               >
@@ -237,7 +228,7 @@ const StudentsCardsContainer = ({
                 className="size-72 md:size-96"
               />
               <Text className="font-bold text-lg text-center">
-                Nenhum talento foi encontrado
+                {t("emptySearchState")}
               </Text>
             </Column>
           )}

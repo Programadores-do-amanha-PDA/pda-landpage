@@ -4,13 +4,15 @@ import { Column, Header, Image, InternalLink, Text } from "@/common/components";
 import StudentsCards from "./StudentsCardsContainer";
 import WannaSupportModal from "@forms/WannaSupportModal";
 
-
 import { Student } from "@/app/api/student/_studentModel";
 import { getStudents } from "@/hooks/getStudents";
 
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { useTranslations } from "next-intl";
 
 const Home = () => {
+  const t = useTranslations("hire-a-talent.emptyState");
+
   const [students, setStudents] = useState<Student[]>([]);
   const [loading, setLoading] = useState<boolean | null>(null);
 
@@ -39,16 +41,16 @@ const Home = () => {
             className="size-72 md:size-96"
           />
           <Text className="font-bold text-lg text-center">
-            Estamos atualizando o banco de Talentos!
+            {t("start")}
             <br />
-            Volte mais tarde!
+            {t("end")}
           </Text>
           <InternalLink
             className="font-semibold text-gray-900 cursor-pointer dark:text-gray-50 flex flex-row flex-nowrap gap-4 items-center justify-center bg-primary-500/55 w-max p-4 py-2 rounded-xl hover:bg-primary-500/75"
             href="/"
           >
             <ArrowLeftIcon className="size-4 rotate-12" />
-            <Text className="">Voltar a tela inicial</Text>
+            <Text className="">{t("button")}</Text>
           </InternalLink>
         </Column>
       ) : (

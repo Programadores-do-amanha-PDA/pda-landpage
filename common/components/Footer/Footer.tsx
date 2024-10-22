@@ -1,12 +1,22 @@
 "use client";
-import { Column, Row, Image, Text, Layout } from "@common/components";
-import { ContainerContentFooter } from "@common/components/ContainerCaptonFooter/ContainerContentFooter";
+import {
+  Column,
+  Row,
+  Image,
+  Text,
+  Layout,
+  InternalLink,
+  Link,
+} from "@common/components";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("footer");
+
   return (
     <Row className="w-full items-center justify-center py-8 !pb-0 bg-slate-50 dark:bg-secondary-850">
       <Layout className="w-full max-w-7xl p-6 lg:p-8 relative flex-col gap-12">
-        <Column className="w-full justify-between sm:flex-row gap-8">
+        <Column className="w-full justify-between sm:flex-row gap-14 sm:gap-8">
           <Column className="gap-6 items-center sm:items-start">
             <Image
               className="block dark:hidden size-14 w-auto"
@@ -24,7 +34,7 @@ const Footer = () => {
             />
             <Column className="gap-4 items-center sm:items-start">
               <Text className="text-gray-900 dark:text-gray-50 font-dela-gothic">
-                Nossos selos
+                {t("ourStamps")}
               </Text>
               <Row className="gap-4">
                 <Image
@@ -45,76 +55,76 @@ const Footer = () => {
             </Column>
           </Column>
 
-          <Row className="grid grid-cols-1 sm:grid-cols-2 gap-20">
-            <ContainerContentFooter
-              title="Recursos"
-              description={[
-                {
-                  content: "Se Inscreva",
-                  onclick: () => {
-                    window.open("https://forms.gle/Sf93Zf5QmvASRFLp9");
-                  },
-                },
-                {
-                  content: "Contrate um Talento",
-                  onclick: () => {
-                    window.open(
-                      "https://programadoresdoamanha.org.br/contrate-um-talento"
-                    );
-                  },
-                },
-                {
-                  content: "Doe Aqui",
-                  onclick: () => {
-                    window.open("https://programadoresdoamanha.apoiar.co/");
-                  },
-                },
-                {
-                  content: "Seja um Voluntário",
-                  onclick: () => {
-                    window.open(
-                      "https://docs.google.com/forms/d/e/1FAIpQLSf-MSrs-wAZJnjps0VdvA-fk7oVFwv3c2_ddaA5OZF7gtkT8Q/viewform"
-                    );
-                  },
-                },
-                {
-                  content: "Trabalhe conosco",
-                  onclick: () => {
-                    window.open(
-                      "https://docs.google.com/forms/d/e/1FAIpQLSf-MSrs-wAZJnjps0VdvA-fk7oVFwv3c2_ddaA5OZF7gtkT8Q/viewform"
-                    );
-                  },
-                },
-              ]}
-            />
+          <Row className="grid grid-cols-1 sm:grid-cols-2 gap-14 sm:gap-20">
+            <Column className="flex flex-col gap-4">
+              <Text className="text-gray-900 dark:text-gray-50 font-dela-gothic text-center sm:text-start">
+                {t("links.title")}
+              </Text>
+              <Column className="gap-2 items-center sm:items-start">
+                <Link
+                  className="font-normal no-underline cursor-pointer text-gray-900 dark:text-gray-50 hover:text-primary-800 hover:dark:text-primary-500"
+                  href={"https://forms.gle/Sf93Zf5QmvASRFLp9"}
+                >
+                  {t("links.subscribe.title")}
+                </Link>
+                <Link
+                  className="font-normal no-underline cursor-pointer text-gray-900 dark:text-gray-50 hover:text-primary-800 hover:dark:text-primary-500"
+                  href={"https://programadoresdoamanha.apoiar.co/"}
+                >
+                  {t("links.donate.title")}
+                </Link>
+                <InternalLink
+                  className="font-normal no-underline cursor-pointer text-gray-900 dark:text-gray-50 hover:text-primary-800 hover:dark:text-primary-500"
+                  href={t("links.hire.href")}
+                >
+                  {t("links.hire.title")}
+                </InternalLink>
+                <Link
+                  className="font-normal no-underline cursor-pointer text-gray-900 dark:text-gray-50 hover:text-primary-800 hover:dark:text-primary-500"
+                  href={
+                    "https://docs.google.com/forms/d/e/1FAIpQLSf-MSrs-wAZJnjps0VdvA-fk7oVFwv3c2_ddaA5OZF7gtkT8Q/viewform"
+                  }
+                >
+                  {t("links.voluntary.title")}
+                </Link>
+                <Link
+                  className="font-normal no-underline cursor-pointer text-gray-900 dark:text-gray-50 hover:text-primary-800 hover:dark:text-primary-500"
+                  href={
+                    "https://docs.google.com/forms/d/e/1FAIpQLSf-MSrs-wAZJnjps0VdvA-fk7oVFwv3c2_ddaA5OZF7gtkT8Q/viewform"
+                  }
+                >
+                  {t("links.workUs.title")}
+                </Link>
+              </Column>
+            </Column>
 
-            <ContainerContentFooter
-              title="Social"
-              description={[
-                {
-                  content: "Instagram",
-                  onclick: () => {
-                    window.open(
-                      "https://www.instagram.com/programadoresdoamanha/"
-                    );
-                  },
-                },
-                {
-                  content: "LinkedIn",
-                  onclick: () => {
-                    window.open(
-                      "https://www.linkedin.com/company/programadoresdoamanha/"
-                    );
-                  },
-                },
-                {
-                  content: "Blog",
-                  onclick: () => {
-                    window.open("https://medium.com/@programadoresdoamanha");
-                  },
-                },
-              ]}
-            />
+            <Column className="flex flex-col gap-4">
+              <Text className="text-gray-900 dark:text-gray-50 font-dela-gothic text-center sm:text-start">
+                {t("socialMedia.title")}
+              </Text>
+              <Column className="gap-2 items-center sm:items-start">
+                <Link
+                  className="font-normal no-underline cursor-pointer text-gray-900 dark:text-gray-50 hover:text-primary-800 hover:dark:text-primary-500"
+                  href={"https://www.instagram.com/programadoresdoamanha/"}
+                >
+                  Instagram
+                </Link>
+                <Link
+                  className="font-normal no-underline cursor-pointer text-gray-900 dark:text-gray-50 hover:text-primary-800 hover:dark:text-primary-500"
+                  href={
+                    "https://www.linkedin.com/company/programadoresdoamanha/"
+                  }
+                >
+                  LinkedIn
+                </Link>
+                <Link
+                  className="font-normal no-underline cursor-pointer text-gray-900 dark:text-gray-50 hover:text-primary-800 hover:dark:text-primary-500"
+                  href={"https://medium.com/@programadoresdoamanha"}
+                >
+                  Blog
+                </Link>
+              </Column>
+            </Column>
           </Row>
         </Column>
 
@@ -126,16 +136,12 @@ const Footer = () => {
             alt="ODS 8 - Onu"
             className="h-full"
           />
-          <Text className="text-center sm:text-start">
-            A Programadores do Amanhã apoia ao ODS 8 da ONU focado em Trabalho
-            Decente Crescimento Econômico
-          </Text>
+          <Text className="text-center sm:text-start">{t("ods")}</Text>
         </Column>
 
         <Row className="w-full items-center justify-center">
           <Text className="font-ibm-plex-sans text-center sm:text-start">
-            Programadores do Amanhã - CNPJ 44.641.193/0001-35 - Todos os
-            direitos reservados.
+            {t("copyright")}
           </Text>
         </Row>
       </Layout>

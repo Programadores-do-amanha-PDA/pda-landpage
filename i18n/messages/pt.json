@@ -22,8 +22,8 @@
     "home": {
         "MainHighlight": {
             "bannerText": {
-                "start": "MULTIPLICAMOS OPORTUNIDADES PARA A JUVENTUDE",
-                "highlight": "NEGRA E INDÍGENA",
+                "start": "MULTIPLICAMOS OPORTUNIDADES PARA A ",
+                "highlight": "JUVENTUDE NEGRA E INDÍGENA",
                 "final": "NO MERCADO DA TECNOLOGIA"
             },
             "buttonSubscribe": "Inscreva-se para a próxima turma",
@@ -182,6 +182,148 @@
             "buttonLearnMore": "Quero saber mais",
             "buttonHireATalent": "Contrate um Talento",
             "formTitle": "QUERO SABER MAIS"
+        }
+    },
+    "who-we-are": {
+        "WhoWeAre": {
+            "start": "O Instituto Programadores do Amanhã tem a missão de",
+            "highlight": "formar e empregar jovens pretos, pardos e indígenas",
+            "end": "no mercado de tecnologia."
+        },
+        "WhereAreWe": {
+            "title": "Nosso Impacto",
+            "mapLoading": "Carregando Mapa...",
+            "description": {
+                "start": "Em parceria com algumas das",
+                "highlight": " maiores empresas de tecnologia do Brasil e Institutos filantrópicos,",
+                "middle": " o Programadores do Amanhã apoiou no processo de",
+                "endHighlight": " conquista da primeira vaga de emprego de jovens de todas as regiões do Brasil, gerando mais de 3 milhões de reais em renda agregada."
+            }
+        },
+        "OurValues": {
+            "title": "Nossos valores",
+            "description": " Conheça os nossos valores que nos guiam em nossa missão de empregar jovens negros e indígenas no mercado de tecnologia.",
+            "cards": {
+                "0": {
+                    "label": "Impacto em primeiro lugar",
+                    "content": "A Programadores do Amanhã existe para gerar renda e perspectiva de futuro para a juventude negra e indígena. Todas as nossas ações são focadas em qualificar e preparar os jovens para o mercado de trabalho de tecnologia. Pois sabemos que quando uma pessoa estudante se emprega, toda a sua estrutura familiar é impactada, contribuindo assim para o encerramento da pobreza geracional."
+                },
+                "1": {
+                    "label": "Fazemos juntos",
+                    "content": "A Programadores do Amanhã entende que os desafios são coletivos e que juntos somos mais capazes. Por isso nos apoiamos porque nos importamos com cada pessoa que compartilha a jornada conosco. Sabemos que nossos desafios são grandes, mas juntos podemos tornar a jornada individual mais leve e prazerosa."
+                },
+                "2": {
+                    "label": "Genuinamente apaixonados",
+                    "content": "Todos nós da Programadores do Amanhã somos genuinamente apaixonados pelo que fazemos porque entendemos que somos os meios para a mudança social que queremos ver para toda juventude negra e indígena no Brasil."
+                },
+                "3": {
+                    "label": "Responsabilidade com os resultados",
+                    "content": "Todos nós da  Programadores do Amanhã sempre buscamos criar novas soluções e formas de aumentar nosso impacto. Testamos e aprendemos com os resultados, nos apoiando em dados e indicadores para entender como evoluir."
+                }
+            }
+        },
+        "OurTeam": {
+            "title": "Nosso Time",
+            "description": "Conheça as pessoas que estão conosco nesta luta para tornar a nossa missão de empregar a juventude negra e indígena na area da tecnologia possível!"
+        },
+        "Advice": {
+            "title": "Nosso Conselho"
+        },
+        "SupervisoryBoard": {
+            "title": "Conselho Fiscal"
+        }
+    },
+    "transparency": {
+        "ActivityReport": {
+            "title": "Relatório de Atividades",
+            "soon": "(Em Breve)",
+            "description": "Apresentamos nossos relatórios de atividades, onde você pode acompanhar de perto o impacto do seu apoio e do trabalho que realizamos.",
+            "cards": {
+                "0": {
+                    "title": "Relatório de atividades de 2023",
+                    "url": "#"
+                },
+                "1": {
+                    "title": "Relatório de atividades de 2024",
+                    "url": "#"
+                }
+            }
+        },
+        "FinancialStatements": {
+            "title": "Demonstrativos Contábeis",
+            "soon": "(Em Breve)",
+            "description": "Abaixo estão nossos demonstrativos contábeis onde você pode acompanhar como os recursos estão sendo gerenciados e utilizados pela Programadores do Amanhã.",
+            "cards": {
+                "0": {
+                    "title": "Demonstrativo Contábil de 2023",
+                    "url": "#"
+                },
+                "1": {
+                    "title": "Demonstrativo Contábil de 2024",
+                    "url": "#"
+                }
+            }
+        },
+        "TransparencyBanner": {
+            "start": "No Instituto Programadores do Amanhã, acreditamos que a",
+            "highlight": "transparência é fundamental",
+            "middle": "para construir",
+            "endHighlight": "confiança e fortalecer nossos laços com nossos apoiadores.",
+            "button": "Acesse nosso Estatuto Social"
+        }
+    },
+    "hire-a-talent": {
+        "emptyState": {
+            "start": "Estamos atualizando o banco de Talentos!",
+            "end": "Por favor, volte mais tarde!",
+            "button": "Voltar para a página inicial"
+        },
+        "HireUs": {
+            "title": "Contrate diretamente conosco!",
+            "button": "Entre em contato",
+            "formTitle": "CONTRATE CONOSCO"
+        },
+        "StudentsCardsContainer": {
+            "technologies": "Tecnologias",
+            "interestAreas": "Areas de Interesse",
+            "searchPlaceholder": "Procurando por alguém?",
+            "resetFilters": "Limpar filtros",
+            "emptySearchState": "Nenhum talento foi encontrado"
+        },
+        "Card": {
+            "technologies": "Tecnologias:"
+        }
+    },
+    "WannaSupport": {
+        "title": "QUERO APOIAR",
+        "successTitle": "Mensagem enviada com sucesso!",
+        "successMessage": "Você será respondido em breve."
+    },
+    "footer": {
+        "ourStamps": "Nossos selos",
+        "copyright": "CNPJ 44.641.193/0001-35 - Todos os direitos reservados ao Instituto Programadores do Amanhã",
+        "ods": "A Programadores do Amanhã apoia ao ODS 8 da ONU focado em Trabalho Decente Crescimento Econômico",
+        "socialMedia": {
+            "title": "Social"
+        },
+        "links": {
+            "title": "Recursos",
+            "subscribe": {
+                "title": "Se Inscreva"
+            },
+            "donate": {
+                "title": "Doe Aqui"
+            },
+            "hire": {
+                "title": "Contrate um Talento",
+                "href": "/contrate-um-talento"
+            },
+            "voluntary": {
+                "title": "Seja Voluntário"
+            },
+            "workUs": {
+                "title": "Trabalhe conosco"
+            }
         }
     }
 }

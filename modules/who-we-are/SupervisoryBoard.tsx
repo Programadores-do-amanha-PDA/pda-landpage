@@ -1,5 +1,6 @@
 "use client";
 import { Column, Image, Layout, Marker, Row, Text } from "@common/components";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 
 const supervisoryMembers = [
@@ -38,6 +39,8 @@ const supervisoryMembers = [
 ];
 
 const SupervisoryBoard = () => {
+  const t = useTranslations("who-we-are.SupervisoryBoard");
+
   const teamMembersContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -77,7 +80,7 @@ const SupervisoryBoard = () => {
             <Text className="text-gray-50 dark:text-primary-900  font-ibm-plex-sans font-black text-center">
               {"</"}
             </Text>
-            Conselho Fiscal
+            {t("title")}
             <Text className="text-gray-50 dark:text-primary-900  font-ibm-plex-sans font-black text-center">
               {">"}
             </Text>

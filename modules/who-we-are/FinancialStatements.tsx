@@ -1,19 +1,22 @@
 "use client";
 import { Column, Layout, Link, Row, Text } from "@common/components";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
-
-const financialStatementsDocuments = [
-  {
-    title: "Demonstrativo Contábil de 2023",
-    url: "#",
-  },
-  {
-    title: "Demonstrativo Contábil de 2024",
-    url: "#",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const FinancialStatements = () => {
+  const t = useTranslations("transparency.FinancialStatements");
+
+  const financialStatementsDocuments = [
+    {
+      title: t("cards.0.title"),
+      url: t("cards.0.url"),
+    },
+    {
+      title: t("cards.1.title"),
+      url: t("cards.1.url"),
+    },
+  ];
+
   return (
     <Layout className="w-full max-w-7xl py-8 min-h-[300px] flex-col gap-20 !justify-between items-start flex-wrap">
       <Column className="w-full text-start gap-4">
@@ -21,18 +24,16 @@ const FinancialStatements = () => {
           <Text className="dark:text-gray-900 text-gray-50  font-ibm-plex-sans font-black text-center">
             {"</"}
           </Text>
-          Demonstrativos Contábeis
+          {t("title")}
           <Text className="dark:text-gray-900 text-gray-50 font-ibm-plex-sans font-black text-center">
             {">"}
           </Text>
           <Text className="dark:text-gray-900 text-gray-50 font-ibm-plex-sans font-black text-base italic text-center">
-            {"  "} (Em Breve)
+            {"  "} {t("soon")}
           </Text>
         </Text>
         <Text className="font-ibm-plex-sans-sans font-semibold text-lg text-gray-900 dark:text-gray-50">
-          Abaixo estão nossos demonstrativos contábeis onde você pode acompanhar
-          como os recursos estão sendo gerenciados e utilizados pela
-          Programadores do Amanhã.
+          {t("description")}
         </Text>
       </Column>
       <Column className="gap-4 w-full">

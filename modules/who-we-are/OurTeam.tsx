@@ -1,6 +1,9 @@
 import { Column, Image, Layout, Row, Text } from "@common/components";
+import { useTranslations } from "next-intl";
 
 const OurTeam = () => {
+  const t = useTranslations("who-we-are.OurTeam");
+
   const teamMembers = [
     {
       name: "Cleber Guedes",
@@ -140,16 +143,12 @@ const OurTeam = () => {
             <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
               {"</"}
             </Text>
-            Nosso Time
+            {t("title")}
             <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
               {">"}
             </Text>
           </Text>
-          <Text className="font-semibold">
-            Conheça as pessoas que estão conosco nesta luta para tornar a nossa
-            missão de empregar a juventude negra e indígena na area da
-            tecnologia possível!
-          </Text>
+          <Text className="font-semibold">{t("description")}</Text>
         </Column>
 
         <Row className="w-full justify-between sm:justify-start flex-wrap gap-y-4 gap-x-1">

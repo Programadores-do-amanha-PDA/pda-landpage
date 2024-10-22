@@ -1,11 +1,329 @@
 {
+    "header": {
+        "home": {
+            "title": "Home"
+        },
+        "whoWeAre": {
+            "title": "Who we are",
+            "href": "/who-we-are"
+        },
+        "transparency": {
+            "title": "Transparency",
+            "href": "/who-we-are#transparency"
+        },
+        "subscribe": {
+            "title": "Register"
+        },
+        "hireATalent": {
+            "title": "Hire a Talent",
+            "href": "/hire-a-talent"
+        }
+    },
     "home": {
         "MainHighlight": {
-            "banner": [
-                "MULTIPLICAMOS OPORTUNIDADES PARA A JUVENTUDE ",
-                "NEGRA E INDÍGENA",
-                " NO MERCADO DA TECNOLOGIA"
-            ]
+            "bannerText": {
+                "start": "WE MULTIPLY OPPORTUNITIES FOR",
+                "highlight": "BLACK AND INDIGENOUS YOUTH",
+                "final": "IN THE TECHNOLOGY MARKET"
+            },
+            "buttonSubscribe": "Register for the next class",
+            "buttonHireATalent": "Hire a Talent",
+            "womanImageAlt": "",
+            "manImageAlt": ""
+        },
+        "ImpactStatus": {
+            "statusItem": {
+                "0": {
+                    "data": "+400",
+                    "label": "Young people selected",
+                    "description": "We selected more than 300 young people from all over Brazil to take part in our classes."
+                },
+                "1": {
+                    "data": "+R$ 3 millions",
+                    "label": "Generated income",
+                    "description": "We generate more than 3 million reais in added income for our students by employing them in the technology area."
+                },
+                "2": {
+                    "data": "250%",
+                    "label": "Average increase in income",
+                    "description": "On average, we generate a 250% increase in our students' family income by employing them in the technology market."
+                }
+            }
+        },
+        "WhoWeAre": {
+            "descriptionText": {
+                "start": "The 'Programadores do Amanhã' Institute was founded in 2021 with the",
+                "highlight": "objective of training and employing young black, brown and indigenous people",
+                "final": "in the technology market."
+            },
+            "buttonLearnMore": "Read more"
+        },
+        "OurNews": {
+            "title": "Our News",
+            "description": "See what the community has to say about Programadores do Amanhã.",
+            "news": {
+                "0": {
+                    "linkTitle": "View post"
+                },
+                "1": {
+                    "content": "“The NGO has already trained 140 young people, who leave the course employed with an average salary of R$3,600. This generates an average increase in family income of 240%.” (translated news)",
+                    "linkTitle": "Read the news"
+                },
+                "2": {
+                    "content": "“Technology and impact can and should go hand in hand, says the NGO's CEO and founder, Cleber Guedes, in line with iFood's goals. Programadores do Amanhã was created to generate income and employment for young black people by teaching them programming.” (translated news)",
+                    "linkTitle": "Read the news"
+                },
+                "3": {
+                    "linkTitle": "Watch video"
+                },
+                "4": {
+                    "content": "“The course acts as a bridge between dreams and reality, offering a way for people who once saw a career in IT as something distant to now follow a concrete path towards success” (translated news)",
+                    "linkTitle": "Read the news"
+                },
+                "5": {
+                    "content": "“With quality infrastructure, including the best software and equipment, “Programadores do Amanhã” promotes a connection between these young talents and large companies that value diversity and seek to build a more inclusive market.” (translated news)",
+                    "linkTitle": "Read the news"
+                },
+                "6": {
+                    "content": "“Our objective is to expand opportunities for young black and indigenous people, providing a route into the technology market, an area often marked by inequality.” (translated news)",
+                    "linkTitle": "Read the news"
+                },
+                "7": {
+                    "content": "“Even though the demand for technology and computer science professionals is high, access to university and training courses is still restricted to a few people. In addition to the cost of investing in professional qualifications, there is also the investment in a high-performance computer or laptop. However, being a programmer is neither cheap nor easy. That's why the Programadores do Amanhã Project was born!” (translated news)",
+                    "linkTitle": "Read the news"
+                },
+                "8": {
+                    "content": "“Our goal is to achieve 80% employability within six months of graduating and my big dream is that, in the future, we won't need to carry out a selection process to be truly accessible and that any young person who is interested can take the course,” says Cleber Guedes.” (translated news)",
+                    "linkTitle": "Read the news"
+                }
+            }
+        },
+        "OurPartners": {
+            "title": "Our Partners",
+            "description": "Get to know the companies and institutes that help us make an impact on the lives of young black and indigenous people from all over Brazil.",
+            "maintainersLabel": "Maintainers",
+            "partnersLabel": "Supporters"
+        },
+        "Subscribe": {
+            "title": "Register for our classes",
+            "description": "To register, simply click on the button below and fill in our registration form with your details. We'll contact you as soon as we open a new class!",
+            "button": "Register for our next class!"
+        },
+        "WantToSupport": {
+            "title": "Support us",
+            "description": "Support us in multiplying opportunities for young black and indigenous people throughout Brazil!",
+            "individual": {
+                "title": "SUPPORT AS AN INDIVIDUAL",
+                "description": "Help us through donations or by mentoring one of our students so that together we can continue to impact the lives of young black and indigenous people!",
+                "buttonDonate": "Donate here",
+                "buttonMentor": "Become a Mentor"
+            },
+            "institutional": {
+                "title": "SUPPORT AS A COMPANY OR INSTITUTION",
+                "description": "Support us in continuing to impact the lives of young black and indigenous people or hire one of our talents and change a life!",
+                "buttonSupport": "I want to support",
+                "buttonHire": "Hire a Talent"
+            },
+            "formTitle": "I WANT TO SUPPORT"
+        },
+        "WhoAlreadyDone": {
+            "title": "Who has already done",
+            "description": "Meet some of the former students who have been through Programadores do Amanhã and what they have to say about us. They are doing amazing things in the world of technology!",
+            "buttonHireATalent": "Hire a Talent"
+        },
+        "AboutFormation": {
+            "title": "Our Formation",
+            "description": "Our formation is entirely project-based, with classes getting hands-on from day one! With this approach, we simulate the real dynamics of the job market, promoting peer learning and learning in squads. All this guarantees a practical, interactive and gamified experience.",
+            "formationCards": {
+                "0": {
+                    "label": "Front-End Programming",
+                    "expandedText": "We offer classes, materials and challenges so that students can learn to develop modern front-ends.",
+                    "tagLabel": "Technologies:"
+                },
+                "1": {
+                    "label": "Back-End Programming",
+                    "expandedText": "We offer classes, materials and challenges so that students can learn to create back-ends for real applications.",
+                    "tagLabel": "Technologies:"
+                },
+                "2": {
+                    "label": "English Immersion",
+                    "expandedText": "We offer English lessons, materials and challenges so that our students can explore the technological universe without limits.",
+                    "tagLabel": "Contents:"
+                },
+                "3": {
+                    "label": "Soft Skills",
+                    "expandedText": "We offer classes, materials and behavioral skills challenges so that our students can develop professionally and learn to deal with others and themselves in different situations.",
+                    "tagLabel": "Skills:"
+                },
+                "4": {
+                    "label": "Financial education",
+                    "expandedText": "We offer a financial education track for students to learn how to manage their money efficiently.",
+                    "tagLabel": "Contents:"
+                }
+            }
+        },
+        "HireATalent": {
+            "title": "Hire a Talent and Change a Life",
+            "description": "We support companies hiring for their talent training programs in three ways:",
+            "cards": {
+                "0": {
+                    "title": "JR Analyst or Trainee",
+                    "description": "Hire a JR Analyst or Trainee and bring innovation to your team! These young talents are ready to apply their knowledge and contribute new ideas. Invest in their development and prepare them to become future leaders in your company. Contact us and find out how we can help you hire new talent!"
+                },
+                "1": {
+                    "title": "Internships",
+                    "description": "Take advantage of the opportunity to hire interns! They bring energy and new perspectives, as well as being eager to learn and contribute to your company. With a well-structured internship program, you can shape future professionals while gaining dedicated employees. Get in touch now and start the selection process!"
+                },
+                "2": {
+                    "title": "Young Apprentice",
+                    "description": "Invest in the future by hiring a Young Apprentice! This is an excellent way to support the professional development of young people between the ages of 14 and 24, while they contribute their skills to your company. As well as complying with the law, you are promoting social inclusion and training citizens who are prepared for the job market."
+                }
+            },
+            "buttonLearnMore": "Want to know more",
+            "buttonHireATalent": "Hire a Talent",
+            "formTitle": "WANT TO KNOW MORE"
+        }
+    },
+    "who-we-are": {
+        "WhoWeAre": {
+            "start": "The Programadores do Amanhã Institute's mission is to",
+            "highlight": "train and employ young black, brown and indigenous people",
+            "end": "in the technology market."
+        },
+        "WhereAreWe": {
+            "title": "Our Impact",
+            "mapLoading": "Loading Map...",
+            "description": {
+                "start": "In partnership with some of ",
+                "highlight": "Brazil's largest technology companies and philanthropic institutes,",
+                "middle": "Programadores do Amanhã has helped ",
+                "endHighlight": "young people from all regions of Brazil get their first job, generating more than 3 million reais in added income."
+            }
+        },
+        "OurValues": {
+            "title": "Our values",
+            "description": "Learn about our values that guide us in our mission to employ young black and indigenous people in the technology market.",
+            "cards": {
+                "0": {
+                    "label": "Impact comes first",
+                    "content": "Programadores do Amanhã exists to generate income and future prospects for black and indigenous youth. All our actions are focused on qualifying and preparing young people for the technology job market. Because we know that when a student becomes employed, their entire family structure is impacted, thus contributing to ending generational poverty."
+                },
+                "1": {
+                    "label": "We do it together",
+                    "content": "Programadores do Amanhã understands that challenges are collective and that together we are more capable. That's why we support each other because we care about each person who shares the journey with us. We know that our challenges are great, but together we can make the individual journey lighter and more enjoyable."
+                },
+                "2": {
+                    "label": "Genuinely in love",
+                    "content": "All of us at Programadores do Amanhã are genuinely passionate about what we do because we understand that we are the means for the social change we want to see for all black and indigenous youth in Brazil."
+                },
+                "3": {
+                    "label": "Responsibility for results",
+                    "content": "All of us at Programadores do Amanhã are always looking to create new solutions and ways to increase our impact. We test and learn from the results, relying on data and indicators to understand how to evolve."
+                }
+            }
+        },
+        "OurTeam": {
+            "title": "Our Team",
+            "description": "Meet the people who are with us in this fight to make our mission of employing black and indigenous youth in technology possible!"
+        },
+        "Advice": {
+            "title": "Our Board"
+        },
+        "SupervisoryBoard": {
+            "title": "Supervisory Board"
+        }
+    },
+    "transparency": {
+        "ActivityReport": {
+            "title": "Activity Report",
+            "soon": "(Coming Soon)",
+            "description": "We present our activity reports, where you can closely monitor the impact of your support and the work we do.",
+            "cards": {
+                "0": {
+                    "title": "Activity report 2023",
+                    "url": "#"
+                },
+                "1": {
+                    "title": "Activity report 2024",
+                    "url": "#"
+                }
+            }
+        },
+        "FinancialStatements": {
+            "title": "Financial Statements",
+            "soon": "(Coming Soon)",
+            "description": "Below are our financial statements where you can follow how resources are being managed and used by Programadores do Amanhã.",
+            "cards": {
+                "0": {
+                    "title": "Financial Statement 2023",
+                    "url": "#"
+                },
+                "1": {
+                    "title": "Financial Statement 2024",
+                    "url": "#"
+                }
+            }
+        },
+        "TransparencyBanner": {
+            "start": "At Instituto Programadores do Amanhã, we believe that",
+            "highlight": "transparency is fundamental",
+            "middle": "to building",
+            "endHighlight": "trust and strengthening our ties with our supporters.",
+            "button": "Access our Bylaws"
+        }
+    },
+    "hire-a-talent": {
+        "emptyState": {
+            "start": "We're updating our talent pool!",
+            "end": "Please come back later!",
+            "button": "Back to home page"
+        },
+        "HireUs": {
+            "title": "Contract directly with us!",
+            "button": "Contact us",
+            "formTitle": "HIRE US"
+        },
+        "StudentsCardsContainer": {
+            "technologies": "Technology",
+            "interestAreas": "Areas of Interest",
+            "searchPlaceholder": "Looking for someone?",
+            "resetFilters": "Cleaning filters",
+            "emptySearchState": "No talent was found"
+        },
+        "Card": {
+            "technologies": "Technologies:"
+        }
+    },
+    "WannaSupport": {
+        "title": "I WANT TO SUPPORT",
+        "successTitle": "Message sent successfully!",
+        "successMessage": "You will be answered shortly."
+    },
+    "footer": {
+        "ourStamps": "Our seals",
+        "copyright": "CNPJ 44.641.193/0001-35 - All rights reserved by Programadores do Amanhã institute",
+        "ods": "Programadores do Amanhã supports UN SDG 8 focused on Decent Work Economic Growth",
+        "socialMedia": {
+            "title": "Social"
+        },
+        "links": {
+            "title": "Resources",
+            "subscribe": {
+                "title": "Register"
+            },
+            "donate": {
+                "title": "Donate here"
+            },
+            "hire": {
+                "title": "Hire a Talent",
+                "href": "/contrate-um-talento"
+            },
+            "voluntary": {
+                "title": "Become a Volunteer"
+            },
+            "workUs": {
+                "title": "Work with us"
+            }
         }
     }
 }

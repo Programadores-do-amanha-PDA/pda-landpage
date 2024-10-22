@@ -5,8 +5,11 @@ import { useEffect, useLayoutEffect } from "react";
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { CheckIcon } from "@heroicons/react/24/outline";
+import { useTranslations } from "next-intl";
 
 const WannaSupport = () => {
+  const t = useTranslations("WannaSupport");
+
   const { push } = useRouter();
   const searchParams = useSearchParams();
 
@@ -35,7 +38,7 @@ const WannaSupport = () => {
 
   return (
     <Modal
-      title={title ? title : "QUERO APOIAR"}
+      title={title ? title : t("title")}
       isOpen={isOpen}
       onClose={onClose}
     >
@@ -52,9 +55,9 @@ const WannaSupport = () => {
 
           <Column>
             <Text className="text-lg font-ibm-plex-sans !font-bold mt-[50] mb-2">
-              Mensagem enviada com sucesso!
+              {t("successTitle")}
             </Text>
-            <Text className="text-base">Você será respondido em breve.</Text>
+            <Text className="text-base">{t("successMessage")}</Text>
           </Column>
         </Row>
       )}

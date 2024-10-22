@@ -1,19 +1,22 @@
 "use client";
-import { Button, Column, Layout, Link, Row, Text } from "@common/components";
+import { Column, Layout, Link, Text } from "@common/components";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
-
-const activityReportsDocuments = [
-  {
-    title: "Relatório de atividades de 2023",
-    url: "#",
-  },
-  {
-    title: "Relatório de atividades de 2024",
-    url: "#",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const ActivityReport = () => {
+  const t = useTranslations("transparency.ActivityReport");
+
+  const activityReportsDocuments = [
+    {
+      title: t("cards.0.title"),
+      url: t("cards.0.url"),
+    },
+    {
+      title: t("cards.1.title"),
+      url: t("cards.1.url"),
+    },
+  ];
+
   return (
     <Layout className="w-full max-w-7xl min-h-[300px] py-8 flex-col gap-20 !justify-between items-start flex-wrap">
       <Column className="w-full text-start gap-4">
@@ -21,18 +24,16 @@ const ActivityReport = () => {
           <Text className="dark:text-gray-900 text-gray-50 font-ibm-plex-sans font-black text-center">
             {"</"}
           </Text>
-          Relatórios de atividades
+          {t("title")}
           <Text className="dark:text-gray-900 text-gray-50 font-ibm-plex-sans font-black text-center">
             {">"}
           </Text>
           <Text className="dark:text-gray-900 text-gray-50 font-ibm-plex-sans font-black text-base italic text-center">
-            {"  "} (Em Breve)
+            {"  "} {t("soon")}
           </Text>
         </Text>
         <Text className="font-ibm-plex-sans-sans font-semibold text-lg text-gray-900 dark:text-gray-50">
-          Apresentamos nossos relatórios de atividades, onde você pode
-          acompanhar de perto o impacto do seu apoio e do trabalho que
-          realizamos.
+          {t("description")}
         </Text>
       </Column>
       <Column className="gap-4 w-full">

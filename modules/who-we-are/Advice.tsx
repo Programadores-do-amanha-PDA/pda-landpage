@@ -1,5 +1,6 @@
 "use client";
 import { Column, Image, Layout, Marker, Row, Text } from "@common/components";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
 
 const adviceMembers = [
@@ -38,6 +39,8 @@ const adviceMembers = [
 ];
 
 const Advice = () => {
+  const t = useTranslations("who-we-are.Advice");
+
   const teamMembersContainer = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -77,7 +80,7 @@ const Advice = () => {
             <Text className="text-gray-50 dark:text-primary-900 font-ibm-plex-sans font-black text-center">
               {"</"}
             </Text>
-            Nosso Conselho
+            {t("title")}
             <Text className="text-gray-50 dark:text-primary-900  font-ibm-plex-sans font-black text-center">
               {">"}
             </Text>

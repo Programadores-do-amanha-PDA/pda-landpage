@@ -1,5 +1,6 @@
 "use client";
 import { Layout, Row, Text, Marker as Mark, Column } from "@/common/components";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import {
   ComposableMap,
@@ -151,6 +152,8 @@ const markers: {
 ];
 
 const WhereAreWe = () => {
+  const t = useTranslations("who-we-are.WhereAreWe");
+
   const [geoData, setGeoData] = useState(null);
 
   useEffect(() => {
@@ -167,7 +170,7 @@ const WhereAreWe = () => {
             <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
               {"</"}
             </Text>
-            Nosso Impacto
+            {t("title")}
             <Text className="text-primary-500  font-ibm-plex-sans font-black text-center">
               {">"}
             </Text>
@@ -177,7 +180,7 @@ const WhereAreWe = () => {
         <Row className="flex-col-reverse sm:flex-row gap-6 !justify-center items-center">
           <Row className="w-full items-center justify-center">
             {!geoData ? (
-              <div>Carregando Mapa...</div>
+              <div>{t("mapLoading")}</div>
             ) : (
               <ComposableMap
                 projection="geoAzimuthalEqualArea"
@@ -222,16 +225,13 @@ const WhereAreWe = () => {
           </Row>
 
           <Text className="text-lg lg:text-xl text-gray-900 dark:text-gray-50 w-full text-center sm:text-start">
-            Em parceria com algumas das{" "}
+            {t("description.start")}{" "}
             <Mark className="bg-primary-500/55 px-2 rounded-lg text-gray-900 dark:text-gray-50">
-              maiores empresas de tecnologia do Brasil e Institutos
-              filantrópicos,
+              {t("description.highlight")}
             </Mark>{" "}
-            o Programadores do Amanhã apoiou no processo de{" "}
+            {t("description.middle")}{" "}
             <Mark className="bg-primary-500/55 px-2 rounded-lg text-gray-900 dark:text-gray-50">
-              conquista da primeira vaga de emprego de jovens de todas as
-              regiões do Brasil, gerando mais de 3 milhões de reais em renda
-              agregada.
+              {t("description.endHighlight")}
             </Mark>{" "}
           </Text>
         </Row>
