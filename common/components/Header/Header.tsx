@@ -4,9 +4,10 @@ import { useTranslations } from "next-intl";
 
 import { Image, Button, Row, Column, InternalLink } from "@common/components";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import LanguageSwitcher from "@/common/components/Selectors/LanguageSwitcher";
 
 const buttonMenuDesktopStyle =
-  "text-gray-900 dark:text-gray-50 w-max mx-0 font-md font-roboto font-semibold";
+  "text-gray-900 dark:text-gray-50 w-max mx-0 h-10 font-md font-roboto font-semibold flex items-center justify-center ";
 const buttonMenuDeviceStyle =
   "w-full text-start p-0 mx-0 font-normal text-gray-900 dark:text-gray-50 h-10 flex items-center justify-center font-semibold";
 
@@ -102,10 +103,11 @@ const Header = () => {
             </Button>
             <InternalLink
               href={t("hireATalent.href")}
-              className={`${buttonStyle} p-1 px-2 w-full relative items-center border-2 border-secondary-500 hover:bg-secondary-500/55 rounded-xl shadow-sm`}
+              className={`${buttonStyle} p-1 px-2 w-max relative items-center border-2 border-secondary-500 hover:bg-secondary-500/55 rounded-xl shadow-sm`}
             >
               {t("hireATalent.title")}
             </InternalLink>
+            <LanguageSwitcher />
           </Column>
         </Column>
 

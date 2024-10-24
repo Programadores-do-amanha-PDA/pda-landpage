@@ -44,7 +44,7 @@ const ListBox = ({
             "items-center justify-between flex data-[open]:bg-secondary-50/35 data-[open]:dark:bg-secondary-200/35 transition-all relative gap-2"
           )}
         >
-          <ChevronLeftIcon className="size-5 fill-gray-50/60 group-data-[hover]:fill-gray-50 dark:fill-gray-900/60 dark:group-data-[hover]:fill-gray-900 data-[open]:rotate-180" />
+          <ChevronLeftIcon className="size-5 fill-gray-50/60 group-data-[hover]:fill-gray-50 dark:fill-gray-900/60 dark:group-data-[hover]:fill-gray-900" />
           <span className="text-sm font-normal">
             {selectedItems.length === 1
               ? selectedItems[0]
