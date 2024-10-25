@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "../globals.css";
 import { dela_gothic, ibm_plex_sans } from "../fonts";
@@ -71,6 +72,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <AppProviders>{children}</AppProviders>
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
