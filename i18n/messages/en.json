@@ -148,12 +148,14 @@
                 "2": {
                     "label": "English Immersion",
                     "expandedText": "We offer English lessons, materials and challenges so that our students can explore the technological universe without limits.",
-                    "tagLabel": "Contents:"
+                    "tagLabel": "Contents:",
+                    "tags": "Vocabulary-Personal presentation-Present simple-Adverbs of frequency-Past simple-Present Perfect-Past Continuous-Modal Verbs"
                 },
                 "3": {
                     "label": "Soft Skills",
                     "expandedText": "We offer classes, materials and behavioral skills challenges so that our students can develop professionally and learn to deal with others and themselves in different situations.",
-                    "tagLabel": "Skills:"
+                    "tagLabel": "Skills:",
+                    "tags": "Agile - SCRUM & KANBAN - Nonviolent Communication - Conflict management - Innovation - Business vision - Storytelling"
                 },
                 "4": {
                     "label": "Financial education",

@@ -42,16 +42,7 @@ const AboutFormation = () => {
       expandedText: t("formationCards.2.expandedText"),
       tagSection: {
         tagLabel: t("formationCards.2.tagLabel"),
-        tags: [
-          "Vocabulary",
-          "Personal presentation",
-          "Present simple",
-          "Adverbs of frequency",
-          "Past simple",
-          "Present Perfect",
-          "Past Continuous",
-          "Modal Verbs",
-        ],
+        tags: t("formationCards.2.tags").split("-"),
       },
     },
     {
@@ -59,15 +50,7 @@ const AboutFormation = () => {
       expandedText: t("formationCards.3.expandedText"),
       tagSection: {
         tagLabel: t("formationCards.3.tagLabel"),
-        tags: [
-          "Ágil",
-          "SCRUM & KANBAN",
-          "Comunicação Não-Violenta",
-          "Gestão de conflitos",
-          "Inovação",
-          "Visão de negócio",
-          "Storytelling",
-        ],
+        tags: t("formationCards.3.tags").split(" - ")
       },
     },
     {

@@ -148,12 +148,14 @@
                 "2": {
                     "label": "Imersão em Inglês",
                     "expandedText": "Oferecemos aulas, materiais e desafios de inglês para que nossos estudantes possam explorar o universo tecnológico sem limites.",
-                    "tagLabel": "Conteúdos:"
+                    "tagLabel": "Conteúdos:",
+                    "tags": "Vocabulário-Apresentação pessoal-Presente simples-Advérbios de frequência-Passado simples-Presente Perfeito-Passado Contínuo-Verbos Modais"
                 },
                 "3": {
                     "label": "Soft Skills",
                     "expandedText": "Oferecemos aulas, materiais e desafios de habilidades comportamentais para que nossos estudantes possam se desenvolver de maneira profissional e aprender a lida com o outro e consigo mesmo em diferentes situações.",
-                    "tagLabel": "Habilidades:"
+                    "tagLabel": "Habilidades:",
+                    "tags": "Ágil - SCRUM & KANBAN - Comunicação Não-Violenta - Gestão de conflitos - Inovação - Visão de negócio - Storytelling"
                 },
                 "4": {
                     "label": "Educação financeira",
