@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 
-import { Image, Button, Row, Column, InternalLink } from "@common/components";
+import { Image, Row, Column, InternalLink, Link } from "@common/components";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import LanguageSwitcher from "@/common/components/Selectors/LanguageSwitcher";
 
@@ -14,7 +14,7 @@ const buttonMenuDeviceStyle =
 const deviceMenuCss =
   "h-full flex-col !justify-start gap-4 flex overflow-y-none";
 const desktopMenuCss =
-  "h-20 !justify-start flex-col sm:flex-row overflow-y-none sm:gap-6";
+  "h-20 !justify-start flex-col min-[882px]:flex-row overflow-y-none min-[882px]:gap-6";
 
 const Header = () => {
   const t = useTranslations("header");
@@ -25,20 +25,16 @@ const Header = () => {
     ? buttonMenuDeviceStyle
     : buttonMenuDesktopStyle;
 
-  const handleSubscribe = () => {
-    window.open("https://forms.gle/Sf93Zf5QmvASRFLp9");
-  };
-
   return (
-    <Row className="w-full min-h-20 sticky top-0 left-0 sm:h-20 items-start justify-center z-50 bg-gray-50 dark:bg-secondary-900">
+    <Row className="w-full min-h-20 sticky top-0 left-0 min-[882px]:h-20 items-start justify-center z-50 bg-gray-50 dark:bg-secondary-900">
       <Row
         className={`
-        h-20 w-full bg-gray-50 dark:bg-secondary-900 transition-all top-0 max-w-7xl fixed sm:!justify-between  px-6 lg:px-8 xl:px-0 items-center z-50  ${
+        h-20 w-full bg-gray-50 dark:bg-secondary-900 transition-all top-0 max-w-7xl fixed min-[882px]:!justify-between  px-6 lg:px-8 xl:px-0 items-center z-50  ${
           deviceMenuOpen ? deviceMenuCss : desktopMenuCss
         }`}
       >
-        <Row className="flex w-full sm:w-max  justify-between z-10 self-center">
-          <Row className="w-full sm:w-max flex justify-between items-center h-20 relative top-0 left-0">
+        <Row className="flex w-full min-[882px]:w-max  justify-between z-10 self-center">
+          <Row className="w-full min-[882px]:w-max flex justify-between items-center h-20 relative top-0 left-0">
             <InternalLink className="cursor-pointer size-10" href="/">
               <Image
                 className="block dark:hidden"
@@ -59,7 +55,7 @@ const Header = () => {
 
             <Column
               className={`flex ${
-                !deviceMenuOpen && "sm:hidden"
+                !deviceMenuOpen && "min-[882px]:hidden"
               }  items-center justify-center rounded-xl size-10 ease-in-out transition-all delay-75`}
               onClick={() => setDeviceMenuOpen(!deviceMenuOpen)}
             >
@@ -76,13 +72,13 @@ const Header = () => {
         </Row>
 
         <Column
-          className={` justify-between w-full h-full sm:flex-row ${
+          className={` justify-between w-full h-full min-[882px]:flex-row ${
             deviceMenuOpen
               ? "gap-5 py-4 flex flex-col items-center"
-              : "gap-5 py-0 hidden sm:flex items-center my-0"
+              : "gap-5 py-0 hidden min-[882px]:flex items-center my-0"
           }`}
         >
-          <Column className="sm:flex-row w-full sm:w-max gap-5">
+          <Column className="min-[882px]:flex-row w-full min-[882px]:w-max gap-5">
             <InternalLink className={buttonStyle} href={"/"}>
               {t("home.title")}
             </InternalLink>
@@ -94,16 +90,16 @@ const Header = () => {
             </InternalLink>
           </Column>
 
-          <Column className="sm:flex-row w-full sm:w-max gap-4 ">
-            <Button
+          <Column className="min-[882px]:flex-row w-full min-[882px]:w-max gap-4">
+            <Link
               className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-primary-500 rounded-xl gap-2 !text-gray-900 hover:shadow-sm`}
-              onClick={handleSubscribe}
+              href="https://forms.gle/Sf93Zf5QmvASRFLp9"
             >
               {t("subscribe.title")}
-            </Button>
+            </Link>
             <InternalLink
               href={t("hireATalent.href")}
-              className={`${buttonStyle} p-1 px-2 w-max relative items-center border-2 border-secondary-500 hover:bg-secondary-500/55 rounded-xl shadow-sm`}
+              className={`${buttonStyle} p-1 px-2 w-full relative items-center border-2 border-secondary-500 hover:bg-secondary-500/55 rounded-xl shadow-sm`}
             >
               {t("hireATalent.title")}
             </InternalLink>

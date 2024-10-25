@@ -52,7 +52,7 @@
         },
         "WhoWeAre": {
             "descriptionText": {
-                "start": "The 'Programadores do Amanhã' Institute was founded in 2021 with the",
+                "start": "The Programadores do Amanhã Institute was founded in 2021 with the",
                 "highlight": "objective of training and employing young black, brown and indigenous people",
                 "final": "in the technology market."
             },
@@ -179,7 +179,7 @@
                     "description": "Invest in the future by hiring a Young Apprentice! This is an excellent way to support the professional development of young people between the ages of 14 and 24, while they contribute their skills to your company. As well as complying with the law, you are promoting social inclusion and training citizens who are prepared for the job market."
                 }
             },
-            "buttonLearnMore": "Want to know more",
+            "buttonLearnMore": "Know more",
             "buttonHireATalent": "Hire a Talent",
             "formTitle": "WANT TO KNOW MORE"
         }
