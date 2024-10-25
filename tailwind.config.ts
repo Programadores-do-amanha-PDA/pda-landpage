@@ -23,6 +23,9 @@ const config: Config = {
     },
 
     extend: {
+      screens: {
+        mdx: "882px",
+      },
       fontFamily: {
         "dela-gothic": ["var(--font-dela-gothic)"],
         "ibm-plex-sans": ["var(--font-ibm-plex-sans)"],

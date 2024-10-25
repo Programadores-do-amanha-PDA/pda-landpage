@@ -42,8 +42,8 @@ export default function LanguageListBox({
     <Listbox value={selected} onChange={handleSetSelectedLanguage}>
       <ListboxButton
         className={clsx(
-          "relative flex gap-2 w-36 h-10 rounded-lg  bg-gray-400 dark:bg-gray-600 py-1.5 pr-8 pl-3 text-left text-sm/6  text-gray-50 dark:text-gray-900",
-          "data-[open]:rounded-b-none data-[open]:bg-gray-400/80 data-[open]:dark:bg-gray-600/80"
+          "relative flex gap-2 mdx:w-36 h-10 rounded-xl  bg-gray-400 dark:bg-gray-600 py-1.5 pr-8 pl-3 text-left text-sm/6  text-gray-50 dark:text-gray-900",
+          "data-[open]:mdx:rounded-b-none data-[open]:mdx:rounded-t-xl data-[open]:rounded-t-none data-[open]:bg-gray-400/80 data-[open]:dark:bg-gray-600/80"
         )}
       >
         <Image
@@ -57,14 +57,15 @@ export default function LanguageListBox({
           {selected.label}
         </Text>
         <ChevronDownIcon
-          className="group pointer-events-none absolute top-2.5 right-2.5 size-4 text-gray-900 dark:text-gray-50"
+          className="group pointer-events-none absolute top-2.5 right-2.5 size-4 text-gray-900 dark:text-gray-50 mdx:rotate-0 rotate-180"
           aria-hidden="true"
         />
       </ListboxButton>
       <ListboxOptions
         className={clsx(
           "w-[var(--button-width)] rounded-xl border border-gray-50/5 bg-gray-400 dark:bg-gray-600 [--anchor-gap:var(--spacing-1)] empty:invisible",
-          "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0 z-50 data-[open]:rounded-t-none p-2 flex flex-col gap-2"
+          "transition duration-100 ease-in data-[leave]:data-[closed]:opacity-0 z-50 p-2 flex flex-col gap-2",
+          "data-[open]:rounded-b-none data-[open]:rounded-t-xl data-[open]:mdx:rounded-t-none data-[open]:mdx:rounded-b-xl"
         )}
         anchor="bottom end"
       >
