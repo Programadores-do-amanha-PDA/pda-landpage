@@ -42,7 +42,7 @@ export default function LanguageListBox({
     <Listbox value={selected} onChange={handleSetSelectedLanguage}>
       <ListboxButton
         className={clsx(
-          "relative flex gap-2 mdx:w-36 h-10 rounded-xl  bg-gray-400 dark:bg-gray-600 py-1.5 pr-8 pl-3 text-left text-sm/6  text-gray-50 dark:text-gray-900",
+          "relative flex items-center gap-2 mdx:w-36 h-10 rounded-xl  bg-gray-400 dark:bg-gray-600 py-1.5 pr-8 pl-3 text-left text-sm/6  text-gray-50 dark:text-gray-900",
           "data-[open]:mdx:rounded-b-none data-[open]:mdx:rounded-t-xl data-[open]:rounded-t-none data-[open]:bg-gray-400/80 data-[open]:dark:bg-gray-600/80"
         )}
       >
@@ -57,7 +57,7 @@ export default function LanguageListBox({
           {selected.label}
         </Text>
         <ChevronDownIcon
-          className="group pointer-events-none absolute top-2.5 right-2.5 size-4 text-gray-900 dark:text-gray-50 mdx:rotate-0 rotate-180"
+          className="group pointer-events-none absolute top-0 bottom-0 my-auto right-2.5 size-4 text-gray-900 dark:text-gray-50 mdx:rotate-0 rotate-180"
           aria-hidden="true"
         />
       </ListboxButton>
