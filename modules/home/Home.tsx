@@ -10,7 +10,7 @@ import OurNews from "./OurNews";
 import OurPartners from "./OurPartners";
 import WannaSupportModal from "@forms/WannaSupportModal";
 
-import { Column, Header, Footer } from "@/common/components";
+import { Column, Header, Footer, PageViewComponent } from "@/common/components";
 import { Suspense } from "react";
 
 const Home = () => {
@@ -33,6 +33,8 @@ const Home = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <WannaSupportModal />
       </Suspense>
+
+      <PageViewComponent pageName="Home" />
     </Column>
   );
 };

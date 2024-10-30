@@ -1,6 +1,6 @@
 "use client";
 import { Suspense, useEffect, useState } from "react";
-import { Column, Header, Image, InternalLink, Text } from "@/common/components";
+import { Column, Header, Image, InternalLink, PageViewComponent, Text } from "@/common/components";
 import StudentsCards from "./StudentsCardsContainer";
 import WannaSupportModal from "@forms/WannaSupportModal";
 
@@ -9,6 +9,7 @@ import { getStudents } from "@/hooks/getStudents";
 
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
+import { usePathname } from "@/i18n/routing";
 
 const Home = () => {
   const t = useTranslations("hire-a-talent.emptyState");
@@ -60,6 +61,8 @@ const Home = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <WannaSupportModal />
       </Suspense>
+
+      <PageViewComponent pageName="Hire a Talent" />
     </Column>
   );
 };
