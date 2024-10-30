@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -58,14 +57,6 @@ export default async function LocaleLayout({
           src="https://js.hsforms.net/forms/shell.js"
         />
         <Analytics />
-        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS && (
-          <>
-            <GoogleTagManager
-              gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}
-            />
-            <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-          </>
-        )}
       </head>
 
       <body className="w-full h-max flex justify-center items-start">

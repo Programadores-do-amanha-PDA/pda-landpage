@@ -2,9 +2,17 @@
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
 
-import { Image, Row, Column, InternalLink, Link } from "@common/components";
+import {
+  Image,
+  Row,
+  Column,
+  InternalLink,
+  Link,
+  Button,
+} from "@common/components";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import LanguageSwitcher from "@/common/components/Selectors/LanguageSwitcher";
+import { Mixpanel } from "@/utils/Mixpanel";
 
 const buttonMenuDesktopStyle =
   "text-gray-900 dark:text-gray-50 w-max mx-0 h-10 font-md font-roboto font-semibold flex items-center justify-center ";
@@ -24,6 +32,11 @@ const Header = () => {
   const buttonStyle = deviceMenuOpen
     ? buttonMenuDeviceStyle
     : buttonMenuDesktopStyle;
+
+  const handleSubscribe = () => {
+    window.open("https://forms.gle/Sf93Zf5QmvASRFLp9");
+    Mixpanel.track("Register");
+  };
 
   return (
     <Row className="w-full min-h-20 sticky top-0 left-0 min-[882px]:h-20 items-start justify-center z-50 bg-gray-50 dark:bg-secondary-900">
@@ -91,12 +104,12 @@ const Header = () => {
           </Column>
 
           <Column className="min-[882px]:flex-row w-full min-[882px]:w-max gap-4">
-            <Link
+            <Button
               className={`${buttonStyle} p-1 px-2 w-full relative items-center bg-primary-500 rounded-xl gap-2 !text-gray-900 hover:shadow-sm`}
-              href="https://forms.gle/Sf93Zf5QmvASRFLp9"
+              onClick={handleSubscribe}
             >
               {t("subscribe.title")}
-            </Link>
+            </Button>
             <InternalLink
               href={t("hireATalent.href")}
               className={`${buttonStyle} p-1 px-2 w-full relative items-center border-2 border-secondary-500 hover:bg-secondary-500/55 rounded-xl shadow-sm`}

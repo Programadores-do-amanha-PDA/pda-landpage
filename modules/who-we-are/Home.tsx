@@ -1,4 +1,4 @@
-import { Column, Footer, Header } from "@/common/components";
+import { Column, Footer, Header, PageViewComponent } from "@/common/components";
 
 import WhoWeAre from "./WhoWeAre";
 import WhereAreWe from "./WhereAreWe";
@@ -28,6 +28,7 @@ const Home = () => {
         <FinancialStatements />
       </Column>
       <Footer />
+      <PageViewComponent pageName="Who We Are" />
     </Column>
   );
 };
