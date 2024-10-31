@@ -1,4 +1,5 @@
 "use client";
+import { Mixpanel } from "@/utils/Mixpanel";
 import {
   Button,
   Row,
@@ -17,6 +18,7 @@ const MainHighlight = () => {
 
   const handleSubscribe = () => {
     window.open("https://forms.gle/Sf93Zf5QmvASRFLp9");
+    Mixpanel.track("Register");
   };
 
   return (

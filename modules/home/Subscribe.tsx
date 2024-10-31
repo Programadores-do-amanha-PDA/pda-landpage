@@ -1,5 +1,6 @@
 "use client";
 import { Button, Column, Row, Text, Layout } from "@/common/components";
+import { Mixpanel } from "@/utils/Mixpanel";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
 
@@ -8,6 +9,7 @@ const Subscribe = () => {
 
   const handleSubscribe = () => {
     window.open("https://forms.gle/Sf93Zf5QmvASRFLp9");
+    Mixpanel.track("Register");
   };
 
   return (
