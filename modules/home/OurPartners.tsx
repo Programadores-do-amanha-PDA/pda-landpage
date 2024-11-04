@@ -12,6 +12,11 @@ const maintainers = [
     name: "Inter",
     link: "https://contadigital.inter.co/",
   },
+  {
+    logo: "/assets/maintainers/movimento_bem_maior.png",
+    name: "Movimento Bem Maior",
+    link: "https://movimentobemmaior.org.br/",
+  },
 ];
 
 const partners = [
