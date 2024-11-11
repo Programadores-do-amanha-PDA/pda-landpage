@@ -62,14 +62,6 @@ const OurTeam = () => {
       },
     },
     {
-      name: "Raíssa Emanuele",
-      role: "Analista de Jornada",
-      image: {
-        url: "/assets/team/Raissa.jpg",
-        alt: "",
-      },
-    },
-    {
       name: "Jardielen Chaves",
       role: "Estagiária de Operações",
       image: {
