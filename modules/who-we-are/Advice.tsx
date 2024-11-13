@@ -11,31 +11,7 @@ const adviceMembers = [
       url: "/assets/team/Cleber_Guedes.jpg",
       alt: "",
     },
-  },
-  {
-    name: "Leticia Silveira",
-    role: "Gerente de Programas",
-    image: {
-      url: "/assets/team/Leticia_Silveira.png",
-      alt: "",
-    },
-  },
-  {
-    name: "Beatriz Meigger",
-    role: "Líder de seleção & Empregabilidade",
-    image: {
-      url: "/assets/team/Beatriz_Meigger.jpg",
-      alt: "",
-    },
-  },
-  {
-    name: "Rafael Cerqueira",
-    role: "Líder de Jornada do Estudante",
-    image: {
-      url: "/assets/team/Rafael_Cerqueira.jpeg",
-      alt: "",
-    },
-  },
+  }
 ];
 
 const Advice = () => {

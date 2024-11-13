@@ -13,26 +13,26 @@ const supervisoryMembers = [
     },
   },
   {
-    name: "Leticia Silveira",
-    role: "Gerente de Programas",
+    name: "Fabiana Bacelar",
+    role: "Conselheira Fiscal",
     image: {
-      url: "/assets/team/Leticia_Silveira.png",
+      url: "/assets/advice/Fabiana_Bacelar.jpeg",
       alt: "",
     },
   },
   {
-    name: "Beatriz Meigger",
-    role: "Líder de seleção & Empregabilidade",
+    name: "Gilvan Bueno",
+    role: "Conselheiro Fiscal",
     image: {
-      url: "/assets/team/Beatriz_Meigger.jpg",
+      url: "/assets/advice/Gilvan_Bueno.jpeg",
       alt: "",
     },
   },
   {
-    name: "Rafael Cerqueira",
-    role: "Líder de Jornada do Estudante",
+    name: "Larissa Calixto",
+    role: "Conselheira Fiscal",
     image: {
-      url: "/assets/team/Rafael_Cerqueira.jpeg",
+      url: "/assets/advice/Larissa_Calixto.jpeg",
       alt: "",
     },
   },
