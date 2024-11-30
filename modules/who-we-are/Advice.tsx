@@ -5,13 +5,37 @@ import { useEffect, useRef } from "react";
 
 const adviceMembers = [
   {
-    name: "Cleber Guedes",
-    role: "CEO",
+    name: "Victor Salles",
+    role: "Conselheiro Administrativo",
     image: {
-      url: "/assets/team/Cleber_Guedes.jpg",
+      url: "/assets/advice/Victor_Salles.jpeg",
       alt: "",
     },
-  }
+  },
+  {
+    name: "Robson Privado",
+    role: "Conselheiro Administrativo",
+    image: {
+      url: "/assets/advice/Robson_Privado.jpeg",
+      alt: "",
+    },
+  },
+  {
+    name: "Lucas Marques",
+    role: "Conselheiro Administrativo",
+    image: {
+      url: "/assets/advice/Lucas_Marques.jpeg",
+      alt: "",
+    },
+  },
+  {
+    name: "Daiane Almeida",
+    role: "Conselheira Administrativo",
+    image: {
+      url: "/assets/advice/Daiane_Almeida.jpeg",
+      alt: "",
+    },
+  },
 ];
 
 const Advice = () => {

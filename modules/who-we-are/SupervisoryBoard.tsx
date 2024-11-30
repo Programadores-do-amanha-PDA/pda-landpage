@@ -5,14 +5,6 @@ import { useEffect, useRef } from "react";
 
 const supervisoryMembers = [
   {
-    name: "Cleber Guedes",
-    role: "CEO",
-    image: {
-      url: "/assets/team/Cleber_Guedes.jpg",
-      alt: "",
-    },
-  },
-  {
     name: "Fabiana Bacelar",
     role: "Conselheira Fiscal",
     image: {
