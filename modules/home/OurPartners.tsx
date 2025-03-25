@@ -76,6 +76,27 @@ const partners = [
     width: 256,
     height: 102,
   },
+  {
+    logo: "/assets/partners/netlex.png",
+    name: "NetLex",
+    link: "https://netlex.io/",
+    width: 256,
+    height: 102,
+  },
+  {
+    logo: "/assets/partners/solides.png",
+    name: "Solides",
+    link: "https://solides.com.br/",
+    width: 256,
+    height: 102,
+  },
+  {
+    logo: "/assets/partners/thoughtworks.png",
+    name: "Thoughtworks",
+    link: "https://www.thoughtworks.com/pt-br",
+    width: 256,
+    height: 102,
+  },
 ];
 
 const OurPartners = () => {
@@ -109,7 +130,7 @@ const OurPartners = () => {
               {maintainers.map((maintainer, i) => (
                 <Link
                   key={i}
-                  className="flex-shrink-0 size-28 sm:size-36 mx-4 bg-gray-50 rounded-xl p-1"
+                  className="flex-shrink-0 size-28 w-36 sm:size-36 sm:w-44 mx-4 bg-gray-50 rounded-xl p-2"
                   href={maintainer.link}
                 >
                   <Image
@@ -134,7 +155,7 @@ const OurPartners = () => {
               {partners.map((partner, k) => (
                 <Link
                   key={k}
-                  className="flex-shrink-0 size-28 sm:size-36 mx-4 bg-gray-50 rounded-xl p-1"
+                  className="flex-shrink-0 size-28 w-36 sm:size-36 sm:w-44 mx-4 bg-gray-50 rounded-xl p-2"
                   href={partner.link}
                 >
                   <Image
