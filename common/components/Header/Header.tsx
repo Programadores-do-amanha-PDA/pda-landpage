@@ -34,7 +34,7 @@ const Header = () => {
     : buttonMenuDesktopStyle;
 
   const handleSubscribe = () => {
-    window.open("https://forms.gle/Sf93Zf5QmvASRFLp9");
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSckPqdM7RLKURhIaVbzyHj6dvDI7zjrIO5wQtbo25uVlqTTUQ/viewform?usp=dialog");
     Mixpanel.track("Register");
   };
 
