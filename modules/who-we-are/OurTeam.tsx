@@ -32,14 +32,6 @@ const OurTeam = () => {
       },
     },
     {
-      name: "Rafael Cerqueira",
-      role: "Líder de Jornada do Estudante",
-      image: {
-        url: "/assets/team/Rafael_Cerqueira.jpeg",
-        alt: "",
-      },
-    },
-    {
       name: "Karlla Souzza",
       role: "Desenvolvedora FullStack",
       image: {
@@ -64,26 +56,10 @@ const OurTeam = () => {
       },
     },
     {
-      name: "Raíssa Emanuele",
-      role: "Analista de Jornada",
+      name: "Maria Raquel",
+      role: "Analista e Cientista de dados",
       image: {
-        url: "/assets/team/Raissa.jpg",
-        alt: "",
-      },
-    },
-    {
-      name: "Jardielen Chaves",
-      role: "Estagiária de Operações",
-      image: {
-        url: "/assets/team/Jardielen.jpg",
-        alt: "",
-      },
-    },
-    {
-      name: "Beatriz Ferreira",
-      role: "Facilitadora de Programação",
-      image: {
-        url: "/assets/team/Beatriz_Ferreira.jpg",
+        url: "/assets/team/maria-raquel.jpg",
         alt: "",
       },
     },
@@ -96,34 +72,10 @@ const OurTeam = () => {
       },
     },
     {
-      name: "Iasmim Oliveira",
-      role: "Facilitadora de Programação",
-      image: {
-        url: "/assets/team/Iasmim.jpg",
-        alt: "",
-      },
-    },
-    {
       name: "Tabata Macedo",
       role: "Facilitadora de Programação",
       image: {
         url: "/assets/team/Tabata.jpg",
-        alt: "",
-      },
-    },
-    {
-      name: "Michelle de souza",
-      role: "Facilitadora de Programação",
-      image: {
-        url: "/assets/team/Michelle.jpg",
-        alt: "",
-      },
-    },
-    {
-      name: "Felipe Santos",
-      role: "Facilitador de Inglês",
-      image: {
-        url: "/assets/team/Felipe_Santos.jpg",
         alt: "",
       },
     },
@@ -135,7 +87,17 @@ const OurTeam = () => {
         alt: "",
       },
     },
-  ];
+    {
+      name: "Julio César Brito",
+      role: "Facilitador de Programação",
+      image: {
+        url: "/assets/team/julio.jpg",
+        alt: "",
+      },
+    },
+  ].sort(
+    (a, b) => a.name.localeCompare(b.name) || a.role.localeCompare(b.role)
+  );
 
   return (
     <Row className="justify-center p-6 lg:p-8 items-center w-full overflow-x-hidden bg-gray-50 dark:bg-secondary-900 relative">
