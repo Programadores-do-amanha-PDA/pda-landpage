@@ -12,6 +12,7 @@ import TransparencyBanner from "./TransparencyBanner";
 import ActivityReport from "./ActivityReport";
 import FinancialStatements from "./FinancialStatements";
 import ImpactStatus from "./ImpactStatus";
+import ElectionMinutes from "./ElectionMinutes";
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
       <Column className="w-full items-center justify-center py-8 px-6 lg:px-8 bg-gradient-to-b from-primary-500 to-secondary-630 dark:from-primary-600 dark:to-secondary-750 gap-10">
         <ActivityReport />
         <FinancialStatements />
+        <ElectionMinutes />
       </Column>
       <Footer />
       <PageViewComponent pageName="Who We Are" />

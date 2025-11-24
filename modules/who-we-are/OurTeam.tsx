@@ -56,8 +56,16 @@ const OurTeam = () => {
       },
     },
     {
+      name: "Lúnia Martins",
+      role: "Analista de Jornada",
+      image: {
+        url: "/assets/team/maria-raquel.jpg",
+        alt: "",
+      },
+    },
+    {
       name: "Maria Raquel",
-      role: "Analista e Cientista de dados",
+      role: "Estagiária de People Analytics",
       image: {
         url: "/assets/team/maria-raquel.jpg",
         alt: "",
