@@ -1,4 +1,5 @@
 "use client";
+
 import { Button, Column, Row, Text, Layout } from "@/common/components";
 import { Mixpanel } from "@/utils/Mixpanel";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";

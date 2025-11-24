@@ -1,3 +1,5 @@
+"use client";
+
 import MainHighlight from "./MainHighlight";
 import ImpactStatus from "./ImpactStatus";
 import WhoWeAre from "./WhoWeAre";

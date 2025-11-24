@@ -2,7 +2,6 @@ import mixpanel from "mixpanel-browser";
 
 // Configuração do Mixpanel
 const MIXPANEL_TOKEN = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
-console.log(MIXPANEL_TOKEN)
 
 // Interface para as props do tracking
 interface TrackingProps {

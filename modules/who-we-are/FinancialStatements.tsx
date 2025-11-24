@@ -1,4 +1,5 @@
 "use client";
+
 import { Column, Layout, Link, Row, Text } from "@common/components";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";

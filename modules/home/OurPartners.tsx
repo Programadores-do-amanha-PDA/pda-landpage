@@ -1,3 +1,5 @@
+"use client";
+
 import { Column, Text, Layout, Image, Row, Link } from "@common/components";
 import { useTranslations } from "next-intl";
 

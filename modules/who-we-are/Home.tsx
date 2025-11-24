@@ -1,3 +1,5 @@
+"use client";
+
 import { Column, Footer, Header, PageViewComponent } from "@/common/components";
 
 import WhoWeAre from "./WhoWeAre";

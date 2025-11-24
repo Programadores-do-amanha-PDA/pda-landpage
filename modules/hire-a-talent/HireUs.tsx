@@ -1,4 +1,5 @@
 "use client";
+
 import { Button, Row, Text, Layout } from "@/common/components";
 import { useModal } from "@/common/context/modal-context";
 import { EnvelopeIcon } from "@heroicons/react/24/outline";

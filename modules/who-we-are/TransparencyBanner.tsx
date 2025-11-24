@@ -1,3 +1,5 @@
+"use client";
+
 import { Column, Layout, Marker, Row, Text } from "@/common/components";
 import { DocumentTextIcon } from "@heroicons/react/24/outline";
 import { useTranslations } from "next-intl";
@@ -17,11 +19,11 @@ const TransparencyBanner = () => {
             </Text>
             {t("start")}{" "}
             <Marker className="bg-primary-100/55 px-2 rounded-lg">
-            {t("highlight")}
+              {t("highlight")}
             </Marker>{" "}
             {t("middle")}{" "}
             <Marker className="bg-primary-100/55 px-2 rounded-lg">
-            {t("endHighlight")}
+              {t("endHighlight")}
             </Marker>
             <Text className="text-primary-100  font-ibm-plex-sans font-black text-center">
               {">"}

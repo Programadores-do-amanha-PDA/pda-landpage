@@ -1,6 +1,14 @@
 "use client";
+
 import { Suspense, useEffect, useState } from "react";
-import { Column, Header, Image, InternalLink, PageViewComponent, Text } from "@/common/components";
+import {
+  Column,
+  Header,
+  Image,
+  InternalLink,
+  PageViewComponent,
+  Text,
+} from "@/common/components";
 import StudentsCards from "./StudentsCardsContainer";
 import WannaSupportModal from "@forms/WannaSupportModal";
 

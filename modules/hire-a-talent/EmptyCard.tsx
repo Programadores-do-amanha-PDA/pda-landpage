@@ -1,3 +1,5 @@
+"use client";
+
 import { Column, Row } from "@/common/components";
 
 const EmptyCard = () => {

@@ -1,4 +1,5 @@
 "use client";
+
 import { Column, Modal, Text, Row } from "@common/components";
 import { useModal } from "@common/context/modal-context";
 import { useEffect, useLayoutEffect } from "react";
@@ -37,11 +38,7 @@ const WannaSupport = () => {
   }, [isOpen, successfull]);
 
   return (
-    <Modal
-      title={title ? title : t("title")}
-      isOpen={isOpen}
-      onClose={onClose}
-    >
+    <Modal title={title ? title : t("title")} isOpen={isOpen} onClose={onClose}>
       {!successfull ? (
         isOpen && (
           <Column

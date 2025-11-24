@@ -1,4 +1,5 @@
 "use client";
+
 import { Layout, Row, Text, Marker as Mark, Column } from "@/common/components";
 import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
