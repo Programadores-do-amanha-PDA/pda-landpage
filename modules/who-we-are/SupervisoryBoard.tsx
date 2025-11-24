@@ -46,7 +46,7 @@ const SupervisoryBoard = () => {
 
   useEffect(() => {
     const container = teamMembersContainer.current;
-    if (container) {
+    if (container && typeof window !== "undefined") {
       const items = container.children;
       const windowHeight = window.innerWidth;
       if (items[0] && container && windowHeight > 737) {
