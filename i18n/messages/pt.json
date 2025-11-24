@@ -34,9 +34,9 @@
         "ImpactStatus": {
             "statusItem": {
                 "0": {
-                    "data": "+400",
+                    "data": "+300",
                     "label": "Jovens formados",
-                    "description": "Formamos mais de 322 jovens de todo o Brasil."
+                    "description": "Formamos mais de 300 jovens de todo o Brasil."
                 },
                 "1": {
                     "data": "+R$ 6.7 milhões",
