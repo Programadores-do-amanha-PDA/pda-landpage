@@ -36,12 +36,12 @@
                 "0": {
                     "data": "+400",
                     "label": "Young people selected",
-                    "description": "We selected more than 300 young people from all over Brazil to take part in our classes."
+                    "description": "We selected more than 400 young people from all over Brazil to take part in our classes."
                 },
                 "1": {
-                    "data": "+R$ 3 millions",
+                    "data": "+R$ 4 millions",
                     "label": "Generated income",
-                    "description": "We generate more than 3 million reais in added income for our students by employing them in the technology area."
+                    "description": "We generate more than 4 million reais in added income for our students by employing them in the technology area."
                 },
                 "2": {
                     "data": "250%",
@@ -229,7 +229,7 @@
             "description": "Meet the people who are with us in this fight to make our mission of employing black and indigenous youth in technology possible!"
         },
         "Advice": {
-            "title": "Our Board"
+            "title": "Board of Directors"
         },
         "SupervisoryBoard": {
             "title": "Supervisory Board"
