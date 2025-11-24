@@ -59,7 +59,7 @@ const OurTeam = () => {
       name: "Lúnia Martins",
       role: "Analista de Jornada",
       image: {
-        url: "/assets/team/maria-raquel.jpg",
+        url: "/assets/team/lunia.jpeg",
         alt: "",
       },
     },
@@ -80,14 +80,6 @@ const OurTeam = () => {
       },
     },
     {
-      name: "Tabata Macedo",
-      role: "Facilitadora de Programação",
-      image: {
-        url: "/assets/team/Tabata.jpg",
-        alt: "",
-      },
-    },
-    {
       name: "Yasmin",
       role: "Facilitadora de Inglês",
       image: {
@@ -103,9 +95,7 @@ const OurTeam = () => {
         alt: "",
       },
     },
-  ].sort(
-    (a, b) => a.name.localeCompare(b.name) || a.role.localeCompare(b.role)
-  );
+  ];
 
   return (
     <Row className="justify-center p-6 lg:p-8 items-center w-full overflow-x-hidden bg-gray-50 dark:bg-secondary-900 relative">
