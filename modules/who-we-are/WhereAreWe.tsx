@@ -10,6 +10,12 @@ import {
   Marker,
 } from "react-simple-maps";
 
+// Type assertions to fix React 18 compatibility
+const Map = ComposableMap as any;
+const Geos = Geographies as any;
+const Geo = Geography as any;
+const Pin = Marker as any;
+
 const markers: {
   markerOffset: number;
   name: string;
@@ -183,26 +189,26 @@ const WhereAreWe = () => {
             {!geoData ? (
               <div>{t("mapLoading")}</div>
             ) : (
-              <ComposableMap
+              <Map
                 projection="geoAzimuthalEqualArea"
                 projectionConfig={{
                   rotate: [53, 15, 0],
                   scale: 600,
                 }}
               >
-                <Geographies geography={geoData}>
-                  {({ geographies }) =>
-                    geographies.map((geo) => (
-                      <Geography
+                <Geos geography={geoData}>
+                  {({ geographies }: any) =>
+                    geographies.map((geo: any) => (
+                      <Geo
                         key={geo.rsmKey}
                         geography={geo}
                         className="fill-primary-500"
                       />
                     ))
                   }
-                </Geographies>
+                </Geos>
                 {markers.map(({ name, coordinates, markerOffset }) => (
-                  <Marker key={name} coordinates={coordinates}>
+                  <Pin key={name} coordinates={coordinates}>
                     <g
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -219,9 +225,9 @@ const WhereAreWe = () => {
                     <title style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}>
                       {name}
                     </title>
-                  </Marker>
+                  </Pin>
                 ))}
-              </ComposableMap>
+              </Map>
             )}
           </Row>
 
