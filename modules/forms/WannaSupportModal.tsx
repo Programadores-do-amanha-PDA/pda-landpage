@@ -1,7 +1,8 @@
 "use client";
+
 import { Column, Modal, Text, Row } from "@common/components";
 import { useModal } from "@common/context/modal-context";
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { CheckIcon } from "@heroicons/react/24/outline";
@@ -15,34 +16,30 @@ const WannaSupport = () => {
 
   const { isOpen, setIsOpen, title } = useModal();
 
-  const successfull = searchParams.get("successfull");
+  const successful = searchParams.get("successful");
 
   useEffect(() => {
-    setIsOpen(!!successfull);
-  }, [successfull, setIsOpen]);
+    setIsOpen(!!successful);
+  }, [successful, setIsOpen]);
 
   const onClose = () => {
     setIsOpen(false);
-    if (!!successfull) {
+    if (!!successful) {
       push("/");
     }
   };
 
-  useLayoutEffect(() => {
-    if (isOpen && !successfull) {
+  useEffect(() => {
+    if (isOpen && !successful) {
       const script = document.createElement("script");
       script.src = "/static/wanna-support-form.js";
       document.head.appendChild(script);
     }
-  }, [isOpen, successfull]);
+  }, [isOpen, successful]);
 
   return (
-    <Modal
-      title={title ? title : t("title")}
-      isOpen={isOpen}
-      onClose={onClose}
-    >
-      {!successfull ? (
+    <Modal title={title ? title : t("title")} isOpen={isOpen} onClose={onClose}>
+      {!successful ? (
         isOpen && (
           <Column
             className="h-[474px] w-full md:w-[500px]"

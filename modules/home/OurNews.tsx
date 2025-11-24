@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 
 import { Column, Text, Row, Layout, Button, Image } from "@common/components";

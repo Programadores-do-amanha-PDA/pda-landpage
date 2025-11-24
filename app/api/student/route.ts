@@ -31,9 +31,6 @@ export async function POST(req: Request) {
   );
   const [username, password] = credentials.split(":");
 
-  console.log(username, password);
-  console.log(process.env.PDA_API_USERNAME, process.env.PDA_API_PASSWORD);
-
   if (
     process.env.PDA_API_USERNAME !== username ||
     process.env.PDA_API_PASSWORD !== password

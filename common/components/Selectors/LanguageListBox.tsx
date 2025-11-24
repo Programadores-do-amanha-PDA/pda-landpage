@@ -1,4 +1,5 @@
 "use client";
+
 import {
   Listbox,
   ListboxButton,
@@ -12,8 +13,18 @@ import { Text } from "../Text";
 import { Image } from "../Image";
 
 const languages = [
-  { id: 1, code: "pt", label: "Português", flag: "/assets/flags/brazil.png" },
-  { id: 2, code: "en", label: "English", flag: "/assets/flags/usa.png" },
+  {
+    id: 1,
+    code: "pt" as const,
+    label: "Português",
+    flag: "/assets/flags/brazil.png",
+  },
+  {
+    id: 2,
+    code: "en" as const,
+    label: "English",
+    flag: "/assets/flags/usa.png",
+  },
 ];
 
 interface LanguageListBoxProps {

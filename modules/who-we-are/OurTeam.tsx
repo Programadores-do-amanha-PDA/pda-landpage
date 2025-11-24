@@ -1,3 +1,5 @@
+"use client";
+
 import { Column, Image, Layout, Row, Text } from "@common/components";
 import { useTranslations } from "next-intl";
 
@@ -30,14 +32,6 @@ const OurTeam = () => {
       },
     },
     {
-      name: "Rafael Cerqueira",
-      role: "Líder de Jornada do Estudante",
-      image: {
-        url: "/assets/team/Rafael_Cerqueira.jpeg",
-        alt: "",
-      },
-    },
-    {
       name: "Karlla Souzza",
       role: "Desenvolvedora FullStack",
       image: {
@@ -62,18 +56,18 @@ const OurTeam = () => {
       },
     },
     {
-      name: "Jardielen Chaves",
-      role: "Estagiária de Operações",
+      name: "Lúnia Martins",
+      role: "Analista de Jornada",
       image: {
-        url: "/assets/team/Jardielen.jpg",
+        url: "/assets/team/lunia.jpeg",
         alt: "",
       },
     },
     {
-      name: "Beatriz Ferreira",
-      role: "Facilitadora de Programação",
+      name: "Maria Raquel",
+      role: "Estagiária de People Analytics",
       image: {
-        url: "/assets/team/Beatriz_Ferreira.jpg",
+        url: "/assets/team/maria-raquel.jpg",
         alt: "",
       },
     },
@@ -86,42 +80,18 @@ const OurTeam = () => {
       },
     },
     {
-      name: "Iasmim Oliveira",
-      role: "Facilitadora de Programação",
-      image: {
-        url: "/assets/team/Iasmim.jpg",
-        alt: "",
-      },
-    },
-    {
-      name: "Tabata Macedo",
-      role: "Facilitadora de Programação",
-      image: {
-        url: "/assets/team/Tabata.jpg",
-        alt: "",
-      },
-    },
-    {
-      name: "Michelle de souza",
-      role: "Facilitadora de Programação",
-      image: {
-        url: "/assets/team/Michelle.jpg",
-        alt: "",
-      },
-    },
-    {
-      name: "Felipe Santos",
-      role: "Facilitador de Inglês",
-      image: {
-        url: "/assets/team/Felipe_Santos.jpg",
-        alt: "",
-      },
-    },
-    {
       name: "Yasmin",
       role: "Facilitadora de Inglês",
       image: {
         url: "/assets/team/Yasmin_Santana.jpg",
+        alt: "",
+      },
+    },
+    {
+      name: "Julio César Brito",
+      role: "Facilitador de Programação",
+      image: {
+        url: "/assets/team/julio.jpg",
         alt: "",
       },
     },

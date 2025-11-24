@@ -1,4 +1,5 @@
 "use client";
+
 import { useLocale } from "next-intl";
 import { LanguageListBox } from "@/common/components/Selectors";
 import { useRouter } from "@/i18n/routing";

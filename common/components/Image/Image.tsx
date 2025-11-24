@@ -1,6 +1,8 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import Image from "next/image";
+"use client";
+
 import React, { FC } from "react";
+import Image from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 export interface ImageProps {
   className?: string;

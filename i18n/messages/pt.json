@@ -35,18 +35,18 @@
             "statusItem": {
                 "0": {
                     "data": "+400",
-                    "label": "Jovens selecionados",
-                    "description": "Selecionamos mais de 400 jovens de todo o Brasil para fazer parte das nossas turmas."
+                    "label": "Jovens formados",
+                    "description": "Formamos mais de 322 jovens de todo o Brasil."
                 },
                 "1": {
-                    "data": "+R$ 4 milhões",
+                    "data": "+R$ 6.7 milhões",
                     "label": "Gerados em renda",
-                    "description": "Geramos mais de 4 milhões de reais em renda agregada por nossos estudantes ao se empregarem na área de tecnologia."
+                    "description": "Geramos mais de 6.7 milhões de reais em renda agregada por nossos estudantes ao se empregarem na área de tecnologia."
                 },
                 "2": {
-                    "data": "250%",
+                    "data": "144%",
                     "label": "Aumento em média na renda",
-                    "description": "Em média geramos um aumento de 250% da renda familiar dos nossos estudantes ao se empregarem no mercado de tecnologia."
+                    "description": "Em média geramos um aumento de 144% da renda familiar dos nossos estudantes ao se empregarem no mercado de tecnologia."
                 }
             }
         },
@@ -199,7 +199,7 @@
                 "start": "Em parceria com algumas das",
                 "highlight": " maiores empresas de tecnologia do Brasil e Institutos filantrópicos,",
                 "middle": " o Programadores do Amanhã apoiou no processo de",
-                "endHighlight": " conquista da primeira vaga de emprego de jovens de todas as regiões do Brasil, gerando mais de 3 milhões de reais em renda agregada."
+                "endHighlight": " conquista da primeira vaga de emprego de jovens de todas as regiões do Brasil, gerando mais de 6.7 milhões de reais em renda agregada."
             }
         },
         "OurValues": {
@@ -236,42 +236,51 @@
         }
     },
     "transparency": {
-        "ActivityReport": {
-            "title": "Relatório de Atividades",
-            "soon": "(Em Breve)",
-            "description": "Apresentamos nossos relatórios de atividades, onde você pode acompanhar de perto o impacto do seu apoio e do trabalho que realizamos.",
-            "cards": {
-                "0": {
-                    "title": "Relatório de atividades de 2023",
-                    "url": "#"
-                },
-                "1": {
-                    "title": "Relatório de atividades de 2024",
-                    "url": "#"
-                }
-            }
-        },
-        "FinancialStatements": {
-            "title": "Demonstrativos Contábeis",
-            "soon": "(Em Breve)",
-            "description": "Abaixo estão nossos demonstrativos contábeis onde você pode acompanhar como os recursos estão sendo gerenciados e utilizados pela Programadores do Amanhã.",
-            "cards": {
-                "0": {
-                    "title": "Demonstrativo Contábil de 2023",
-                    "url": "#"
-                },
-                "1": {
-                    "title": "Demonstrativo Contábil de 2024",
-                    "url": "#"
-                }
-            }
-        },
         "TransparencyBanner": {
             "start": "No Instituto Programadores do Amanhã, acreditamos que a",
             "highlight": "transparência é fundamental",
             "middle": "para construir",
             "endHighlight": "confiança e fortalecer nossos laços com nossos apoiadores.",
             "button": "Acesse nosso Estatuto Social"
+        },
+        "ActivityReport": {
+            "title": "Relatório de Atividades",
+            "soon": "(Em Breve)",
+            "description": "Apresentamos nossos relatórios de atividades, onde você pode acompanhar de perto o impacto do seu apoio e do trabalho que realizamos.",
+            "cards": {
+                "0": {
+                    "title": "Em Breve",
+                    "url": "#"
+                }
+            }
+        },
+        "FinancialStatements": {
+            "title": "Demonstrativos Contábeis",
+            "soon": "",
+            "description": "Abaixo estão nossos demonstrativos contábeis onde você pode acompanhar como os recursos estão sendo gerenciados e utilizados pela Programadores do Amanhã.",
+            "cards": {
+                "0": [
+                    {
+                        "title": "Certificado de auditoria contábil 2024",
+                        "url": "https://drive.google.com/file/d/1SgwDqy5xmLyfFmHs5-9vOABZtFAMyW-6/view?usp=sharing"
+                    },
+                    {
+                        "title": "Demonstrações Contábeis 2024",
+                        "url": "https://drive.google.com/file/d/1PNgNAz34Y90reYj7fJ6BJlNmhX7oDv1T/view?usp=sharing"
+                    }
+                ]
+            }
+        },
+        "ElectionMinutes": {
+            "title": "Atas de eleições",
+            "soon": "",
+            "description": "Abaixo encontram-se as nossas atas de eleições, onde poderá acompanhar as eleições do Programadores do Amanhã.",
+            "cards": {
+                "0": {
+                    "title": "Ata eleição 2024",
+                    "url": "https://drive.google.com/file/d/1Sp2uReAKfU08o-23JhwAw4GxUe3g4WXg/view?usp=sharing"
+                }
+            }
         }
     },
     "hire-a-talent": {

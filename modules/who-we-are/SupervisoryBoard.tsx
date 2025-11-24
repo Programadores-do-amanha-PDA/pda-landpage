@@ -1,4 +1,5 @@
 "use client";
+
 import { Column, Image, Layout, Marker, Row, Text } from "@common/components";
 import { useTranslations } from "next-intl";
 import { useEffect, useRef } from "react";
@@ -37,13 +38,11 @@ const SupervisoryBoard = () => {
 
   useEffect(() => {
     const container = teamMembersContainer.current;
-    if (container) {
+    if (container && typeof window !== "undefined") {
       const items = container.children;
       const windowHeight = window.innerWidth;
-      console.log(windowHeight);
       if (items[0] && container && windowHeight > 737) {
         const lineHeight = (items[0] as HTMLElement).offsetHeight;
-        console.log(lineHeight);
 
         const secondLineItems = [];
 

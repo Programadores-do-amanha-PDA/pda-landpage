@@ -1,7 +1,11 @@
-import React from 'react'
+"use client";
 
-import { ModalProvider } from './modal-context'
+import React from "react";
 
-const AppProviders = ({ children }: { children: React.ReactNode }) => <ModalProvider>{children}</ModalProvider>
+import { ModalProvider } from "./modal-context";
 
-export default AppProviders
+const AppProviders = ({ children }: { children: React.ReactNode }) => (
+  <ModalProvider>{children}</ModalProvider>
+);
+
+export default AppProviders;

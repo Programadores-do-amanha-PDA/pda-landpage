@@ -34,19 +34,19 @@
         "ImpactStatus": {
             "statusItem": {
                 "0": {
-                    "data": "+400",
-                    "label": "Young people selected",
-                    "description": "We selected more than 400 young people from all over Brazil to take part in our classes."
+                    "data": "+300",
+                    "label": "Young graduates",
+                    "description": "We have trained over 300 young people from all over Brazil."
                 },
                 "1": {
-                    "data": "+R$ 4 millions",
+                    "data": "+R$ 6.7 millions",
                     "label": "Generated income",
-                    "description": "We generate more than 4 million reais in added income for our students by employing them in the technology area."
+                    "description": "We generate more than 6.7 million reais in added income for our students by employing them in the technology area."
                 },
                 "2": {
-                    "data": "250%",
+                    "data": "144%",
                     "label": "Average increase in income",
-                    "description": "On average, we generate a 250% increase in our students' family income by employing them in the technology market."
+                    "description": "On average, we generate a 144% increase in our students' family income by employing them in the technology market."
                 }
             }
         },
@@ -199,7 +199,7 @@
                 "start": "In partnership with some of ",
                 "highlight": "Brazil's largest technology companies and philanthropic institutes,",
                 "middle": "Programadores do Amanhã has helped ",
-                "endHighlight": "young people from all regions of Brazil get their first job, generating more than 3 million reais in added income."
+                "endHighlight": "young people from all regions of Brazil get their first job, generating more than 6.7 million reais in added income."
             }
         },
         "OurValues": {
@@ -236,42 +236,51 @@
         }
     },
     "transparency": {
-        "ActivityReport": {
-            "title": "Activity Report",
-            "soon": "(Coming Soon)",
-            "description": "We present our activity reports, where you can closely monitor the impact of your support and the work we do.",
-            "cards": {
-                "0": {
-                    "title": "Activity report 2023",
-                    "url": "#"
-                },
-                "1": {
-                    "title": "Activity report 2024",
-                    "url": "#"
-                }
-            }
-        },
-        "FinancialStatements": {
-            "title": "Financial Statements",
-            "soon": "(Coming Soon)",
-            "description": "Below are our financial statements where you can follow how resources are being managed and used by Programadores do Amanhã.",
-            "cards": {
-                "0": {
-                    "title": "Financial Statement 2023",
-                    "url": "#"
-                },
-                "1": {
-                    "title": "Financial Statement 2024",
-                    "url": "#"
-                }
-            }
-        },
         "TransparencyBanner": {
             "start": "At Instituto Programadores do Amanhã, we believe that",
             "highlight": "transparency is fundamental",
             "middle": "to building",
             "endHighlight": "trust and strengthening our ties with our supporters.",
             "button": "Access our Bylaws"
+        },
+        "ActivityReport": {
+            "title": "Activity Report",
+            "soon": "(Coming Soon)",
+            "description": "We present our activity reports, where you can closely monitor the impact of your support and the work we do.",
+            "cards": {
+                "0": {
+                    "title": "Coming Soon",
+                    "url": "#"
+                }
+            }
+        },
+        "FinancialStatements": {
+            "title": "Financial Statements",
+            "soon": "",
+            "description": "Below are our financial statements where you can follow how resources are being managed and used by Programadores do Amanhã.",
+            "cards": {
+                "0": [
+                    {
+                        "title": "Accounting audit certificate 2024",
+                        "url": "https://drive.google.com/file/d/1SgwDqy5xmLyfFmHs5-9vOABZtFAMyW-6/view?usp=sharing"
+                    },
+                    {
+                        "title": "Financial Statements 2024",
+                        "url": "https://drive.google.com/file/d/1PNgNAz34Y90reYj7fJ6BJlNmhX7oDv1T/view?usp=sharing"
+                    }
+                ]
+            }
+        },
+        "ElectionMinutes": {
+            "title": "Elections Minutes",
+            "soon": "",
+            "description": "Below you will find our election minutes, where you can follow the elections for Programadores do Amanhã.",
+            "cards": {
+                "0": {
+                    "title": "Minutes of the 2024 election",
+                    "url": "https://drive.google.com/file/d/1Sp2uReAKfU08o-23JhwAw4GxUe3g4WXg/view?usp=sharing"
+                }
+            }
         }
     },
     "hire-a-talent": {

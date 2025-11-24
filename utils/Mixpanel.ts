@@ -2,7 +2,6 @@ import mixpanel from "mixpanel-browser";
 
 // Configuração do Mixpanel
 const MIXPANEL_TOKEN = process.env.NEXT_PUBLIC_MIXPANEL_TOKEN;
-console.log(MIXPANEL_TOKEN)
 
 // Interface para as props do tracking
 interface TrackingProps {
@@ -22,7 +21,7 @@ class Analytics {
         });
         this.initialized = true;
       } catch (error) {
-        console.error("Erro ao inicializar Mixpanel:", error);
+        console.error("Error on start Mixpanel:", error);
         this.initialized = false;
       }
     }
@@ -30,14 +29,14 @@ class Analytics {
 
   track(eventName: string, properties?: TrackingProps) {
     if (!this.initialized) {
-      console.warn("Analytics não inicializado");
+      console.warn("Analytics not started");
       return;
     }
 
     try {
       mixpanel.track(eventName, properties);
     } catch (error) {
-      console.error("Erro ao enviar evento:", error);
+      console.error("Error to send event:", error);
     }
   }
 }

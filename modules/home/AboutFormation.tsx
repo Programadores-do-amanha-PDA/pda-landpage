@@ -1,4 +1,5 @@
 "use client";
+
 import { Expensive } from "@/common/components/Card";
 import { Text, Column, Layout, Row } from "@common/components";
 import { useTranslations } from "next-intl";
@@ -50,7 +51,7 @@ const AboutFormation = () => {
       expandedText: t("formationCards.3.expandedText"),
       tagSection: {
         tagLabel: t("formationCards.3.tagLabel"),
-        tags: t("formationCards.3.tags").split(" - ")
+        tags: t("formationCards.3.tags").split(" - "),
       },
     },
     {

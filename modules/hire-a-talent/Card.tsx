@@ -1,3 +1,5 @@
+"use client";
+
 import { Student } from "@/app/api/student/_studentModel";
 import { Column, Image, Link, Row, Text } from "@/common/components";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
