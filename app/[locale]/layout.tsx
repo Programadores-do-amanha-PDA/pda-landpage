@@ -49,6 +49,7 @@ export default async function LocaleLayout({
     <html
       lang="pt-BR"
       className={`w-full h-full flex  ${ibm_plex_sans.variable} ${dela_gothic.variable} font-ibm-plex-sans`}
+      suppressHydrationWarning
     >
       <head>
         {/* eslint-disable-next-line */}
@@ -59,7 +60,7 @@ export default async function LocaleLayout({
         <Analytics />
       </head>
 
-      <body className="w-full h-max flex justify-center items-start">
+      <body className="w-full h-max flex justify-center items-start" suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <AppProviders>{children}</AppProviders>
         </NextIntlClientProvider>

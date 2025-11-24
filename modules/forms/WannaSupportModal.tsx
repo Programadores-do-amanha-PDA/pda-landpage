@@ -2,7 +2,7 @@
 
 import { Column, Modal, Text, Row } from "@common/components";
 import { useModal } from "@common/context/modal-context";
-import { useEffect, useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { CheckIcon } from "@heroicons/react/24/outline";
@@ -29,7 +29,7 @@ const WannaSupport = () => {
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (isOpen && !successfull) {
       const script = document.createElement("script");
       script.src = "/static/wanna-support-form.js";
