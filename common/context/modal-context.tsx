@@ -1,9 +1,10 @@
 "use client";
+
 import React, {
-  useEffect,
   useState,
   Dispatch,
   SetStateAction,
+  useEffect,
 } from "react";
 import {
   disableBodyScroll,
@@ -24,18 +25,33 @@ const ModalContext = React.createContext<IModalContext>({} as IModalContext);
 const ModalProvider: React.FC<ScriptProps> = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [title, setTitle] = useState("QUERO APOIAR");
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    if (isOpen) {
-      disableBodyScroll(document.body);
-    } else {
-      enableBodyScroll(document.body);
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    try {
+      if (isOpen) {
+        disableBodyScroll(document.body);
+      } else {
+        enableBodyScroll(document.body);
+      }
+    } catch (error) {
+      console.error("Error managing body scroll:", error);
     }
-  }, [isOpen]);
+  }, [isOpen, isMounted]);
 
   useEffect(() => {
     return () => {
-      clearAllBodyScrollLocks();
+      try {
+        clearAllBodyScrollLocks();
+      } catch (error) {
+        console.error("Error clearing body scroll locks:", error);
+      }
     };
   }, []);
 
@@ -45,7 +61,6 @@ const ModalProvider: React.FC<ScriptProps> = (props) => {
       {...props}
     >
       {props.children}
-
     </ModalContext.Provider>
   );
 };

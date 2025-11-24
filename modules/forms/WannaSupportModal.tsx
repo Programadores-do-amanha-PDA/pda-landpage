@@ -16,30 +16,30 @@ const WannaSupport = () => {
 
   const { isOpen, setIsOpen, title } = useModal();
 
-  const successfull = searchParams.get("successfull");
+  const successful = searchParams.get("successful");
 
   useEffect(() => {
-    setIsOpen(!!successfull);
-  }, [successfull, setIsOpen]);
+    setIsOpen(!!successful);
+  }, [successful, setIsOpen]);
 
   const onClose = () => {
     setIsOpen(false);
-    if (!!successfull) {
+    if (!!successful) {
       push("/");
     }
   };
 
   useEffect(() => {
-    if (isOpen && !successfull) {
+    if (isOpen && !successful) {
       const script = document.createElement("script");
       script.src = "/static/wanna-support-form.js";
       document.head.appendChild(script);
     }
-  }, [isOpen, successfull]);
+  }, [isOpen, successful]);
 
   return (
     <Modal title={title ? title : t("title")} isOpen={isOpen} onClose={onClose}>
-      {!successfull ? (
+      {!successful ? (
         isOpen && (
           <Column
             className="h-[474px] w-full md:w-[500px]"

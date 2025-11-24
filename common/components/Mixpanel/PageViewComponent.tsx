@@ -1,4 +1,5 @@
 "use client";
+
 import { usePathname } from "@/i18n/routing";
 import { Mixpanel } from "@/utils/Mixpanel";
 import { useLocale } from "next-intl";
@@ -9,16 +10,16 @@ interface PageViewComponentProps {
 }
 
 const PageViewComponent = ({ pageName }: PageViewComponentProps) => {
-  const path = usePathname()
-  const locale = useLocale()
+  const path = usePathname();
+  const locale = useLocale();
 
   useEffect(() => {
     Mixpanel.track("Page View", {
       pageName: pageName,
       path: path,
-      locale: locale
+      locale: locale,
     });
-  }, []);
+  }, [locale, pageName, path]);
 
   return <></>;
 };

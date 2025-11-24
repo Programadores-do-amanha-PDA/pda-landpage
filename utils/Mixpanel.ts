@@ -21,7 +21,7 @@ class Analytics {
         });
         this.initialized = true;
       } catch (error) {
-        console.error("Erro ao inicializar Mixpanel:", error);
+        console.error("Error on start Mixpanel:", error);
         this.initialized = false;
       }
     }
@@ -29,14 +29,14 @@ class Analytics {
 
   track(eventName: string, properties?: TrackingProps) {
     if (!this.initialized) {
-      console.warn("Analytics não inicializado");
+      console.warn("Analytics not started");
       return;
     }
 
     try {
       mixpanel.track(eventName, properties);
     } catch (error) {
-      console.error("Erro ao enviar evento:", error);
+      console.error("Error to send event:", error);
     }
   }
 }

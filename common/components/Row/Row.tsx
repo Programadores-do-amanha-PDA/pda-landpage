@@ -1,4 +1,6 @@
-import { FC, PropsWithChildren } from "react";
+"use client";
+
+import React, { FC, PropsWithChildren } from "react";
 
 export interface RowComponentProps
   extends PropsWithChildren<{}>,

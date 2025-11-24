@@ -1,3 +1,5 @@
+"use client";
+
 import { Row } from "../Row";
 import clsx from "clsx";
 import {
