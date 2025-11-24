@@ -6,34 +6,26 @@ import { useEffect, useRef } from "react";
 
 const supervisoryMembers = [
   {
-    name: "Cleber Guedes",
-    role: "CEO",
+    name: "Fabiana Bacelar",
+    role: "Conselheira Fiscal",
     image: {
-      url: "/assets/team/Cleber_Guedes.jpg",
+      url: "/assets/advice/Fabiana_Bacelar.jpeg",
       alt: "",
     },
   },
   {
-    name: "Leticia Silveira",
-    role: "Gerente de Programas",
+    name: "Gilvan Bueno",
+    role: "Conselheiro Fiscal",
     image: {
-      url: "/assets/team/Leticia_Silveira.png",
+      url: "/assets/advice/Gilvan_Bueno.jpeg",
       alt: "",
     },
   },
   {
-    name: "Beatriz Meigger",
-    role: "Líder de seleção & Empregabilidade",
+    name: "Larissa Calixto",
+    role: "Conselheira Fiscal",
     image: {
-      url: "/assets/team/Beatriz_Meigger.jpg",
-      alt: "",
-    },
-  },
-  {
-    name: "Rafael Cerqueira",
-    role: "Líder de Jornada do Estudante",
-    image: {
-      url: "/assets/team/Rafael_Cerqueira.jpeg",
+      url: "/assets/advice/Larissa_Calixto.jpeg",
       alt: "",
     },
   },

@@ -36,12 +36,12 @@
                 "0": {
                     "data": "+400",
                     "label": "Jovens selecionados",
-                    "description": "Selecionamos mais de 300 jovens de todo o Brasil para fazer parte das nossas turmas."
+                    "description": "Selecionamos mais de 400 jovens de todo o Brasil para fazer parte das nossas turmas."
                 },
                 "1": {
-                    "data": "+R$ 3 milhões",
+                    "data": "+R$ 4 milhões",
                     "label": "Gerados em renda",
-                    "description": "Geramos mais de 3 milhões de reais em renda agregada por nossos estudantes ao se empregarem na área de tecnologia."
+                    "description": "Geramos mais de 4 milhões de reais em renda agregada por nossos estudantes ao se empregarem na área de tecnologia."
                 },
                 "2": {
                     "data": "250%",
@@ -229,7 +229,7 @@
             "description": "Conheça as pessoas que estão conosco nesta luta para tornar a nossa missão de empregar a juventude negra e indígena na area da tecnologia possível!"
         },
         "Advice": {
-            "title": "Nosso Conselho"
+            "title": "Conselho Administrativo"
         },
         "SupervisoryBoard": {
             "title": "Conselho Fiscal"

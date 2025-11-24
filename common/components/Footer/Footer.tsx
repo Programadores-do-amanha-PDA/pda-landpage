@@ -64,7 +64,7 @@ const Footer = () => {
               <Column className="gap-2 items-center sm:items-start">
                 <Link
                   className="font-normal no-underline cursor-pointer text-gray-900 dark:text-gray-50 hover:text-primary-800 hover:dark:text-primary-500"
-                  href={"https://forms.gle/Sf93Zf5QmvASRFLp9"}
+                  href={"https://docs.google.com/forms/d/e/1FAIpQLSckPqdM7RLKURhIaVbzyHj6dvDI7zjrIO5wQtbo25uVlqTTUQ/viewform?usp=dialog"}
                 >
                   {t("links.subscribe.title")}
                 </Link>
