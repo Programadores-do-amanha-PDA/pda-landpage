@@ -59,7 +59,7 @@ const WantToSupport = () => {
             <Column className="gap-6 sm:flex-row">
               <Link
                 className="w-full md:w-max h-10 p-1 px-3 gap-4 relative flex items-center justify-center transition-all font-semibold text-gray-900 bg-gray-50/55 hover:bg-gray-50/80 dark:bg-primary-700/55 dark:hover:bg-primary-700/80 rounded-xl sm:max-w-52 shadow-md"
-                href="https://programadoresdoamanha.apoiar.co/"
+                href="https://www.doe.programadoresdoamanha.org.br"
               >
                 {t("individual.buttonDonate")}
 
