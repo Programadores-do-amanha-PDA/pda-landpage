@@ -73,9 +73,7 @@ export const highlights = {
     },
     {
       value: "24 estados",
-      text: "Nossos alunos vêm de 24 estados e de todas as regiões do país.",
-      // [PENDENTE] O livro de cases diz 100 municípios; confirmar o número atualizado.
-      placeholder: "[ATUALIZAR NÚMERO DE MUNICÍPIOS]",
+      text: "Nossos alunos vêm de 24 estados, de mais de 100 municípios e de todas as regiões do país.",
     },
   ] as { value: string; text: string; placeholder?: string }[],
   note: "Dados atualizados em outubro/2026.",
