@@ -23,7 +23,7 @@
         "MainHighlight": {
             "bannerText": {
                 "start": "MULTIPLICAMOS OPORTUNIDADES PARA A ",
-                "highlight": "JUVENTUDE NEGRA E INDÍGENA",
+                "highlight": "JUVENTUDE DE BAIXA RENDA",
                 "final": "NO MERCADO DA TECNOLOGIA"
             },
             "buttonSubscribe": "Inscreva-se para a próxima turma",
@@ -53,7 +53,7 @@
         "WhoWeAre": {
             "descriptionText": {
                 "start": "O Instituto Programadores do Amanhã nasceu em 2021 com o",
-                "highlight": "objetivo de formar e empregar jovens pretos, pardos e indígenas",
+                "highlight": "objetivo de formar e empregar jovens de baixa renda",
                 "final": "no mercado de tecnologia."
             },
             "buttonLearnMore": "Saiba mais"
@@ -100,7 +100,7 @@
         },
         "OurPartners": {
             "title": "Nossos Parceiros",
-            "description": "Conheçam as empresas e institutos que nos ajudam a causar impacto nas vidas dos jovens negros e indígenas de todo o Brasil.",
+            "description": "Conheçam as empresas e institutos que nos ajudam a causar impacto nas vidas dos jovens de baixa renda de todo o Brasil.",
             "maintainersLabel": "Mantenedores",
             "partnersLabel": "Apoiadores"
         },
@@ -111,16 +111,16 @@
         },
         "WantToSupport": {
             "title": "Nos Apoie",
-            "description": "Nos apoie a multiplicar as oportunidades para jovens negros e indígenas de todo o Brasil!",
+            "description": "Nos apoie a multiplicar as oportunidades para jovens de baixa renda de todo o Brasil!",
             "individual": {
                 "title": "APOIE COMO PESSOA FÍSICA",
-                "description": "Nos ajude através de doações ou sendo mentor de um dos nossos estudantes para que possamos juntos continuar a impactar as vidas de jovens negros e indígenas!",
+                "description": "Nos ajude através de doações ou sendo mentor de um dos nossos estudantes para que possamos juntos continuar a impactar as vidas de jovens de baixa renda!",
                 "buttonDonate": "Doe Aqui",
                 "buttonMentor": "Quero Ser Mentor/a"
             },
             "institutional": {
                 "title": "APOIE COMO EMPRESA OU INSTITUIÇÃO",
-                "description": "Nos apoie a continuar a impactar as vidas de jovens negros e indígenas ou contrate um dos nossos talentos e mude uma vida!",
+                "description": "Nos apoie a continuar a impactar as vidas de jovens de baixa renda ou contrate um dos nossos talentos e mude uma vida!",
                 "buttonSupport": "Quero Apoiar",
                 "buttonHire": "Contrate um Talento"
             },
@@ -189,7 +189,7 @@
     "who-we-are": {
         "WhoWeAre": {
             "start": "O Instituto Programadores do Amanhã tem a missão de",
-            "highlight": "formar e empregar jovens pretos, pardos e indígenas",
+            "highlight": "formar e empregar jovens de baixa renda",
             "end": "no mercado de tecnologia."
         },
         "WhereAreWe": {
@@ -204,11 +204,11 @@
         },
         "OurValues": {
             "title": "Nossos valores",
-            "description": " Conheça os nossos valores que nos guiam em nossa missão de empregar jovens negros e indígenas no mercado de tecnologia.",
+            "description": " Conheça os nossos valores que nos guiam em nossa missão de empregar jovens de baixa renda no mercado de tecnologia.",
             "cards": {
                 "0": {
                     "label": "Impacto em primeiro lugar",
-                    "content": "A Programadores do Amanhã existe para gerar renda e perspectiva de futuro para a juventude negra e indígena. Todas as nossas ações são focadas em qualificar e preparar os jovens para o mercado de trabalho de tecnologia. Pois sabemos que quando uma pessoa estudante se emprega, toda a sua estrutura familiar é impactada, contribuindo assim para o encerramento da pobreza geracional."
+                    "content": "A Programadores do Amanhã existe para gerar renda e perspectiva de futuro para a juventude de baixa renda. Todas as nossas ações são focadas em qualificar e preparar os jovens para o mercado de trabalho de tecnologia. Pois sabemos que quando uma pessoa estudante se emprega, toda a sua estrutura familiar é impactada, contribuindo assim para o encerramento da pobreza geracional."
                 },
                 "1": {
                     "label": "Fazemos juntos",
@@ -216,7 +216,7 @@
                 },
                 "2": {
                     "label": "Genuinamente apaixonados",
-                    "content": "Todos nós da Programadores do Amanhã somos genuinamente apaixonados pelo que fazemos porque entendemos que somos os meios para a mudança social que queremos ver para toda juventude negra e indígena no Brasil."
+                    "content": "Todos nós da Programadores do Amanhã somos genuinamente apaixonados pelo que fazemos porque entendemos que somos os meios para a mudança social que queremos ver para toda a juventude de baixa renda no Brasil."
                 },
                 "3": {
                     "label": "Responsabilidade com os resultados",
@@ -226,7 +226,7 @@
         },
         "OurTeam": {
             "title": "Nosso Time",
-            "description": "Conheça as pessoas que estão conosco nesta luta para tornar a nossa missão de empregar a juventude negra e indígena na area da tecnologia possível!"
+            "description": "Conheça as pessoas que estão conosco nesta luta para tornar a nossa missão de empregar a juventude de baixa renda na area da tecnologia possível!"
         },
         "Advice": {
             "title": "Conselho Administrativo"
