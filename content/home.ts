@@ -151,7 +151,7 @@ export const support = {
 
 export const partners = {
   title: "Quem já fez e faz acontecer",
-  // [PENDENTE] Logos provisórios: lista do mockup, arquivos atuais em public/assets/maintainers e partners.
+  // [PENDENTE] Logos provisórios: mesma lista e ordem do site atual (mantenedores e parceiros).
   // onDark: true exibe o logo sobre fundo ink (para arquivos de logo branco).
   logos: [
     {
@@ -167,10 +167,35 @@ export const partners = {
       height: 482,
     },
     {
+      name: "Movimento Bem Maior",
+      src: "/assets/maintainers/movimento_bem_maior.png",
+      width: 3508,
+      height: 1086,
+    },
+    { name: "Dito", src: "/assets/partners/dito.png", width: 512, height: 512 },
+    {
+      name: "Instituto Eurofarma",
+      src: "/assets/partners/eurofarma.png",
+      width: 2540,
+      height: 710,
+    },
+    {
       name: "iFood",
       src: "/assets/partners/ifood.jpg",
       width: 841,
       height: 595,
+    },
+    {
+      name: "Instituto SYN",
+      src: "/assets/partners/instituto_syn.png",
+      width: 1455,
+      height: 408,
+    },
+    {
+      name: "Keeggo",
+      src: "/assets/partners/keeggo.png",
+      width: 292,
+      height: 142,
     },
     {
       name: "Instituto Localiza",
@@ -179,35 +204,34 @@ export const partners = {
       height: 1074,
     },
     {
-      name: "Onfly",
-      src: "/assets/partners/onfly.png",
-      width: 11812,
-      height: 4725,
-    },
-    { name: "Dito", src: "/assets/partners/dito.png", width: 512, height: 512 },
-    {
-      name: "Instituto SYN",
-      src: "/assets/partners/instituto_syn.png",
-      width: 1455,
-      height: 408,
-    },
-    {
-      name: "Instituto Eurofarma",
-      src: "/assets/partners/eurofarma.png",
-      width: 2540,
-      height: 710,
-    },
-    {
       name: "Instituto Machado Meyer",
       src: "/assets/partners/machado_meyer.png",
       width: 2732,
       height: 723,
     },
     {
-      name: "Keeggo",
-      src: "/assets/partners/keeggo.png",
-      width: 292,
-      height: 142,
+      name: "Onfly",
+      src: "/assets/partners/onfly.png",
+      width: 11812,
+      height: 4725,
+    },
+    {
+      name: "NetLex",
+      src: "/assets/partners/netlex.png",
+      width: 500,
+      height: 250,
+    },
+    {
+      name: "Sólides",
+      src: "/assets/partners/solides.png",
+      width: 1154,
+      height: 284,
+    },
+    {
+      name: "Thoughtworks",
+      src: "/assets/partners/thoughtworks.png",
+      width: 1703,
+      height: 495,
     },
   ] as {
     name: string;
