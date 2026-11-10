@@ -1,20 +1,20 @@
 import type { MetadataRoute } from "next";
 
-import { SITE_URL } from "@/content/links";
+const SITE_URL = "https://programadoresdoamanha.org.br";
 
-// Adicionar /pt/impacto, /pt/empresas, /pt/doe e /pt/sobre conforme forem publicadas.
+// Rotas públicas reais do site, em português e inglês.
+const paths = ["", "/who-we-are", "/hire-a-talent"];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    { url: `${SITE_URL}/pt`, changeFrequency: "monthly", priority: 1 },
-    {
-      url: `${SITE_URL}/pt/who-we-are`,
-      changeFrequency: "monthly",
-      priority: 0.6,
+  return paths.map((path) => ({
+    url: `${SITE_URL}/pt${path}`,
+    changeFrequency: "monthly",
+    priority: path === "" ? 1 : 0.7,
+    alternates: {
+      languages: {
+        "pt-BR": `${SITE_URL}/pt${path}`,
+        en: `${SITE_URL}/en${path}`,
+      },
     },
-    {
-      url: `${SITE_URL}/pt/hire-a-talent`,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-  ];
+  }));
 }
