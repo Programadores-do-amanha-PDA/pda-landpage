@@ -76,8 +76,8 @@ export const problem = {
 };
 
 export const pillars = {
-  title: "Mudamos a renda e a realidade das famílias através do trabalho",
-  lead: "Capacitamos jovens nas habilidades que as maiores empresas do Brasil exigem: programação, inteligência artificial, inglês e soft skills.",
+  // Decisão do time (nov/2026): sem o título "Mudamos a renda..." e só esta frase antes dos três quadros.
+  lead: "Capacitamos jovens nas habilidades que as maiores empresas do Brasil exigem:",
   items: [
     {
       number: "01",

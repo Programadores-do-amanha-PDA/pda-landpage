@@ -4,18 +4,13 @@ import { pillars } from "@/content/home";
 export function Pillars() {
   return (
     <section aria-labelledby="fazemos-titulo" className="bg-white">
-      <Container className="flex flex-col gap-14 py-20 sm:py-28">
-        <div className="flex flex-wrap items-end gap-12">
-          <h2
-            id="fazemos-titulo"
-            className="m-0 min-w-0 flex-[999_1_560px] font-display text-[clamp(40px,5vw,72px)] font-normal uppercase leading-[0.95]"
-          >
-            {pillars.title}
-          </h2>
-          <p className="m-0 min-w-0 flex-[1_1_360px] text-[18px]">
-            {pillars.lead}
-          </p>
-        </div>
+      <Container className="flex flex-col gap-8 py-20 sm:py-28">
+        <h2
+          id="fazemos-titulo"
+          className="m-0 max-w-[760px] font-mono text-[18px] font-bold leading-[1.55] sm:text-[20px]"
+        >
+          {pillars.lead}
+        </h2>
         <ul className="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(280px,100%),1fr))] gap-6 p-0">
           {pillars.items.map((item) => (
             <li
