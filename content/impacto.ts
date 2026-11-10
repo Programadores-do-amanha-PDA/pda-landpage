@@ -26,7 +26,6 @@ export const opening = {
 };
 
 export const pyramid = {
-  tag: "</PIRÂMIDE DE RENDA>",
   title: "A pirâmide de renda no Brasil",
   text: [
     { text: "Apenas " },

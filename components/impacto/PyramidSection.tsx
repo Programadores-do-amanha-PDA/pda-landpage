@@ -8,9 +8,6 @@ export function PyramidSection() {
     <section aria-labelledby="piramide-titulo" className="bg-cream">
       <Container className="flex flex-wrap items-center gap-16 py-20 sm:py-28">
         <div className="flex min-w-0 flex-[1_1_380px] flex-col gap-6">
-          <p className="m-0 font-mono text-[16px] font-bold tracking-[0.08em] text-purple sm:text-[18px]">
-            {pyramid.tag}
-          </p>
           <h2
             id="piramide-titulo"
             className="m-0 font-display text-[clamp(40px,5vw,64px)] font-normal uppercase leading-[1.02]"
