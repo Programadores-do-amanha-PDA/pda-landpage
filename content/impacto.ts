@@ -9,9 +9,11 @@ export const meta = {
 };
 
 export const opening = {
-  tag: "</NÚMEROS REAIS. HISTÓRIAS REAIS.>",
   /** Cada item é uma linha do título. */
-  title: [[{ text: "Nosso" }, { text: "impacto", mark: "bar" }]] as RichLine[],
+  title: [
+    [{ text: "Números reais." }],
+    [{ text: "Histórias reais.", mark: "bar" }],
+  ] as RichLine[],
   lead: [
     { text: "Selecionamos nossos alunos entre os " },
     { text: "10% mais pobres", mark: "strong" },
