@@ -19,3 +19,32 @@
   );
   background-size: 8px 8px;
 }
+
+/* Card que gira (histórias em /impacto): hover, foco pelo teclado e toque. */
+.pda-novo .pda-flip {
+  perspective: 1200px;
+}
+.pda-novo .pda-flip-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+.pda-novo .pda-flip:hover .pda-flip-inner,
+.pda-novo .pda-flip:focus .pda-flip-inner,
+.pda-novo .pda-flip:focus-within .pda-flip-inner {
+  transform: rotateY(180deg);
+}
+.pda-novo .pda-flip-face {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.pda-novo .pda-flip-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .pda-novo .pda-flip-inner {
+    transition: none;
+  }
+}

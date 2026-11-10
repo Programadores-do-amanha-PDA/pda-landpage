@@ -1,6 +1,7 @@
 // Conteúdo da página /impacto. Fonte: docs/redesign/textos-site.md, seção "Impacto (/impacto)".
 import type { LinkItem, RichLine, Segment } from "./types";
 import { ROUTES } from "./links";
+import { testimonial as karenTestimonial } from "./home";
 
 export const meta = {
   title: "Impacto | Programadores do Amanhã",
@@ -89,7 +90,8 @@ export const stories = {
     { text: "um jovem por semana", mark: "strong" },
     { text: ", em mais de 100 empresas." },
   ] as Segment[],
-  // [PENDENTE] Fotos dos alumni. Sem foto, o card mostra um placeholder visível.
+  // [PENDENTE] Fotos dos alumni e textos do verso dos cards.
+  // Sem foto ou sem texto, o card mostra um placeholder visível.
   people: [
     { name: "Ingrid Dias", turma: "Turma 1", city: "Belo Horizonte, MG", company: "Mercado Livre", photo: null },
     {
@@ -101,6 +103,8 @@ export const stories = {
         src: "/assets/karen-francisco.jpg",
         alt: "Karen Francisco sorrindo, sentada à mesa de trabalho",
       },
+      // Mesmo depoimento da Home.
+      story: karenTestimonial.quote,
     },
     { name: "Isaque Cascaes", turma: "Turma 2", city: "Belém, PA", company: "S.O.S Software", photo: null },
     { name: "Diego Nascimento", turma: "Turma 3", city: "São Paulo, SP", company: "Lefosse Advogados", photo: null },
@@ -114,6 +118,8 @@ export const stories = {
     city: string;
     company: string;
     photo: Photo;
+    /** Texto do verso do card. */
+    story?: string;
   }[],
 };
 
