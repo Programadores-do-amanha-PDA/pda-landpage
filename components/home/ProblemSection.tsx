@@ -26,9 +26,9 @@ export function ProblemSection() {
           {problem.stats.map((stat) => (
             <div
               key={stat.value}
-              className="flex min-w-0 flex-[1_1_360px] flex-col gap-4 rounded-sm border border-cream/[0.18] bg-card-dark p-7 sm:p-12"
+              className="flex min-w-0 flex-[1_1_360px] flex-col gap-4 rounded-sm [container-type:inline-size] border border-cream/[0.18] bg-card-dark p-7 sm:p-12"
             >
-              <span className="font-display text-[clamp(56px,8vw,120px)] leading-none text-yellow">
+              <span className="whitespace-nowrap font-display text-[clamp(44px,18cqi,104px)] leading-[1.05] text-yellow">
                 {stat.value}
               </span>
               <p className="m-0 text-[18px]">{stat.text}</p>
