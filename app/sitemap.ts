@@ -10,11 +10,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE_URL}/pt${path}`,
     changeFrequency: "monthly",
     priority: path === "" ? 1 : 0.7,
-    alternates: {
-      languages: {
-        "pt-BR": `${SITE_URL}/pt${path}`,
-        en: `${SITE_URL}/en${path}`,
-      },
-    },
+    // A nova Home só existe em português (/en redireciona para /pt), então ela não tem alternativa em inglês.
+    ...(path === ""
+      ? {}
+      : {
+          alternates: {
+            languages: {
+              "pt-BR": `${SITE_URL}/pt${path}`,
+              en: `${SITE_URL}/en${path}`,
+            },
+          },
+        }),
   }));
 }
