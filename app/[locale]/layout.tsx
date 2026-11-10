@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import "../globals.css";
 import { dela_gothic, ibm_plex_sans } from "../fonts";
 import AppProviders from "@/common/context";
+import { routing } from "@/i18n/routing";
 
 export const metadata: Metadata = {
   title: "Programadores do Amanhã",
@@ -39,10 +41,16 @@ export const metadata: Metadata = {
 
 export default async function LocaleLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  // Caminhos que não começam com um idioma válido (ex.: /teste-404) viram 404, não 500.
+  if (!routing.locales.includes(params.locale as (typeof routing.locales)[number])) {
+    notFound();
+  }
+
   const messages = await getMessages();
 
   return (
