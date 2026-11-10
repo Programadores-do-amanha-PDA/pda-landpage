@@ -126,8 +126,11 @@ export const testimonial = {
     "Foi um divisor de águas na minha vida. Entrei como estagiária no Itaú e, depois de 1 ano e 3 meses, fui efetivada como engenheira de software.",
   name: "Karen Francisco",
   details: "Turma 2 · Osasco, SP · Itaú Unibanco",
-  // [PENDENTE] Foto da Karen.
-  photo: null as null | { src: string; alt: string },
+  // Recorte vertical 660 x 780 (3x o tamanho de exibição, 220 x 260).
+  photo: {
+    src: "/assets/karen-francisco.jpg",
+    alt: "Karen Francisco sorrindo, sentada à mesa de trabalho",
+  } as null | { src: string; alt: string },
   photoPlaceholder: "[FOTO KAREN]",
 };
 
