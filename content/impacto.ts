@@ -56,7 +56,6 @@ export const pyramid = {
 };
 
 export const curve = {
-  tag: "</ALUMNI>",
   // Mesma frase da Home (seção "A prova").
   title: "Em 3 anos, a renda dos alumni mais que triplica",
   text: "R$ 2.423 no primeiro ano de trabalho. R$ 8.662 no terceiro, acima da linha dos 10% mais ricos do Brasil.",
@@ -86,7 +85,6 @@ export const highlights = {
 type Photo = { src: string; alt: string } | null;
 
 export const stories = {
-  tag: "</NOSSAS HISTÓRIAS>",
   title: "Cada rosto é uma trajetória",
   /** Subtítulo: empregabilidade. */
   subtitle: [
@@ -133,7 +131,6 @@ export const deboraTestimonial = {
 };
 
 export const firstSalary = {
-  tag: "</PRIMEIRO SALÁRIO>",
   title: "O que eles fizeram com o primeiro salário",
   quotes: [
     {
@@ -151,7 +148,6 @@ export const firstSalary = {
 };
 
 export const permanence = {
-  tag: "</PERMANÊNCIA>",
   title: "A tecnologia transforma quando a dignidade vem junto",
   lead: "Durante toda a formação, cada jovem é acompanhado de perto, com apoio financeiro, emocional e estrutural para não desistir.",
   items: [

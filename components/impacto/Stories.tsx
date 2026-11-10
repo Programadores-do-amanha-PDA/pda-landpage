@@ -9,9 +9,6 @@ export function Stories() {
     <section aria-labelledby="historias-titulo" className="bg-cream">
       <Container className="flex flex-col gap-12 py-20 sm:py-28">
         <div className="flex flex-col gap-6">
-          <p className="m-0 font-mono text-[16px] font-bold tracking-[0.08em] text-purple sm:text-[18px]">
-            {stories.tag}
-          </p>
           <h2
             id="historias-titulo"
             className="m-0 font-display text-[clamp(40px,5vw,72px)] font-normal uppercase leading-[1.02]"

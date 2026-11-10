@@ -1,5 +1,4 @@
 import { Container } from "@/components/ui/Container";
-import { SectionTag } from "@/components/ui/SectionTag";
 import { firstSalary } from "@/content/impacto";
 
 const card =
@@ -13,7 +12,6 @@ export function FirstSalary() {
     >
       <Container className="flex flex-col gap-12 py-20 sm:py-28">
         <div className="flex flex-col gap-6">
-          <SectionTag>{firstSalary.tag}</SectionTag>
           <h2
             id="primeiro-salario-titulo"
             className="m-0 max-w-[960px] font-display text-[clamp(40px,5vw,72px)] font-normal uppercase leading-[1.02]"
