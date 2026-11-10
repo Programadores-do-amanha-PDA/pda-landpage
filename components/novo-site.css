@@ -1,0 +1,21 @@
+/* Estilos do redesign, restritos ao wrapper .pda-novo para não afetar as páginas antigas. */
+
+.pda-novo {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Foco visível: contorno amarelo de 3 px (anel ink por fora para aparecer também em fundo claro). */
+.pda-novo :focus-visible {
+  outline: 3px solid #eddc12;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #300635;
+}
+
+/* Textura sutil de pontos do hero: 1 px a cada 8 px. */
+.pda-novo .bg-dots {
+  background-image: radial-gradient(
+    rgba(245, 243, 220, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 8px 8px;
+}
