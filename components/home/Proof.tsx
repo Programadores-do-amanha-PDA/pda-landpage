@@ -6,7 +6,11 @@ import { proof, salaryCurve } from "@/content/home";
 /** "A prova": texto da curva salarial e o gráfico. */
 export function Proof() {
   return (
-    <section aria-labelledby="prova-titulo" className="bg-cream">
+    <section
+      id="impacto"
+      aria-labelledby="prova-titulo"
+      className="scroll-mt-4 bg-cream"
+    >
       <Container className="flex flex-wrap items-center gap-16 py-20 sm:py-28">
         <div className="flex min-w-0 flex-[1_1_400px] flex-col gap-6">
           <h2
@@ -22,9 +26,11 @@ export function Proof() {
             </strong>
             {proof.highlight.text}
           </p>
-          <div>
-            <Button link={proof.cta} variant="pill-purple" />
-          </div>
+          {proof.cta && (
+            <div>
+              <Button link={proof.cta} variant="pill-purple" />
+            </div>
+          )}
         </div>
         <SalaryChart {...salaryCurve} className="min-w-0 flex-[1_1_520px]" />
       </Container>
