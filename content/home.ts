@@ -116,9 +116,7 @@ export const proof = {
     value: "7 alumni",
     text: " já estão no top 5% mais rico do país, com idade média de 21 anos.",
   },
-  // [PROVISÓRIO] Sem botão até /impacto existir: hoje ele apontaria para esta mesma seção.
-  // Final: { label: "Veja nosso impacto", href: "/impacto" }
-  cta: null as LinkItem | null,
+  cta: { label: "Veja nosso impacto", href: ROUTES.impacto } as LinkItem | null,
 };
 
 export const testimonial = {
