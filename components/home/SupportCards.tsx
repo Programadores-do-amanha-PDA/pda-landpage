@@ -9,7 +9,7 @@ export function SupportCards() {
       <Container className="flex flex-col gap-12 py-20 sm:py-28">
         <h2
           id="apoiar-titulo"
-          className="m-0 font-display text-[clamp(40px,5vw,72px)] font-normal uppercase leading-[0.95]"
+          className="m-0 font-display text-[clamp(40px,5vw,72px)] font-normal uppercase leading-[1.02]"
         >
           {support.title}
         </h2>
