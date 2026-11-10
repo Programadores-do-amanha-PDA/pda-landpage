@@ -1,9 +1,22 @@
 import Image from "next/image";
 
 import { Container } from "@/components/ui/Container";
-import { testimonial } from "@/content/home";
+import { testimonial as homeTestimonial } from "@/content/home";
 
-export function Testimonial() {
+type Data = {
+  quote: string;
+  name: string;
+  details: string;
+  photo: null | { src: string; alt: string };
+  photoPlaceholder: string;
+};
+
+/** Depoimento em destaque. Sem props, usa o da Home. */
+export function Testimonial({
+  testimonial = homeTestimonial,
+}: {
+  testimonial?: Data;
+}) {
   return (
     <section aria-label="Depoimento" className="bg-ink text-cream">
       <Container
