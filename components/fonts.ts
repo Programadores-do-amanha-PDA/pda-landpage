@@ -1,16 +1,25 @@
-import { Anton, JetBrains_Mono } from "next/font/google";
+import localFont from "next/font/local";
 
-// Fontes do redesign. As variáveis são aplicadas só no wrapper das páginas novas.
-export const anton = Anton({
+// Fontes do redesign, salvas no projeto (subconjunto latin, que cobre acentos do português).
+// Antes vinham de next/font/google, que baixa do Google Fonts durante o build: em nov/2026
+// isso derrubou o deploy de produção na Vercel. Com os arquivos locais, o build não depende de rede.
+// Origem: Google Fonts (Anton e JetBrains Mono), licença SIL Open Font License 1.1.
+
+export const anton = localFont({
+  src: "./fonts/anton-latin-400.woff2",
   weight: "400",
-  subsets: ["latin"],
+  style: "normal",
   display: "swap",
   variable: "--font-anton",
+  fallback: ["Impact", "sans-serif"],
 });
 
-export const jetbrainsMono = JetBrains_Mono({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
+// Arquivo variável: um só arquivo cobre os pesos 400, 500 e 700 usados no site.
+export const jetbrainsMono = localFont({
+  src: "./fonts/jetbrains-mono-latin-variable.woff2",
+  weight: "400 700",
+  style: "normal",
   display: "swap",
   variable: "--font-mono",
+  fallback: ["ui-monospace", "monospace"],
 });
