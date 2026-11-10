@@ -83,7 +83,7 @@ export function IncomePyramid({
           <thead>
             <tr>
               <th scope="col">Faixa</th>
-              <th scope="col">Renda mensal per capita</th>
+              <th scope="col">Remuneração mensal</th>
             </tr>
           </thead>
           <tbody>

@@ -17,6 +17,9 @@ export function CurveSection() {
           >
             {curve.title}
           </h2>
+          <p className="m-0 max-w-[760px] text-[18px] leading-[1.6] sm:text-[20px]">
+            {curve.text}
+          </p>
         </div>
         <SalaryChart {...salaryCurve} className="text-ink" />
       </Container>

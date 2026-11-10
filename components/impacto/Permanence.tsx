@@ -34,9 +34,7 @@ export function Permanence() {
             </div>
           ))}
         </dl>
-        <p className="m-0 text-[14px] font-bold text-purple">
-          {permanence.placeholder}
-        </p>
+        <p className="m-0 text-[13px]">{permanence.note}</p>
       </Container>
     </section>
   );

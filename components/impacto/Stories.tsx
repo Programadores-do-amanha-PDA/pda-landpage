@@ -17,6 +17,13 @@ export function Stories() {
           >
             {stories.title}
           </h2>
+          <p className="m-0 max-w-[820px] text-[18px] leading-[1.6] sm:text-[20px]">
+            <strong className="font-display text-[28px] font-normal uppercase text-purple sm:text-[32px]">
+              {stories.subtitle.value}
+            </strong>
+            <br />
+            {stories.subtitle.text}
+          </p>
           <p className="m-0 max-w-[720px] text-[18px] leading-[1.6] sm:text-[20px]">
             {stories.lead}
           </p>

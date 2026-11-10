@@ -9,12 +9,9 @@ export const meta = {
 };
 
 export const opening = {
-  tag: "</IMPACTO>",
+  tag: "</NÚMEROS REAIS. HISTÓRIAS REAIS.>",
   /** Cada item é uma linha do título. */
-  title: [
-    [{ text: "Números reais." }],
-    [{ text: "Histórias reais.", mark: "bar" }],
-  ] as RichLine[],
+  title: [[{ text: "Nosso" }, { text: "impacto", mark: "bar" }]] as RichLine[],
   lead: [
     { text: "Selecionamos nossos alunos entre os " },
     { text: "10% mais pobres", mark: "strong" },
@@ -24,6 +21,11 @@ export const opening = {
     { text: "10% mais ricos", mark: "strong" },
     { text: "." },
   ] as Segment[],
+  /** Destaque ao lado do texto de abertura. */
+  stat: {
+    value: "Top 5%",
+    text: "7 alumni já estão no top 5% mais rico do Brasil. Com idade média de 21 anos, esse grupo tem renda superior a R$\u00a010.313.",
+  },
 };
 
 export const pyramid = {
@@ -32,11 +34,11 @@ export const pyramid = {
   text: [
     { text: "Apenas " },
     { text: "10%", mark: "strong" },
-    { text: " da população brasileira tem renda mensal per capita a partir de " },
+    { text: " da população brasileira tem remuneração mensal a partir de " },
     { text: "R$\u00a08.034", mark: "strong" },
     { text: "." },
   ] as Segment[],
-  chartTitle: "Renda mensal per capita no Brasil",
+  chartTitle: "Remuneração mensal no Brasil",
   /** De cima para baixo. highlight marca a faixa dos 10% mais ricos. */
   levels: [
     { label: "Top 1%", value: 21767 },
@@ -54,17 +56,14 @@ export const pyramid = {
 
 export const curve = {
   tag: "</ALUMNI>",
-  title: "Alumni PdA começam a carreira acima da média nacional",
+  // Mesma frase da Home (seção "A prova").
+  title: "Em 3 anos, a renda dos alumni mais que triplica",
+  text: "R$ 2.423 no primeiro ano de trabalho. R$ 8.662 no terceiro, acima da linha dos 10% mais ricos do Brasil.",
 };
 
 export const highlights = {
   label: "Destaques",
   items: [
-    {
-      value: "Top 5%",
-      text: "7 alumni já estão no top 5% mais rico do Brasil. Com idade média de 21 anos, esse grupo tem renda superior a R$\u00a010.313.",
-      accent: true,
-    },
     {
       value: "R$ 12M+",
       text: "De renda acumulada gerada pela rede alumni que ingressou no mercado de tecnologia.",
@@ -74,16 +73,12 @@ export const highlights = {
       text: "De aumento na renda familiar em dezenas de casos.",
     },
     {
-      value: "1 jovem por semana",
-      text: "Desde a formatura da primeira turma, empregamos em média um jovem por semana, em mais de 100 empresas.",
-    },
-    {
       value: "24 estados",
       text: "Nossos alunos vêm de 24 estados e de todas as regiões do país.",
       // [PENDENTE] O livro de cases diz 100 municípios; confirmar o número atualizado.
       placeholder: "[ATUALIZAR NÚMERO DE MUNICÍPIOS]",
     },
-  ] as { value: string; text: string; accent?: boolean; placeholder?: string }[],
+  ] as { value: string; text: string; placeholder?: string }[],
   note: "Dados atualizados em outubro/2026.",
 };
 
@@ -92,6 +87,11 @@ type Photo = { src: string; alt: string } | null;
 export const stories = {
   tag: "</NOSSAS HISTÓRIAS>",
   title: "Cada rosto é uma trajetória",
+  /** Subtítulo: empregabilidade. */
+  subtitle: {
+    value: "1 jovem por semana",
+    text: "Desde a formatura da primeira turma, empregamos em média um jovem por semana, em mais de 100 empresas.",
+  },
   lead: "Cada trajetória é uma porta que se abre na tecnologia para um mundo de mais oportunidades.",
   // [PENDENTE] Fotos dos alumni. Sem foto, o card mostra um placeholder visível.
   people: [
@@ -159,7 +159,6 @@ export const permanence = {
     { value: "+300", text: "Notebooks entregues" },
     { value: "+100", text: "Jovens apoiados com internet" },
   ],
-  // [PENDENTE] Confirmar se os números do livro foram atualizados.
-  placeholder: "[CONFIRMAR ATUALIZAÇÃO DOS NÚMEROS]",
+  note: "Dados atualizados em outubro/2026.",
   cta: { label: "Apoie a próxima turma", href: ROUTES.doe } as LinkItem,
 };
