@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { Container } from "@/components/ui/Container";
+import { RichText } from "@/components/ui/RichText";
 import { stories } from "@/content/impacto";
 
 export function Stories() {
@@ -18,14 +19,7 @@ export function Stories() {
             {stories.title}
           </h2>
           <p className="m-0 max-w-[820px] text-[18px] leading-[1.6] sm:text-[20px]">
-            <strong className="font-display text-[28px] font-normal uppercase text-purple sm:text-[32px]">
-              {stories.subtitle.value}
-            </strong>
-            <br />
-            {stories.subtitle.text}
-          </p>
-          <p className="m-0 max-w-[720px] text-[18px] leading-[1.6] sm:text-[20px]">
-            {stories.lead}
+            <RichText segments={stories.subtitle} strongClassName="text-purple" />
           </p>
         </div>
         <ul className="m-0 grid list-none grid-cols-2 gap-3 sm:grid-cols-[repeat(auto-fill,minmax(260px,1fr))] sm:gap-6 p-0">

@@ -21,11 +21,6 @@ export const opening = {
     { text: "10% mais ricos", mark: "strong" },
     { text: "." },
   ] as Segment[],
-  /** Destaque ao lado do texto de abertura. */
-  stat: {
-    value: "Top 5%",
-    text: "7 alumni já estão no top 5% mais rico do Brasil. Com idade média de 21 anos, esse grupo tem renda superior a R$\u00a010.313.",
-  },
 };
 
 export const pyramid = {
@@ -38,6 +33,11 @@ export const pyramid = {
     { text: "R$\u00a08.034", mark: "strong" },
     { text: "." },
   ] as Segment[],
+  /** Destaque abaixo do texto da pirâmide. */
+  stat: {
+    value: "Top 5%",
+    text: "7 alumni já estão no top 5% mais rico do Brasil. Com idade média de 21 anos, esse grupo tem renda superior a R$\u00a010.313.",
+  },
   chartTitle: "Remuneração mensal no Brasil",
   /** De cima para baixo. highlight marca a faixa dos 10% mais ricos. */
   levels: [
@@ -88,11 +88,11 @@ export const stories = {
   tag: "</NOSSAS HISTÓRIAS>",
   title: "Cada rosto é uma trajetória",
   /** Subtítulo: empregabilidade. */
-  subtitle: {
-    value: "1 jovem por semana",
-    text: "Desde a formatura da primeira turma, empregamos em média um jovem por semana, em mais de 100 empresas.",
-  },
-  lead: "Cada trajetória é uma porta que se abre na tecnologia para um mundo de mais oportunidades.",
+  subtitle: [
+    { text: "Desde a formatura da primeira turma, empregamos em média " },
+    { text: "um jovem por semana", mark: "strong" },
+    { text: ", em mais de 100 empresas." },
+  ] as Segment[],
   // [PENDENTE] Fotos dos alumni. Sem foto, o card mostra um placeholder visível.
   people: [
     { name: "Ingrid Dias", turma: "Turma 1", city: "Belo Horizonte, MG", company: "Mercado Livre", photo: null },

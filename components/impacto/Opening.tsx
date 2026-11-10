@@ -24,17 +24,9 @@ export function Opening() {
             </span>
           ))}
         </h1>
-        <div className="flex flex-wrap items-end gap-10">
-          <p className="m-0 min-w-0 max-w-[720px] flex-[1_1_420px] text-[18px] leading-[1.6] sm:text-[20px]">
-            <RichText segments={opening.lead} />
-          </p>
-          <div className="flex min-w-0 flex-[1_1_320px] flex-col gap-3 border border-cream/[0.18] bg-card-dark p-7 sm:max-w-[440px] sm:p-9">
-            <p className="m-0 font-display text-[48px] uppercase leading-none text-yellow sm:text-[56px]">
-              {opening.stat.value}
-            </p>
-            <p className="m-0 text-[15px] leading-[1.55]">{opening.stat.text}</p>
-          </div>
-        </div>
+        <p className="m-0 max-w-[720px] text-[18px] leading-[1.6] sm:text-[20px]">
+          <RichText segments={opening.lead} />
+        </p>
       </Container>
     </section>
   );

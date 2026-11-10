@@ -20,6 +20,12 @@ export function PyramidSection() {
           <p className="m-0 text-[18px] leading-[1.6] sm:text-[20px]">
             <RichText segments={pyramid.text} strongClassName="text-purple" />
           </p>
+          <div className="flex flex-col gap-3 rounded-[0_48px_0_48px] bg-ink p-7 text-cream sm:p-9">
+            <p className="m-0 font-display text-[48px] uppercase leading-none text-yellow sm:text-[56px]">
+              {pyramid.stat.value}
+            </p>
+            <p className="m-0 text-[15px] leading-[1.55]">{pyramid.stat.text}</p>
+          </div>
         </div>
         <IncomePyramid
           title={pyramid.chartTitle}
