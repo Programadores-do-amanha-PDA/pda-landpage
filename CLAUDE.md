@@ -55,7 +55,7 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 
 - **Títulos:** Anton, caixa alta, `line-height` entre 0.95 e 1.08. Palavras-chave podem ir em amarelo ou sobre uma barra amarela.
 - **Texto:** JetBrains Mono, 17 a 20 px, `line-height` 1.55 a 1.6.
-- **Botões:** retangulares, caixa alta, `letter-spacing: 0.08em`, mono em negrito. Principal amarelo com texto ink e seta; secundário com contorno cream.
+- **Botões:** retangulares, caixa alta, `letter-spacing: 0.08em`, mono em negrito. Principal amarelo com texto ink e seta; secundário com contorno cream. Fora do hero, os botões com canto de 8 px do mockup também são aceitos (decisão do time, nov/2026).
 - **Tag de seção:** `</NOME DA SEÇÃO>` em mono amarelo (ex.: `</MOBILIDADE SOCIAL>`).
 - Fundo do hero escuro com textura sutil de pontos (`radial-gradient` 1px a cada 8px).
 - Cantos retos por padrão. Cards claros com 16 px; cards de apoio com o corte diagonal (`border-radius: 0 48px 0 48px`).
@@ -76,7 +76,7 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 
 ## Gráficos
 
-- `/` e `/impacto`: curva salarial dos alumni (Ano 0: R$ 2.423 · Ano 1: R$ 2.700 · Ano 2: R$ 4.833 · Ano 3: R$ 8.662) com a linha do top 10% (R$ 8.034) marcada. Barras em escala real, último ano em purple.
+- `/` e `/impacto`: curva salarial dos alumni (Ano 0: R$ 2.423 · Ano 1: R$ 2.700 · Ano 2: R$ 4.833 · Ano 3: R$ 8.662) com a linha do top 10% (R$ 8.034) marcada. Barras em escala real, último ano em purple. A etiqueta da linha do top 10% fica à esquerda, para não encostar na última barra.
 - `/impacto`: pirâmide de renda (Top 1% R$ 21.767 · Top 5% R$ 10.313 · Top 10% R$ 8.034 · Média Brasil R$ 2.020 · Jovens 18 a 24 R$ 1.726).
 - Fazer em SVG ou HTML/CSS acessível (com texto alternativo ou tabela), sem biblioteca pesada.
 
@@ -84,7 +84,7 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 
 - Responsivo até 360 px de largura, sem rolagem horizontal.
 - Acessibilidade: HTML semântico, `alt` em todas as imagens, contraste AA, foco visível (contorno amarelo de 3 px).
-- SEO: `title` e `description` por página, Open Graph, `sitemap.xml`. Este repositório não tem meta de verificação do Google (confirmar se a verificação é feita por DNS).
+- SEO: `title` e `description` por página, Open Graph, `sitemap.xml`. A verificação do Google é feita fora do código, no Search Console (não precisa de meta tag).
 - Manter `@vercel/analytics`.
 - Rodar `next build` e `next lint` sem erros antes de abrir o PR.
 
