@@ -23,7 +23,7 @@
         "MainHighlight": {
             "bannerText": {
                 "start": "WE MULTIPLY OPPORTUNITIES FOR",
-                "highlight": "BLACK AND INDIGENOUS YOUTH",
+                "highlight": "LOW-INCOME YOUTH",
                 "final": "IN THE TECHNOLOGY MARKET"
             },
             "buttonSubscribe": "Register for the next class",
@@ -39,9 +39,9 @@
                     "description": "We have trained over 300 young people from all over Brazil."
                 },
                 "1": {
-                    "data": "+R$ 6.7 millions",
+                    "data": "+R$ 7 millions",
                     "label": "Generated income",
-                    "description": "We generate more than 6.7 million reais in added income for our students by employing them in the technology area."
+                    "description": "We generate more than 7 million reais in added income for our students by employing them in the technology area."
                 },
                 "2": {
                     "data": "150%",
@@ -53,7 +53,7 @@
         "WhoWeAre": {
             "descriptionText": {
                 "start": "The Programadores do Amanhã Institute was founded in 2021 with the",
-                "highlight": "objective of training and employing young black, brown and indigenous people",
+                "highlight": "objective of training and employing low-income young people",
                 "final": "in the technology market."
             },
             "buttonLearnMore": "Read more"
@@ -100,7 +100,7 @@
         },
         "OurPartners": {
             "title": "Our Partners",
-            "description": "Get to know the companies and institutes that help us make an impact on the lives of young black and indigenous people from all over Brazil.",
+            "description": "Get to know the companies and institutes that help us make an impact on the lives of low-income young people from all over Brazil.",
             "maintainersLabel": "Maintainers",
             "partnersLabel": "Supporters"
         },
@@ -111,16 +111,16 @@
         },
         "WantToSupport": {
             "title": "Support us",
-            "description": "Support us in multiplying opportunities for young black and indigenous people throughout Brazil!",
+            "description": "Support us in multiplying opportunities for low-income young people throughout Brazil!",
             "individual": {
                 "title": "SUPPORT AS AN INDIVIDUAL",
-                "description": "Help us through donations or by mentoring one of our students so that together we can continue to impact the lives of young black and indigenous people!",
+                "description": "Help us through donations or by mentoring one of our students so that together we can continue to impact the lives of low-income young people!",
                 "buttonDonate": "Donate here",
                 "buttonMentor": "Become a Mentor"
             },
             "institutional": {
                 "title": "SUPPORT AS A COMPANY OR INSTITUTION",
-                "description": "Support us in continuing to impact the lives of young black and indigenous people or hire one of our talents and change a life!",
+                "description": "Support us in continuing to impact the lives of low-income young people or hire one of our talents and change a life!",
                 "buttonSupport": "I want to support",
                 "buttonHire": "Hire a Talent"
             },
@@ -189,7 +189,7 @@
     "who-we-are": {
         "WhoWeAre": {
             "start": "The Programadores do Amanhã Institute's mission is to",
-            "highlight": "train and employ young black, brown and indigenous people",
+            "highlight": "train and employ low-income young people",
             "end": "in the technology market."
         },
         "WhereAreWe": {
@@ -199,16 +199,16 @@
                 "start": "In partnership with some of ",
                 "highlight": "Brazil's largest technology companies and philanthropic institutes,",
                 "middle": "Programadores do Amanhã has helped ",
-                "endHighlight": "young people from all regions of Brazil get their first job, generating more than 6.7 million reais in added income."
+                "endHighlight": "young people from all regions of Brazil get their first job, generating more than 7 million reais in added income."
             }
         },
         "OurValues": {
             "title": "Our values",
-            "description": "Learn about our values that guide us in our mission to employ young black and indigenous people in the technology market.",
+            "description": "Learn about our values that guide us in our mission to employ low-income young people in the technology market.",
             "cards": {
                 "0": {
                     "label": "Impact comes first",
-                    "content": "Programadores do Amanhã exists to generate income and future prospects for black and indigenous youth. All our actions are focused on qualifying and preparing young people for the technology job market. Because we know that when a student becomes employed, their entire family structure is impacted, thus contributing to ending generational poverty."
+                    "content": "Programadores do Amanhã exists to generate income and future prospects for low-income youth. All our actions are focused on qualifying and preparing young people for the technology job market. Because we know that when a student becomes employed, their entire family structure is impacted, thus contributing to ending generational poverty."
                 },
                 "1": {
                     "label": "We do it together",
@@ -216,7 +216,7 @@
                 },
                 "2": {
                     "label": "Genuinely in love",
-                    "content": "All of us at Programadores do Amanhã are genuinely passionate about what we do because we understand that we are the means for the social change we want to see for all black and indigenous youth in Brazil."
+                    "content": "All of us at Programadores do Amanhã are genuinely passionate about what we do because we understand that we are the means for the social change we want to see for all low-income youth in Brazil."
                 },
                 "3": {
                     "label": "Responsibility for results",
@@ -226,7 +226,7 @@
         },
         "OurTeam": {
             "title": "Our Team",
-            "description": "Meet the people who are with us in this fight to make our mission of employing black and indigenous youth in technology possible!"
+            "description": "Meet the people who are with us in this fight to make our mission of employing low-income youth in technology possible!"
         },
         "Advice": {
             "title": "Board of Directors"

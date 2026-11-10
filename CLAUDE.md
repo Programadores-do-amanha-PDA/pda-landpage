@@ -1,0 +1,108 @@
+# Site PdA: briefing do redesign
+
+Este arquivo orienta o Claude Code na reconstrução do site da Programadores do Amanhã (programadoresdoamanha.org.br). Leia tudo antes de começar. Em caso de dúvida, pergunte em vez de inventar conteúdo.
+
+## Objetivo
+
+Trocar a landing page única atual por um site de 5 páginas, cada uma com um público e um CTA claros, contando a tese de mobilidade social da PdA com os dados de outubro/2026.
+
+## Fontes de verdade
+
+| Arquivo | O que é |
+| --- | --- |
+| `docs/redesign/textos-site.md` | Copy final de todas as páginas. Use o texto exatamente como está. |
+| `docs/redesign/mockup-home.dc.html` | Mockup aprovado da Home (estrutura, cores, tipografia, espaçamento). É um arquivo do canvas de design, não roda sozinho: leia o markup e os estilos inline como referência visual. |
+| `public/assets/mosaico-alumni.jpg` | Mosaico de fotos dos alumni usado no hero da Home (provisório, ver Pendências). |
+
+Quando o mockup e o `textos-site.md` divergirem na Home, **o mockup vence**: ele tem as últimas revisões de texto.
+
+## Stack
+
+- Repositório que está no ar: `Programadores-do-amanha-PDA/pda-landpage` (este). O antigo `prog-do-amanha/programadoresdoamanha` não é o site publicado.
+- **Next.js 14 com App Router + TypeScript + Tailwind CSS**, já usado aqui. As páginas novas não usam os componentes antigos de `common/` nem de `modules/`.
+- Idiomas via `next-intl` (`/pt` e `/en`, padrão `pt`). A copy nova só existe em português: as páginas novas saem em PT e o `/en` delas redireciona para `/pt` até haver tradução.
+- Conteúdo estático em arquivos (`content/*.ts` ou MDX). Nada de CMS por enquanto.
+- Componentes novos em `components/`, conteúdo em `content/`, links em `content/links.ts`.
+- **Não mexer** em `app/[locale]/hire-a-talent`, `app/[locale]/who-we-are`, `app/api/*` e nos módulos que elas usam (`modules/hire-a-talent`, `modules/who-we-are`, banco MongoDB). O futuro delas ainda vai ser decidido; só garanta que continuem funcionando.
+- Manter Mixpanel (`PageViewComponent`), `@vercel/analytics` e `@vercel/speed-insights`.
+
+## Páginas
+
+| Rota | Público | CTA principal |
+| --- | --- | --- |
+| `/` | Todos | Patrocine a mobilidade · Contrate um talento |
+| `/impacto` | Doadores, imprensa, conselho | Apoie a próxima turma |
+| `/empresas` | RH e ESG | Quero contratar · Falar com a PdA |
+| `/doe` | Pessoa física | Doar agora |
+| `/sobre` | Todos | Contato |
+
+Header e rodapé iguais em todas as páginas (rodapé descrito no fim de `textos-site.md`). O link "Inscreva-se" aponta para o Google Forms de inscrição.
+
+## Identidade visual
+
+Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
+
+| Token | Hex | Uso |
+| --- | --- | --- |
+| ink | `#300635` | Fundos escuros, texto principal em fundo claro |
+| ink-deep | `#270A2E` | Seção do problema |
+| card-dark | `#3A1442` | Cards sobre fundo escuro (borda `rgba(245,243,220,0.18)`) |
+| purple | `#890098` | Faixa de números, botões secundários, destaques |
+| purple-mid | `#5C0A6B` | Placeholders e camadas |
+| yellow | `#EDDC12` | Acento: barras de destaque, números, botão principal. Sempre em pequena dose |
+| cream | `#F5F3DC` | Fundo claro padrão e texto sobre escuro |
+| white | `#FFFFFF` | Seções alternadas e cards claros |
+
+- **Títulos:** Anton, caixa alta, `line-height` entre 0.95 e 1.08. Palavras-chave podem ir em amarelo ou sobre uma barra amarela.
+- **Texto:** JetBrains Mono, 17 a 20 px, `line-height` 1.55 a 1.6.
+- **Botões:** retangulares, caixa alta, `letter-spacing: 0.08em`, mono em negrito. Principal amarelo com texto ink e seta; secundário com contorno cream. Fora do hero, os botões com canto de 8 px do mockup também são aceitos (decisão do time, nov/2026).
+- **Tag de seção:** `</NOME DA SEÇÃO>` em mono amarelo (ex.: `</MOBILIDADE SOCIAL>`).
+- Fundo do hero escuro com textura sutil de pontos (`radial-gradient` 1px a cada 8px).
+- Cantos retos por padrão. Cards claros com 16 px; cards de apoio com o corte diagonal (`border-radius: 0 48px 0 48px`).
+- Sem gradientes, sem emoji, sem sombras suaves.
+
+**Regra crítica de tipografia:** nenhuma barra amarela pode cobrir texto de outra linha. Use espaçamento entre linhas e `gap` suficientes para que as barras fiquem contidas na própria linha, inclusive com acentos (ex.: o "Â" de PIRÂMIDE).
+
+## Regras de conteúdo (decisões do time)
+
+- **Posicionamento:** falar apenas de **baixa renda** (os 10% mais pobres). Não usar nenhuma referência a jovens negros, pretos, pardos ou indígenas em textos, alts, metatags ou títulos de matérias.
+- **Patrocínio:** não publicar valores de planos (Bronze/Prata/Ouro), parcelamento nem o trecho do RIR. Na página de empresas, o benefício fiscal aparece só de forma genérica.
+- **Doação:** todos os botões de doar levam a `https://doe.programadoresdoamanha.org.br/`.
+- **Formulários:** tudo via Google Forms (inscrição de jovens, mentoria, contato de empresas). Nada de HubSpot. Crie os links como constantes em um único arquivo (`content/links.ts`) para facilitar a troca.
+- **Domínio:** todos os links internos e absolutos usam `programadoresdoamanha.org.br` (o site atual tem links quebrados para `.org`, sem o `.br`).
+- **Contato:** `contato@programadoresdoamanha.org.br`.
+- **Fontes dos dados:** 1,8% vem do Atlas da Mobilidade Social; 9 gerações vem do Global Social Mobility Index 2020; pirâmide de renda vem de IBGE PNAD Contínua 2024 e FGV IBRE (jul/2024). Exibir as fontes nas seções correspondentes.
+- Copy em português brasileiro, sem travessões longos (—). Não inventar números, nomes ou depoimentos: o que faltar vira placeholder visível `[ASSIM]`.
+
+## Gráficos
+
+- `/` e `/impacto`: curva salarial dos alumni (Ano 0: R$ 2.423 · Ano 1: R$ 2.700 · Ano 2: R$ 4.833 · Ano 3: R$ 8.662) com a linha do top 10% (R$ 8.034) marcada. Barras em escala real, último ano em purple. A etiqueta da linha do top 10% fica à esquerda, para não encostar na última barra.
+- `/impacto`: pirâmide de renda (Top 1% R$ 21.767 · Top 5% R$ 10.313 · Top 10% R$ 8.034 · Média Brasil R$ 2.020 · Jovens 18 a 24 R$ 1.726).
+- Fazer em SVG ou HTML/CSS acessível (com texto alternativo ou tabela), sem biblioteca pesada.
+
+## Qualidade
+
+- Responsivo até 360 px de largura, sem rolagem horizontal.
+- Acessibilidade: HTML semântico, `alt` em todas as imagens, contraste AA, foco visível (contorno amarelo de 3 px).
+- SEO: `title` e `description` por página, Open Graph, `sitemap.xml`. A verificação do Google é feita fora do código, no Search Console (não precisa de meta tag).
+- Manter `@vercel/analytics`.
+- Rodar `next build` e `next lint` sem erros antes de abrir o PR.
+
+## Fluxo de trabalho
+
+1. Criar a branch `feat/novo-site` a partir de `develop`.
+2. Construir primeiro a Home fiel ao mockup, depois `/impacto`, `/empresas`, `/doe` e `/sobre`.
+3. Commits pequenos, um por página ou componente.
+4. Abrir PR para `develop`. A Vercel gera o preview para o time validar.
+5. Nunca fazer push direto em `main` ou `develop`.
+
+## Pendências (não bloqueiam a construção, deixar como placeholder)
+
+- Mosaico do hero: substituir o recorte provisório pelo arquivo original em alta resolução e confirmar a autorização de uso de imagem de todas as pessoas.
+- Fotos de Karen, Ingrid, Débora, Diego e demais destaques.
+- Logos dos parceiros (manter a lista atual por enquanto; os arquivos estão em `public/assets`).
+- Lista e logos de empresas que contrataram, para `/empresas`.
+- Ano de fundação (PDF diz 2019, site antigo diz 2021).
+- Matérias de imprensa: os títulos atuais citam jovens negros e indígenas. Mostrar só o logo do veículo ou aguardar matérias novas.
+- Links reais dos Google Forms.
+- Futuro da página "Apoie um aluno" e do PdA Labs no site.
