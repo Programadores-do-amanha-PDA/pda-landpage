@@ -8,6 +8,7 @@ const config: Config = {
     "./common/**/*.{js,ts,jsx,tsx,mdx}",
     "./modules/**/*.{js,ts,jsx,tsx,mdx}",
     "./hooks/**/*.{js,ts,jsx,tsx,mdx}",
+    "./content/**/*.ts",
   ],
   theme: {
     fontSize: {
@@ -26,11 +27,29 @@ const config: Config = {
       screens: {
         mdx: "882px",
       },
+      maxWidth: {
+        site: "1280px",
+        narrow: "1080px",
+      },
       fontFamily: {
+        // Redesign
+        display: ["var(--font-anton)", "Impact", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
         "dela-gothic": ["var(--font-dela-gothic)"],
         "ibm-plex-sans": ["var(--font-ibm-plex-sans)"],
       },
       colors: {
+        // Tokens do redesign (CLAUDE.md, "Identidade visual")
+        ink: "#300635",
+        "ink-deep": "#270A2E",
+        "ink-soft": "#4A1F50",
+        "card-dark": "#3A1442",
+        purple: "#890098",
+        "purple-mid": "#5C0A6B",
+        lilac: "#C9B8CC",
+        // DEFAULT é o amarelo do redesign; 400 preserva o yellow-400 do Tailwind usado em modules/home.
+        yellow: { DEFAULT: "#EDDC12", 400: "#facc15" },
+        cream: "#F5F3DC",
         secondary: {
           950: "#140614",
           900: "#270c27",
