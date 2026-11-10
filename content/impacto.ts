@@ -50,8 +50,7 @@ export const pyramid = {
   ] as { label: string; value: number; highlight?: boolean }[],
   note: "A largura de cada faixa indica a posição na pirâmide, não o valor.",
   sources: [
-    "IBGE, PNAD Contínua, Rendimento de todas as fontes 2024",
-    "FGV IBRE, Jovens e a armadilha do mercado de trabalho (julho/2024)",
+    "IBGE, por meio da PNAD Contínua – Rendimento de Todas as Fontes, com dados de 2024",
   ],
 };
 

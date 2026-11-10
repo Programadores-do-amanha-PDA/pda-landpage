@@ -74,7 +74,8 @@ export function IncomePyramid({
       <p className="m-0 text-[13px]">{note}</p>
 
       <p className="m-0 text-[13px]">
-        <strong>Fontes:</strong> {sources.join("; ")}.
+        <strong>{sources.length > 1 ? "Fontes:" : "Fonte:"}</strong>{" "}
+        {sources.join("; ")}.
       </p>
 
       <div className="sr-only">
