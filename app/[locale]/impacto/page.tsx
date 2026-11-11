@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 import { PageViewComponent } from "@/common/components";
-import { Testimonial } from "@/components/home/Testimonial";
 import { CurveSection } from "@/components/impacto/CurveSection";
-import { FirstSalary } from "@/components/impacto/FirstSalary";
 import { Highlights } from "@/components/impacto/Highlights";
 import { Opening } from "@/components/impacto/Opening";
 import { Permanence } from "@/components/impacto/Permanence";
@@ -13,7 +11,7 @@ import { Stories } from "@/components/impacto/Stories";
 import { SupportCta } from "@/components/impacto/SupportCta";
 import { NewSiteShell } from "@/components/layout/NewSiteShell";
 import { hero } from "@/content/home";
-import { deboraTestimonial, meta } from "@/content/impacto";
+import { meta } from "@/content/impacto";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -51,8 +49,6 @@ export default function ImpactoPage({
       <CurveSection />
       <Highlights />
       <Stories />
-      <Testimonial testimonial={deboraTestimonial} />
-      <FirstSalary />
       <Permanence />
       <SupportCta />
       <PageViewComponent pageName="Impacto" />

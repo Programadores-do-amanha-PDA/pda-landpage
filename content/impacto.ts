@@ -108,10 +108,27 @@ export const stories = {
     },
     { name: "Isaque Cascaes", turma: "Turma 2", city: "Belém, PA", company: "S.O.S Software", photo: null },
     { name: "Diego Nascimento", turma: "Turma 3", city: "São Paulo, SP", company: "Lefosse Advogados", photo: null },
-    { name: "Débora Moura", turma: "Turma 3", city: "São Vicente, SP", company: "Localiza", photo: null },
+    {
+      name: "Débora Moura",
+      turma: "Turma 3",
+      city: "São Vicente, SP",
+      company: "Localiza",
+      photo: null,
+      story:
+        "Antes da PdA eu ainda não tinha uma paixão profissional. O diferencial da PdA, para mim, é justamente essa ponte entre o aprendizado técnico e a preparação para o mercado real.",
+    },
     { name: "Adilson Junior", turma: "Turma 3", city: "São Paulo, SP", company: "XP Inc.", photo: null },
     { name: "Danielle Santos", turma: "Turma 3", city: "Belo Horizonte, MG", company: "KPMG", photo: null },
-    { name: "Clayton Bahia", turma: "Turma 5", city: "Salvador, BA", company: "Aura Brasil", photo: null },
+    {
+      name: "Clayton Bahia",
+      turma: "Turma 5",
+      city: "Salvador, BA",
+      company: "Aura Brasil",
+      photo: null,
+      // Frase sobre o primeiro salário (livro de cases).
+      story:
+        "Fiz uma compra imensa em casa. Realizei o meu sonho, que era encher o carrinho.",
+    },
   ] as {
     name: string;
     turma: string;
@@ -121,33 +138,6 @@ export const stories = {
     /** Texto do verso do card. */
     story?: string;
   }[],
-};
-
-export const deboraTestimonial = {
-  quote:
-    "Antes da PdA eu ainda não tinha uma paixão profissional. O diferencial da PdA, para mim, é justamente essa ponte entre o aprendizado técnico e a preparação para o mercado real.",
-  name: "Débora Moura",
-  details: "Turma 3 · São Vicente, SP · Localiza",
-  // [PENDENTE] Foto da Débora.
-  photo: null as Photo,
-  photoPlaceholder: "[FOTO DÉBORA]",
-};
-
-export const firstSalary = {
-  title: "O que eles fizeram com o primeiro salário",
-  quotes: [
-    {
-      quote:
-        "Fiz uma compra imensa em casa. Realizei o meu sonho, que era encher o carrinho.",
-      name: "Clayton Bahia",
-      details: "Salvador, BA",
-    },
-  ],
-  // [PENDENTE] Selecionar mais 2 ou 3 frases sobre o primeiro salário no livro de cases.
-  placeholders: [
-    "[FRASE SOBRE O PRIMEIRO SALÁRIO]",
-    "[FRASE SOBRE O PRIMEIRO SALÁRIO]",
-  ],
 };
 
 export const permanence = {
