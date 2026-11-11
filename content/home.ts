@@ -21,7 +21,7 @@ export const hero = {
   primaryCta: { label: "Patrocine a mobilidade", href: ROUTES.doe } as LinkItem,
   secondaryCta: {
     label: "Contrate um talento",
-    href: ROUTES.empresas,
+    href: ROUTES.contrate,
   } as LinkItem,
   image: {
     // [PENDENTE] Recorte provisório: trocar pelo original em alta resolução e confirmar autorização de imagem.
@@ -146,7 +146,7 @@ export const support = {
       number: "02",
       title: "Contrate um talento",
       text: "Abra vagas de estágio, trainee ou analista júnior para a nossa comunidade. Profissionais formados em tecnologia, IA e inglês, com validação técnica e comportamental feita pela PdA.",
-      cta: { label: "Quero contratar", href: ROUTES.empresas } as LinkItem,
+      cta: { label: "Quero contratar", href: ROUTES.contrate } as LinkItem,
       tone: "light" as const,
     },
   ],

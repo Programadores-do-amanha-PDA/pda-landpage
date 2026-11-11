@@ -21,7 +21,7 @@ export const site = {
 export const nav: { links: LinkItem[]; cta: LinkItem } = {
   links: [
     { label: "Impacto", href: ROUTES.impacto },
-    { label: "Contrate um talento", href: ROUTES.empresas },
+    { label: "Contrate um talento", href: ROUTES.contrate },
     { label: "Quem somos", href: ROUTES.sobre },
     { label: "Inscreva-se", href: FORMS.inscricao },
   ],
@@ -45,7 +45,7 @@ export const footer = {
       title: "Participe",
       links: [
         { label: "Doe", href: ROUTES.doe },
-        { label: "Contrate um talento", href: ROUTES.empresas },
+        { label: "Contrate um talento", href: ROUTES.contrate },
         { label: "Seja mentor", href: ROUTES.sejaMentor },
         { label: "Inscreva-se", href: FORMS.inscricao },
       ],

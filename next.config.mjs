@@ -13,6 +13,13 @@ const nextConfig = {
         destination: "https://programadoresdoamanha.org.br/pt/doe",
         permanent: true,
       },
+      {
+        // "Contrate um talento" saiu de /empresas para /contrate (nov/2026). O redirect é
+        // temporário porque /empresas vai virar a página de empresas que querem doar.
+        source: "/:locale(pt|en)/empresas",
+        destination: "/pt/contrate",
+        permanent: false,
+      },
     ];
   },
 

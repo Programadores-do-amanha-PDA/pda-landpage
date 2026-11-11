@@ -33,7 +33,7 @@ export const CONTATO_MAILTO = `mailto:${CONTATO_EMAIL}`;
 export const FORMS = {
   inscricao: "https://forms.gle/Sf93Zf5QmvASRFLp9",
   mentoria: "https://forms.gle/pFCB42A7FJ7L31Fd8",
-  /** Empresas que querem contratar um talento (botões de /empresas). */
+  /** Empresas que querem contratar um talento (botões de /contrate). */
   empresas: "https://forms.gle/4LpDwUxAU3cDSTT19",
 } as const;
 
@@ -43,7 +43,7 @@ export const FORMS = {
 export const ROUTES = {
   home: "/",
   impacto: "/impacto",
-  empresas: "/empresas",
+  contrate: "/contrate",
   doe: "/doe",
   sobre: "/sobre",
   naMidia: "/sobre#na-midia",

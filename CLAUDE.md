@@ -50,11 +50,15 @@ Em `/doe`, as decisões do time (nov/2026) também vencem o `textos-site.md`. O 
 | --- | --- | --- |
 | `/` | Todos | Patrocine a mobilidade · Contrate um talento |
 | `/impacto` | Doadores, imprensa, conselho | Apoie a próxima turma |
-| `/empresas` | RH | Quero contratar (Google Forms de empresas) |
+| `/contrate` | RH | Quero contratar (Google Forms de empresas) |
 | `/doe` | Pessoa física | Doar agora (pop-up da Doare) |
 | `/sobre` | Todos | Contato |
 
-Em `/empresas`, as decisões do time (nov/2026) também vencem o `textos-site.md`. O conteúdo final está em `content/empresas.ts`. A página fala só de contratar talentos: no menu ela se chama "Contrate um talento", e sai a seção "Apoie a formação" (patrocínio). Uma página própria para empresas que querem doar será criada depois. Os botões "Quero contratar" e "Abrir uma vaga" vão para o Google Forms de empresas (`FORMS.empresas`).
+Em `/contrate` ("Contrate um talento", seção "Para empresas" do `textos-site.md`), as decisões do time (nov/2026) também vencem o `textos-site.md`. O conteúdo final está em `content/contrate.ts`. Principais mudanças:
+- A página fala só de contratar talentos: no menu ela se chama "Contrate um talento", e sai a seção "Apoie a formação" (patrocínio).
+- A rota é `/contrate` (`ROUTES.contrate`). Ela foi publicada primeiro em `/empresas`, que agora redireciona para `/pt/contrate` com redirect temporário (307, em `redirects()` do `next.config.mjs`): `/empresas` fica reservada para a futura página de empresas que querem doar. Ao criar essa página, remova o redirect.
+- Os botões "Quero contratar" e "Abrir uma vaga" vão para o Google Forms de empresas (`FORMS.empresas`).
+- A faixa "Empresas que já contrataram" tem 10 logos em `public/assets/contrataram` (BTG Pactual, Oracle, Inter, XP Investimentos, Localiza, Onfly, Hotmart, Itaú, BV e Mercado Livre). A Onfly usa `public/assets/partners/onfly.png`.
 
 Header e rodapé iguais em todas as páginas (rodapé descrito no fim de `textos-site.md`). O link "Inscreva-se" aponta para o Google Forms de inscrição. No rodapé, o nome da PdA aparece como logo e os selos (BTG Soma, Pacto Global e ODS 8) aparecem como imagens, em `public/assets/selos`. A coluna "Sobre" do rodapé também tem o link "Transparência" (`/sobre#transparencia`).
 
@@ -114,7 +118,7 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 ## Fluxo de trabalho
 
 1. Criar uma branch por página (ex.: `feat/pagina-sobre`) a partir de `develop` atualizada.
-2. Home, `/impacto`, `/sobre`, `/doe` e `/empresas` já estão no ar.
+2. Home, `/impacto`, `/sobre`, `/doe` e `/contrate` já estão no ar. Falta a página de empresas que querem doar, em `/empresas`.
 3. Commits pequenos, um por página ou componente.
 4. Abrir PR para `develop`. A Vercel gera o preview para o time validar.
 5. Nunca fazer push direto em `main` ou `develop`.

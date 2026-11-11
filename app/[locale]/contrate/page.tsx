@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 
 import { PageViewComponent } from "@/common/components";
-import { Hero } from "@/components/empresas/Hero";
-import { Hire } from "@/components/empresas/Hire";
+import { Hero } from "@/components/contrate/Hero";
+import { Hire } from "@/components/contrate/Hire";
 import { NewSiteShell } from "@/components/layout/NewSiteShell";
-import { meta } from "@/content/empresas";
+import { meta } from "@/content/contrate";
 import { hero as homeHero } from "@/content/home";
 import { site } from "@/content/site";
 
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   title: { absolute: meta.title },
   description: meta.description,
   keywords: site.keywords,
-  alternates: { canonical: "/pt/empresas" },
+  alternates: { canonical: "/pt/contrate" },
   openGraph: {
     title: meta.title,
     description: meta.description,
-    url: "/pt/empresas",
+    url: "/pt/contrate",
     images: [
       {
         url: homeHero.image.src,
@@ -29,19 +29,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function EmpresasPage({
+export default function ContratePage({
   params,
 }: {
   params: { locale: string };
 }) {
-  // A copy nova só existe em português: /en/empresas vai para /pt/empresas até haver tradução.
-  if (params.locale !== "pt") redirect("/pt/empresas");
+  // A copy nova só existe em português: /en/contrate vai para /pt/contrate até haver tradução.
+  if (params.locale !== "pt") redirect("/pt/contrate");
 
   return (
     <NewSiteShell>
       <Hero />
       <Hire />
-      <PageViewComponent pageName="Empresas" />
+      <PageViewComponent pageName="Contrate" />
     </NewSiteShell>
   );
 }
