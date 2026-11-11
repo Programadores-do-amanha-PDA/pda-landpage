@@ -21,7 +21,7 @@ export const FORMS = {
 
 /**
  * Destinos dos links internos.
- * [PROVISÓRIO] Enquanto /empresas, /doe e /sobre não existem, cada link aponta
+ * [PROVISÓRIO] Enquanto /empresas e /doe não existem, cada link aponta
  * para a página ou o serviço que já está no ar. Quando a página nova ficar pronta,
  * troque o valor pela rota final (comentada ao lado).
  */
@@ -30,8 +30,8 @@ export const ROUTES = {
   impacto: "/impacto",
   empresas: "/hire-a-talent", // final: "/empresas"
   doe: DOACAO_URL, // final: "/doe"
-  sobre: "/who-we-are", // final: "/sobre"
-  naMidia: "/who-we-are", // final: "/sobre#na-midia"
+  sobre: "/sobre",
+  naMidia: "/sobre#na-midia",
   sejaMentor: FORMS.mentoria, // final: "/doe#seja-mentor"
 } as const;
 
