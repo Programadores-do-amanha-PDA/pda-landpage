@@ -179,7 +179,7 @@ export const stories = {
       turma: "Turma 6",
       city: "São Paulo, SP",
       company: "Cielo",
-      photo: { src: "/assets/alumni/maria-eduarda.jpg", alt: "Retrato de Maria Eduarda Souza sorrindo" },
+      photo: { src: "/assets/alumni/maria-eduarda.jpg", alt: "Retrato de Maria Eduarda Souza, de óculos" },
       story:
         "Vim da periferia, onde as oportunidades nem sempre aparecem. Foram horas estudando, errando e recomeçando. Essa vaga é só o começo, e quero mostrar que quem vem de onde eu vim pode chegar longe.",
     },
