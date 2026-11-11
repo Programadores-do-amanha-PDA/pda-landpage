@@ -123,7 +123,7 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 
 - Mosaico do hero: substituir o recorte provisório pelo arquivo original em alta resolução e confirmar a autorização de uso de imagem de todas as pessoas.
 - Logos dos parceiros (manter a lista atual por enquanto; os arquivos estão em `public/assets`).
-- Lista e logos de empresas que contrataram, para `/empresas`.
+- Logos das empresas que contrataram (`/empresas`): os arquivos em `public/assets/contrataram` foram recortados de uma imagem em baixa resolução. Trocar pelos originais.
 - Matérias de imprensa: os links do Brazil Journal e do iFood em `/sobre` ainda levam a matérias que citam jovens negros no endereço e no título. Trocar por matérias de 2025 e 2026 quando chegarem.
 - Links reais dos Google Forms.
 - Site antigo de doação no Tilda: a empresa que o mantinha precisa despublicar a página e remover o domínio `doe` do projeto (a PdA não tem acesso ao Tilda). O DNS já não aponta para lá.
