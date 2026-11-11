@@ -63,17 +63,23 @@ export function Stories() {
                       </p>
                     </div>
                   </div>
-                  <div className="pda-flip-face pda-flip-back flex flex-col justify-between gap-3 overflow-y-auto rounded-2xl bg-ink p-4 text-cream sm:p-6">
-                    <p className="m-0 text-[12px] leading-[1.5] sm:text-[15px] sm:leading-[1.55]">
+                  {/* O texto cresce com a largura do card (unidade cqw) para ocupar o verso. */}
+                  <div className="pda-flip-face pda-flip-back flex flex-col justify-between gap-4 overflow-y-auto rounded-2xl bg-ink p-4 text-cream [container-type:inline-size] sm:p-6">
+                    <p className="m-0 text-[12px] leading-[1.5] sm:text-[clamp(14px,8cqw,22px)]">
                       {person.story ? (
                         <>“{person.story}”</>
                       ) : (
                         <>[TEXTO SOBRE {firstName(person.name)}]</>
                       )}
                     </p>
-                    <p className="m-0 font-display text-[18px] uppercase leading-[1.05] text-yellow sm:text-[22px]">
-                      {person.name}
-                    </p>
+                    <div className="flex flex-col gap-1">
+                      <p className="m-0 font-display text-[18px] uppercase leading-[1.05] text-yellow sm:text-[24px]">
+                        {person.name}
+                      </p>
+                      <p className="m-0 hidden text-[13px] sm:block">
+                        {person.turma} · {person.company}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </article>

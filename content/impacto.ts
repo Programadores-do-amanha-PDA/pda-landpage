@@ -116,7 +116,7 @@ export const stories = {
       turma: "Turma 3",
       city: "São Vicente, SP",
       company: "Localiza",
-      photo: { src: "/assets/alumni/debora.jpg", alt: "Retrato de Débora Moura sorrindo" },
+      photo: { src: "/assets/alumni/debora.jpg", alt: "Débora Moura sorrindo, com a mão apoiada no rosto" },
       story:
         "Foram muitos “nãos”, um processo longo e momentos em que quis desistir. Mas finalmente chegou o tão sonhado “sim”! A PdA foi uma verdadeira ponte nessa jornada.",
     },
