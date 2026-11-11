@@ -73,7 +73,7 @@ export const highlights = {
     },
     {
       value: "24 estados",
-      text: "Nossos alunos vêm de 24 estados, de mais de 100 municípios e de todas as regiões do país.",
+      text: "Nossos alunos vêm de mais de 100 municípios, em todas as regiões do país.",
     },
   ] as { value: string; text: string; placeholder?: string }[],
   note: "Dados atualizados em outubro/2026.",
