@@ -16,6 +16,8 @@ Trocar a landing page única atual por um site de 5 páginas, cada uma com um p�
 
 Quando o mockup e o `textos-site.md` divergirem na Home, **o mockup vence**: ele tem as últimas revisões de texto.
 
+Na Home, as revisões do time (nov/2026) também vencem o mockup: o botão do hero é "Patrocine a mobilidade social"; a faixa de números tem todos os valores na mesma cor; o rótulo do gráfico é "Top 10% de renda no Brasil"; "Como apoiar" tem dois blocos, "Apoiar como empresa" (doar e contratar) e "Apoiar como pessoa física" (doar e ser mentor). Em todo o site, a PdA fala de si em primeira pessoa ("os jovens que formamos", não "formados pela PdA"); os depoimentos dos alumni ficam como estão. O zero com ponto é o desenho da JetBrains Mono e fica assim (decisão do time).
+
 Em `/impacto`, as revisões do time (nov/2026) vencem o `textos-site.md`. O conteúdo final está em `content/impacto.ts`. Principais mudanças: sem as seções de depoimento da Débora e de primeiro salário; o Top 5% fica na seção da pirâmide; "um jovem por semana" é o subtítulo das histórias; os cards das histórias usam os 10 alumni do formulário "O Primeiro Sim" (fotos em `public/assets/alumni`, texto resumido no verso do card).
 
 Em `/sobre`, as revisões do time (nov/2026) também vencem o `textos-site.md`. O conteúdo final está em `content/sobre.ts`. Principais mudanças:

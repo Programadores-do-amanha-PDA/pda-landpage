@@ -21,7 +21,7 @@ export function Stories() {
             <RichText segments={stories.subtitle} strongClassName="text-purple" />
           </p>
         </div>
-        <ul className="m-0 grid list-none grid-cols-2 gap-3 p-0 sm:grid-cols-[repeat(auto-fill,minmax(260px,1fr))] sm:gap-6">
+        <ul className="m-0 grid list-none grid-cols-2 gap-3 p-0 sm:gap-6 lg:grid-cols-5 lg:gap-5">
           {stories.people.map((person) => (
             <li key={person.name}>
               {/* Card que gira no hover, no foco (teclado) e no toque. O verso fica no DOM para leitores de tela. */}
@@ -38,7 +38,7 @@ export function Stories() {
                           src={person.photo.src}
                           alt={person.photo.alt}
                           fill
-                          sizes="(min-width: 1280px) 300px, 50vw"
+                          sizes="(min-width: 1024px) 250px, 50vw"
                           className="object-cover object-top"
                         />
                       </div>

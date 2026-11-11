@@ -44,7 +44,7 @@ export function SalaryChart({
           style={{ bottom: pct(reference.value) }}
         />
         <span
-          className="absolute left-0 bg-yellow px-1.5 py-0.5 text-[12px] font-bold leading-tight"
+          className="absolute left-0 max-w-[62%] bg-yellow px-1.5 py-0.5 text-[12px] font-bold leading-tight"
           style={{ bottom: `calc(${pct(reference.value)} + 6px)` }}
         >
           {referenceText}
