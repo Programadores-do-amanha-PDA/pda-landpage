@@ -26,6 +26,13 @@ Em `/sobre`, as revisões do time (nov/2026) também vencem o `textos-site.md`. 
 - "Na mídia" mostra só Brazil Journal, iFood, Onfly e Méliuz, nessa ordem: logos com link para as matérias.
 - Ano de fundação: 2019.
 
+Em `/doe`, as decisões do time (nov/2026) também vencem o `textos-site.md`. O conteúdo final está em `content/doe.ts`. Principais mudanças:
+- A doação é feita pelo pop-up da Doare: o SDK (`paybox.sdk.js`) carrega com `next/script` só nesta página, e cada botão chama `Paybox.show({ payboxId })`. Os IDs ficam em `DOARE` (`content/links.ts`).
+- "Doar agora" abre o pop-up genérico. Em "Formas de doar" há os botões R$ 30 (suporte terapêutico), R$ 100 (notebook e internet), R$ 500 (formação completa) e Outro valor, cada um com o seu pop-up.
+- Sem os widgets da campanha da Doare (total arrecadado, barra, dias restantes) e sem o pop-up "Futuros que começam agora" (o ID continua em `DOARE`).
+- Sem a seção "Seja mentor": os links "Seja mentor" vão direto ao Google Forms de mentoria.
+- A Doare recusa (403) o pop-up quando a página roda em `localhost`; em produção ele abre normalmente.
+
 ## Stack
 
 - Repositório que está no ar: `Programadores-do-amanha-PDA/pda-landpage` (este). O antigo `prog-do-amanha/programadoresdoamanha` não é o site publicado.
@@ -43,7 +50,7 @@ Em `/sobre`, as revisões do time (nov/2026) também vencem o `textos-site.md`. 
 | `/` | Todos | Patrocine a mobilidade · Contrate um talento |
 | `/impacto` | Doadores, imprensa, conselho | Apoie a próxima turma |
 | `/empresas` | RH e ESG | Quero contratar · Falar com a PdA |
-| `/doe` | Pessoa física | Doar agora |
+| `/doe` | Pessoa física | Doar agora (pop-up da Doare) |
 | `/sobre` | Todos | Contato |
 
 Header e rodapé iguais em todas as páginas (rodapé descrito no fim de `textos-site.md`). O link "Inscreva-se" aponta para o Google Forms de inscrição. No rodapé, o nome da PdA aparece como logo e os selos (BTG Soma, Pacto Global e ODS 8) aparecem como imagens, em `public/assets/selos`. A coluna "Sobre" do rodapé também tem o link "Transparência" (`/sobre#transparencia`).
@@ -79,7 +86,7 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 
 - **Posicionamento:** falar apenas de **baixa renda** (os 10% mais pobres). Não usar nenhuma referência a jovens negros, pretos, pardos ou indígenas em textos, alts, metatags ou títulos de matérias.
 - **Patrocínio:** não publicar valores de planos (Bronze/Prata/Ouro), parcelamento nem o trecho do RIR. Na página de empresas, o benefício fiscal aparece só de forma genérica.
-- **Doação:** todos os botões de doar levam a `https://doe.programadoresdoamanha.org.br/`.
+- **Doação:** todos os botões de doar do site levam a `/doe` (`ROUTES.doe`). Na página, a doação é feita pelo pop-up da Doare. O subdomínio `doe.programadoresdoamanha.org.br` deve redirecionar para `/pt/doe`.
 - **Formulários:** tudo via Google Forms (inscrição de jovens, mentoria, contato de empresas). Nada de HubSpot. Crie os links como constantes em um único arquivo (`content/links.ts`) para facilitar a troca.
 - **Domínio:** todos os links internos e absolutos usam `programadoresdoamanha.org.br` (o site atual tem links quebrados para `.org`, sem o `.br`).
 - **Contato:** `contato@programadoresdoamanha.org.br`.
@@ -104,7 +111,7 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 ## Fluxo de trabalho
 
 1. Criar uma branch por página (ex.: `feat/pagina-sobre`) a partir de `develop` atualizada.
-2. Home, `/impacto` e `/sobre` já estão no ar. Faltam `/empresas` e depois `/doe`.
+2. Home, `/impacto` e `/sobre` já estão no ar, e `/doe` foi construída. Falta `/empresas`.
 3. Commits pequenos, um por página ou componente.
 4. Abrir PR para `develop`. A Vercel gera o preview para o time validar.
 5. Nunca fazer push direto em `main` ou `develop`.
@@ -116,4 +123,5 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 - Lista e logos de empresas que contrataram, para `/empresas`.
 - Matérias de imprensa: os links do Brazil Journal e do iFood em `/sobre` ainda levam a matérias que citam jovens negros no endereço e no título. Trocar por matérias de 2025 e 2026 quando chegarem.
 - Links reais dos Google Forms.
+- Subdomínio `doe`: depois que `/doe` estiver no ar, apontar `doe.programadoresdoamanha.org.br` para este projeto na Vercel (hoje aponta para o Tilda) e redirecionar para `/pt/doe`.
 - Futuro da página "Apoie um aluno" e do PdA Labs no site.

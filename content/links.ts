@@ -2,8 +2,26 @@
 
 export const SITE_URL = "https://programadoresdoamanha.org.br";
 
-/** Todos os botões de doar levam para cá. */
-export const DOACAO_URL = "https://doe.programadoresdoamanha.org.br/";
+/**
+ * Doação pelo pop-up da Doare (doare.org), usado na página /doe.
+ * Os payboxId são públicos (não são chave secreta). Para trocar um pop-up, altere só o ID.
+ */
+export const DOARE = {
+  sdk: "https://paybox.doare.org/assets/javascripts/paybox.sdk.js",
+  termos: "https://doare.org/terms",
+  privacidade: "https://doare.org/privacidade",
+  payboxId: {
+    /** Pop-up genérico "Doar": a pessoa escolhe valor e recorrência. */
+    geral: "98533830-b7f0-4222-8efb-a55b908df8f7",
+    /** Configurado na Doare com R$ 30 (era o "cota50" do site anterior). */
+    cota30: "19470d9b-82f2-4060-926e-fb61bd5249a6",
+    cota100: "ea5e1102-0d1d-4083-a007-41c4bb2a4d49",
+    cota500: "8e3dfea9-022e-4e75-b526-0832fd8d84b6",
+    outroValor: "611c2811-cccc-42cb-938f-677b9d6e327f",
+    /** Campanha "Futuros que começam agora" (não usada na página por enquanto). */
+    futurosQueComecamAgora: "78d4b4a1-7aad-4d71-8eba-1506fac82dda",
+  },
+} as const;
 
 export const CONTATO_EMAIL = "contato@programadoresdoamanha.org.br";
 export const CONTATO_MAILTO = `mailto:${CONTATO_EMAIL}`;
@@ -20,20 +38,20 @@ export const FORMS = {
 } as const;
 
 /**
- * Destinos dos links internos.
- * [PROVISÓRIO] Enquanto /empresas e /doe não existem, cada link aponta
- * para a página ou o serviço que já está no ar. Quando a página nova ficar pronta,
- * troque o valor pela rota final (comentada ao lado).
+ * Destinos dos links internos. Todos os botões de doar levam para ROUTES.doe.
+ * [PROVISÓRIO] Enquanto /empresas não existe, o link aponta para a página que já está no ar.
+ * Quando a página nova ficar pronta, troque o valor pela rota final (comentada ao lado).
  */
 export const ROUTES = {
   home: "/",
   impacto: "/impacto",
   empresas: "/hire-a-talent", // final: "/empresas"
-  doe: DOACAO_URL, // final: "/doe"
+  doe: "/doe",
   sobre: "/sobre",
   naMidia: "/sobre#na-midia",
   transparencia: "/sobre#transparencia",
-  sejaMentor: FORMS.mentoria, // final: "/doe#seja-mentor"
+  // Decisão do time (nov/2026): sem seção de mentoria em /doe; o link vai direto ao Forms.
+  sejaMentor: FORMS.mentoria,
 } as const;
 
 export const SOCIAL = {
