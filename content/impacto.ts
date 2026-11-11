@@ -39,7 +39,7 @@ export const pyramid = {
     value: "Top 5%",
     text: "7 alumni já estão no top 5% mais rico do Brasil. Com idade média de 21 anos, esse grupo tem renda superior a R$\u00a010.313.",
   },
-  chartTitle: "Remuneração mensal no Brasil",
+  chartTitle: "Renda mensal dos trabalhadores brasileiros",
   /** De cima para baixo. highlight marca a faixa dos 10% mais ricos. */
   levels: [
     { label: "Top 1%", value: 21767 },

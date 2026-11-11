@@ -43,7 +43,7 @@ export function IncomePyramid({
         className,
       )}
     >
-      <figcaption className="text-[14px] font-bold">{title}</figcaption>
+      <figcaption className="text-center text-[14px] font-bold">{title}</figcaption>
 
       {/* --min: largura da faixa do topo. Maior no celular para o texto caber em 360 px. */}
       <ol
