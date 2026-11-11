@@ -33,19 +33,20 @@ export const CONTATO_MAILTO = `mailto:${CONTATO_EMAIL}`;
 export const FORMS = {
   inscricao: "https://forms.gle/Sf93Zf5QmvASRFLp9",
   mentoria: "https://forms.gle/pFCB42A7FJ7L31Fd8",
-  /** [LINK DO GOOGLE FORMS DE EMPRESAS] ainda não existe. */
+  /**
+   * [LINK DO GOOGLE FORMS DE EMPRESAS] ainda não existe. Enquanto for "#", /empresas mostra
+   * o aviso [LINK DO GOOGLE FORMS DE EMPRESAS] junto dos botões. Troque pelo link do Forms.
+   */
   empresas: "#",
 } as const;
 
 /**
  * Destinos dos links internos. Todos os botões de doar levam para ROUTES.doe.
- * [PROVISÓRIO] Enquanto /empresas não existe, o link aponta para a página que já está no ar.
- * Quando a página nova ficar pronta, troque o valor pela rota final (comentada ao lado).
  */
 export const ROUTES = {
   home: "/",
   impacto: "/impacto",
-  empresas: "/hire-a-talent", // final: "/empresas"
+  empresas: "/empresas",
   doe: "/doe",
   sobre: "/sobre",
   naMidia: "/sobre#na-midia",
