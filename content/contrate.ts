@@ -1,4 +1,4 @@
-// Conteúdo da página /empresas. Fonte: docs/redesign/textos-site.md, seção "Para empresas (/empresas)".
+// Conteúdo da página /contrate ("Contrate um talento"). Fonte: docs/redesign/textos-site.md, seção "Para empresas (/empresas)".
 // Decisão do time (nov/2026): a página fala só de contratar talentos ("Contrate um talento").
 // O apoio de empresas (patrocínio) vai para uma página própria no futuro.
 import type { LinkItem, RichLine } from "./types";
