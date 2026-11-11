@@ -39,11 +39,22 @@ export function SupportCards() {
                   {card.title}
                 </h3>
                 <p className="m-0">{card.text}</p>
-                <div>
-                  <Button
-                    link={card.cta}
-                    variant={dark ? "pill-yellow" : "pill-ink"}
-                  />
+                <div className="flex flex-wrap gap-3">
+                  {card.ctas.map((cta, i) => (
+                    <Button
+                      key={cta.label}
+                      link={cta}
+                      variant={
+                        i === 0
+                          ? dark
+                            ? "pill-yellow"
+                            : "pill-ink"
+                          : dark
+                            ? "pill-outline"
+                            : "pill-outline-ink"
+                      }
+                    />
+                  ))}
                 </div>
               </article>
             );
