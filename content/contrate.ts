@@ -7,7 +7,7 @@ import { FORMS } from "./links";
 export const meta = {
   title: "Contrate um talento | Programadores do Amanhã",
   description:
-    "Mais de 100 empresas já contrataram jovens formados pela Programadores do Amanhã em programação, inteligência artificial e inglês. Contrate um talento para o seu time.",
+    "Mais de 100 empresas já contrataram os jovens que formamos em programação, inteligência artificial e inglês. Contrate um talento para o seu time.",
 };
 
 export const hero = {
@@ -16,18 +16,31 @@ export const hero = {
     [{ text: "Contrate um talento." }],
     [{ text: "Mude uma" }, { text: "vida.", mark: "bar" }],
   ] as RichLine[],
-  lead: "Mais de 100 empresas já contrataram jovens formados pela PdA em programação, inteligência artificial e inglês.",
+  lead: "Mais de 100 empresas já contrataram os jovens que formamos em programação, inteligência artificial e inglês.",
   cta: { label: "Quero contratar", href: FORMS.empresas } as LinkItem,
 };
 
 export const hire = {
   title: "Talentos prontos para o seu time",
-  lead: "Abra vagas de estágio, trainee ou analista júnior para a nossa comunidade. Cada pessoa passa por validação técnica e comportamental da PdA antes da indicação: menos custo de seleção, mais aderência à vaga.",
+  // Texto revisado (nov/2026): primeira pessoa e cards com título.
+  lead: "Você abre a vaga de estágio, trainee ou analista júnior. Nós indicamos jovens que já passaram pela nossa validação técnica e comportamental. Seu time recebe talentos alinhados à vaga e gasta menos tempo com seleção.",
   skills: [
-    "Programação e inteligência artificial aplicada, de prompts a agentes integrados a sistemas reais",
-    "Inglês para o mercado tech",
-    "High Agency: autonomia, iniciativa e responsabilidade",
-    "Experiência em squads, com metodologias ágeis e projetos reais",
+    {
+      title: "Programação e IA",
+      text: "Do código a agentes de inteligência artificial integrados a sistemas reais.",
+    },
+    {
+      title: "Inglês",
+      text: "Inglês para o dia a dia do mercado de tecnologia.",
+    },
+    {
+      title: "High Agency",
+      text: "Autonomia, iniciativa e responsabilidade pelo próprio trabalho.",
+    },
+    {
+      title: "Trabalho em squad",
+      text: "Experiência com metodologias ágeis em projetos reais.",
+    },
   ],
   logosTitle: "Empresas que já contrataram",
   // Lista aprovada pelo time (nov/2026). Logos da Wikimedia Commons, exceto Onfly (arquivo do site)

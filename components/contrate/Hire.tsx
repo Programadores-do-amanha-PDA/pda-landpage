@@ -23,7 +23,7 @@ export function Hire() {
         <ul className="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(100%,260px),1fr))] gap-6 p-0">
           {hire.skills.map((item, i) => (
             <li
-              key={item}
+              key={item.title}
               className="flex flex-col gap-4 rounded-2xl border-2 border-ink bg-white p-7"
             >
               <span
@@ -32,7 +32,10 @@ export function Hire() {
               >
                 {String(i + 1).padStart(2, "0")}
               </span>
-              <p className="m-0 text-[17px] leading-[1.55]">{item}</p>
+              <h3 className="m-0 font-display text-[28px] font-normal uppercase leading-none">
+                {item.title}
+              </h3>
+              <p className="m-0 text-[17px] leading-[1.55]">{item.text}</p>
             </li>
           ))}
         </ul>
