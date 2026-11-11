@@ -44,3 +44,22 @@ export const SOCIAL = {
 export const SOURCES = {
   atlasMobilidade: "https://atlasmobilidadesocial.org.br/",
 } as const;
+
+/** Matérias da seção "Na mídia" de /sobre. */
+export const MEDIA = {
+  brazilJournal:
+    "https://braziljournal.com/pretos-pobres-e-perifericos-e-programando-o-brasil-de-amanha/",
+  ifood:
+    "https://institucional.ifood.com.br/noticias/programadores-do-amanha-multiplica-renda-de-jovens-negros/",
+  oDia: "https://odia.ig.com.br/economia/empregos-e-negocios/2023/08/6691950-programadores-do-amanha-oferece-curso-exclusivo-de-programacao-para-negros-e-indigenas.html",
+  onfly:
+    "https://www.linkedin.com/feed/update/urn:li:ugcPost:7183831578299555840/",
+  pretaJoia:
+    "https://www.pretajoia.com/2023/08/programadores-do-amanha-ministra-curso.html",
+  guiaDeTi:
+    "https://guiadeti.com.br/curso-gratuito-programacao-jovens-negros/",
+  comiteCidadania: "https://comitepelacidadania.org/programadores-do-amanha/",
+  aloAloBahia:
+    "https://aloalobahia.com/notas/programadores-do-amanha-projeto-oferece-curso-gratuito-de-programacao-para-negros-e-indigenas",
+  youtube: "https://youtu.be/I5FkKeaT-2c",
+} as const;
