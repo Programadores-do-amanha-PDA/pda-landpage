@@ -21,7 +21,7 @@ export const FORMS = {
 
 /**
  * Destinos dos links internos.
- * [PROVISÓRIO] Enquanto /empresas, /doe e /sobre não existem, cada link aponta
+ * [PROVISÓRIO] Enquanto /empresas e /doe não existem, cada link aponta
  * para a página ou o serviço que já está no ar. Quando a página nova ficar pronta,
  * troque o valor pela rota final (comentada ao lado).
  */
@@ -30,8 +30,9 @@ export const ROUTES = {
   impacto: "/impacto",
   empresas: "/hire-a-talent", // final: "/empresas"
   doe: DOACAO_URL, // final: "/doe"
-  sobre: "/who-we-are", // final: "/sobre"
-  naMidia: "/who-we-are", // final: "/sobre#na-midia"
+  sobre: "/sobre",
+  naMidia: "/sobre#na-midia",
+  transparencia: "/sobre#transparencia",
   sejaMentor: FORMS.mentoria, // final: "/doe#seja-mentor"
 } as const;
 
@@ -43,4 +44,30 @@ export const SOCIAL = {
 
 export const SOURCES = {
   atlasMobilidade: "https://atlasmobilidadesocial.org.br/",
+} as const;
+
+/** Matérias da seção "Na mídia" de /sobre. */
+export const MEDIA = {
+  brazilJournal:
+    "https://braziljournal.com/pretos-pobres-e-perifericos-e-programando-o-brasil-de-amanha/",
+  ifood:
+    "https://institucional.ifood.com.br/noticias/programadores-do-amanha-multiplica-renda-de-jovens-negros/",
+  onfly:
+    "https://www.linkedin.com/feed/update/urn:li:ugcPost:7183831578299555840/",
+  youtube: "https://youtu.be/I5FkKeaT-2c",
+} as const;
+
+/**
+ * Documentos da seção "Transparência" de /sobre (arquivos no Google Drive da PdA).
+ * Para publicar um documento novo, adicione o link aqui e o item em content/sobre.ts.
+ */
+export const DOCUMENTOS = {
+  auditoria2024:
+    "https://drive.google.com/file/d/1SgwDqy5xmLyfFmHs5-9vOABZtFAMyW-6/view?usp=sharing",
+  demonstracoes2024:
+    "https://drive.google.com/file/d/1PNgNAz34Y90reYj7fJ6BJlNmhX7oDv1T/view?usp=sharing",
+  estatuto:
+    "https://drive.google.com/file/d/1a0k84oPobukIG5yffA5M_ViJsf32hvnM/view?usp=sharing",
+  ataEleicao2024:
+    "https://drive.google.com/file/d/1Sp2uReAKfU08o-23JhwAw4GxUe3g4WXg/view?usp=sharing",
 } as const;

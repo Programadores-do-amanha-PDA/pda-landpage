@@ -38,6 +38,7 @@ export const footer = {
         { label: "Quem somos", href: ROUTES.sobre },
         { label: "Impacto", href: ROUTES.impacto },
         { label: "Na mídia", href: ROUTES.naMidia },
+        { label: "Transparência", href: ROUTES.transparencia },
       ],
     },
     {
