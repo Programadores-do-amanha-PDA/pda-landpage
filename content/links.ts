@@ -32,6 +32,7 @@ export const ROUTES = {
   doe: DOACAO_URL, // final: "/doe"
   sobre: "/sobre",
   naMidia: "/sobre#na-midia",
+  transparencia: "/sobre#transparencia",
   sejaMentor: FORMS.mentoria, // final: "/doe#seja-mentor"
 } as const;
 
