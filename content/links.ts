@@ -55,3 +55,18 @@ export const MEDIA = {
     "https://www.linkedin.com/feed/update/urn:li:ugcPost:7183831578299555840/",
   youtube: "https://youtu.be/I5FkKeaT-2c",
 } as const;
+
+/**
+ * Documentos da seção "Transparência" de /sobre (arquivos no Google Drive da PdA).
+ * Para publicar um documento novo, adicione o link aqui e o item em content/sobre.ts.
+ */
+export const DOCUMENTOS = {
+  auditoria2024:
+    "https://drive.google.com/file/d/1SgwDqy5xmLyfFmHs5-9vOABZtFAMyW-6/view?usp=sharing",
+  demonstracoes2024:
+    "https://drive.google.com/file/d/1PNgNAz34Y90reYj7fJ6BJlNmhX7oDv1T/view?usp=sharing",
+  estatuto:
+    "https://drive.google.com/file/d/1a0k84oPobukIG5yffA5M_ViJsf32hvnM/view?usp=sharing",
+  ataEleicao2024:
+    "https://drive.google.com/file/d/1Sp2uReAKfU08o-23JhwAw4GxUe3g4WXg/view?usp=sharing",
+} as const;

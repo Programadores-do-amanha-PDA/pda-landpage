@@ -7,6 +7,7 @@ import { Board } from "@/components/sobre/Board";
 import { Contact } from "@/components/sobre/Contact";
 import { Hero } from "@/components/sobre/Hero";
 import { Mission } from "@/components/sobre/Mission";
+import { Transparency } from "@/components/sobre/Transparency";
 import { Media } from "@/components/sobre/Media";
 import { hero as homeHero } from "@/content/home";
 import { site } from "@/content/site";
@@ -41,6 +42,7 @@ export default function SobrePage({ params }: { params: { locale: string } }) {
       <Hero />
       <Mission />
       <Board />
+      <Transparency />
       <Media />
       <Contact />
       <PageViewComponent pageName="Sobre" />

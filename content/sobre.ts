@@ -1,6 +1,6 @@
 // Conteúdo da página /sobre. Fonte: docs/redesign/textos-site.md, seção "Quem somos (/sobre)".
 import type { LinkItem, RichLine, Segment } from "./types";
-import { CONTATO_EMAIL, CONTATO_MAILTO, MEDIA } from "./links";
+import { CONTATO_EMAIL, CONTATO_MAILTO, DOCUMENTOS, MEDIA } from "./links";
 
 export const meta = {
   title: "Quem somos | Programadores do Amanhã",
@@ -52,30 +52,85 @@ export const mission = {
   ],
 };
 
-export const board = {
-  title: "Conselho de administração",
-  members: [
+export type BoardMember = {
+  name: string;
+  /** Opcional: o conselho fiscal aparece só com o nome. */
+  role?: string;
+  /** null mostra o placeholder [FOTO]. */
+  photo: string | null;
+};
+
+/** Os conselhos aparecem em ordem alfabética pelo nome (decisão do time, nov/2026). */
+const byName = (a: BoardMember, b: BoardMember) =>
+  a.name.localeCompare(b.name, "pt-BR");
+
+export const boards = [
+  {
+    id: "conselho-administracao",
+    title: "Conselho de administração",
+    members: [
+      {
+        name: "Mônica Hauck",
+        role: "Cofundadora da Sólides",
+        photo: "/assets/advice/Monica_Hauck.jpeg",
+      },
+      {
+        name: "Robson Privado",
+        role: "Cofundador da MadeiraMadeira",
+        photo: "/assets/advice/Robson_Privado.jpeg",
+      },
+      {
+        name: "Victor Salles",
+        role: "Cofundador da Proteus Academy",
+        photo: "/assets/advice/Victor_Salles.jpeg",
+      },
+      {
+        name: "Lucas Marques",
+        role: "Fundador da Shiva",
+        photo: "/assets/advice/Lucas_Marques.jpeg",
+      },
+    ].sort(byName) as BoardMember[],
+  },
+  {
+    id: "conselho-fiscal",
+    title: "Conselho fiscal",
+    // Mesmos membros publicados em /who-we-are.
+    members: [
+      { name: "Fabiana Bacelar", photo: "/assets/advice/Fabiana_Bacelar.jpeg" },
+      { name: "Gilvan Bueno", photo: "/assets/advice/Gilvan_Bueno.jpeg" },
+      { name: "Larissa Calixto", photo: "/assets/advice/Larissa_Calixto.jpeg" },
+    ].sort(byName) as BoardMember[],
+  },
+];
+
+export const transparency = {
+  title: "Transparência",
+  // Adaptado do banner de transparência de /who-we-are.
+  lead: "Acreditamos que a transparência é fundamental para construir confiança e fortalecer nossos laços com nossos apoiadores.",
+  // Para publicar um documento novo (ex.: auditoria de 2025), adicione um item ao grupo
+  // e o link em DOCUMENTOS (content/links.ts).
+  groups: [
     {
-      name: "Mônica Hauck",
-      role: "Cofundadora da Sólides",
-      photo: "/assets/advice/Monica_Hauck.jpeg",
+      title: "Auditoria e demonstrações contábeis",
+      documents: [
+        {
+          label: "Certificado de auditoria contábil 2024",
+          href: DOCUMENTOS.auditoria2024,
+        },
+        {
+          label: "Demonstrações contábeis 2024",
+          href: DOCUMENTOS.demonstracoes2024,
+        },
+      ],
     },
     {
-      name: "Robson Privado",
-      role: "Cofundador da MadeiraMadeira",
-      photo: "/assets/advice/Robson_Privado.jpeg",
+      title: "Estatuto e atas",
+      documents: [
+        { label: "Estatuto social", href: DOCUMENTOS.estatuto },
+        { label: "Ata de eleição 2024", href: DOCUMENTOS.ataEleicao2024 },
+      ],
     },
-    {
-      name: "Victor Salles",
-      role: "Cofundador da Proteus Academy",
-      photo: "/assets/advice/Victor_Salles.jpeg",
-    },
-    {
-      name: "Lucas Marques",
-      role: "Fundador da Shiva",
-      photo: "/assets/advice/Lucas_Marques.jpeg",
-    },
-  ] as { name: string; role: string; photo: string | null }[],
+  ] as { title: string; documents: LinkItem[] }[],
 };
 
 export const media = {
