@@ -2,8 +2,6 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { hire } from "@/content/empresas";
 
-import { PendingNote } from "./PendingNote";
-
 /** Contrate: perfil dos talentos, empresas que já contrataram e CTA para abrir vaga. */
 export function Hire() {
   return (
@@ -44,9 +42,8 @@ export function Hire() {
             {hire.logosPlaceholder}
           </div>
         </div>
-        <div className="flex flex-col items-start gap-3">
+        <div>
           <Button link={hire.cta} variant="pill-ink" />
-          <PendingNote className="text-purple" />
         </div>
       </Container>
     </section>

@@ -3,8 +3,6 @@ import { Container } from "@/components/ui/Container";
 import { RichText } from "@/components/ui/RichText";
 import { hero } from "@/content/empresas";
 
-import { PendingNote } from "./PendingNote";
-
 export function Hero() {
   return (
     <section
@@ -28,12 +26,8 @@ export function Hero() {
         <p className="m-0 max-w-[760px] text-[18px] leading-[1.6] sm:text-[20px]">
           {hero.lead}
         </p>
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-wrap gap-4">
-            <Button link={hero.primaryCta} variant="primary" />
-            <Button link={hero.secondaryCta} variant="outline" />
-          </div>
-          <PendingNote className="text-yellow" />
+        <div>
+          <Button link={hero.cta} variant="primary" />
         </div>
       </Container>
     </section>
