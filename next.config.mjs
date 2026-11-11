@@ -4,6 +4,18 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        // O subdomínio de doação (antigo site do Tilda) leva para a página /doe.
+        source: "/:path*",
+        has: [{ type: "host", value: "doe.programadoresdoamanha.org.br" }],
+        destination: "https://programadoresdoamanha.org.br/pt/doe",
+        permanent: true,
+      },
+    ];
+  },
+
   async rewrites() {
     return [
       {
