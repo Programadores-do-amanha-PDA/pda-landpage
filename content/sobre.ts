@@ -49,9 +49,12 @@ export const formation = {
 
 export const board = {
   title: "Conselho de administração",
-  // photo: null mostra o placeholder [FOTO] no lugar do retrato.
   members: [
-    { name: "Mônica Hauck", role: "Cofundadora da Sólides", photo: null },
+    {
+      name: "Mônica Hauck",
+      role: "Cofundadora da Sólides",
+      photo: "/assets/advice/Monica_Hauck.jpeg",
+    },
     {
       name: "Robson Privado",
       role: "Cofundador da MadeiraMadeira",

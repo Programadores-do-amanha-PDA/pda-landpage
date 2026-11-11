@@ -13,7 +13,7 @@ export function Board() {
         >
           {board.title}
         </h2>
-        <ul className="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(220px,100%),1fr))] gap-6 p-0">
+        <ul className="m-0 grid list-none grid-cols-1 min-[480px]:grid-cols-2 lg:grid-cols-4 gap-6 p-0">
           {board.members.map((member) => (
             <li
               key={member.name}
