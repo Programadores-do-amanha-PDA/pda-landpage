@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/Button";
 import { RichText } from "@/components/ui/RichText";
-import { SectionTag } from "@/components/ui/SectionTag";
 import { hero } from "@/content/home";
 
 export function Hero() {
@@ -14,7 +13,6 @@ export function Hero() {
     >
       <div className="flex flex-wrap items-stretch">
         <div className="flex min-w-0 flex-[999_1_600px] flex-col justify-center gap-10 py-20 pl-5 pr-5 sm:py-28 sm:pl-[max(32px,calc((100vw-1280px)/2+32px))] sm:pr-12">
-          <SectionTag>{hero.tag}</SectionTag>
           <h1
             id="hero-titulo"
             className="m-0 flex flex-col items-start gap-[0.1em] font-display text-[clamp(48px,8.5vw,150px)] font-normal uppercase leading-[1.08]"

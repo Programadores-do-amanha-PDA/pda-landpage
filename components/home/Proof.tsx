@@ -15,7 +15,7 @@ export function Proof() {
         <div className="flex min-w-0 flex-[1_1_400px] flex-col gap-6">
           <h2
             id="prova-titulo"
-            className="m-0 font-display text-[clamp(40px,5vw,64px)] font-normal uppercase leading-[0.95]"
+            className="m-0 font-display text-[clamp(40px,5vw,64px)] font-normal uppercase leading-[1.02]"
           >
             {proof.title}
           </h2>

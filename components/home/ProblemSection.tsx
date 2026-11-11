@@ -14,7 +14,7 @@ export function ProblemSection() {
         <div className="flex flex-col gap-8">
           <h2
             id="problema-titulo"
-            className="m-0 font-display text-[clamp(44px,6.5vw,104px)] font-normal uppercase leading-[0.95]"
+            className="m-0 font-display text-[clamp(44px,6.5vw,104px)] font-normal uppercase leading-[1.02]"
           >
             <RichText segments={problem.title} />
           </h2>

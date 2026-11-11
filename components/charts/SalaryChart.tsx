@@ -33,7 +33,7 @@ export function SalaryChart({
         className,
       )}
     >
-      <figcaption className="text-[14px] font-bold">{title}</figcaption>
+      <figcaption className="text-center text-[14px] font-bold">{title}</figcaption>
 
       <div
         aria-hidden="true"
