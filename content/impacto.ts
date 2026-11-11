@@ -1,7 +1,6 @@
 // Conteúdo da página /impacto. Fonte: docs/redesign/textos-site.md, seção "Impacto (/impacto)".
 import type { LinkItem, RichLine, Segment } from "./types";
 import { ROUTES } from "./links";
-import { testimonial as karenTestimonial } from "./home";
 
 export const meta = {
   title: "Impacto | Programadores do Amanhã",
@@ -90,44 +89,99 @@ export const stories = {
     { text: "um jovem por semana", mark: "strong" },
     { text: ", em mais de 100 empresas." },
   ] as Segment[],
-  // [PENDENTE] Fotos dos alumni e textos do verso dos cards.
-  // Sem foto ou sem texto, o card mostra um placeholder visível.
+  // Fonte: formulário "O Primeiro Sim" (fotos e histórias enviadas pelos alumni).
+  // Os textos são trechos resumidos das respostas, nas palavras de cada pessoa.
+  // [PENDENTE] Confirmar a autorização de uso de imagem no site de todas as pessoas.
   people: [
-    { name: "Ingrid Dias", turma: "Turma 1", city: "Belo Horizonte, MG", company: "Mercado Livre", photo: null },
     {
-      name: "Karen Francisco",
-      turma: "Turma 2",
-      city: "Osasco, SP",
-      company: "Itaú Unibanco",
-      photo: {
-        src: "/assets/karen-francisco.jpg",
-        alt: "Karen Francisco sorrindo, sentada à mesa de trabalho",
-      },
-      // Mesmo depoimento da Home.
-      story: karenTestimonial.quote,
+      name: "Anselmo Dias",
+      turma: "Turma 3",
+      city: "Areia Branca, SE",
+      company: "MTM Tecnologia",
+      photo: { src: "/assets/alumni/anselmo.jpg", alt: "Retrato de Anselmo Dias" },
+      story:
+        "Todas as noites e finais de semana que passei estudando em vez de sair valeram a pena. Cada erro virou uma lição que me aproximou da minha primeira vaga.",
     },
-    { name: "Isaque Cascaes", turma: "Turma 2", city: "Belém, PA", company: "S.O.S Software", photo: null },
-    { name: "Diego Nascimento", turma: "Turma 3", city: "São Paulo, SP", company: "Lefosse Advogados", photo: null },
+    {
+      name: "Gabriela Reis",
+      turma: "Turma 3",
+      city: "Belo Horizonte, MG",
+      company: "Hotmart",
+      photo: { src: "/assets/alumni/gabriela.jpg", alt: "Retrato de Gabriela Reis sorrindo" },
+      story:
+        "Uma longa jornada que valeu cada passo. Minha história prova que o sucesso não se limita a lugares ou origens, mas à força de vontade de cada um.",
+    },
     {
       name: "Débora Moura",
       turma: "Turma 3",
       city: "São Vicente, SP",
       company: "Localiza",
-      photo: null,
+      photo: { src: "/assets/alumni/debora.jpg", alt: "Retrato de Débora Moura sorrindo" },
       story:
-        "Antes da PdA eu ainda não tinha uma paixão profissional. O diferencial da PdA, para mim, é justamente essa ponte entre o aprendizado técnico e a preparação para o mercado real.",
+        "Foram muitos “nãos”, um processo longo e momentos em que quis desistir. Mas finalmente chegou o tão sonhado “sim”! A PdA foi uma verdadeira ponte nessa jornada.",
     },
-    { name: "Adilson Junior", turma: "Turma 3", city: "São Paulo, SP", company: "XP Inc.", photo: null },
-    { name: "Danielle Santos", turma: "Turma 3", city: "Belo Horizonte, MG", company: "KPMG", photo: null },
     {
-      name: "Clayton Bahia",
-      turma: "Turma 5",
-      city: "Salvador, BA",
-      company: "Aura Brasil",
-      photo: null,
-      // Frase sobre o primeiro salário (livro de cases).
+      name: "Renan Oliveira",
+      turma: "Turma 3",
+      city: "São Paulo, SP",
+      company: "BCG X",
+      photo: { src: "/assets/alumni/renan.jpg", alt: "Retrato de Renan Oliveira, de óculos" },
       story:
-        "Fiz uma compra imensa em casa. Realizei o meu sonho, que era encher o carrinho.",
+        "Receber a aprovação do BCG foi a melhor notícia do meu mês. Ver as metas que tracei quando comecei a estudar programação com a PdA darem resultado é gratificante.",
+    },
+    {
+      name: "Victória Santos",
+      turma: "Turma 3",
+      city: "Duque de Caxias, RJ",
+      company: "BTG Pactual",
+      photo: { src: "/assets/alumni/victoria.jpg", alt: "Retrato de Victória Santos" },
+      story:
+        "Me sinto aliviada e agradecida. Foi na PdA que percebi que, além das hard skills, era importante tirar um tempo para me conhecer e evoluir minhas soft skills.",
+    },
+    {
+      name: "Diogo Silva",
+      turma: "Turma 4",
+      city: "João Pessoa, PB",
+      company: "Indicium",
+      photo: { src: "/assets/alumni/diogo.jpg", alt: "Retrato de Diogo Silva sorrindo, de óculos" },
+      story:
+        "O tão esperado “sim” chegou! Dados e IA sempre foram minha paixão, e a PdA me direcionou para esse processo seletivo. Transformou um caminho difícil em um percurso mais leve.",
+    },
+    {
+      name: "Larissa Oliveira",
+      turma: "Turma 4",
+      city: "Diadema, SP",
+      company: "Telefônica Vivo",
+      photo: { src: "/assets/alumni/larissa.jpg", alt: "Retrato de Larissa Oliveira sorrindo, de óculos" },
+      story:
+        "Não importa quantos currículos a gente envie ou quantas entrevistas faça: o “sim” um dia chega. Se vocês não perderem a esperança, o de vocês também chega.",
+    },
+    {
+      name: "Thauan Carneiro",
+      turma: "Turma 6",
+      city: "Sobral, CE",
+      company: "CloudWalk",
+      photo: { src: "/assets/alumni/thauan.jpg", alt: "Retrato de Thauan Carneiro, de óculos e camiseta preta" },
+      story:
+        "Era minha última tentativa nessa área. Quando a notícia veio, minha mãe disse: “Agora a gente pode comer qualquer coisa que der vontade”. Parece simples, mas não tinha preço.",
+    },
+    {
+      name: "Maria Alice Miranda",
+      turma: "Turma 6",
+      city: "Sobradinho, BA",
+      company: "Aoop Cloud Solutions",
+      photo: { src: "/assets/alumni/maria-alice.jpg", alt: "Retrato de Maria Alice Miranda, de óculos" },
+      story:
+        "Conseguir minha primeira vaga em tecnologia aos 18 anos era algo que eu nunca imaginei. Caí de paraquedas na programação, e a PdA foi a minha grande porta de entrada.",
+    },
+    {
+      name: "Maria Eduarda Souza",
+      turma: "Turma 6",
+      city: "São Paulo, SP",
+      company: "Cielo",
+      photo: { src: "/assets/alumni/maria-eduarda.jpg", alt: "Retrato de Maria Eduarda Souza sorrindo" },
+      story:
+        "Vim da periferia, onde as oportunidades nem sempre aparecem. Foram horas estudando, errando e recomeçando. Essa vaga é só o começo, e quero mostrar que quem vem de onde eu vim pode chegar longe.",
     },
   ] as {
     name: string;
