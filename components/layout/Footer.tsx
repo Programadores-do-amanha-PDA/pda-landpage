@@ -8,10 +8,15 @@ export function Footer() {
     <footer className="bg-ink text-[14px] text-cream">
       <div className="mx-auto flex max-w-site flex-col gap-10 px-5 pb-10 pt-16 sm:px-8">
         <div className="flex flex-wrap justify-between gap-10">
-          <div className="flex flex-[1_1_260px] flex-col gap-2">
-            <span className="font-display text-[28px] uppercase leading-[1.05]">
-              {footer.name}
-            </span>
+          <div className="flex flex-[1_1_260px] flex-col gap-4">
+            {/* Logo para fundo escuro (cópia do Logo_PDA_Horizontal_FundoRoxo com o til corrigido para branco). */}
+            <Image
+              src="/assets/logo-pda-fundo-escuro.png"
+              alt={footer.name}
+              width={240}
+              height={60}
+              className="h-auto w-[220px] sm:w-[240px]"
+            />
             <span>{footer.tagline}</span>
           </div>
           {footer.columns.map((col) => (
