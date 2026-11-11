@@ -31,23 +31,23 @@ export const mission = {
     },
   ] as Segment[],
   valuesTitle: "Nossos valores",
-  // Mesmos valores publicados em /who-we-are (i18n/messages/pt.json, "OurValues").
+  // Títulos dos valores publicados em /who-we-are; textos revisados pelo time (nov/2026).
   values: [
     {
       title: "Impacto em primeiro lugar",
-      text: "A Programadores do Amanhã existe para gerar renda e perspectiva de futuro para a juventude de baixa renda. Todas as nossas ações são focadas em qualificar e preparar os jovens para o mercado de trabalho de tecnologia. Pois sabemos que quando uma pessoa estudante se emprega, toda a sua estrutura familiar é impactada, contribuindo assim para o encerramento da pobreza geracional.",
+      text: "Existimos para gerar renda e perspectiva de futuro para a juventude de baixa renda. Todas as nossas ações são focadas em qualificar e preparar os jovens para o mercado de trabalho. Pois sabemos que quando um jovem estudante se emprega, toda a sua estrutura familiar é impactada, contribuindo assim para o encerramento da pobreza geracional.",
     },
     {
       title: "Fazemos juntos",
-      text: "A Programadores do Amanhã entende que os desafios são coletivos e que juntos somos mais capazes. Por isso nos apoiamos porque nos importamos com cada pessoa que compartilha a jornada conosco. Sabemos que nossos desafios são grandes, mas juntos podemos tornar a jornada individual mais leve e prazerosa.",
+      text: "Entendemos que os desafios são coletivos e que juntos somos mais capazes. Nos apoiamos porque nos importamos com cada pessoa que compartilha a jornada conosco. Sabemos que nossos desafios são grandes, mas que juntos podemos tornar a jornada individual mais leve e satisfatória.",
     },
     {
       title: "Genuinamente apaixonados",
-      text: "Todos nós da Programadores do Amanhã somos genuinamente apaixonados pelo que fazemos porque entendemos que somos os meios para a mudança social que queremos ver para toda a juventude de baixa renda no Brasil.",
+      text: "Somos genuinamente apaixonados pelo que fazemos porque entendemos que somos os meios para a mudança social que queremos ver para toda a juventude de baixa renda no Brasil.",
     },
     {
       title: "Responsabilidade com os resultados",
-      text: "Todos nós da Programadores do Amanhã sempre buscamos criar novas soluções e formas de aumentar nosso impacto. Testamos e aprendemos com os resultados, nos apoiando em dados e indicadores para entender como evoluir.",
+      text: "Sempre buscamos criar novas soluções e formas de aumentar nosso impacto. Testamos e aprendemos com os resultados, nos apoiando em dados e indicadores para entender como evoluir.",
     },
   ],
 };
