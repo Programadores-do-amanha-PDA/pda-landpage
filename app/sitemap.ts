@@ -8,12 +8,13 @@ const paths = [
   "/impacto",
   "/sobre",
   "/doe",
+  "/empresas",
   "/who-we-are",
   "/hire-a-talent",
 ];
 
 // Páginas novas que só existem em português (/en redireciona para /pt).
-const ptOnly = new Set(["", "/impacto", "/sobre", "/doe"]);
+const ptOnly = new Set(["", "/impacto", "/sobre", "/doe", "/empresas"]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((path) => ({
