@@ -12,7 +12,7 @@ Trocar a landing page única atual por um site de 5 páginas, cada uma com um p�
 | --- | --- |
 | `docs/redesign/textos-site.md` | Copy final de todas as páginas. Use o texto exatamente como está. |
 | `docs/redesign/mockup-home.dc.html` | Mockup aprovado da Home (estrutura, cores, tipografia, espaçamento). É um arquivo do canvas de design, não roda sozinho: leia o markup e os estilos inline como referência visual. |
-| `public/assets/mosaico-alumni.jpg` | Mosaico de fotos dos alumni (provisório, ver Pendências). O hero da Home usa `mosaico-alumni-hero.jpg`, um recorte sem a primeira fileira, que tem os rostos cortados no arquivo original. |
+| `public/assets/mosaico-alumni.jpg` | Mosaico de fotos dos alumni (provisório, ver a issue #32). O hero da Home usa `mosaico-alumni-hero.jpg`, um recorte sem a primeira fileira, que tem os rostos cortados no arquivo original. |
 
 Quando o mockup e o `textos-site.md` divergirem na Home, **o mockup vence**: ele tem as últimas revisões de texto.
 
@@ -119,17 +119,25 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 
 ## Fluxo de trabalho
 
-1. Criar uma branch por página (ex.: `feat/pagina-sobre`) a partir de `develop` atualizada.
-2. Home, `/impacto`, `/sobre`, `/doe` e `/contrate` já estão no ar. Falta a página de empresas que querem doar, em `/empresas`.
+1. Criar uma branch por tarefa (ex.: `feat/pagina-sobre`) a partir de `develop` atualizada.
+2. Home, `/impacto`, `/sobre`, `/doe` e `/contrate` já estão no ar. Falta a página de empresas que querem doar, em `/empresas` (issue #30).
 3. Commits pequenos, um por página ou componente.
-4. Abrir PR para `develop`. A Vercel gera o preview para o time validar.
+4. Rodar `next lint` e `next build` e conferir a página em 1440 px e 360 px antes de entregar.
 5. Nunca fazer push direto em `main` ou `develop`.
 
-## Pendências (não bloqueiam a construção, deixar como placeholder)
+### Como publicar
 
-- Mosaico do hero: substituir o recorte provisório pelo arquivo original em alta resolução e confirmar a autorização de uso de imagem de todas as pessoas.
-- Logos dos parceiros (manter a lista atual por enquanto; os arquivos estão em `public/assets`).
-- Matérias de imprensa: os links do Brazil Journal e do iFood em `/sobre` ainda levam a matérias que citam jovens negros no endereço e no título. Trocar por matérias de 2025 e 2026 quando chegarem.
-- Links reais dos Google Forms.
-- Site antigo de doação no Tilda: a empresa que o mantinha precisa despublicar a página e remover o domínio `doe` do projeto (a PdA não tem acesso ao Tilda). O DNS já não aponta para lá.
-- Futuro da página "Apoie um aluno" e do PdA Labs no site.
+Quem publica não é desenvolvedor: explique os passos de forma simples e não faça push.
+
+1. O Claude faz os commits na branch. A pessoa publica a branch pelo GitHub Desktop (**Publish branch**) e clica em **Create Pull Request**.
+2. No GitHub, o PR abre com **base: main**: trocar para **develop** antes de criar. A Vercel comenta no PR com o link de preview para o time validar.
+3. Depois do merge na `develop`, abrir o PR de `develop` para `main` por https://github.com/Programadores-do-amanha-PDA/pda-landpage/compare/main...develop?expand=1 e fazer o merge.
+4. A Vercel publica em alguns minutos. Conferir o site no ar em programadoresdoamanha.org.br.
+
+## Backlog e pendências
+
+O backlog do site fica nas Issues do GitHub: https://github.com/Programadores-do-amanha-PDA/pda-landpage/issues
+
+- Ideia nova ou pendência vira uma issue. O repositório é público: não escrever nas issues nada que o site também não publicaria.
+- Ao fazer uma issue, cite o número no PR (ex.: "Closes #33") para fechá-la no merge.
+- Pendências em aberto (nov/2026): página de empresas que querem doar (#30), matérias de imprensa em `/sobre` (#31), mosaico do hero (#32), logos dos parceiros (#33), links dos Google Forms de inscrição e mentoria (#34), site antigo no Tilda (#35) e futuro de "Apoie um aluno" e do PdA Labs (#36).
