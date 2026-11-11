@@ -52,29 +52,6 @@ export const mission = {
   ],
 };
 
-export const formation = {
-  title: "A formação",
-  // [PENDENTE] Confirmar se a parceria com a Alura, citada no livro, segue ativa.
-  items: [
-    {
-      title: "Programação e IA",
-      text: "Formação prática, em squads, com metodologias ágeis, versionamento de código e projetos reais. A inteligência artificial atravessa toda a trilha.",
-    },
-    {
-      title: "Inglês",
-      text: "Aulas semanais focadas em comunicação no mercado tech e na etapa de inglês dos processos seletivos.",
-    },
-    {
-      title: "Preparação para o mercado",
-      text: "Soft skills semanais, portfólio, currículo e simulação completa de um processo seletivo tech, com feedback detalhado.",
-    },
-    {
-      title: "Acompanhamento integral",
-      text: "Encontros individuais periódicos para entender o contexto pessoal, profissional e familiar de cada jovem, com apoio financeiro, psicológico e de equipamentos quando necessário.",
-    },
-  ],
-};
-
 export const board = {
   title: "Conselho de administração",
   members: [
@@ -99,27 +76,6 @@ export const board = {
       photo: "/assets/advice/Lucas_Marques.jpeg",
     },
   ] as { name: string; role: string; photo: string | null }[],
-};
-
-export const seals = {
-  title: "Selos e compromissos",
-  items: [
-    {
-      name: "Selo BTG Soma",
-      alt: "Selo de Confiança BTG Soma, turma 2022",
-      src: "/assets/selos/btg-soma.jpg",
-    },
-    {
-      name: "Pacto Global Rede Brasil",
-      alt: "Pacto Global Rede Brasil",
-      src: "/assets/selos/pacto-global.jpg",
-    },
-    {
-      name: "Apoiadora do ODS 8 da ONU (Trabalho decente e crescimento econômico)",
-      alt: "ODS 8: Trabalho decente e crescimento econômico",
-      src: "/assets/selos/ods8.jpg",
-    },
-  ],
 };
 
 export const media = {

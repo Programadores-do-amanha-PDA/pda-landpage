@@ -5,7 +5,7 @@ import { board } from "@/content/sobre";
 
 export function Board() {
   return (
-    <section aria-labelledby="conselho-titulo" className="bg-cream text-ink">
+    <section aria-labelledby="conselho-titulo" className="bg-white text-ink">
       <Container className="flex flex-col gap-10 py-20 sm:py-28">
         <h2
           id="conselho-titulo"
@@ -17,7 +17,7 @@ export function Board() {
           {board.members.map((member) => (
             <li
               key={member.name}
-              className="flex flex-col overflow-hidden rounded-2xl bg-white"
+              className="flex flex-col overflow-hidden rounded-2xl bg-cream"
             >
               <div className="relative aspect-square w-full bg-purple-mid">
                 {member.photo ? (

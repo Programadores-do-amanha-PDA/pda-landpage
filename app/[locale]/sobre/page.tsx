@@ -5,11 +5,9 @@ import { PageViewComponent } from "@/common/components";
 import { NewSiteShell } from "@/components/layout/NewSiteShell";
 import { Board } from "@/components/sobre/Board";
 import { Contact } from "@/components/sobre/Contact";
-import { Formation } from "@/components/sobre/Formation";
 import { Hero } from "@/components/sobre/Hero";
 import { Mission } from "@/components/sobre/Mission";
 import { Media } from "@/components/sobre/Media";
-import { Seals } from "@/components/sobre/Seals";
 import { hero as homeHero } from "@/content/home";
 import { site } from "@/content/site";
 import { meta } from "@/content/sobre";
@@ -42,9 +40,7 @@ export default function SobrePage({ params }: { params: { locale: string } }) {
     <NewSiteShell>
       <Hero />
       <Mission />
-      <Formation />
       <Board />
-      <Seals />
       <Media />
       <Contact />
       <PageViewComponent pageName="Sobre" />
