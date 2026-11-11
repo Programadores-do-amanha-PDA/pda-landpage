@@ -3,7 +3,6 @@ import type { LinkItem, RichLine, Segment } from "./types";
 import { DOACAO_URL, FORMS, ROUTES, SOURCES } from "./links";
 
 export const hero = {
-  tag: "</MOBILIDADE SOCIAL>",
   /** Cada item é uma linha do título. */
   title: [
     [{ text: "Produzimos" }],
@@ -26,10 +25,11 @@ export const hero = {
   } as LinkItem,
   image: {
     // [PENDENTE] Recorte provisório: trocar pelo original em alta resolução e confirmar autorização de imagem.
-    src: "/assets/mosaico-alumni.jpg",
+    // Sem a primeira fileira do mosaico, que tem os rostos cortados no arquivo provisório.
+    src: "/assets/mosaico-alumni-hero.jpg",
     alt: "Mosaico com fotos de alumni da Programadores do Amanhã",
     width: 1074,
-    height: 1132,
+    height: 912,
   },
 };
 
