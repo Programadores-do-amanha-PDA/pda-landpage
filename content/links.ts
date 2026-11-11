@@ -21,13 +21,13 @@ export const FORMS = {
 
 /**
  * Destinos dos links internos.
- * [PROVISÓRIO] Enquanto /impacto, /empresas, /doe e /sobre não existem, cada link aponta
+ * [PROVISÓRIO] Enquanto /empresas, /doe e /sobre não existem, cada link aponta
  * para a página ou o serviço que já está no ar. Quando a página nova ficar pronta,
  * troque o valor pela rota final (comentada ao lado).
  */
 export const ROUTES = {
   home: "/",
-  impacto: "/#impacto", // final: "/impacto"
+  impacto: "/impacto",
   empresas: "/hire-a-talent", // final: "/empresas"
   doe: DOACAO_URL, // final: "/doe"
   sobre: "/who-we-are", // final: "/sobre"

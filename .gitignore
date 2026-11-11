@@ -128,3 +128,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Configuração local do Claude Code (servidor de preview)
+.claude/launch.json
