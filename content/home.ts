@@ -1,6 +1,6 @@
 // Conteúdo da Home. Fonte: docs/redesign/mockup-home.dc.html (prevalece) e docs/redesign/textos-site.md.
 import type { LinkItem, RichLine, Segment } from "./types";
-import { DOACAO_URL, FORMS, ROUTES, SOURCES } from "./links";
+import { FORMS, ROUTES, SOURCES } from "./links";
 
 export const hero = {
   /** Cada item é uma linha do título. */
@@ -139,7 +139,7 @@ export const support = {
       number: "01",
       title: "Patrocine a mobilidade social",
       text: "Sua doação, única ou recorrente, custeia a formação completa de jovens que, em 3 anos de carreira, superam a renda dos 10% mais ricos do Brasil.",
-      cta: { label: "Quero doar", href: DOACAO_URL } as LinkItem,
+      cta: { label: "Quero doar", href: ROUTES.doe } as LinkItem,
       tone: "purple" as const,
     },
     {
@@ -249,7 +249,7 @@ export const closing = {
   symbol: ">>>>>>>",
   statement:
     "Investimos em jovens que não vão só acompanhar o futuro do trabalho. Eles vão construí-lo.",
-  primaryCta: { label: "Faça parte", href: DOACAO_URL } as LinkItem,
+  primaryCta: { label: "Faça parte", href: ROUTES.doe } as LinkItem,
   secondaryCta: {
     label: "Quero me inscrever",
     href: FORMS.inscricao,

@@ -3,10 +3,17 @@ import type { MetadataRoute } from "next";
 const SITE_URL = "https://programadoresdoamanha.org.br";
 
 // Rotas públicas reais do site, em português e inglês.
-const paths = ["", "/impacto", "/sobre", "/who-we-are", "/hire-a-talent"];
+const paths = [
+  "",
+  "/impacto",
+  "/sobre",
+  "/doe",
+  "/who-we-are",
+  "/hire-a-talent",
+];
 
 // Páginas novas que só existem em português (/en redireciona para /pt).
-const ptOnly = new Set(["", "/impacto", "/sobre"]);
+const ptOnly = new Set(["", "/impacto", "/sobre", "/doe"]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((path) => ({

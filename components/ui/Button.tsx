@@ -7,7 +7,7 @@ import { SmartLink } from "./SmartLink";
  * primary / outline: botões retangulares em caixa alta (hero).
  * pill-*: botões com canto de 8 px usados no restante do mockup.
  */
-type Variant =
+export type Variant =
   | "primary"
   | "outline"
   | "pill-yellow"
@@ -33,6 +33,32 @@ const variants: Record<Variant, string> = {
     "rounded-lg border-2 border-cream px-[26px] py-[14px] text-cream hover:bg-cream hover:text-ink",
 };
 
+/** Classes do botão, para reaproveitar o visual em <button> (ex.: DonateButton). */
+export function buttonClassName(variant: Variant, className?: string) {
+  return cx(base, variants[variant], className);
+}
+
+/** Seta dos botões principais. */
+export function ButtonArrow() {
+  return (
+    <svg
+      aria-hidden="true"
+      width="18"
+      height="18"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="shrink-0"
+    >
+      <path d="M5 12h14" />
+      <path d="M13 6l6 6-6 6" />
+    </svg>
+  );
+}
+
 type Props = {
   link: LinkItem;
   variant?: Variant;
@@ -47,28 +73,9 @@ export function Button({
   className,
 }: Props) {
   return (
-    <SmartLink
-      href={link.href}
-      className={cx(base, variants[variant], className)}
-    >
+    <SmartLink href={link.href} className={buttonClassName(variant, className)}>
       {link.label}
-      {arrow && (
-        <svg
-          aria-hidden="true"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="shrink-0"
-        >
-          <path d="M5 12h14" />
-          <path d="M13 6l6 6-6 6" />
-        </svg>
-      )}
+      {arrow && <ButtonArrow />}
     </SmartLink>
   );
 }
