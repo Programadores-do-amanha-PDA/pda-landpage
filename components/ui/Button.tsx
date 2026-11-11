@@ -13,7 +13,8 @@ export type Variant =
   | "pill-yellow"
   | "pill-purple"
   | "pill-ink"
-  | "pill-outline";
+  | "pill-outline"
+  | "pill-outline-ink";
 
 const base =
   "inline-flex items-center justify-center gap-3 font-mono font-bold no-underline transition-colors";
@@ -31,6 +32,8 @@ const variants: Record<Variant, string> = {
     "rounded-lg bg-ink px-7 py-4 text-cream hover:bg-purple hover:text-cream",
   "pill-outline":
     "rounded-lg border-2 border-cream px-[26px] py-[14px] text-cream hover:bg-cream hover:text-ink",
+  "pill-outline-ink":
+    "rounded-lg border-2 border-ink px-[26px] py-[14px] text-ink hover:bg-ink hover:text-cream",
 };
 
 /** Classes do botão, para reaproveitar o visual em <button> (ex.: DonateButton). */

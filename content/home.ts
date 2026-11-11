@@ -18,7 +18,7 @@ export const hero = {
     { text: "10% mais ricos", mark: "strong" },
     { text: "." },
   ] as Segment[],
-  primaryCta: { label: "Patrocine a mobilidade", href: ROUTES.doe } as LinkItem,
+  primaryCta: { label: "Patrocine a mobilidade social", href: ROUTES.doe } as LinkItem,
   secondaryCta: {
     label: "Contrate um talento",
     href: ROUTES.contrate,
@@ -36,8 +36,7 @@ export const hero = {
 export const numbers = {
   label: "Números",
   items: [
-    // [PENDENTE] Ano de fundação: o PDF diz 2019 e o site antigo diz 2021.
-    { value: "2019", caption: "Ano de fundação", accent: true },
+    { value: "2019", caption: "Ano de fundação" },
     { value: "+500", caption: "Jovens selecionados" },
     { value: "+100", caption: "Empresas já contrataram nossos talentos" },
     { value: "R$ 12M+", caption: "Em renda gerada pela rede alumni" },
@@ -106,7 +105,7 @@ export const salaryCurve = {
     { label: "Ano 2", value: 4833 },
     { label: "Ano 3", value: 8662 },
   ],
-  reference: { label: "Top 10%", value: 8034 },
+  reference: { label: "Top 10% de renda no Brasil", value: 8034 },
 };
 
 export const proof = {
@@ -132,21 +131,28 @@ export const testimonial = {
   photoPlaceholder: "[FOTO KAREN]",
 };
 
+// Decisão do time (nov/2026): dois blocos, um para empresas e outro para pessoas físicas.
 export const support = {
   title: "Como apoiar",
   cards: [
     {
       number: "01",
-      title: "Patrocine a mobilidade social",
-      text: "Sua doação, única ou recorrente, custeia a formação completa de jovens que, em 3 anos de carreira, superam a renda dos 10% mais ricos do Brasil.",
-      cta: { label: "Quero doar", href: ROUTES.doe } as LinkItem,
+      title: "Apoiar como empresa",
+      text: "Patrocine a formação de jovens de baixa renda e abra vagas de estágio, trainee ou analista júnior para os talentos que formamos em tecnologia, IA e inglês, com validação técnica e comportamental.",
+      ctas: [
+        { label: "Quero doar", href: ROUTES.doe },
+        { label: "Quero contratar", href: ROUTES.contrate },
+      ] as LinkItem[],
       tone: "purple" as const,
     },
     {
       number: "02",
-      title: "Contrate um talento",
-      text: "Abra vagas de estágio, trainee ou analista júnior para a nossa comunidade. Profissionais formados em tecnologia, IA e inglês, com validação técnica e comportamental feita pela PdA.",
-      cta: { label: "Quero contratar", href: ROUTES.contrate } as LinkItem,
+      title: "Apoiar como pessoa física",
+      text: "Sua doação, única ou recorrente, custeia a formação completa de jovens que, em 3 anos de carreira, superam a renda dos 10% mais ricos do Brasil. Você também pode doar seu tempo como mentor.",
+      ctas: [
+        { label: "Quero doar", href: ROUTES.doe },
+        { label: "Quero ser mentor", href: ROUTES.sejaMentor },
+      ] as LinkItem[],
       tone: "light" as const,
     },
   ],
