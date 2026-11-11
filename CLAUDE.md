@@ -22,6 +22,7 @@ Em `/sobre`, as revisões do time (nov/2026) também vencem o `textos-site.md`. 
 - "Nossa missão" com os 4 valores no lugar de "Nossa história". O trecho "missão é gerar renda e empregabilidade" fica em negrito purple, e os textos dos valores foram revisados pelo time.
 - Sem as seções "A formação" e "Selos e compromissos". Os selos continuam no rodapé.
 - Conselho de administração e conselho fiscal em ordem alfabética pelo nome. O conselho fiscal mostra só o nome. As fotos estão em `public/assets/advice`.
+- Seção "Nosso time" logo depois dos conselhos, nos mesmos cards e também em ordem alfabética, sem texto de abertura: Beatriz Meigger (Gerente de Impacto), Cleber Guedes (Diretor executivo), Letícia Silveira (Gerente de Desenvolvimento Institucional) e Thauana Miranda (Conselheira de carreira). As fotos estão em `public/assets/team`; as demais fotos dessa pasta só existem porque `/who-we-are` ainda as usa.
 - Nova seção "Transparência" (`#transparencia`), com auditoria, demonstrações contábeis, estatuto e atas no Google Drive. Para publicar um documento novo, adicione o link em `DOCUMENTOS` (`content/links.ts`) e o item em `content/sobre.ts`.
 - "Na mídia" mostra só Brazil Journal, iFood, Onfly e Méliuz, nessa ordem: logos com link para as matérias.
 - Ano de fundação: 2019.
