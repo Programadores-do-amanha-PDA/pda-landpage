@@ -7,9 +7,9 @@ export function NumbersStrip() {
       <Container className="pb-6 pt-14">
         <dl className="m-0 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-8">
           {numbers.items.map((item) => (
-            <div key={item.caption} className="flex flex-col-reverse gap-1">
+            <div key={item.caption} className="flex flex-col gap-1">
               <dt className="text-[15px]">{item.caption}</dt>
-              <dd className="m-0 font-display text-[56px] leading-none sm:text-[64px]">
+              <dd className="order-first m-0 font-display text-[56px] leading-none sm:text-[64px]">
                 {item.value}
               </dd>
             </div>
