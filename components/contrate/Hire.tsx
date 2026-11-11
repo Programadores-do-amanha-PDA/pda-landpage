@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
-import { hire } from "@/content/empresas";
+import { hire } from "@/content/contrate";
 
 /** Contrate: perfil dos talentos, empresas que já contrataram e CTA para abrir vaga. */
 export function Hire() {

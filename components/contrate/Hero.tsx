@@ -1,17 +1,17 @@
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { RichText } from "@/components/ui/RichText";
-import { hero } from "@/content/empresas";
+import { hero } from "@/content/contrate";
 
 export function Hero() {
   return (
     <section
-      aria-labelledby="empresas-titulo"
+      aria-labelledby="contrate-titulo"
       className="bg-ink bg-dots text-cream"
     >
       <Container className="flex flex-col gap-10 py-20 sm:py-28">
         <h1
-          id="empresas-titulo"
+          id="contrate-titulo"
           className="m-0 flex flex-col items-start gap-[0.12em] font-display text-[clamp(40px,8vw,128px)] font-normal uppercase leading-[1.08]"
         >
           {hero.title.map((line, i) => (
