@@ -18,7 +18,7 @@ export function Media() {
         >
           {media.title}
         </h2>
-        <ul className="m-0 grid list-none grid-cols-2 gap-4 p-0 sm:grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
+        <ul className="m-0 grid list-none grid-cols-2 gap-4 p-0 lg:grid-cols-4">
           {media.items.map((item) => (
             <li key={item.name}>
               <a

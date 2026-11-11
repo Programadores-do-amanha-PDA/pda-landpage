@@ -97,22 +97,12 @@ export const seals = {
 export const media = {
   title: "Na mídia",
   // Só o logo do veículo, com link para a matéria (decisão do time, nov/2026).
-  // [PENDENTE] Trocar por matérias de 2025 e 2026 quando chegarem.
-  // onDark: logo exibido sobre fundo ink.
+  // Lista e ordem definidas pelo time (nov/2026). onDark: logo exibido sobre fundo ink.
   items: [
     { name: "Brazil Journal", src: "/assets/news/braziljournal.png", href: MEDIA.brazilJournal },
     { name: "iFood", src: "/assets/partners/ifood.jpg", href: MEDIA.ifood },
-    { name: "O Dia", src: "/assets/news/odia.webp", href: MEDIA.oDia },
     { name: "Onfly", src: "/assets/partners/onfly.png", href: MEDIA.onfly },
-    { name: "Preta Joia", src: "/assets/news/pretajoia.jpg", href: MEDIA.pretaJoia },
-    { name: "Guia de TI", src: "/assets/news/guiadeti.png", href: MEDIA.guiaDeTi, onDark: true },
-    {
-      name: "Comitê pela Cidadania",
-      src: "/assets/news/comitepelacidadania.png",
-      href: MEDIA.comiteCidadania,
-    },
-    { name: "Alô Alô Bahia", src: "/assets/news/aloalobahia.png", href: MEDIA.aloAloBahia, onDark: true },
-    // O site antigo exibia este vídeo com o logo do Méliuz.
+    // Vídeo no YouTube; o site antigo já o exibia com o logo do Méliuz.
     {
       name: "Méliuz (vídeo no YouTube)",
       src: "/assets/maintainers/meliuz.png",
