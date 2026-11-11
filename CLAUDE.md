@@ -86,7 +86,7 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 
 - **Posicionamento:** falar apenas de **baixa renda** (os 10% mais pobres). Não usar nenhuma referência a jovens negros, pretos, pardos ou indígenas em textos, alts, metatags ou títulos de matérias.
 - **Patrocínio:** não publicar valores de planos (Bronze/Prata/Ouro), parcelamento nem o trecho do RIR. Na página de empresas, o benefício fiscal aparece só de forma genérica.
-- **Doação:** todos os botões de doar do site levam a `/doe` (`ROUTES.doe`). Na página, a doação é feita pelo pop-up da Doare. O subdomínio `doe.programadoresdoamanha.org.br` deve redirecionar para `/pt/doe`.
+- **Doação:** todos os botões de doar do site levam a `/doe` (`ROUTES.doe`). Na página, a doação é feita pelo pop-up da Doare. O subdomínio `doe.programadoresdoamanha.org.br` redireciona para `/pt/doe` (308, em `redirects()` do `next.config.mjs`).
 - **Formulários:** tudo via Google Forms (inscrição de jovens, mentoria, contato de empresas). Nada de HubSpot. Crie os links como constantes em um único arquivo (`content/links.ts`) para facilitar a troca.
 - **Domínio:** todos os links internos e absolutos usam `programadoresdoamanha.org.br` (o site atual tem links quebrados para `.org`, sem o `.br`).
 - **Contato:** `contato@programadoresdoamanha.org.br`.
@@ -123,5 +123,5 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 - Lista e logos de empresas que contrataram, para `/empresas`.
 - Matérias de imprensa: os links do Brazil Journal e do iFood em `/sobre` ainda levam a matérias que citam jovens negros no endereço e no título. Trocar por matérias de 2025 e 2026 quando chegarem.
 - Links reais dos Google Forms.
-- Subdomínio `doe`: depois que `/doe` estiver no ar, apontar `doe.programadoresdoamanha.org.br` para este projeto na Vercel (hoje aponta para o Tilda) e redirecionar para `/pt/doe`.
+- Subdomínio `doe`: adicionar `doe.programadoresdoamanha.org.br` a este projeto na Vercel, conectado a Production (o redirecionamento para `/pt/doe` já está no `next.config.mjs`), trocar o registro DNS que aponta para o Tilda e desativar o site no Tilda.
 - Futuro da página "Apoie um aluno" e do PdA Labs no site.
