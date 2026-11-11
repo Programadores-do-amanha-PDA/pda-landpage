@@ -60,7 +60,7 @@ export type BoardMember = {
   photo: string | null;
 };
 
-/** Os conselhos aparecem em ordem alfabética pelo nome (decisão do time, nov/2026). */
+/** Conselhos e time aparecem em ordem alfabética pelo nome (decisão do time, nov/2026). */
 const byName = (a: BoardMember, b: BoardMember) =>
   a.name.localeCompare(b.name, "pt-BR");
 
@@ -99,6 +99,32 @@ export const boards = [
       { name: "Fabiana Bacelar", photo: "/assets/advice/Fabiana_Bacelar.jpeg" },
       { name: "Gilvan Bueno", photo: "/assets/advice/Gilvan_Bueno.jpeg" },
       { name: "Larissa Calixto", photo: "/assets/advice/Larissa_Calixto.jpeg" },
+    ].sort(byName) as BoardMember[],
+  },
+  {
+    id: "nosso-time",
+    title: "Nosso time",
+    members: [
+      {
+        name: "Beatriz Meigger",
+        role: "Gerente de Impacto",
+        photo: "/assets/team/Beatriz_Meigger.jpg",
+      },
+      {
+        name: "Cleber Guedes",
+        role: "Diretor executivo",
+        photo: "/assets/team/Cleber_Guedes.jpg",
+      },
+      {
+        name: "Letícia Silveira",
+        role: "Gerente de Desenvolvimento Institucional",
+        photo: "/assets/team/Leticia_Silveira.png",
+      },
+      {
+        name: "Thauana Miranda",
+        role: "Conselheira de carreira",
+        photo: "/assets/team/Thauana_Miranda.png",
+      },
     ].sort(byName) as BoardMember[],
   },
 ];

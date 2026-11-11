@@ -86,9 +86,9 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 
 - **Posicionamento:** falar apenas de **baixa renda** (os 10% mais pobres). Não usar nenhuma referência a jovens negros, pretos, pardos ou indígenas em textos, alts, metatags ou títulos de matérias.
 - **Patrocínio:** não publicar valores de planos (Bronze/Prata/Ouro), parcelamento nem o trecho do RIR. Na página de empresas, o benefício fiscal aparece só de forma genérica.
-- **Doação:** todos os botões de doar do site levam a `/doe` (`ROUTES.doe`). Na página, a doação é feita pelo pop-up da Doare. O subdomínio `doe.programadoresdoamanha.org.br` redireciona para `/pt/doe` (308, em `redirects()` do `next.config.mjs`).
+- **Doação:** todos os botões de doar do site levam a `/doe` (`ROUTES.doe`). Na página, a doação é feita pelo pop-up da Doare. O subdomínio `doe.programadoresdoamanha.org.br` redireciona para `/pt/doe` (308, em `redirects()` do `next.config.mjs`), mantendo parâmetros como `?utm=`. `www.doe` redireciona para `doe` pelo painel da Vercel.
 - **Formulários:** tudo via Google Forms (inscrição de jovens, mentoria, contato de empresas). Nada de HubSpot. Crie os links como constantes em um único arquivo (`content/links.ts`) para facilitar a troca.
-- **Domínio:** todos os links internos e absolutos usam `programadoresdoamanha.org.br` (o site atual tem links quebrados para `.org`, sem o `.br`).
+- **Domínio:** todos os links internos e absolutos usam `programadoresdoamanha.org.br` (o site atual tem links quebrados para `.org`, sem o `.br`). O DNS do domínio é gerenciado na Vercel (nameservers da Vercel); `doe` e `www.doe` são CNAME para a Vercel e estão ligados a este projeto.
 - **Contato:** `contato@programadoresdoamanha.org.br`.
 - **Fontes dos dados:** 1,8% vem do Atlas da Mobilidade Social; 9 gerações vem do Global Social Mobility Index 2020; pirâmide de renda vem só do IBGE, por meio da PNAD Contínua – Rendimento de Todas as Fontes, com dados de 2024 (a FGV IBRE saiu por decisão do time, nov/2026). Exibir as fontes nas seções correspondentes.
 - Copy em português brasileiro, sem travessões longos (—). Não inventar números, nomes ou depoimentos: o que faltar vira placeholder visível `[ASSIM]`.
@@ -111,7 +111,7 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 ## Fluxo de trabalho
 
 1. Criar uma branch por página (ex.: `feat/pagina-sobre`) a partir de `develop` atualizada.
-2. Home, `/impacto` e `/sobre` já estão no ar, e `/doe` foi construída. Falta `/empresas`.
+2. Home, `/impacto`, `/sobre` e `/doe` já estão no ar. Falta `/empresas`.
 3. Commits pequenos, um por página ou componente.
 4. Abrir PR para `develop`. A Vercel gera o preview para o time validar.
 5. Nunca fazer push direto em `main` ou `develop`.
@@ -123,5 +123,5 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 - Lista e logos de empresas que contrataram, para `/empresas`.
 - Matérias de imprensa: os links do Brazil Journal e do iFood em `/sobre` ainda levam a matérias que citam jovens negros no endereço e no título. Trocar por matérias de 2025 e 2026 quando chegarem.
 - Links reais dos Google Forms.
-- Subdomínio `doe`: adicionar `doe.programadoresdoamanha.org.br` a este projeto na Vercel, conectado a Production (o redirecionamento para `/pt/doe` já está no `next.config.mjs`), trocar o registro DNS que aponta para o Tilda e desativar o site no Tilda.
+- Site antigo de doação no Tilda: a empresa que o mantinha precisa despublicar a página e remover o domínio `doe` do projeto (a PdA não tem acesso ao Tilda). O DNS já não aponta para lá.
 - Futuro da página "Apoie um aluno" e do PdA Labs no site.

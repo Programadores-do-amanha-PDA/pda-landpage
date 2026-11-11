@@ -3,10 +3,10 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { boards } from "@/content/sobre";
 
-/** Conselho de administração e conselho fiscal. */
+/** Conselho de administração, conselho fiscal e time. */
 export function Board() {
   return (
-    <section aria-label="Conselhos" className="bg-white text-ink">
+    <section aria-label="Conselhos e time" className="bg-white text-ink">
       <Container className="flex flex-col gap-20 py-20 sm:py-28">
         {boards.map((group) => (
           <div key={group.id} className="flex flex-col gap-10">
