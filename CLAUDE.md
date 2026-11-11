@@ -12,9 +12,11 @@ Trocar a landing page única atual por um site de 5 páginas, cada uma com um p�
 | --- | --- |
 | `docs/redesign/textos-site.md` | Copy final de todas as páginas. Use o texto exatamente como está. |
 | `docs/redesign/mockup-home.dc.html` | Mockup aprovado da Home (estrutura, cores, tipografia, espaçamento). É um arquivo do canvas de design, não roda sozinho: leia o markup e os estilos inline como referência visual. |
-| `public/assets/mosaico-alumni.jpg` | Mosaico de fotos dos alumni usado no hero da Home (provisório, ver Pendências). |
+| `public/assets/mosaico-alumni.jpg` | Mosaico de fotos dos alumni (provisório, ver Pendências). O hero da Home usa `mosaico-alumni-hero.jpg`, um recorte sem a primeira fileira, que tem os rostos cortados no arquivo original. |
 
 Quando o mockup e o `textos-site.md` divergirem na Home, **o mockup vence**: ele tem as últimas revisões de texto.
+
+Em `/impacto`, as revisões do time (nov/2026) vencem o `textos-site.md`. O conteúdo final está em `content/impacto.ts`. Principais mudanças: sem as seções de depoimento da Débora e de primeiro salário; o Top 5% fica na seção da pirâmide; "um jovem por semana" é o subtítulo das histórias; os cards das histórias usam os 10 alumni do formulário "O Primeiro Sim" (fotos em `public/assets/alumni`, texto resumido no verso do card).
 
 ## Stack
 
@@ -36,7 +38,9 @@ Quando o mockup e o `textos-site.md` divergirem na Home, **o mockup vence**: ele
 | `/doe` | Pessoa física | Doar agora |
 | `/sobre` | Todos | Contato |
 
-Header e rodapé iguais em todas as páginas (rodapé descrito no fim de `textos-site.md`). O link "Inscreva-se" aponta para o Google Forms de inscrição.
+Header e rodapé iguais em todas as páginas (rodapé descrito no fim de `textos-site.md`). O link "Inscreva-se" aponta para o Google Forms de inscrição. No rodapé, o nome da PdA aparece como logo e os selos (BTG Soma, Pacto Global e ODS 8) aparecem como imagens, em `public/assets/selos`.
+
+**Logo em fundo escuro:** use `public/assets/logo-pda-fundo-escuro.png`. O arquivo `Logo_PDA_Horizontal_FundoRoxo.png` tem o til do "Ã" na cor ink, que some em fundo escuro; a cópia corrige o til para branco.
 
 ## Identidade visual
 
@@ -56,7 +60,7 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 - **Títulos:** Anton, caixa alta, `line-height` entre 0.95 e 1.08. Palavras-chave podem ir em amarelo ou sobre uma barra amarela.
 - **Texto:** JetBrains Mono, 17 a 20 px, `line-height` 1.55 a 1.6.
 - **Botões:** retangulares, caixa alta, `letter-spacing: 0.08em`, mono em negrito. Principal amarelo com texto ink e seta; secundário com contorno cream. Fora do hero, os botões com canto de 8 px do mockup também são aceitos (decisão do time, nov/2026).
-- **Tag de seção:** `</NOME DA SEÇÃO>` em mono amarelo (ex.: `</MOBILIDADE SOCIAL>`).
+- **Sem tag de seção:** o site não usa mais a tag `</NOME DA SEÇÃO>` do mockup; as seções começam direto no título (decisão do time, nov/2026).
 - Fundo do hero escuro com textura sutil de pontos (`radial-gradient` 1px a cada 8px).
 - Cantos retos por padrão. Cards claros com 16 px; cards de apoio com o corte diagonal (`border-radius: 0 48px 0 48px`).
 - Sem gradientes, sem emoji, sem sombras suaves.
@@ -71,13 +75,14 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 - **Formulários:** tudo via Google Forms (inscrição de jovens, mentoria, contato de empresas). Nada de HubSpot. Crie os links como constantes em um único arquivo (`content/links.ts`) para facilitar a troca.
 - **Domínio:** todos os links internos e absolutos usam `programadoresdoamanha.org.br` (o site atual tem links quebrados para `.org`, sem o `.br`).
 - **Contato:** `contato@programadoresdoamanha.org.br`.
-- **Fontes dos dados:** 1,8% vem do Atlas da Mobilidade Social; 9 gerações vem do Global Social Mobility Index 2020; pirâmide de renda vem de IBGE PNAD Contínua 2024 e FGV IBRE (jul/2024). Exibir as fontes nas seções correspondentes.
+- **Fontes dos dados:** 1,8% vem do Atlas da Mobilidade Social; 9 gerações vem do Global Social Mobility Index 2020; pirâmide de renda vem só do IBGE, por meio da PNAD Contínua – Rendimento de Todas as Fontes, com dados de 2024 (a FGV IBRE saiu por decisão do time, nov/2026). Exibir as fontes nas seções correspondentes.
 - Copy em português brasileiro, sem travessões longos (—). Não inventar números, nomes ou depoimentos: o que faltar vira placeholder visível `[ASSIM]`.
 
 ## Gráficos
 
 - `/` e `/impacto`: curva salarial dos alumni (Ano 0: R$ 2.423 · Ano 1: R$ 2.700 · Ano 2: R$ 4.833 · Ano 3: R$ 8.662) com a linha do top 10% (R$ 8.034) marcada. Barras em escala real, último ano em purple. A etiqueta da linha do top 10% fica à esquerda, para não encostar na última barra.
-- `/impacto`: pirâmide de renda (Top 1% R$ 21.767 · Top 5% R$ 10.313 · Top 10% R$ 8.034 · Média Brasil R$ 2.020 · Jovens 18 a 24 R$ 1.726).
+- `/impacto`: pirâmide de renda (Top 1% R$ 21.767 · Top 5% R$ 10.313 · Top 10% R$ 8.034 · Média Brasil R$ 2.020 · Jovens 18 a 24 R$ 1.726), com o título "Renda mensal dos trabalhadores brasileiros".
+- Os títulos dos gráficos ficam centralizados.
 - Fazer em SVG ou HTML/CSS acessível (com texto alternativo ou tabela), sem biblioteca pesada.
 
 ## Qualidade
@@ -99,7 +104,6 @@ Siga o mockup da Home e aplique a mesma linguagem nas outras páginas.
 ## Pendências (não bloqueiam a construção, deixar como placeholder)
 
 - Mosaico do hero: substituir o recorte provisório pelo arquivo original em alta resolução e confirmar a autorização de uso de imagem de todas as pessoas.
-- Fotos de Karen, Ingrid, Débora, Diego e demais destaques.
 - Logos dos parceiros (manter a lista atual por enquanto; os arquivos estão em `public/assets`).
 - Lista e logos de empresas que contrataram, para `/empresas`.
 - Ano de fundação (PDF diz 2019, site antigo diz 2021).
