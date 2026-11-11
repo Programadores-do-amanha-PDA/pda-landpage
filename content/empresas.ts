@@ -30,19 +30,19 @@ export const hire = {
     "Experiência em squads, com metodologias ágeis e projetos reais",
   ],
   logosTitle: "Empresas que já contrataram",
-  // Lista aprovada pelo time (nov/2026). [PENDENTE] Os arquivos foram recortados de uma imagem
-  // de apresentação, em baixa resolução: trocar pelos logos originais quando houver.
+  // Lista aprovada pelo time (nov/2026). Logos da Wikimedia Commons, exceto Onfly (arquivo do site)
+  // e Mercado Livre (arquivo enviado pelo time).
   logos: [
-    { name: "BTG Pactual", src: "/assets/contrataram/btg-pactual.png", width: 137, height: 55 },
-    { name: "Oracle", src: "/assets/contrataram/oracle.png", width: 158, height: 21 },
-    { name: "Inter", src: "/assets/contrataram/inter.png", width: 195, height: 50 },
-    { name: "XP Investimentos", src: "/assets/contrataram/xp-investimentos.png", width: 172, height: 39 },
-    { name: "Localiza", src: "/assets/contrataram/localiza.png", width: 195, height: 39 },
-    { name: "Onfly", src: "/assets/contrataram/onfly.png", width: 156, height: 48 },
-    { name: "Hotmart", src: "/assets/contrataram/hotmart.png", width: 159, height: 52 },
-    { name: "Itaú", src: "/assets/contrataram/itau.png", width: 57, height: 58 },
-    { name: "BV", src: "/assets/contrataram/bv.png", width: 68, height: 50 },
-    { name: "Mercado Livre", src: "/assets/contrataram/mercado-livre.png", width: 85, height: 70 },
+    { name: "BTG Pactual", src: "/assets/contrataram/btg-pactual.svg", width: 398, height: 158 },
+    { name: "Oracle", src: "/assets/contrataram/oracle.svg", width: 231, height: 30 },
+    { name: "Inter", src: "/assets/contrataram/inter.svg", width: 500, height: 127 },
+    { name: "XP Investimentos", src: "/assets/contrataram/xp-investimentos.png", width: 599, height: 131 },
+    { name: "Localiza", src: "/assets/contrataram/localiza.svg", width: 120, height: 24 },
+    { name: "Onfly", src: "/assets/partners/onfly.png", width: 11812, height: 4725 },
+    { name: "Hotmart", src: "/assets/contrataram/hotmart.svg", width: 5280, height: 2048 },
+    { name: "Itaú", src: "/assets/contrataram/itau.svg", width: 500, height: 500 },
+    { name: "BV", src: "/assets/contrataram/bv.svg", width: 92, height: 64 },
+    { name: "Mercado Livre", src: "/assets/contrataram/mercado-livre.png", width: 948, height: 796 },
   ] as { name: string; src: string; width: number; height: number }[],
   cta: { label: "Abrir uma vaga", href: FORMS.empresas } as LinkItem,
 };
