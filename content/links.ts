@@ -13,7 +13,8 @@ export const DOARE = {
   payboxId: {
     /** Pop-up genérico "Doar": a pessoa escolhe valor e recorrência. */
     geral: "98533830-b7f0-4222-8efb-a55b908df8f7",
-    cota50: "19470d9b-82f2-4060-926e-fb61bd5249a6",
+    /** Configurado na Doare com R$ 30 (era o "cota50" do site anterior). */
+    cota30: "19470d9b-82f2-4060-926e-fb61bd5249a6",
     cota100: "ea5e1102-0d1d-4083-a007-41c4bb2a4d49",
     cota500: "8e3dfea9-022e-4e75-b526-0832fd8d84b6",
     outroValor: "611c2811-cccc-42cb-938f-677b9d6e327f",

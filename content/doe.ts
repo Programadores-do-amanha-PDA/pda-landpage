@@ -1,6 +1,6 @@
 // Conteúdo da página /doe. Fonte: docs/redesign/textos-site.md, seção "Doe (/doe)",
 // com as decisões do time (nov/2026): doação pelo pop-up da Doare, botões de valor
-// R$ 50 / R$ 100 / R$ 500 / Outro valor, sem os widgets da campanha e sem a seção de mentoria.
+// R$ 30 / R$ 100 / R$ 500 / Outro valor, sem os widgets da campanha e sem a seção de mentoria.
 import type { RichLine, Segment } from "./types";
 import { DOARE, SOURCES } from "./links";
 
@@ -61,9 +61,9 @@ export const ways = {
   // Descrições do site anterior, revisadas e aprovadas pelo time (nov/2026).
   amounts: [
     {
-      value: "R$ 50",
+      value: "R$ 30",
       text: "Ajuda a custear o suporte terapêutico.",
-      action: { label: "Doar R$ 50", payboxId: DOARE.payboxId.cota50 },
+      action: { label: "Doar R$ 30", payboxId: DOARE.payboxId.cota30 },
     },
     {
       value: "R$ 100",

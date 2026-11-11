@@ -28,7 +28,7 @@ Em `/sobre`, as revisões do time (nov/2026) também vencem o `textos-site.md`. 
 
 Em `/doe`, as decisões do time (nov/2026) também vencem o `textos-site.md`. O conteúdo final está em `content/doe.ts`. Principais mudanças:
 - A doação é feita pelo pop-up da Doare: o SDK (`paybox.sdk.js`) carrega com `next/script` só nesta página, e cada botão chama `Paybox.show({ payboxId })`. Os IDs ficam em `DOARE` (`content/links.ts`).
-- "Doar agora" abre o pop-up genérico. Em "Formas de doar" há os botões R$ 50 (suporte terapêutico), R$ 100 (notebook e internet), R$ 500 (formação completa) e Outro valor, cada um com o seu pop-up.
+- "Doar agora" abre o pop-up genérico. Em "Formas de doar" há os botões R$ 30 (suporte terapêutico), R$ 100 (notebook e internet), R$ 500 (formação completa) e Outro valor, cada um com o seu pop-up.
 - Sem os widgets da campanha da Doare (total arrecadado, barra, dias restantes) e sem o pop-up "Futuros que começam agora" (o ID continua em `DOARE`).
 - Sem a seção "Seja mentor": os links "Seja mentor" vão direto ao Google Forms de mentoria.
 - A Doare recusa (403) o pop-up quando a página roda em `localhost`; em produção ele abre normalmente.
