@@ -4,7 +4,6 @@ import { redirect } from "next/navigation";
 import { PageViewComponent } from "@/common/components";
 import { Hero } from "@/components/empresas/Hero";
 import { Hire } from "@/components/empresas/Hire";
-import { Support } from "@/components/empresas/Support";
 import { NewSiteShell } from "@/components/layout/NewSiteShell";
 import { meta } from "@/content/empresas";
 import { hero as homeHero } from "@/content/home";
@@ -42,7 +41,6 @@ export default function EmpresasPage({
     <NewSiteShell>
       <Hero />
       <Hire />
-      <Support />
       <PageViewComponent pageName="Empresas" />
     </NewSiteShell>
   );

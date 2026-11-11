@@ -1,8 +1,8 @@
+import Image from "next/image";
+
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { hire } from "@/content/empresas";
-
-import { PendingNote } from "./PendingNote";
 
 /** Contrate: perfil dos talentos, empresas que já contrataram e CTA para abrir vaga. */
 export function Hire() {
@@ -40,13 +40,25 @@ export function Hire() {
           <h3 className="m-0 font-display text-[clamp(26px,3vw,36px)] font-normal uppercase leading-none">
             {hire.logosTitle}
           </h3>
-          <div className="flex min-h-[88px] items-center justify-center rounded-lg border-2 border-dashed border-ink/40 bg-white p-5 text-center font-mono text-[15px] font-bold">
-            {hire.logosPlaceholder}
-          </div>
+          <ul className="m-0 grid list-none grid-cols-2 gap-4 p-0 sm:grid-cols-3 lg:grid-cols-5">
+            {hire.logos.map((logo) => (
+              <li
+                key={logo.name}
+                className="relative h-[88px] rounded-lg border border-ink/[0.12] bg-white"
+              >
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  fill
+                  sizes="200px"
+                  className="object-contain p-5"
+                />
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="flex flex-col items-start gap-3">
+        <div>
           <Button link={hire.cta} variant="pill-ink" />
-          <PendingNote className="text-purple" />
         </div>
       </Container>
     </section>

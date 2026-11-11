@@ -21,7 +21,7 @@ export const site = {
 export const nav: { links: LinkItem[]; cta: LinkItem } = {
   links: [
     { label: "Impacto", href: ROUTES.impacto },
-    { label: "Para empresas", href: ROUTES.empresas },
+    { label: "Contrate um talento", href: ROUTES.empresas },
     { label: "Quem somos", href: ROUTES.sobre },
     { label: "Inscreva-se", href: FORMS.inscricao },
   ],
