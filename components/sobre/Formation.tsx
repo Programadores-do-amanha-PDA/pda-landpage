@@ -26,7 +26,7 @@ export function Formation() {
               <h3 className="m-0 font-display text-[28px] font-normal uppercase leading-[1.02] sm:text-[32px]">
                 {item.title}
               </h3>
-              <p className="m-0 text-[16px] leading-[1.55]">{item.text}</p>
+              <p className="m-0 text-[17px] leading-[1.55]">{item.text}</p>
             </li>
           ))}
         </ul>

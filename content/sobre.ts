@@ -1,5 +1,5 @@
 // Conteúdo da página /sobre. Fonte: docs/redesign/textos-site.md, seção "Quem somos (/sobre)".
-import type { LinkItem, RichLine } from "./types";
+import type { LinkItem, RichLine, Segment } from "./types";
 import { CONTATO_EMAIL, CONTATO_MAILTO, MEDIA } from "./links";
 
 export const meta = {
@@ -18,10 +18,38 @@ export const hero = {
   lead: "Desde 2019, a Programadores do Amanhã forma jovens de baixa renda nas habilidades que as maiores empresas do Brasil exigem e conecta esses talentos ao mercado de tecnologia.",
 };
 
-export const history = {
-  title: "Nossa história",
-  // [PENDENTE] Texto a revisar pelo time.
-  text: "Começamos com uma pergunta: por que um jovem talentoso da base da pirâmide leva gerações para mudar de renda? A resposta estava no acesso. Desde então, mais de 500 jovens de 24 estados foram selecionados, mais de 100 empresas contrataram nossos talentos e a rede alumni já gerou mais de R$ 12 milhões em renda.",
+// Missão e valores no lugar de "Nossa história" (decisão do time, nov/2026).
+export const mission = {
+  title: "Nossa missão",
+  text: [
+    {
+      text: "Em parceria com algumas das maiores empresas de tecnologia do Brasil e institutos filantrópicos, nossa ",
+    },
+    { text: "missão é gerar renda e empregabilidade", mark: "strong" },
+    {
+      text: " através da conquista da primeira vaga de emprego de jovens de todas as regiões do Brasil.",
+    },
+  ] as Segment[],
+  valuesTitle: "Nossos valores",
+  // Mesmos valores publicados em /who-we-are (i18n/messages/pt.json, "OurValues").
+  values: [
+    {
+      title: "Impacto em primeiro lugar",
+      text: "A Programadores do Amanhã existe para gerar renda e perspectiva de futuro para a juventude de baixa renda. Todas as nossas ações são focadas em qualificar e preparar os jovens para o mercado de trabalho de tecnologia. Pois sabemos que quando uma pessoa estudante se emprega, toda a sua estrutura familiar é impactada, contribuindo assim para o encerramento da pobreza geracional.",
+    },
+    {
+      title: "Fazemos juntos",
+      text: "A Programadores do Amanhã entende que os desafios são coletivos e que juntos somos mais capazes. Por isso nos apoiamos porque nos importamos com cada pessoa que compartilha a jornada conosco. Sabemos que nossos desafios são grandes, mas juntos podemos tornar a jornada individual mais leve e prazerosa.",
+    },
+    {
+      title: "Genuinamente apaixonados",
+      text: "Todos nós da Programadores do Amanhã somos genuinamente apaixonados pelo que fazemos porque entendemos que somos os meios para a mudança social que queremos ver para toda a juventude de baixa renda no Brasil.",
+    },
+    {
+      title: "Responsabilidade com os resultados",
+      text: "Todos nós da Programadores do Amanhã sempre buscamos criar novas soluções e formas de aumentar nosso impacto. Testamos e aprendemos com os resultados, nos apoiando em dados e indicadores para entender como evoluir.",
+    },
+  ],
 };
 
 export const formation = {
