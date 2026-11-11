@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { SmartLink } from "@/components/ui/SmartLink";
 import { footer } from "@/content/site";
 
@@ -39,8 +41,27 @@ export function Footer() {
             </div>
           ))}
         </div>
-        <div className="flex flex-wrap justify-between gap-4 border-t border-cream/25 pt-6 text-[13px]">
-          <span>{footer.seals}</span>
+        <div className="flex flex-wrap items-center justify-between gap-6 border-t border-cream/25 pt-6 text-[13px]">
+          <ul
+            aria-label="Selos e compromissos"
+            className="m-0 flex list-none flex-wrap gap-3 p-0"
+          >
+            {footer.seals.map((seal) => (
+              <li
+                key={seal.src}
+                className="h-[80px] w-[80px] overflow-hidden rounded-lg bg-white p-1 sm:h-[88px] sm:w-[88px]"
+              >
+                <Image
+                  src={seal.src}
+                  alt={seal.name}
+                  title={seal.name}
+                  width={240}
+                  height={240}
+                  className="h-full w-full object-contain"
+                />
+              </li>
+            ))}
+          </ul>
           <span>{footer.legal}</span>
         </div>
       </div>

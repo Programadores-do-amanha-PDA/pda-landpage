@@ -62,7 +62,17 @@ export const footer = {
       links: [{ label: CONTATO_EMAIL, href: CONTATO_MAILTO }],
     },
   ] as { title: string; links: LinkItem[] }[],
-  seals: "Selo BTG Soma · Pacto Global Rede Brasil · ODS 8",
+  seals: [
+    {
+      name: "Selo de Confiança BTG Soma, turma 2022",
+      src: "/assets/selos/btg-soma.jpg",
+    },
+    { name: "Pacto Global Rede Brasil", src: "/assets/selos/pacto-global.jpg" },
+    {
+      name: "ODS 8: Trabalho decente e crescimento econômico",
+      src: "/assets/selos/ods8.jpg",
+    },
+  ],
   legal:
     "Programadores do Amanhã · CNPJ 44.641.193/0001-35 · Todos os direitos reservados.",
 };
