@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import { trackEvent } from "@/components/analytics/events";
 import {
   ButtonArrow,
   buttonClassName,
@@ -55,6 +56,7 @@ export function DonateButton({
   const [status, setStatus] = useState<"idle" | "loading" | "error">("idle");
 
   async function open() {
+    trackEvent("doar_clique", { link_text: action.label });
     setStatus("loading");
     const paybox = await waitForPaybox();
     if (!paybox) {

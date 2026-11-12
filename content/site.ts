@@ -77,3 +77,10 @@ export const footer = {
   legal:
     "Programadores do Amanhã · CNPJ 44.641.193/0001-35 · Todos os direitos reservados.",
 };
+
+/** Aviso de cookies do Google Analytics (components/analytics/CookieBanner). */
+export const cookieBanner = {
+  text: "Usamos cookies do Google Analytics para medir as visitas ao site e o resultado dos nossos anúncios. Você pode aceitar ou recusar.",
+  accept: "Aceitar",
+  decline: "Recusar",
+};
