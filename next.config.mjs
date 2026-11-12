@@ -14,6 +14,24 @@ const nextConfig = {
         permanent: true,
       },
       {
+        // A raiz vai sempre para /pt. Permanente (308) para o Google tratar /pt como o
+        // endereço da Home; sem isso o next-intl redireciona com 307.
+        source: "/",
+        destination: "/pt",
+        permanent: true,
+      },
+      {
+        // As páginas novas só existem em português.
+        source: "/en",
+        destination: "/pt",
+        permanent: true,
+      },
+      {
+        source: "/en/:page(impacto|sobre|doe|contrate)",
+        destination: "/pt/:page",
+        permanent: true,
+      },
+      {
         // "Contrate um talento" saiu de /empresas para /contrate (nov/2026). O redirect é
         // temporário porque /empresas vai virar a página de empresas que querem doar.
         source: "/:locale(pt|en)/empresas",
