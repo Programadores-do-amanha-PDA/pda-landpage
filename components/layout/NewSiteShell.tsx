@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 
+import { CookieBanner } from "@/components/analytics/CookieBanner";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { anton, jetbrainsMono } from "@/components/fonts";
@@ -15,6 +17,8 @@ export function NewSiteShell({ children }: { children: ReactNode }) {
       <Header />
       <main id="conteudo">{children}</main>
       <Footer />
+      <CookieBanner />
+      <GoogleAnalytics />
     </div>
   );
 }

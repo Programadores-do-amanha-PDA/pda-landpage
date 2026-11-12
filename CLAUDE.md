@@ -45,6 +45,7 @@ Em `/doe`, as decisões do time (nov/2026) também vencem o `textos-site.md`. O 
 - Componentes novos em `components/`, conteúdo em `content/`, links em `content/links.ts`.
 - **Não mexer** em `app/[locale]/hire-a-talent`, `app/[locale]/who-we-are`, `app/api/*` e nos módulos que elas usam (`modules/hire-a-talent`, `modules/who-we-are`, banco MongoDB). O futuro delas ainda vai ser decidido; só garanta que continuem funcionando.
 - Manter Mixpanel (`PageViewComponent`), `@vercel/analytics` e `@vercel/speed-insights`.
+- Google Analytics 4 (`GA4_ID` em `content/links.ts`) para o Google Ad Grants: carrega só depois do aceite no aviso de cookies (`components/analytics`). As conversões são os eventos `doar_clique`, `contratar_clique`, `inscricao_clique` e `mentoria_clique`; um link novo para os Google Forms entra sozinho pelo destino do link (`components/analytics/events.ts`).
 
 ## Páginas
 

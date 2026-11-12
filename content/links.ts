@@ -23,7 +23,13 @@ export const DOARE = {
   },
 } as const;
 
-export const CONTATO_EMAIL = "contato@programadoresdoamanha.org.br";
+/**
+ * Google Analytics 4 (fluxo "Site PdA"). O ID de métrica é público.
+ * Carrega só depois que a pessoa aceita os cookies (components/analytics).
+ */
+export const GA4_ID = "G-437ZNRZE17";
+
+export const CONTATO_EMAIL ="contato@programadoresdoamanha.org.br";
 export const CONTATO_MAILTO = `mailto:${CONTATO_EMAIL}`;
 
 /**
