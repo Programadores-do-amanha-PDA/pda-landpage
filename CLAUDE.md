@@ -142,3 +142,5 @@ O backlog do site fica nas Issues do GitHub: https://github.com/Programadores-do
 - Ideia nova ou pendência vira uma issue. O repositório é público: não escrever nas issues nada que o site também não publicaria.
 - Ao fazer uma issue, cite o número no PR (ex.: "Closes #33") para fechá-la no merge.
 - Pendências em aberto (nov/2026): página de empresas que querem doar (#30), matérias de imprensa em `/sobre` (#31), mosaico do hero (#32), logos dos parceiros (#33), links dos Google Forms de inscrição e mentoria (#34), site antigo no Tilda (#35) e futuro de "Apoie um aluno" e do PdA Labs (#36).
+- Selo Doar (nov/2026): descrever a formação de forma estruturada (#42), bloco "Como nos financiamos" em Transparência (#43), relatório anual de atividades em Transparência (#44), cadastro na newsletter (#45), canal de denúncia ou ouvidoria (#46) e política de privacidade da PdA, LGPD (#47).
+- Google Ad Grants (nov/2026): vincular o GA4 ao Google Ads e importar as conversões, já que o GA4 e os eventos estão no ar (#48), e endereço da PdA no rodapé (#49).
